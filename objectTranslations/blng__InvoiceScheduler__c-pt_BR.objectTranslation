@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Programador de faturas</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Programadores de faturas</value>
+    </caseValues>
+    <fields>
+        <label><!-- Apex Job Id --></label>
+        <name>blng__ApexJobId__c</name>
+    </fields>
+    <fields>
+        <label><!-- Automatically Post Invoices --></label>
+        <name>blng__AutomaticallyPostInvoices__c</name>
+    </fields>
+    <fields>
+        <label><!-- Bill Usage Charges --></label>
+        <name>blng__BillUsageCharges__c</name>
+    </fields>
+    <fields>
+        <label><!-- Include All Currencies --></label>
+        <name>blng__IncludeAllCurrencies__c</name>
+    </fields>
+    <fields>
+        <label><!-- Invoice Batch --></label>
+        <name>blng__InvoiceBatches__c</name>
+    </fields>
+    <fields>
+        <label><!-- Invoice Date --></label>
+        <name>blng__InvoiceDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Invoice Day Of Month --></label>
+        <name>blng__InvoiceDayOfMonth__c</name>
+    </fields>
+    <fields>
+        <label><!-- Invoice Day Of Week --></label>
+        <name>blng__InvoiceDayOfWeek__c</name>
+    </fields>
+    <fields>
+        <label><!-- Notes --></label>
+        <name>blng__Notes__c</name>
+    </fields>
+    <fields>
+        <label><!-- Start Date Time --></label>
+        <name>blng__StartDateTime__c</name>
+    </fields>
+    <fields>
+        <label><!-- Target Date --></label>
+        <name>blng__TargetDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Target Day Of Month --></label>
+        <name>blng__TargetDayOfMonth__c</name>
+    </fields>
+    <fields>
+        <label><!-- Target Day Of Week --></label>
+        <name>blng__TargetDayOfWeek__c</name>
+    </fields>
+    <fields>
+        <help>Tipo de agenda:
+Uma vez – O faturamento será realizado apenas uma vez.
+Diário – O faturamento será repetido continuamente todo dia.</help>
+        <label><!-- Type --></label>
+        <name>blng__Type__c</name>
+    </fields>
+    <gender>Masculine</gender>
+    <nameFieldLabel>Nome do agendador de fatura</nameFieldLabel>
+</CustomObjectTranslation>

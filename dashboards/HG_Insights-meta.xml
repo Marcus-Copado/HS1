@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DashboardFolder xmlns="http://soap.sforce.com/2006/04/metadata">
+    <folderShares>
+        <accessLevel>Manage</accessLevel>
+        <sharedTo>dcapuz.y9bz3vosozhh.g8tzkfyg5ruy.djf3a36xuu2a@copado.com2022/09/21_11-40-17.demo</sharedTo>
+        <sharedToType>User</sharedToType>
+    </folderShares>
+    <name>HG Insights</name>
+</DashboardFolder>

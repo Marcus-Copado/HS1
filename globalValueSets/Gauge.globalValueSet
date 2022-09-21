@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>1 mil</fullName>
+        <default>false</default>
+        <label>1 mil</label>
+    </customValue>
+    <customValue>
+        <fullName>1.5 mil</fullName>
+        <default>false</default>
+        <label>1.5 mil</label>
+    </customValue>
+    <customValue>
+        <fullName>2 mil</fullName>
+        <default>false</default>
+        <label>2 mil</label>
+    </customValue>
+    <customValue>
+        <fullName>2.5 mil</fullName>
+        <default>false</default>
+        <label>2.5 mil</label>
+    </customValue>
+    <customValue>
+        <fullName>3 mil</fullName>
+        <default>false</default>
+        <label>3 mil</label>
+    </customValue>
+    <masterLabel>Gauge</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

@@ -1,0 +1,26 @@
+<aura:component controller="QuickQuoteCTRL" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >    
+    <aura:attribute name="StartDate" type="SBQQ__Quote__c"/>
+    <aura:attribute name="SubscriptionTerm" type="SBQQ__Quote__c"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    
+    <div class="slds-form-element">
+        <div class="slds-form slds-form_compound">
+        <div class="slds-form-element__control">
+            <div class="slds-form-element__group">
+            <div class="slds-form-element__row">
+                <div class="slds-form-element slds-size_1-of-4">
+            		<lightning:input aura:id="StartDate" type="date" label="Start Date" name="startDate" value=""/>  
+                </div>
+                <div class="slds-form-element slds-size_1-of-4" >
+            		<lightning:input value="12" label="Subscription Term" aura:id="SubscriptionTerm"/>
+                </div>
+            </div>
+                	
+            
+            <br/>
+            <button class="slds-button slds-button_neutral" onclick="{!c.handleClick}">Get a Quote</button>
+            </div>
+        </div>
+        </div>
+    </div>	
+</aura:component>

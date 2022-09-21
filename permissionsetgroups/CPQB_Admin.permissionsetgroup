@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSetGroup xmlns="http://soap.sforce.com/2006/04/metadata">
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>CPQB Admin</label>
+    <permissionSets>CALM_API</permissionSets>
+    <permissionSets>HPP_Perm_Set</permissionSets>
+    <permissionSets>SBQQ__SteelBrickCPQAdmin</permissionSets>
+    <permissionSets>SFBD__Collections_Admin</permissionSets>
+    <permissionSets>View_All_Custom_Settings</permissionSets>
+    <permissionSets>adnblng__AuthorizeDotNetAdmin</permissionSets>
+    <permissionSets>blng__SalesforceBillingAdmin</permissionSets>
+    <permissionSets>csblng__CyberSourceAdmin</permissionSets>
+    <permissionSets>force__EinsteinAnalyticsAdmin</permissionSets>
+    <permissionSets>pyzblng__PayeezyAdmin</permissionSets>
+    <permissionSets>sbaa__AdvancedApprovalsAdmin</permissionSets>
+    <status>Updated</status>
+</PermissionSetGroup>

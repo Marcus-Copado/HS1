@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>AntiVirus</fullName>
+        <default>false</default>
+        <label>AntiVirus</label>
+    </customValue>
+    <customValue>
+        <fullName>Client Security</fullName>
+        <default>false</default>
+        <label>Client Security</label>
+    </customValue>
+    <customValue>
+        <fullName>Data Protection</fullName>
+        <default>false</default>
+        <label>Data Protection</label>
+    </customValue>
+    <customValue>
+        <fullName>Maintenance</fullName>
+        <default>false</default>
+        <label>Maintenance</label>
+    </customValue>
+    <customValue>
+        <fullName>Professional Services</fullName>
+        <default>false</default>
+        <label>Professional Services</label>
+    </customValue>
+    <customValue>
+        <fullName>Solution</fullName>
+        <default>false</default>
+        <label>Solution</label>
+    </customValue>
+    <customValue>
+        <fullName>Support Hours</fullName>
+        <default>false</default>
+        <label>Support Hours</label>
+    </customValue>
+    <customValue>
+        <fullName>Threat Intelligence</fullName>
+        <default>false</default>
+        <label>Threat Intelligence</label>
+    </customValue>
+    <masterLabel>Product Line</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

@@ -1,0 +1,2 @@
+<apex:page StandardController="Product2" extensions="Q2Cpreviewconfig" action="{!preview}">
+</apex:page>

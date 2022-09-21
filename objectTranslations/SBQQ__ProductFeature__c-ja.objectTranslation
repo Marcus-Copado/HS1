@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>商品機能</value>
+    </caseValues>
+    <fieldSets>
+        <label><!-- NoQuantity --></label>
+        <name>NoQuantity</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- Configurator --></label>
+        <name>SBQQ__Configurator</name>
+    </fieldSets>
+    <fields>
+        <label><!-- AdditionalInstructions --></label>
+        <name>AdditionalInstructions__c</name>
+    </fields>
+    <fields>
+        <help>関連するオプションが含まれる複数の機能が同じグループになるように、この機能をカテゴリに割り当てます。</help>
+        <label><!-- Category --></label>
+        <name>SBQQ__Category__c</name>
+        <picklistValues>
+            <masterLabel>Accessories</masterLabel>
+            <translation><!-- Accessories --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Advanced</masterLabel>
+            <translation><!-- Advanced --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Analytics</masterLabel>
+            <translation><!-- Analytics --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Atomic Platform</masterLabel>
+            <translation><!-- Atomic Platform --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Basic</masterLabel>
+            <translation><!-- Basic --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Case</masterLabel>
+            <translation><!-- Case --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Core Platform</masterLabel>
+            <translation><!-- Core Platform --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Custom Solution</masterLabel>
+            <translation><!-- Custom Solution --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hardware</masterLabel>
+            <translation>ハードウェア</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IT Operations</masterLabel>
+            <translation><!-- IT Operations --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Off the Shelf</masterLabel>
+            <translation><!-- Off the Shelf --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>On Premise</masterLabel>
+            <translation><!-- On Premise --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Power</masterLabel>
+            <translation><!-- Power --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Security</masterLabel>
+            <translation><!-- Security --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Service &amp; Support</masterLabel>
+            <translation><!-- Service &amp; Support --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Services</masterLabel>
+            <translation><!-- Services --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Software</masterLabel>
+            <translation>ソフトウェア</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Solution</masterLabel>
+            <translation><!-- Solution --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Standard Grades</masterLabel>
+            <translation><!-- Standard Grades --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Success &amp; Services</masterLabel>
+            <translation><!-- Success &amp; Services --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Support</masterLabel>
+            <translation><!-- Support --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>設定時にこの機能に使用される項目セットの API 参照名。</help>
+        <label><!-- Configuration Field Set --></label>
+        <name>SBQQ__ConfigurationFieldSet__c</name>
+        <picklistValues>
+            <masterLabel>Base</masterLabel>
+            <translation><!-- Base --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Maintenance</masterLabel>
+            <translation><!-- Maintenance --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NoQuantity</masterLabel>
+            <translation><!-- NoQuantity --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>OptionConfiguration</masterLabel>
+            <translation>OptionConfiguration</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>OptionConfigurationNoQuantity</masterLabel>
+            <translation><!-- OptionConfigurationNoQuantity --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PDU</masterLabel>
+            <translation><!-- PDU --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PowerCables</masterLabel>
+            <translation><!-- PowerCables --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SBAddOns</masterLabel>
+            <translation><!-- SBAddOns --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SBSuccessPlan</masterLabel>
+            <translation><!-- SBSuccessPlan --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SB_Ad_Hoc</masterLabel>
+            <translation><!-- SB_Ad_Hoc --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SB_ProServPackage</masterLabel>
+            <translation><!-- SB_ProServPackage --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Services</masterLabel>
+            <translation><!-- Services --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Slot</masterLabel>
+            <translation><!-- Slot --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SmartBundleNoQty</masterLabel>
+            <translation><!-- SmartBundleNoQty --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Smart_Bundle</masterLabel>
+            <translation><!-- Smart_Bundle --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>この機能を含む商品バンドル。商品の詳細ページから機能を作成した場合は、この項目はすでに入力されています。</help>
+        <label><!-- Configured SKU --></label>
+        <name>SBQQ__ConfiguredSKU__c</name>
+        <relationshipLabel><!-- Features --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>この機能のすべてのオプションによって選択された商品に適用される割引率表。これは、商品で選択されている割引率表を上書きします。</help>
+        <label><!-- Discount Schedule --></label>
+        <name>SBQQ__DiscountSchedule__c</name>
+        <relationshipLabel><!-- Product Features --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>設定時にこの機能の動的オプションを絞り込むときに使用される項目セットの API 参照名。</help>
+        <label><!-- Dynamic Option Filter Field Set --></label>
+        <name>SBQQ__DynamicProductFilterFieldSet__c</name>
+        <picklistValues>
+            <masterLabel>ConfiguratorFilter</masterLabel>
+            <translation>ConfiguratorFilter</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>設定時にこの機能の動的オプションを表示するときに使用される項目セットの API 参照名。</help>
+        <label><!-- Dynamic Option Lookup Field Set --></label>
+        <name>SBQQ__DynamicProductLookupFieldSet__c</name>
+        <picklistValues>
+            <masterLabel>ConfiguratorLookup</masterLabel>
+            <translation>ConfiguratorLookup</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>商品バンドルの一部として選択できるこの機能のオプションの最大数。</help>
+        <label><!-- Max Options --></label>
+        <name>SBQQ__MaxOptionCount__c</name>
+    </fields>
+    <fields>
+        <help>商品バンドルに含める必要があるこの機能のオプションの最小数。</help>
+        <label><!-- Min Options --></label>
+        <name>SBQQ__MinOptionCount__c</name>
+    </fields>
+    <fields>
+        <help>商品の関連リストでの並び替え順を決定する連続番号。</help>
+        <label><!-- Number --></label>
+        <name>SBQQ__Number__c</name>
+    </fields>
+    <fields>
+        <help>ユーザがこの商品に付随するオプションを選択する方法を決定します。[クリック] の場合は、オプションの横にチェックボックスが表示されます。[追加] の場合は、定義済みのオプションを表示するボタンが表示されます。[動的] の場合は、すべての有効な商品を表示するボタンが表示されます。</help>
+        <label><!-- Option Selection Method --></label>
+        <name>SBQQ__OptionSelectionMethod__c</name>
+        <picklistValues>
+            <masterLabel>Add</masterLabel>
+            <translation>追加</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Click</masterLabel>
+            <translation>クリック</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dynamic</masterLabel>
+            <translation>動的</translation>
+        </picklistValues>
+    </fields>
+    <nameFieldLabel>機能名</nameFieldLabel>
+    <validationRules>
+        <errorMessage><!-- Can’t create dynamic bundles for evergreen or renewable/evergreen products --></errorMessage>
+        <name>SBQQ__Dynamic_OptionSelectionMethod_Validation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Min Options cannot be negative. --></errorMessage>
+        <name>SBQQ__MinOptionValidation</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- Translate --></label>
+        <name>SBQQ__Translate</name>
+    </webLinks>
+</CustomObjectTranslation>

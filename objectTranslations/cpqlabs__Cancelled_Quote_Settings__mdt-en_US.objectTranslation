@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <help><!-- If marked True, initiating an Order for a Cancelled and Replaced Quote will Order the Amendment Quotes automatically. --></help>
+        <label><!-- Sync Orders --></label>
+        <name>cpqlabs__Sync_Orders__c</name>
+    </fields>
+    <fields>
+        <help><!-- If marked True, updating the Quote Start Date on the Replacement Quote updates the Start Date on the Amended Quotes. --></help>
+        <label><!-- Sync Quote Start Date --></label>
+        <name>cpqlabs__Sync_QuoteStartDate__c</name>
+    </fields>
+</CustomObjectTranslation>

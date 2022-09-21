@@ -1,0 +1,28 @@
+<aura:component controller="AAstatuscardCTRL" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global">
+
+    <aura:attribute name="approval" type="sbaa__Approval__c"/>
+    <aura:registerEvent name="AAStatusRefresh" type="c:AAStatusCardRefresh"/>
+    
+    <div class="slds-box">
+        <div class="slds-grid slds-gutters">
+            <div class="slds-col slds-size_1-of_2" >
+                <p><b>Quote: </b> <a onclick="{!c.handleClickGoToQuote}" id="{!v.approval.Quote__r.Id}">{!v.approval.Quote__r.Name} </a></p>
+                <p><b>Amount: </b> <ui:outputCurrency value="{!v.approval.Quote_Amount__c}" format="$##,##,###,###.00"/></p>
+                <p><b>Margin: </b> {!v.approval.Margin__c}%</p>
+            </div>
+            <div class="slds-col slds-size_1-of_2">
+                <p><b>Submitter: </b> {!v.approval.Owner.Name }</p>
+                <p><b>Opp Close Date: </b> <lightning:formattedDateTime value="{!v.approval.Quote__r.SBQQ__Opportunity2__r.CloseDate}"/></p>
+                <p><b>Days Until Close Date: </b> {!v.approval.DUOCD__c }</p>
+            </div>
+        </div>
+        <div>
+            <lightning:input value="" label="Comments" aura:id="comment" />
+        </div>
+        <br/>
+        <div class="slds-button-group" role="group">
+            <button class="slds-button slds-button_neutral" onclick="{!c.handleClickApprove}" id="{!v.approval.Id}">Approve</button>
+            <button class="slds-button slds-button_neutral" onclick="{!c.handleClickReject}" id="{!v.approval.Id}">Reject</button>
+        </div>
+    </div>
+</aura:component>

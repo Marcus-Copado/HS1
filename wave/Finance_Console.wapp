@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WaveApplication xmlns="http://soap.sforce.com/2006/04/metadata">
+    <folder>Finance_Console</folder>
+    <masterLabel>Finance Console</masterLabel>
+    <shares>
+        <accessLevel>Manage</accessLevel>
+        <sharedTo>tsaarnio.wnuzyi7gwngx.8xrmrzhbodgy@copado.com2022/09/21_11-40-17.demo</sharedTo>
+        <sharedToType>User</sharedToType>
+    </shares>
+</WaveApplication>

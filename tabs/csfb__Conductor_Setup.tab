@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomTab xmlns="http://soap.sforce.com/2006/04/metadata">
+    <frameHeight>700</frameHeight>
+    <hasSidebar>true</hasSidebar>
+    <icon>csfb__Conga/csfb__Conga_O.svg</icon>
+    <label>Conga Invoice Batch Setup</label>
+    <motif>Custom140: TV Widescreen</motif>
+    <url>/apex/csfb__ConductorSetupPage?myserverurl={!$Api.Partner_Server_URL_290}</url>
+    <urlEncodingKey>UTF-8</urlEncodingKey>
+</CustomTab>

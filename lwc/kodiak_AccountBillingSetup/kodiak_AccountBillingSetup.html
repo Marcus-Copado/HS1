@@ -1,0 +1,130 @@
+<template>
+  <div>
+    <template if:true={showModal}>
+      <section
+        role="dialog"
+        tabindex="-1"
+        aria-labelledby="modal-heading-01"
+        aria-modal="true"
+        aria-describedby="modal-content-id-1"
+        class="slds-modal slds-fade-in-open"
+      >
+        <div class="slds-modal__container">
+          <header class="slds-modal__header">
+            <lightning-button-icon
+              class="slds-modal__close"
+              title="Close"
+              icon-name="utility:close"
+              icon-class="slds-button_icon-inverse"
+              onclick={hide}
+            ></lightning-button-icon>
+
+            <h2 class="slds-text-heading_medium slds-hyphenate">
+              Account Billing Configuration
+            </h2>
+          </header>
+          <article class="slds-card">
+            <template if:true={showSpinner}>
+              <div class="slds-spinner_container">
+                <lightning-spinner
+                  alternative-text="Loading"
+                  size="medium"
+                ></lightning-spinner>
+              </div>
+            </template>
+            <div
+              class="slds-modal__content slds-p-around_medium"
+              id="modal-content-id-1"
+            >
+              <p
+                class="slds-m-bottom_x-small slds-text-title slds-text-align_center"
+              >
+                To allow for easy configuration of Salesforce Billing in a
+                shared environment, please fill out the following fields.
+              </p>
+              <lightning-combobox
+                name="legalEntity"
+                label="Legal Entity"
+                required
+                value={selectedLegalEntity}
+                placeholder="Select a Legal Entity"
+                options={legalEntityOptions}
+                onchange={handleLegalEntityChange}
+              ></lightning-combobox>
+
+              <p class="slds-m-vertical_small">
+                <strong>Legal entities</strong> represent a way a company is
+                organized. Each legal entity record relates to a billing, tax,
+                revenue recognition, and general ledger treatment for order
+                products.
+              </p>
+
+              <lightning-combobox
+                name="financeBook"
+                label="Finance Book"
+                required
+                value={selectedFinanceBook}
+                placeholder="Select a Finance Book"
+                options={financeBookOptions}
+                onchange={handleFinanceBookChange}
+              ></lightning-combobox>
+              <p class="slds-m-vertical_small">
+                <strong>Finance books</strong> are useful for organizing your
+                transaction records into several groups for reporting and
+                recordkeeping purposes. For example, there is a revenue finance
+                book to track all your ASC606 revenue for each month of the
+                year.
+              </p>
+
+              <lightning-combobox
+                name="billToContact"
+                label="Bill To Contact"
+                required
+                value={selectedBillToContact}
+                placeholder="Select a Bill To Contact"
+                options={billToContactOptions}
+                onchange={handleBillToContactChange}
+              ></lightning-combobox>
+              <p class="slds-m-vertical_small">
+                <strong>Bill to contacts</strong> allow us to keep record of who 
+                typically receives invoices within the Accounts Payable department 
+                for each account.
+              </p>
+              
+            </div>
+          </article>
+          <footer class="slds-modal__footer">
+            <button class="slds-button slds-button_neutral" onclick={hide}>
+              Cancel
+            </button>
+            <button
+              class="slds-button slds-button_brand"
+              onclick={handleSave}
+              disabled={saveButtonDisabled}
+            >
+              Save
+            </button>
+          </footer>
+        </div>
+      </section>
+      <div class="slds-backdrop slds-backdrop_open"></div>
+    </template>
+    <div
+      class="slds-notify slds-notify_alert slds-theme_alert-texture slds-theme_warning slds-hide custom-alert"
+      role="alert"
+    >
+      <span class="slds-assistive-text">warning</span>
+      <lightning-icon
+        class="slds-m-right_small"
+        icon-name="utility:warning"
+        alternative-text="warning"
+      ></lightning-icon>
+      <h2>
+        <a href="javascript:void(0);" onclick={show} class="no-outline">
+          Your Account is not completely configured for Salesforce Billing.
+          Additional Setup is required, click here to finish configuration.</a
+        >
+      </h2>
+    </div>
+  </div>
+</template>

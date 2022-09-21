@@ -1,0 +1,7 @@
+<apex:page controller="APXTCFQ.ComposerPageController" showHeader="false" sidebar="false">
+    <!-- Custom Loading splash screen -->
+    <apex:includeScript value="{!URLFOR($Resource.APXTCFQ__ComposerResources,'apxt-bootstrapper.js')}" />
+    <apex:includeScript value="{!URLFOR($Resource.APXTCFQ__ComposerResources,'composerSf1-vf.js')}" />
+    <!-- Canvas Object -->
+    <apex:canvasApp namespacePrefix="{!JSENCODE(namespace)}" developerName="{!devNameSF1}" id="Composer_SF1" height="100%" width="100%" border="0" scrolling="no" onCanvasAppError="err" onCanvasAppLoad="done" parameters="{id:'{!$CurrentPage.parameters.id}'}" />
+</apex:page>

@@ -1,0 +1,3 @@
+<apex:page standardController="blng__CreditNote__c" extensions="CreditNoteExtController" action="{!onSubmit}">
+<apex:pageMessages />
+</apex:page>

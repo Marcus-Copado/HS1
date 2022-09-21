@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Network xmlns="http://soap.sforce.com/2006/04/metadata">
+    <allowInternalUserLogin>false</allowInternalUserLogin>
+    <allowMembersToFlag>false</allowMembersToFlag>
+    <changePasswordTemplate>unfiled$public/CommunityChangePasswordEmailTemplate</changePasswordTemplate>
+    <communityRoles/>
+    <disableReputationRecordConversations>false</disableReputationRecordConversations>
+    <emailSenderAddress>scrowe@salesforce.com</emailSenderAddress>
+    <emailSenderName>Customer Portal</emailSenderName>
+    <enableCustomVFErrorPageOverrides>false</enableCustomVFErrorPageOverrides>
+    <enableDirectMessages>true</enableDirectMessages>
+    <enableExperienceBundleBasedSnaOverrideEnabled>true</enableExperienceBundleBasedSnaOverrideEnabled>
+    <enableGuestChatter>false</enableGuestChatter>
+    <enableGuestFileAccess>false</enableGuestFileAccess>
+    <enableGuestMemberVisibility>false</enableGuestMemberVisibility>
+    <enableInvitation>false</enableInvitation>
+    <enableKnowledgeable>false</enableKnowledgeable>
+    <enableMemberVisibility>true</enableMemberVisibility>
+    <enableNicknameDisplay>false</enableNicknameDisplay>
+    <enablePrivateMessages>false</enablePrivateMessages>
+    <enableReputation>false</enableReputation>
+    <enableShowAllNetworkSettings>false</enableShowAllNetworkSettings>
+    <enableSiteAsContainer>true</enableSiteAsContainer>
+    <enableTalkingAboutStats>true</enableTalkingAboutStats>
+    <enableTopicAssignmentRules>true</enableTopicAssignmentRules>
+    <enableTopicSuggestions>false</enableTopicSuggestions>
+    <enableUpDownVote>true</enableUpDownVote>
+    <forgotPasswordTemplate>unfiled$public/CommunityForgotPasswordEmailTemplate</forgotPasswordTemplate>
+    <gatherCustomerSentimentData>false</gatherCustomerSentimentData>
+    <networkMemberGroups>
+        <permissionSet>Partner_CPQ_License</permissionSet>
+        <permissionSet>Customer_CPQ_License</permissionSet>
+        <profile>admin</profile>
+        <profile>reseller cpq user</profile>
+        <profile>sys admin - cpq</profile>
+        <profile>cpqb sales</profile>
+        <profile>customer community user</profile>
+        <profile>partner community user</profile>
+        <profile>customer community plus user</profile>
+        <profile>partner community login user</profile>
+        <profile>customer community login user</profile>
+        <profile>customer community plus login user</profile>
+    </networkMemberGroups>
+    <networkPageOverrides>
+        <changePasswordPageOverrideSetting>Standard</changePasswordPageOverrideSetting>
+        <forgotPasswordPageOverrideSetting>Designer</forgotPasswordPageOverrideSetting>
+        <homePageOverrideSetting>Designer</homePageOverrideSetting>
+        <loginPageOverrideSetting>Designer</loginPageOverrideSetting>
+        <selfRegProfilePageOverrideSetting>Designer</selfRegProfilePageOverrideSetting>
+    </networkPageOverrides>
+    <picassoSite>Customer_Portal1</picassoSite>
+    <recommendationDefinition>
+        <recommendationDefinitionDetails>
+            <actionUrl>https://salesforce.com</actionUrl>
+            <description>Adjustable mounting depth of 6&quot; - 30&quot; (152 - 762 mm) Overall rack depth, 39&quot; (990 mm) Universal square holes, cage nuts included</description>
+            <linkText>Learn More</linkText>
+            <scheduledRecommendations>
+                <scheduledRecommendationDetails>
+                    <channel>CustomChannel1</channel>
+                    <enabled>true</enabled>
+                    <rank>2</rank>
+                    <recommendationAudience>000000000000000</recommendationAudience>
+                </scheduledRecommendationDetails>
+            </scheduledRecommendations>
+            <setupName>Maxspace Rack Enclosure</setupName>
+            <title>Maxspace Rack Enclosure</title>
+        </recommendationDefinitionDetails>
+        <recommendationDefinitionDetails>
+            <actionUrl>https://salesforce.com</actionUrl>
+            <description>Increase performance, ability to scale, and simplify your IT with an entry-level 1U rack server designed for web hosting and multi-purpose applications.</description>
+            <linkText>Learn More</linkText>
+            <scheduledRecommendations>
+                <scheduledRecommendationDetails>
+                    <channel>CustomChannel1</channel>
+                    <enabled>true</enabled>
+                    <rank>1</rank>
+                    <recommendationAudience>000000000000000</recommendationAudience>
+                </scheduledRecommendationDetails>
+            </scheduledRecommendations>
+            <setupName>PowerSlide R750 Rack Server</setupName>
+            <title>PowerSlide R750 Rack Server</title>
+        </recommendationDefinitionDetails>
+        <recommendationDefinitionDetails>
+            <actionUrl>https://salesforce.com</actionUrl>
+            <description>SmartBytes HealthCare Solution</description>
+            <linkText>Learn More</linkText>
+            <scheduledRecommendations>
+                <scheduledRecommendationDetails>
+                    <channel>CustomChannel1</channel>
+                    <enabled>true</enabled>
+                    <rank>3</rank>
+                    <recommendationAudience>000000000000000</recommendationAudience>
+                </scheduledRecommendationDetails>
+            </scheduledRecommendations>
+            <setupName>SmartBytes HealthCare Solution</setupName>
+            <title>SmartBytes HealthCare Solution</title>
+        </recommendationDefinitionDetails>
+    </recommendationDefinition>
+    <selfRegistration>false</selfRegistration>
+    <sendWelcomeEmail>true</sendWelcomeEmail>
+    <site>Customer_Portal</site>
+    <siteArchiveStatus>NotArchived</siteArchiveStatus>
+    <status>DownForMaintenance</status>
+    <tabs>
+        <defaultTab>home</defaultTab>
+        <standardTab>Chatter</standardTab>
+    </tabs>
+    <urlPathPrefix>customerportal</urlPathPrefix>
+    <welcomeTemplate>unfiled$public/CommunityWelcomeEmailTemplate</welcomeTemplate>
+</Network>

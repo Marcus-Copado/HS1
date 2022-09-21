@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Term</fullName>
+        <default>true</default>
+        <label>Term</label>
+    </customValue>
+    <customValue>
+        <fullName>Perpetual</fullName>
+        <default>false</default>
+        <label>Perpetual</label>
+    </customValue>
+    <masterLabel>License Type</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

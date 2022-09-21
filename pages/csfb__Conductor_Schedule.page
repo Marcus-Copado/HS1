@@ -1,0 +1,18 @@
+<apex:page standardcontroller="csfb__Conductor__c" extensions="csfb.Conductor_CtlExt" sidebar="{!ShowSidebar}" showHeader="true">   
+    <script Language="JavaScript"> 
+        var previousOnload = window.onload; 
+        window.onload = function(){
+            if (previousOnload){ 
+                previousOnload(); 
+            } 
+            var redir = '{!RedirectUrl}';
+            if(redir){
+                self.location = redir;
+            }
+        }
+    </script> 
+    <div style="background-color:#f8f8f8;display:relative;width:125px;margin-left:25px;margin-top:25px;padding:10px;border:1px dashed #888888;">
+        <img style="margin-right:5px;" src='https://cloudfront.congamerge.com/apxtlibraryjs/resources/images/apxt-conga-o-24-v2.png' alt="Loading" />
+        <div style="font-size:16px;display:inline;position:relative;top:-10px">Loading...</div>
+    </div>
+</apex:page>

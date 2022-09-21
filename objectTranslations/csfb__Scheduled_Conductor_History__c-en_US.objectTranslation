@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Conga Batch --></label>
+        <name>csfb__Conga_Conductor__c</name>
+        <relationshipLabel><!-- Scheduled Conga Batch History --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Dashboard Link --></label>
+        <name>csfb__Dashboard_Link__c</name>
+    </fields>
+    <fields>
+        <label><!-- Date --></label>
+        <name>csfb__Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Description --></label>
+        <name>csfb__Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Number of Failures --></label>
+        <name>csfb__Number_of_Failures__c</name>
+    </fields>
+    <fields>
+        <label><!-- Number of Service Events --></label>
+        <name>csfb__Number_of_Service_Events__c</name>
+    </fields>
+    <fields>
+        <label><!-- Number of Successes --></label>
+        <name>csfb__Number_of_Successes__c</name>
+    </fields>
+    <fields>
+        <label><!-- Output File Link --></label>
+        <name>csfb__Output_File_Link__c</name>
+    </fields>
+    <fields>
+        <label><!-- Ran as --></label>
+        <name>csfb__Ran_as__c</name>
+        <relationshipLabel><!-- Scheduled Conga Batch History --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Total Number of Records --></label>
+        <name>csfb__Total_Number_of_Records__c</name>
+    </fields>
+</CustomObjectTranslation>

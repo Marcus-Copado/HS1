@@ -1,0 +1,33 @@
+<aura:component controller="ccQuickQuoteCtrl" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >    
+    <aura:attribute name="StartDate" type="SBQQ__Quote__c"/>
+    <aura:attribute name="SubscriptionTerm" type="SBQQ__Quote__c"/>
+    <aura:attribute name="showSpinner" type="Boolean" default="false"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+
+    <article class="slds-card">
+        <aura:if isTrue="{!v.showSpinner}">
+            <lightning:spinner variant="brand" size="small" alternativeText="Creating Quote"/>
+        </aura:if>
+
+        <div class="slds-form-element slds-card__body slds-card__body_inner">
+            <div class="slds-form slds-form_compound">
+                <div class="slds-form-element__control">
+                    <div class="slds-form-element__group">
+                    <div class="slds-form-element__row slds-p-top---small">
+                        <div class="slds-form-element slds-size_1-of-2">
+                            <lightning:input aura:id="StartDate" type="date" label="Start Date" name="startDate" value=""/>
+                        </div>
+                        <div class="slds-form-element slds-size_1-of-2" >
+                            <lightning:input aura:id="SubscriptionTerm" value="12" label="Subscription Term" />
+                        </div>
+                    </div>
+                    <br/>
+                    <button class="slds-button slds-button_neutral" onclick="{!c.handleClick}">Get a Quote</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </article>
+
+</aura:component>

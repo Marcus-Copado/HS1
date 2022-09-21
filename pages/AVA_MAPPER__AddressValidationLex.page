@@ -1,0 +1,31 @@
+<apex:page controller="AVA_MAPPER.AddressValidationLexController">
+    <apex:includeLightning />
+    <div id="addressValidationDisplayId"></div> 
+    <script>
+
+    $Lightning.use("ava_mapper:AddressValidationApp", function() {
+        $Lightning.createComponent("ava_mapper:AddressValidation",
+                                   {
+                                       recordId : "{!JSENCODE($CurrentPage.parameters.Id)}",
+                                       connectorType : "{!JSENCODE($CurrentPage.parameters.sType)}",
+                                       addressType : "{!JSENCODE($CurrentPage.parameters.adrType)}",
+                                   },
+                                   "addressValidationDisplayId",
+                                   function(component) {
+                                   $A.eventService.addHandler({
+                                               event: 'force:navigateToSObject',
+                                               handler: function(event) {
+                                                   debugger;
+                                                   if (typeof sforce != 'undefined' && typeof sforce.one != 'undefined') {
+                                                       // VF page in S1 or Lightning Exp
+                                                       sforce.one.navigateToSObject("{!$CurrentPage.parameters.id}", 'detail');
+                                                   } else {
+                                                       // VF page in Classic
+                                                       window.location='/{!$CurrentPage.parameters.Id}';
+                                                   }
+                                               }
+                                           });
+                                   });
+    });
+    </script>
+</apex:page>

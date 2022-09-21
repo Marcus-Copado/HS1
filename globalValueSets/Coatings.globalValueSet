@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Aqueous</fullName>
+        <default>true</default>
+        <label>Aqueous</label>
+    </customValue>
+    <customValue>
+        <fullName>Matte</fullName>
+        <default>false</default>
+        <label>Matte</label>
+    </customValue>
+    <customValue>
+        <fullName>None</fullName>
+        <default>false</default>
+        <label>None</label>
+    </customValue>
+    <customValue>
+        <fullName>Other</fullName>
+        <default>false</default>
+        <label>Other</label>
+    </customValue>
+    <customValue>
+        <fullName>UV</fullName>
+        <default>false</default>
+        <label>UV</label>
+    </customValue>
+    <customValue>
+        <fullName>EB</fullName>
+        <default>false</default>
+        <label>EB</label>
+    </customValue>
+    <masterLabel>Coatings</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

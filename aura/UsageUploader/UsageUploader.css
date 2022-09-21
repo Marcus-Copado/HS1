@@ -1,0 +1,18 @@
+.THIS {
+    background-color:white;
+    padding: 10px;
+    border-radius: 3px;
+}
+.THIS .slds-icon_container{
+    float:left;
+    margin-right:5px;
+}
+.THIS .headerSP{
+    margin-left:10px;
+    color: #7e8be4;
+    font-weight: bold;
+    vertical-align: -webkit-baseline-middle;
+}
+.THIS .form-group{
+    padding-top:20px;
+}

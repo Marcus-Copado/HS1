@@ -1,0 +1,2 @@
+<apex:page StandardController="Order" extensions="Q2CsendtoERP" action="{!sendtoERP}">
+</apex:page>

@@ -1,0 +1,136 @@
+<apex:page title="Import Usage" applyBodyTag="False" standardStylesheets="false" sidebar="false" docType="html-5.0"
+    Controller="CPQB_ImportUsageCTRL" lightningStyleSheets="true">
+
+    <html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <head>
+        <apex:slds />
+    </head>
+
+    <body>
+        <div class="slds-scope">
+            <apex:form >
+
+                <!-- Grid Wrapper -->
+                <div class="slds-grid slds-wrap slds-gutters">
+
+                    <!-- Column -->
+                    <div class="slds-col slds-size_3-of-3">
+
+                        <article class="slds-card">
+
+                            <div class="slds-card__header slds-grid">
+                                <header class="slds-media slds-media_center slds-has-flexi-truncate">
+                                    <div class="slds-media__figure">
+                                        <span class="slds-icon_container slds-icon-standard-apps" title="Usages">
+                                            <svg class="slds-icon slds-icon--medium" aria-hidden="true">
+                                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/apexpages/slds/latest/assets/icons/standard-sprite/svg/symbols.svg#product_item_transaction"
+                                                />
+                                            </svg>
+                                        </span>
+                                    </div>
+                                    <div class="slds-media__body">
+                                        <h2 class="slds-text-heading_small">
+                                            <span>Usages</span>
+                                        </h2>
+                                    </div>
+                                    <div class="slds-col slds-no-flex slds-grid slds-align-top">
+                                        <div class="slds-button-group">
+                                            <div class="slds-icon_container">
+                                                <svg class="slds-icon slds-icon_x-small slds-icon-text-default" aria-hidden="true">
+                                                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#arrowdown" />
+                                                </svg>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="slds-col slds-file-selector slds-p-horizontal_medium">
+                                        <apex:inputFile value="{!csvFileBody}" filename="{!csvAsString}" styleClass="slds-file-selector__input" />
+                                    </div>
+                                    <div class="slds-col slds-p-horizontal_medium">
+                                        <apex:commandButton action="{!ImportCSVFile}" value="Import Excel" styleClass="slds-button slds-button_neutral"
+                                        />
+                                    </div>
+                                    <div class="slds-col slds-p-horizontal_medium">
+                                        <apex:commandButton value="Add Usage" action="{!AddUsage}" styleClass="slds-button slds-button_brand"
+                                        />
+                                    </div>
+                                    <div class="slds-col slds-p-horizontal_medium">
+                                        <apex:commandButton value="Clear Usage" action="{!clearUsage}" styleClass="slds-button slds-button_destructive"
+                                        />
+                                    </div>
+
+                                </header>
+                            </div>
+
+                            <div class="slds-card__body">
+                                
+
+                                    <!-- Usage List -->
+                                    
+                                            <table class="slds-table slds-table_bordered slds-table_cell-buffer slds-table_striped">
+                                                <thead>
+                                                    <tr class="slds-text-title_caps">
+
+                                                        <th scope="col">
+                                                            <div class="slds-truncate" title="Matching ID">Matching ID</div>
+                                                        </th>
+                                                        <th scope="col">
+                                                            <div class="slds-truncate " title="Quantity">Quantity</div>
+                                                        </th>
+                                                        <th scope="col">
+                                                            <div class="slds-truncate" title="Start Date">Start Date</div>
+                                                        </th>
+                                                        <th scope="col">
+                                                            <div class="slds-truncate" title="End Date">End Date</div>
+                                                        </th>
+                                                        <th scope="col">
+                                                            <div class="slds-truncate" title="Status">Status</div>
+                                                        </th>
+                                                    </tr>
+                                                </thead>
+
+                                                <tbody>
+                                                    <apex:repeat value="{!usageList}" var="usl">
+                                                        <tr>
+                                                            <td scope="row" data-label="Matching ID">
+                                                                <div class="slds-truncate">{!usl.blng__MatchingId__c}</div>
+                                                            </td>
+                                                            <td data-label="Quantity">
+                                                                <div class="slds-truncate">{!usl.blng__Quantity__c}</div>
+                                                            </td>
+                                                            <td scope="row" data-label="Start Date">
+                                                                <div class="slds-truncate">
+                                                                    <apex:outputText value="{0,date,MM'/'dd'/'yyyy}">
+                                                                        <apex:param value="{!usl.blng__StartDateTime__c}" />
+                                                                    </apex:outputText>
+                                                                </div>
+                                                            </td>
+                                                            <td data-label="End Date">
+                                                                <div class="slds-truncate">
+                                                                    <apex:outputText value="{0,date,MM'/'dd'/'yyyy}">
+                                                                        <apex:param value="{!usl.blng__EndDateTime__c}" />
+                                                                    </apex:outputText>
+                                                                </div>
+                                                            </td>
+                                                            <td data-label="Status">
+                                                                <div class="slds-truncate">{!usl.blng__Status__c}</div>
+                                                            </td>
+                                                        </tr>
+                                                    </apex:repeat>
+                                                </tbody>
+                                            </table>
+                                   
+                                    <!-- End Usage list -->
+
+                            </div>
+                        </article>
+                    </div>
+                    <!-- End Column -->
+                </div>
+            </apex:form>
+        </div>
+    </body>
+
+    </html>
+</apex:page>

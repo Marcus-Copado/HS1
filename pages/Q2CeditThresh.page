@@ -1,0 +1,45 @@
+<apex:page standardController="Product2" extensions="Q2CeditTiers" sidebar="false">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <apex:form >
+    <apex:pageBlock title="Thresholds" id="pb">
+        
+      <apex:variable var="rowNumber" value="{!0}"/>
+        <apex:pageBlockTable id="thetable" title="Thresholds" var="acc" value="{!ThreshList}">
+          <apex:column headerValue="No." style="width:20px; text-align:center;" headerClass="centertext">
+            <apex:outputText value="{0}" style="text-align:center;">
+              <apex:param value="{!rowNumber+1}" />
+            </apex:outputText>
+          </apex:column>
+          
+         
+          
+          <apex:column headerValue="Level" >
+            <apex:inputField value="{!acc.Approval_Level__c}"/>
+          </apex:column>
+          <apex:column headerValue="Lower Bound Percent" >
+            <apex:inputField value="{!acc.Lower_Bound_Percent__c}"/>
+          </apex:column>
+          <apex:column headerValue="Upper Bound Percent" >
+            <apex:inputField value="{!acc.Upper_Bound_Percent__c}"/>
+          </apex:column>
+          <apex:column headerValue="Action" >
+            <apex:commandButton action="{!addRow}" value="Add Threshold" reRender="pb"/>
+            <apex:commandButton value="Delete" action="{!deleteRow}"  reRender="pb">
+              <apex:param name="rowIndex" value="{!rowNumber}"/>
+            </apex:commandButton>
+            
+          
+            <apex:variable var="rowNumber" value="{!rowNumber+1}"/>
+          </apex:column>
+          
+         
+        </apex:pageBlockTable>
+      <apex:commandButton action="{!addRow}" value="Add Threshold" reRender="pb"/>      
+      <apex:pageBlockButtons >
+        <apex:commandButton value="Save"  action="{!save}" />
+        <apex:commandButton value="Cancel"  action="{!cancel}"/>
+      </apex:pageBlockButtons>           
+    </apex:pageBlock>
+  </apex:form>
+</apex:page>

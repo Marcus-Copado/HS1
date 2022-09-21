@@ -1,0 +1,29 @@
+<aura:component implements="force:appHostable,force:hasRecordId,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    <lightning:card >
+        <article class="slds-card">
+            <div class="slds-grid slds-einstein-header slds-card__header">
+                <header class="slds-media slds-media_center slds-has-flexi-truncate">
+                    <div class="slds-grid slds-grid_vertical-align-center slds-size_3-of-4 slds-medium-size_2-of-3">
+
+                        <div class="slds-media__body">
+                            <h2 class="slds-truncate" title="Einstein (10+)">
+                                <a href="javascript:void(0);" class="slds-card__header-link" title="Einstein (10+)">
+                                    <span class="slds-text-heading_small">Quote Analytics</span>
+                                </a>
+                            </h2>
+                        </div>
+                    </div>
+                    <div class="slds-einstein-header__figure slds-size_1-of-4 slds-medium-size_1-of-3"></div>
+                </header>
+            </div>
+            <div class="slds-card__body slds-card__body_inner">
+            	<p class="slds-p-horizontal_small">
+            		<wave:waveDashboard dashboardId="0FK3t000000MhzmGAQ" />
+        		</p>
+            </div>
+            <footer class="slds-card__footer">
+                
+            </footer>
+        </article>
+    </lightning:card>
+</aura:component>

@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldSets>
+        <label><!-- NoQuantity --></label>
+        <name>NoQuantity</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- Configurator --></label>
+        <name>SBQQ__Configurator</name>
+    </fieldSets>
+    <fields>
+        <label><!-- AdditionalInstructions --></label>
+        <name>AdditionalInstructions__c</name>
+    </fields>
+    <fields>
+        <help><!-- Assign this feature to a category such that multiple features with related options are grouped together. --></help>
+        <label><!-- Category --></label>
+        <name>SBQQ__Category__c</name>
+        <picklistValues>
+            <masterLabel>Accessories</masterLabel>
+            <translation><!-- Accessories --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Advanced</masterLabel>
+            <translation><!-- Advanced --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Analytics</masterLabel>
+            <translation><!-- Analytics --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Atomic Platform</masterLabel>
+            <translation><!-- Atomic Platform --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Basic</masterLabel>
+            <translation><!-- Basic --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Case</masterLabel>
+            <translation><!-- Case --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Core Platform</masterLabel>
+            <translation><!-- Core Platform --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Custom Solution</masterLabel>
+            <translation><!-- Custom Solution --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hardware</masterLabel>
+            <translation><!-- Hardware --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IT Operations</masterLabel>
+            <translation><!-- IT Operations --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Off the Shelf</masterLabel>
+            <translation><!-- Off the Shelf --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>On Premise</masterLabel>
+            <translation><!-- On Premise --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Power</masterLabel>
+            <translation><!-- Power --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Security</masterLabel>
+            <translation><!-- Security --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Service &amp; Support</masterLabel>
+            <translation><!-- Service &amp; Support --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Services</masterLabel>
+            <translation><!-- Services --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Software</masterLabel>
+            <translation><!-- Software --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Solution</masterLabel>
+            <translation><!-- Solution --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Standard Grades</masterLabel>
+            <translation><!-- Standard Grades --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Success &amp; Services</masterLabel>
+            <translation><!-- Success &amp; Services --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Support</masterLabel>
+            <translation><!-- Support --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- The API name of the field set that will be used for this feature during configuration. --></help>
+        <label><!-- Configuration Field Set --></label>
+        <name>SBQQ__ConfigurationFieldSet__c</name>
+        <picklistValues>
+            <masterLabel>Base</masterLabel>
+            <translation><!-- Base --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Maintenance</masterLabel>
+            <translation><!-- Maintenance --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NoQuantity</masterLabel>
+            <translation><!-- NoQuantity --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>OptionConfiguration</masterLabel>
+            <translation><!-- OptionConfiguration --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>OptionConfigurationNoQuantity</masterLabel>
+            <translation><!-- OptionConfigurationNoQuantity --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PDU</masterLabel>
+            <translation><!-- PDU --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PowerCables</masterLabel>
+            <translation><!-- PowerCables --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SBAddOns</masterLabel>
+            <translation><!-- SBAddOns --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SBSuccessPlan</masterLabel>
+            <translation><!-- SBSuccessPlan --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SB_Ad_Hoc</masterLabel>
+            <translation><!-- SB_Ad_Hoc --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SB_ProServPackage</masterLabel>
+            <translation><!-- SB_ProServPackage --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Services</masterLabel>
+            <translation><!-- Services --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Slot</masterLabel>
+            <translation><!-- Slot --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SmartBundleNoQty</masterLabel>
+            <translation><!-- SmartBundleNoQty --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Smart_Bundle</masterLabel>
+            <translation><!-- Smart_Bundle --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- The product bundle that includes this feature. If you created the feature from the product detail page, this should already be populated. --></help>
+        <label><!-- Configured SKU --></label>
+        <name>SBQQ__ConfiguredSKU__c</name>
+        <relationshipLabel><!-- Features --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Discount schedule to be applied to the product selected by all options in this feature. This overrides discount schedule selected on the product. --></help>
+        <label><!-- Discount Schedule --></label>
+        <name>SBQQ__DiscountSchedule__c</name>
+        <relationshipLabel><!-- Product Features --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- The API name of the field set that will be used when filtering dynamic options for this feature during configuration. --></help>
+        <label><!-- Dynamic Option Filter Field Set --></label>
+        <name>SBQQ__DynamicProductFilterFieldSet__c</name>
+        <picklistValues>
+            <masterLabel>ConfiguratorFilter</masterLabel>
+            <translation><!-- ConfiguratorFilter --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- The API name of the field set that will be used when viewing dynamic options for this feature during configuration. --></help>
+        <label><!-- Dynamic Option Lookup Field Set --></label>
+        <name>SBQQ__DynamicProductLookupFieldSet__c</name>
+        <picklistValues>
+            <masterLabel>ConfiguratorLookup</masterLabel>
+            <translation><!-- ConfiguratorLookup --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Maximum number of options for this feature that can be selected as part of the product bundle. --></help>
+        <label><!-- Max Options --></label>
+        <name>SBQQ__MaxOptionCount__c</name>
+    </fields>
+    <fields>
+        <help><!-- Minimum number of options for this feature that must be part of the product bundle. --></help>
+        <label><!-- Min Options --></label>
+        <name>SBQQ__MinOptionCount__c</name>
+    </fields>
+    <fields>
+        <help><!-- A sequential number that determines how the features are sorted in the related list on the product. --></help>
+        <label><!-- Number --></label>
+        <name>SBQQ__Number__c</name>
+    </fields>
+    <fields>
+        <help><!-- Determines how user selects options attached to this product. &quot;Click&quot; method presents options with checkboxes next to them. &quot;Add&quot; renders a button which brings up predefined options. &quot;Dynamic&quot; renders a button which brings up all active products. --></help>
+        <label><!-- Option Selection Method --></label>
+        <name>SBQQ__OptionSelectionMethod__c</name>
+        <picklistValues>
+            <masterLabel>Add</masterLabel>
+            <translation><!-- Add --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Click</masterLabel>
+            <translation><!-- Click --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dynamic</masterLabel>
+            <translation><!-- Dynamic --></translation>
+        </picklistValues>
+    </fields>
+    <validationRules>
+        <errorMessage><!-- Can’t create dynamic bundles for evergreen or renewable/evergreen products --></errorMessage>
+        <name>SBQQ__Dynamic_OptionSelectionMethod_Validation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Min Options cannot be negative. --></errorMessage>
+        <name>SBQQ__MinOptionValidation</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- Translate --></label>
+        <name>SBQQ__Translate</name>
+    </webLinks>
+</CustomObjectTranslation>

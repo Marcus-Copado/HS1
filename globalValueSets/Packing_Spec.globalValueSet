@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Bulk Pack</fullName>
+        <default>true</default>
+        <label>Bulk Pack</label>
+    </customValue>
+    <customValue>
+        <fullName>Corrugated Case</fullName>
+        <default>false</default>
+        <label>Corrugated Case</label>
+    </customValue>
+    <masterLabel>Packing Spec</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

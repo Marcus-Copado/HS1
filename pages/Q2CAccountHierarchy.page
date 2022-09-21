@@ -1,0 +1,15 @@
+<apex:page title="Accounts " standardController="Account" extensions="Q2CAccountHierarchyController">
+    <apex:outputPanel id="cont">
+        <apex:pageBlock title="Accounts and Contracted Prices">
+            <apex:repeat value="{! accountList }" var="a">
+                <apex:pageBlockSection title="{! a.Name + IF(NOT(ISBLANK(a.ParentId)), ' (child of ' + a.Parent.Name + ')', '') }">
+                    <apex:pageBlockTable value="{! a.SBQQ__R00N3t00000Hvo8BEAI__r }" var="con" id="conlist" title="Contracted Prices">
+                        <apex:column value="{!con.SBQQ__Product__c}"/>
+                        <apex:column value="{!con.SBQQ__Price__c}" />
+                        <apex:column value="{!con.SBQQ__Discount__c}" />
+                    </apex:pageBlockTable>
+                </apex:pageBlockSection>
+            </apex:repeat>
+        </apex:pageBlock>
+    </apex:outputPanel>
+</apex:page>

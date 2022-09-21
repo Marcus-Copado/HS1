@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Bending Chip</fullName>
+        <default>true</default>
+        <label>Bending Chip</label>
+    </customValue>
+    <customValue>
+        <fullName>CRB</fullName>
+        <default>false</default>
+        <label>CRB</label>
+    </customValue>
+    <customValue>
+        <fullName>CUK</fullName>
+        <default>false</default>
+        <label>CUK</label>
+    </customValue>
+    <customValue>
+        <fullName>CUK Poly 1 Side</fullName>
+        <default>false</default>
+        <label>CUK Poly 1 Side</label>
+    </customValue>
+    <customValue>
+        <fullName>ES Cream</fullName>
+        <default>false</default>
+        <label>ES Cream</label>
+    </customValue>
+    <customValue>
+        <fullName>ES Natural</fullName>
+        <default>false</default>
+        <label>ES Natural</label>
+    </customValue>
+    <customValue>
+        <fullName>Kraft Pack</fullName>
+        <default>false</default>
+        <label>Kraft Pack</label>
+    </customValue>
+    <customValue>
+        <fullName>Other</fullName>
+        <default>false</default>
+        <label>Other</label>
+    </customValue>
+    <customValue>
+        <fullName>SBS</fullName>
+        <default>false</default>
+        <label>SBS</label>
+    </customValue>
+    <customValue>
+        <fullName>SBS Metpoly</fullName>
+        <default>false</default>
+        <label>SBS Metpoly</label>
+    </customValue>
+    <customValue>
+        <fullName>SBS Poly 1 Side</fullName>
+        <default>false</default>
+        <label>SBS Poly 1 Side</label>
+    </customValue>
+    <customValue>
+        <fullName>SBS Poly 2 Side</fullName>
+        <default>false</default>
+        <label>SBS Poly 2 Side</label>
+    </customValue>
+    <masterLabel>Grade</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

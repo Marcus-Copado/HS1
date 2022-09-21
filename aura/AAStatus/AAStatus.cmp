@@ -1,0 +1,53 @@
+<aura:component controller="AAstatusCTRL" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global">
+    <aura:attribute name="approvals" type="List"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+
+    <article class="slds-card"> 
+        
+        <!-- Header Section -->
+        
+        <div class="slds-card__header slds-grid">
+            <header class="slds-media slds-media_center slds-has-flexi-truncate">
+                <h2 class="slds-card__header-title">
+                    <span class="slds-text-heading_small"><b>Approval Management</b></span>
+                </h2>
+            </header>
+        </div>
+        
+        <!-- End of Header Section -->
+        
+        
+        <!-- Start of Approval Iteration Display -->
+        <div class="slds-card__body slds-card__body_inner">
+            <aura:if isTrue="{!v.approvals.length > 0}">
+                <aura:iteration items="{!v.approvals}" var="approval">
+                   <c:AAStatusCard approval="{!approval}" AAStatusRefresh="{!c.doInit}"/>
+                </aura:iteration>
+            </aura:if>
+            
+            <aura:if isTrue="{!v.approvals.length == 0}">
+                <div class="slds-illustration slds-illustration_large" aria-hidden="true">
+                    <img src="/img/chatter/OpenRoad.svg" class="slds-illustration__svg" alt=""/>
+                    <div class="slds-text-color_weak">
+                        <h3 class="slds-text-heading_medium">No Assigned Approvals</h3>
+                    </div>
+                </div>
+            </aura:if>
+            
+        </div>
+        
+        <!-- End of Approval Iteration Display -->
+        
+        
+        <!-- Start of View All Footer Section -->
+        
+        <footer class="slds-card__footer">
+            <a class="slds-card__footer-action" onclick="{!c.handleViewAllApprovals}">View All
+                <span class="slds-assistive-text">Approvals</span>
+            </a>
+        </footer>
+        
+        <!-- End of View All Footer Section -->
+        
+    </article>
+</aura:component>

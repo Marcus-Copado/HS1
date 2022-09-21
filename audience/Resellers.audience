@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Audience xmlns="http://soap.sforce.com/2006/04/metadata">
+    <audienceName>Resellers</audienceName>
+    <container>Partner Experience</container>
+    <criteria>
+        <criterion>
+            <criteriaNumber>1</criteriaNumber>
+            <criterionValue>
+                <profile>reseller cpq user</profile>
+            </criterionValue>
+            <operator>Equal</operator>
+            <type>Profile</type>
+        </criterion>
+    </criteria>
+    <formulaFilterType>AllCriteriaMatch</formulaFilterType>
+    <isDefaultAudience>false</isDefaultAudience>
+    <targets>
+        <target>
+            <groupName>74bfca7e-bd8f-4ccc-93ee-8f39705fbbe2</groupName>
+            <priority>1</priority>
+            <targetType>ExperienceVariation</targetType>
+            <targetValue>Home_Reseller_Home_Flex_Page</targetValue>
+        </target>
+        <target>
+            <groupName>2d8ce415-6768-4595-9e7e-23eb023b1e76$#$6d97ea79-15a3-47ac-9161-73859389c14e</groupName>
+            <priority>2</priority>
+            <targetType>ExperienceVariation</targetType>
+            <targetValue>Sales_Theme_Navigation_Menu_1_Component_Properties</targetValue>
+        </target>
+        <target>
+            <groupName>f0ea2453-38c9-41f3-842a-1111976a4e2c$#$8387fcad-a360-40cf-ad67-1aae08cd20c8</groupName>
+            <priority>2</priority>
+            <targetType>ExperienceVariation</targetType>
+            <targetValue>Home_Theme_Navigation_Menu_1_Component_Properties</targetValue>
+        </target>
+        <target>
+            <groupName>0a50300f-7305-4ee8-9689-0cddd26bf115$#$bc6f9853-7439-48fd-b238-9a0de678bb3b</groupName>
+            <priority>2</priority>
+            <targetType>ExperienceVariation</targetType>
+            <targetValue>Default_Theme_Navigation_Menu_1_Component_Properties</targetValue>
+        </target>
+    </targets>
+</Audience>

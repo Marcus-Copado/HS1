@@ -1,0 +1,3676 @@
+{
+  "name" : "PricingGuidance_tp",
+  "label" : "Pricing Guidance",
+  "folder" : {
+    "id" : "${App.Folder.Id}"
+  },
+  "dateVersion" : 1,
+  "mobileDisabled" : false,
+  "xmd" : {
+    "measures" : [ ],
+    "derivedDimensions" : [ ],
+    "organizations" : [ ],
+    "showDetailsDefaultFields" : [ ],
+    "dates" : [ ],
+    "derivedMeasures" : [ ],
+    "dimensions" : [ ]
+  },
+  "state" : {
+    "dataSourceLinks" : [ ],
+    "filters" : [
+      {
+        "dataset" : {
+          "name" : "${App.Datasets.PricingGuidanceDataset_tp.Name}"
+        },
+        "fields" : [
+          "SBQQ__Quote__c.CreatedDate"
+        ],
+        "label" : "Quote Created Date",
+        "locked" : false,
+        "operator" : ">=<=",
+        "value" : "[[[\"day\",0],[\"day\",0]]]"
+      },
+      {
+        "dataset" : {
+          "name" : "${App.Datasets.PricingGuidanceDataset_tp.Name}"
+        },
+        "fields" : [
+          "QuantitySum"
+        ],
+        "label" : "Quantity",
+        "locked" : false,
+        "operator" : ">=",
+        "value" : "[[0]]"
+      },
+      {
+        "dataset" : {
+          "name" : "${App.Datasets.PricingGuidanceDataset_tp.Name}"
+        },
+        "fields" : [
+          "SBQQ__Product__c.Name"
+        ],
+        "label" : "Product Name",
+        "locked" : false,
+        "operator" : "in",
+        "value" : "[]"
+      },
+      {
+        "dataset" : {
+          "name" : "${App.Datasets.PricingGuidanceDataset_tp.Name}"
+        },
+        "fields" : [
+          "SBQQ__Quote__c.SBQQ__Status__c"
+        ],
+        "label" : "Quote Status",
+        "locked" : false,
+        "operator" : "in",
+        "value" : "[\"Draft\"]"
+      }
+    ],
+    "gridLayouts" : [
+      {
+        "name" : "Default",
+        "numColumns" : 12,
+        "pages" : [
+          {
+            "label" : "Guidance Graph",
+            "name" : "40f25c54-ccdf-4e0d-95d2-86ab7f9dae65",
+            "navigationHidden" : false,
+            "widgets" : [
+              {
+                "colspan" : 4,
+                "column" : 0,
+                "name" : "filterpanel_1",
+                "row" : 1,
+                "rowspan" : 6,
+                "widgetStyle" : {
+                  "backgroundColor" : "#FFFFFF",
+                  "borderColor" : "#E6ECF2",
+                  "borderEdges" : [ ],
+                  "borderRadius" : 0,
+                  "borderWidth" : 1
+                }
+              },
+              {
+                "colspan" : 4,
+                "column" : 0,
+                "name" : "listselector_3",
+                "row" : 7,
+                "rowspan" : 2,
+                "widgetStyle" : {
+                  "backgroundColor" : "#FFFFFF",
+                  "borderColor" : "#E6ECF2",
+                  "borderEdges" : [ ],
+                  "borderRadius" : 0,
+                  "borderWidth" : 1
+                }
+              },
+              {
+                "colspan" : 4,
+                "column" : 0,
+                "name" : "listselector_1",
+                "row" : 9,
+                "rowspan" : 2,
+                "widgetStyle" : {
+                  "backgroundColor" : "#FFFFFF",
+                  "borderColor" : "#E6ECF2",
+                  "borderEdges" : [ ],
+                  "borderRadius" : 0,
+                  "borderWidth" : 1
+                }
+              },
+              {
+                "colspan" : 4,
+                "column" : 0,
+                "name" : "listselector_2",
+                "row" : 11,
+                "rowspan" : 2,
+                "widgetStyle" : {
+                  "backgroundColor" : "#FFFFFF",
+                  "borderColor" : "#E6ECF2",
+                  "borderEdges" : [ ],
+                  "borderRadius" : 0,
+                  "borderWidth" : 1
+                }
+              },
+              {
+                "colspan" : 8,
+                "column" : 4,
+                "name" : "chart_1",
+                "row" : 1,
+                "rowspan" : 7,
+                "widgetStyle" : {
+                  "borderEdges" : [
+                    "top"
+                  ]
+                }
+              },
+              {
+                "colspan" : 12,
+                "column" : 0,
+                "name" : "navigation_1",
+                "row" : 0,
+                "rowspan" : 1,
+                "widgetStyle" : {
+                  "borderEdges" : [ ]
+                }
+              }
+            ]
+          },
+          {
+            "label" : "Guidance Tiers",
+            "name" : "334b48db-61c2-4ac7-b3db-aeed06e2de91",
+            "navigationHidden" : false,
+            "widgets" : [
+              {
+                "colspan" : 8,
+                "column" : 4,
+                "name" : "table_1",
+                "row" : 1,
+                "rowspan" : 12,
+                "widgetStyle" : {
+                  "backgroundColor" : "#FFFFFF",
+                  "borderColor" : "#E6ECF2",
+                  "borderEdges" : [ ],
+                  "borderRadius" : 0,
+                  "borderWidth" : 1
+                }
+              },
+              {
+                "colspan" : 12,
+                "column" : 0,
+                "name" : "navigation_2",
+                "row" : 0,
+                "rowspan" : 1,
+                "widgetStyle" : {
+                  "borderEdges" : [ ]
+                }
+              },
+              {
+                "colspan" : 4,
+                "column" : 0,
+                "name" : "filterpanel_1",
+                "row" : 1,
+                "rowspan" : 6,
+                "widgetStyle" : {
+                  "backgroundColor" : "#FFFFFF",
+                  "borderColor" : "#E6ECF2",
+                  "borderEdges" : [ ],
+                  "borderRadius" : 0,
+                  "borderWidth" : 1
+                }
+              },
+              {
+                "colspan" : 4,
+                "column" : 0,
+                "name" : "listselector_3",
+                "row" : 7,
+                "rowspan" : 2,
+                "widgetStyle" : {
+                  "backgroundColor" : "#FFFFFF",
+                  "borderColor" : "#E6ECF2",
+                  "borderEdges" : [ ],
+                  "borderRadius" : 0,
+                  "borderWidth" : 1
+                }
+              },
+              {
+                "colspan" : 4,
+                "column" : 0,
+                "name" : "listselector_1",
+                "row" : 9,
+                "rowspan" : 2,
+                "widgetStyle" : {
+                  "backgroundColor" : "#FFFFFF",
+                  "borderColor" : "#E6ECF2",
+                  "borderEdges" : [ ],
+                  "borderRadius" : 0,
+                  "borderWidth" : 1
+                }
+              },
+              {
+                "colspan" : 4,
+                "column" : 0,
+                "name" : "listselector_2",
+                "row" : 11,
+                "rowspan" : 2,
+                "widgetStyle" : {
+                  "backgroundColor" : "#FFFFFF",
+                  "borderColor" : "#E6ECF2",
+                  "borderEdges" : [ ],
+                  "borderRadius" : 0,
+                  "borderWidth" : 1
+                }
+              }
+            ]
+          }
+        ],
+        "rowHeight" : "normal",
+        "selectors" : [ ],
+        "style" : {
+          "alignmentX" : "left",
+          "alignmentY" : "top",
+          "backgroundColor" : "#F2F6FA",
+          "cellSpacingX" : 8,
+          "cellSpacingY" : 8,
+          "fit" : "original",
+          "gutterColor" : "#C5D3E0"
+        },
+        "version" : 1.0
+      }
+    ],
+    "layouts" : [ ],
+    "steps" : {
+      "Guidance_Type_1" : {
+        "broadcastFacet" : true,
+        "label" : "Guidance Type",
+        "selectMode" : "singlerequired",
+        "type" : "staticflex",
+        "values" : [
+          {
+            "display" : "% from median",
+            "value" : 1
+          },
+          {
+            "display" : "% of top deals",
+            "value" : 2
+          }
+        ]
+      },
+      "generateFinalPricingGuidanceStep" : {
+        "broadcastFacet" : true,
+        "groups" : [ ],
+        "label" : "generateFinalPricingGuidanceStep",
+        "numbers" : [ ],
+        "query" : "q = load \"${App.Datasets.PricingGuidanceDataset_tp.FullyQualifiedName}\";\nq = foreach q generate 'QuantitySum' as 'QuantitySum', 'SBQQ__TotalDiscountRate__c' as 'SBQQ__TotalDiscountRate__c',\n( case\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 0, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 0, \"MaxQuantity\"),-1).asObject()}} then \"0\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 1, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 1, \"MaxQuantity\"),-1).asObject()}} then \"1\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 2, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 2, \"MaxQuantity\"),-1).asObject()}} then \"2\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 3, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 3, \"MaxQuantity\"),-1).asObject()}} then \"3\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 4, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 4, \"MaxQuantity\"),-1).asObject()}} then \"4\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 5, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 5, \"MaxQuantity\"),-1).asObject()}} then \"5\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 6, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 6, \"MaxQuantity\"),-1).asObject()}} then \"6\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 7, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 7, \"MaxQuantity\"),-1).asObject()}} then \"7\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 8, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 8, \"MaxQuantity\"),-1).asObject()}} then \"8\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 9, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 9, \"MaxQuantity\"),-1).asObject()}} then \"9\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 10, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 10, \"MaxQuantity\"),-1).asObject()}} then \"10\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 11, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 11, \"MaxQuantity\"),-1).asObject()}} then \"11\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 12, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 12, \"MaxQuantity\"),-1).asObject()}} then \"12\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 13, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 13, \"MaxQuantity\"),-1).asObject()}} then \"13\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 14, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 14, \"MaxQuantity\"),-1).asObject()}} then \"14\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 15, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 15, \"MaxQuantity\"),-1).asObject()}} then \"15\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 16, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 16, \"MaxQuantity\"),-1).asObject()}} then \"16\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 17, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 17, \"MaxQuantity\"),-1).asObject()}} then \"17\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 18, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 18, \"MaxQuantity\"),-1).asObject()}} then \"18\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 19, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 19, \"MaxQuantity\"),-1).asObject()}} then \"19\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 20, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 20, \"MaxQuantity\"),-1).asObject()}} then \"20\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 21, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 21, \"MaxQuantity\"),-1).asObject()}} then \"21\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 22, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 22, \"MaxQuantity\"),-1).asObject()}} then \"22\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 23, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 23, \"MaxQuantity\"),-1).asObject()}} then \"23\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 24, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 24, \"MaxQuantity\"),-1).asObject()}} then \"24\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 25, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 25, \"MaxQuantity\"),-1).asObject()}} then \"25\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 26, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 26, \"MaxQuantity\"),-1).asObject()}} then \"26\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 27, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 27, \"MaxQuantity\"),-1).asObject()}} then \"27\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 28, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 28, \"MaxQuantity\"),-1).asObject()}} then \"28\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 29, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 29, \"MaxQuantity\"),-1).asObject()}} then \"29\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 30, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 30, \"MaxQuantity\"),-1).asObject()}} then \"30\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 31, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 31, \"MaxQuantity\"),-1).asObject()}} then \"31\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 32, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 32, \"MaxQuantity\"),-1).asObject()}} then \"32\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 33, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 33, \"MaxQuantity\"),-1).asObject()}} then \"33\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 34, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 34, \"MaxQuantity\"),-1).asObject()}} then \"34\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 35, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 35, \"MaxQuantity\"),-1).asObject()}} then \"35\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 36, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 36, \"MaxQuantity\"),-1).asObject()}} then \"36\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 37, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 37, \"MaxQuantity\"),-1).asObject()}} then \"37\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 38, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 38, \"MaxQuantity\"),-1).asObject()}} then \"38\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 39, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 39, \"MaxQuantity\"),-1).asObject()}} then \"39\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 40, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 40, \"MaxQuantity\"),-1).asObject()}} then \"40\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 41, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 41, \"MaxQuantity\"),-1).asObject()}} then \"41\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 42, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 42, \"MaxQuantity\"),-1).asObject()}} then \"42\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 43, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 43, \"MaxQuantity\"),-1).asObject()}} then \"43\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 44, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 44, \"MaxQuantity\"),-1).asObject()}} then \"44\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 45, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 45, \"MaxQuantity\"),-1).asObject()}} then \"45\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 46, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 46, \"MaxQuantity\"),-1).asObject()}} then \"46\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 47, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 47, \"MaxQuantity\"),-1).asObject()}} then \"47\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 48, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 48, \"MaxQuantity\"),-1).asObject()}} then \"48\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 49, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 49, \"MaxQuantity\"),-1).asObject()}} then \"49\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 50, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 50, \"MaxQuantity\"),-1).asObject()}} then \"50\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 51, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 51, \"MaxQuantity\"),-1).asObject()}} then \"51\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 52, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 52, \"MaxQuantity\"),-1).asObject()}} then \"52\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 53, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 53, \"MaxQuantity\"),-1).asObject()}} then \"53\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 54, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 54, \"MaxQuantity\"),-1).asObject()}} then \"54\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 55, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 55, \"MaxQuantity\"),-1).asObject()}} then \"55\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 56, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 56, \"MaxQuantity\"),-1).asObject()}} then \"56\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 57, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 57, \"MaxQuantity\"),-1).asObject()}} then \"57\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 58, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 58, \"MaxQuantity\"),-1).asObject()}} then \"58\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 59, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 59, \"MaxQuantity\"),-1).asObject()}} then \"59\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 60, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 60, \"MaxQuantity\"),-1).asObject()}} then \"60\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 61, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 61, \"MaxQuantity\"),-1).asObject()}} then \"61\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 62, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 62, \"MaxQuantity\"),-1).asObject()}} then \"62\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 63, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 63, \"MaxQuantity\"),-1).asObject()}} then \"63\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 64, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 64, \"MaxQuantity\"),-1).asObject()}} then \"64\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 65, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 65, \"MaxQuantity\"),-1).asObject()}} then \"65\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 66, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 66, \"MaxQuantity\"),-1).asObject()}} then \"66\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 67, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 67, \"MaxQuantity\"),-1).asObject()}} then \"67\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 68, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 68, \"MaxQuantity\"),-1).asObject()}} then \"68\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 69, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 69, \"MaxQuantity\"),-1).asObject()}} then \"69\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 70, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 70, \"MaxQuantity\"),-1).asObject()}} then \"70\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 71, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 71, \"MaxQuantity\"),-1).asObject()}} then \"71\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 72, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 72, \"MaxQuantity\"),-1).asObject()}} then \"72\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 73, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 73, \"MaxQuantity\"),-1).asObject()}} then \"73\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 74, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 74, \"MaxQuantity\"),-1).asObject()}} then \"74\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 75, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 75, \"MaxQuantity\"),-1).asObject()}} then \"75\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 76, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 76, \"MaxQuantity\"),-1).asObject()}} then \"76\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 77, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 77, \"MaxQuantity\"),-1).asObject()}} then \"77\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 78, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 78, \"MaxQuantity\"),-1).asObject()}} then \"78\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 79, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 79, \"MaxQuantity\"),-1).asObject()}} then \"79\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 80, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 80, \"MaxQuantity\"),-1).asObject()}} then \"80\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 81, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 81, \"MaxQuantity\"),-1).asObject()}} then \"81\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 82, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 82, \"MaxQuantity\"),-1).asObject()}} then \"82\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 83, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 83, \"MaxQuantity\"),-1).asObject()}} then \"83\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 84, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 84, \"MaxQuantity\"),-1).asObject()}} then \"84\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 85, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 85, \"MaxQuantity\"),-1).asObject()}} then \"85\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 86, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 86, \"MaxQuantity\"),-1).asObject()}} then \"86\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 87, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 87, \"MaxQuantity\"),-1).asObject()}} then \"87\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 88, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 88, \"MaxQuantity\"),-1).asObject()}} then \"88\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 89, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 89, \"MaxQuantity\"),-1).asObject()}} then \"89\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 90, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 90, \"MaxQuantity\"),-1).asObject()}} then \"90\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 91, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 91, \"MaxQuantity\"),-1).asObject()}} then \"91\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 92, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 92, \"MaxQuantity\"),-1).asObject()}} then \"92\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 93, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 93, \"MaxQuantity\"),-1).asObject()}} then \"93\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 94, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 94, \"MaxQuantity\"),-1).asObject()}} then \"94\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 95, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 95, \"MaxQuantity\"),-1).asObject()}} then \"95\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 96, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 96, \"MaxQuantity\"),-1).asObject()}} then \"96\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 97, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 97, \"MaxQuantity\"),-1).asObject()}} then \"97\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 98, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 98, \"MaxQuantity\"),-1).asObject()}} then \"98\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 99, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 99, \"MaxQuantity\"),-1).asObject()}} then \"99\"\n    else \"100\"\n end ) as 'BinGroup';\nresult = group q by 'BinGroup';\nresult = foreach result generate 'BinGroup' as 'BinGroup', min('QuantitySum') as 'Quantity Lower Bound', max('QuantitySum') as 'Quantity Upper Bound',  median('SBQQ__TotalDiscountRate__c') as 'Median Discount';\nresult = foreach result generate 'BinGroup' as 'Bin', 'Quantity Lower Bound' as 'Quantity Lower Bound', 'Quantity Upper Bound' as 'Quantity Upper Bound', 'Median Discount' as 'Median Discount', 'Median Discount' + ('Median Discount'*({{coalesce(cell(targetPercentMedianStep.selection, 0, \"value\"),-1).asObject()}}/100)) as 'Target', 'Median Discount' + ('Median Discount'*({{coalesce(cell(normPercentMedianStep.selection, 0, \"value\"),-1).asObject()}}/100)) as 'Norm', 'Median Discount' + ('Median Discount'*({{coalesce(cell(floorPercentMedianStep.selection, 0, \"value\"),-1).asObject()}}/100)) as 'Floor';\nresult = order result by 'Quantity Lower Bound' asc;\n--Combine upper and lower bounds to create ranges\nfinalResult = group result by ('Bin','Quantity Lower Bound', 'Median Discount', 'Target', 'Norm', 'Floor');\nfinalResult = foreach finalResult generate 'Quantity Lower Bound' as 'Quantity Lower Bound', max('Quantity Lower Bound') over([0..1] partition by all order by 'Quantity Lower Bound') as 'Quantity Upper Bound', 'Median Discount' as 'Median Discount %', 'Target' as 'Target %', 'Norm' as 'Norm %', 'Floor' as 'Floor %';",
+        "receiveFacet" : true,
+        "selectMode" : "single",
+        "strings" : [ ],
+        "type" : "saql",
+        "useGlobal" : true,
+        "visualizationParameters" : {
+          "parameters" : {
+            "autoFitMode" : "keepLabels",
+            "showValues" : true,
+            "bins" : {
+              "breakpoints" : {
+                "high" : 100,
+                "low" : 0
+              },
+              "bands" : {
+                "high" : {
+                  "color" : "#008000",
+                  "label" : ""
+                },
+                "low" : {
+                  "color" : "#B22222",
+                  "label" : ""
+                },
+                "medium" : {
+                  "color" : "#ffa500",
+                  "label" : ""
+                }
+              }
+            },
+            "legend" : {
+              "descOrder" : false,
+              "showHeader" : true,
+              "show" : true,
+              "customSize" : "auto",
+              "position" : "right-top",
+              "inside" : false
+            },
+            "axisMode" : "multi",
+            "tooltip" : {
+              "showBinLabel" : true,
+              "measures" : "",
+              "showNullValues" : true,
+              "showPercentage" : true,
+              "showDimensions" : true,
+              "showMeasures" : true,
+              "customizeTooltip" : false,
+              "dimensions" : ""
+            },
+            "visualizationType" : "hbar",
+            "title" : {
+              "fontSize" : 14,
+              "subtitleFontSize" : 11,
+              "label" : "",
+              "align" : "center",
+              "subtitleLabel" : ""
+            },
+            "binValues" : false,
+            "trellis" : {
+              "flipLabels" : false,
+              "showGridLines" : true,
+              "size" : [
+                100,
+                100
+              ],
+              "enable" : false,
+              "type" : "x",
+              "chartsPerLine" : 4
+            },
+            "showActionMenu" : true,
+            "measureAxis2" : {
+              "sqrtScale" : false,
+              "showTitle" : true,
+              "showAxis" : true,
+              "title" : "",
+              "customDomain" : {
+                "showDomain" : false
+              }
+            },
+            "measureAxis1" : {
+              "sqrtScale" : false,
+              "showTitle" : true,
+              "showAxis" : true,
+              "title" : "",
+              "customDomain" : {
+                "showDomain" : false
+              }
+            },
+            "theme" : "wave",
+            "dimensionAxis" : {
+              "showTitle" : true,
+              "customSize" : "auto",
+              "showAxis" : true,
+              "title" : "",
+              "icons" : {
+                "useIcons" : false,
+                "iconProps" : {
+                  "fit" : "cover",
+                  "column" : "",
+                  "type" : "round"
+                }
+              }
+            },
+            "applyConditionalFormatting" : true
+          },
+          "type" : "chart"
+        }
+      },
+      "floorPercentMedianStep" : {
+        "broadcastFacet" : true,
+        "label" : "Floor Percent away from median",
+        "selectMode" : "singlerequired",
+        "type" : "staticflex",
+        "values" : [
+          {
+            "display" : "0",
+            "value" : 0
+          },
+          {
+            "display" : "-100",
+            "value" : -100
+          },
+          {
+            "display" : "-99",
+            "value" : -99
+          },
+          {
+            "display" : "-98",
+            "value" : -98
+          },
+          {
+            "display" : "-97",
+            "value" : -97
+          },
+          {
+            "display" : "-96",
+            "value" : -96
+          },
+          {
+            "display" : "-95",
+            "value" : -95
+          },
+          {
+            "display" : "-94",
+            "value" : -94
+          },
+          {
+            "display" : "-93",
+            "value" : -93
+          },
+          {
+            "display" : "-92",
+            "value" : -92
+          },
+          {
+            "display" : "-91",
+            "value" : -91
+          },
+          {
+            "display" : "-90",
+            "value" : -90
+          },
+          {
+            "display" : "-89",
+            "value" : -89
+          },
+          {
+            "display" : "-88",
+            "value" : -88
+          },
+          {
+            "display" : "-87",
+            "value" : -87
+          },
+          {
+            "display" : "-86",
+            "value" : -86
+          },
+          {
+            "display" : "-85",
+            "value" : -85
+          },
+          {
+            "display" : "-84",
+            "value" : -84
+          },
+          {
+            "display" : "-83",
+            "value" : -83
+          },
+          {
+            "display" : "-82",
+            "value" : -82
+          },
+          {
+            "display" : "-81",
+            "value" : -81
+          },
+          {
+            "display" : "-80",
+            "value" : -80
+          },
+          {
+            "display" : "-79",
+            "value" : -79
+          },
+          {
+            "display" : "-78",
+            "value" : -78
+          },
+          {
+            "display" : "-77",
+            "value" : -77
+          },
+          {
+            "display" : "-76",
+            "value" : -76
+          },
+          {
+            "display" : "-75",
+            "value" : -75
+          },
+          {
+            "display" : "-74",
+            "value" : -74
+          },
+          {
+            "display" : "-73",
+            "value" : -73
+          },
+          {
+            "display" : "-72",
+            "value" : -72
+          },
+          {
+            "display" : "-71",
+            "value" : -71
+          },
+          {
+            "display" : "-70",
+            "value" : -70
+          },
+          {
+            "display" : "-69",
+            "value" : -69
+          },
+          {
+            "display" : "-68",
+            "value" : -68
+          },
+          {
+            "display" : "-67",
+            "value" : -67
+          },
+          {
+            "display" : "-66",
+            "value" : -66
+          },
+          {
+            "display" : "-65",
+            "value" : -65
+          },
+          {
+            "display" : "-64",
+            "value" : -64
+          },
+          {
+            "display" : "-63",
+            "value" : -63
+          },
+          {
+            "display" : "-62",
+            "value" : -62
+          },
+          {
+            "display" : "-61",
+            "value" : -61
+          },
+          {
+            "display" : "-60",
+            "value" : -60
+          },
+          {
+            "display" : "-59",
+            "value" : -59
+          },
+          {
+            "display" : "-58",
+            "value" : -58
+          },
+          {
+            "display" : "-57",
+            "value" : -57
+          },
+          {
+            "display" : "-56",
+            "value" : -56
+          },
+          {
+            "display" : "-55",
+            "value" : -55
+          },
+          {
+            "display" : "-54",
+            "value" : -54
+          },
+          {
+            "display" : "-53",
+            "value" : -53
+          },
+          {
+            "display" : "-52",
+            "value" : -52
+          },
+          {
+            "display" : "-51",
+            "value" : -51
+          },
+          {
+            "display" : "-50",
+            "value" : -50
+          },
+          {
+            "display" : "-49",
+            "value" : -49
+          },
+          {
+            "display" : "-48",
+            "value" : -48
+          },
+          {
+            "display" : "-47",
+            "value" : -47
+          },
+          {
+            "display" : "-46",
+            "value" : -46
+          },
+          {
+            "display" : "-45",
+            "value" : -45
+          },
+          {
+            "display" : "-44",
+            "value" : -44
+          },
+          {
+            "display" : "-43",
+            "value" : -43
+          },
+          {
+            "display" : "-42",
+            "value" : -42
+          },
+          {
+            "display" : "-41",
+            "value" : -41
+          },
+          {
+            "display" : "-40",
+            "value" : -40
+          },
+          {
+            "display" : "-39",
+            "value" : -39
+          },
+          {
+            "display" : "-38",
+            "value" : -38
+          },
+          {
+            "display" : "-37",
+            "value" : -37
+          },
+          {
+            "display" : "-36",
+            "value" : -36
+          },
+          {
+            "display" : "-35",
+            "value" : -35
+          },
+          {
+            "display" : "-34",
+            "value" : -34
+          },
+          {
+            "display" : "-33",
+            "value" : -33
+          },
+          {
+            "display" : "-32",
+            "value" : -32
+          },
+          {
+            "display" : "-31",
+            "value" : -31
+          },
+          {
+            "display" : "-30",
+            "value" : -30
+          },
+          {
+            "display" : "-29",
+            "value" : -29
+          },
+          {
+            "display" : "-28",
+            "value" : -28
+          },
+          {
+            "display" : "-27",
+            "value" : -27
+          },
+          {
+            "display" : "-26",
+            "value" : -26
+          },
+          {
+            "display" : "-25",
+            "value" : -25
+          },
+          {
+            "display" : "-24",
+            "value" : -24
+          },
+          {
+            "display" : "-23",
+            "value" : -23
+          },
+          {
+            "display" : "-22",
+            "value" : -22
+          },
+          {
+            "display" : "-21",
+            "value" : -21
+          },
+          {
+            "display" : "-20",
+            "value" : -20
+          },
+          {
+            "display" : "-19",
+            "value" : -19
+          },
+          {
+            "display" : "-18",
+            "value" : -18
+          },
+          {
+            "display" : "-17",
+            "value" : -17
+          },
+          {
+            "display" : "-16",
+            "value" : -16
+          },
+          {
+            "display" : "-15",
+            "value" : -15
+          },
+          {
+            "display" : "-14",
+            "value" : -14
+          },
+          {
+            "display" : "-13",
+            "value" : -13
+          },
+          {
+            "display" : "-12",
+            "value" : -12
+          },
+          {
+            "display" : "-11",
+            "value" : -11
+          },
+          {
+            "display" : "-10",
+            "value" : -10
+          },
+          {
+            "display" : "-9",
+            "value" : -9
+          },
+          {
+            "display" : "-8",
+            "value" : -8
+          },
+          {
+            "display" : "-7",
+            "value" : -7
+          },
+          {
+            "display" : "-6",
+            "value" : -6
+          },
+          {
+            "display" : "-5",
+            "value" : -5
+          },
+          {
+            "display" : "-4",
+            "value" : -4
+          },
+          {
+            "display" : "-3",
+            "value" : -3
+          },
+          {
+            "display" : "-2",
+            "value" : -2
+          },
+          {
+            "display" : "-1",
+            "value" : -1
+          },
+          {
+            "display" : "1",
+            "value" : 1
+          },
+          {
+            "display" : "2",
+            "value" : 2
+          },
+          {
+            "display" : "3",
+            "value" : 3
+          },
+          {
+            "display" : "4",
+            "value" : 4
+          },
+          {
+            "display" : "5",
+            "value" : 5
+          },
+          {
+            "display" : "6",
+            "value" : 6
+          },
+          {
+            "display" : "7",
+            "value" : 7
+          },
+          {
+            "display" : "8",
+            "value" : 8
+          },
+          {
+            "display" : "9",
+            "value" : 9
+          },
+          {
+            "display" : "10",
+            "value" : 10
+          },
+          {
+            "display" : "11",
+            "value" : 11
+          },
+          {
+            "display" : "12",
+            "value" : 12
+          },
+          {
+            "display" : "13",
+            "value" : 13
+          },
+          {
+            "display" : "14",
+            "value" : 14
+          },
+          {
+            "display" : "15",
+            "value" : 15
+          },
+          {
+            "display" : "16",
+            "value" : 16
+          },
+          {
+            "display" : "17",
+            "value" : 17
+          },
+          {
+            "display" : "18",
+            "value" : 18
+          },
+          {
+            "display" : "19",
+            "value" : 19
+          },
+          {
+            "display" : "20",
+            "value" : 20
+          },
+          {
+            "display" : "21",
+            "value" : 21
+          },
+          {
+            "display" : "22",
+            "value" : 22
+          },
+          {
+            "display" : "23",
+            "value" : 23
+          },
+          {
+            "display" : "24",
+            "value" : 24
+          },
+          {
+            "display" : "25",
+            "value" : 25
+          },
+          {
+            "display" : "26",
+            "value" : 26
+          },
+          {
+            "display" : "27",
+            "value" : 27
+          },
+          {
+            "display" : "28",
+            "value" : 28
+          },
+          {
+            "display" : "29",
+            "value" : 29
+          },
+          {
+            "display" : "30",
+            "value" : 30
+          },
+          {
+            "display" : "31",
+            "value" : 31
+          },
+          {
+            "display" : "32",
+            "value" : 32
+          },
+          {
+            "display" : "33",
+            "value" : 33
+          },
+          {
+            "display" : "34",
+            "value" : 34
+          },
+          {
+            "display" : "35",
+            "value" : 35
+          },
+          {
+            "display" : "36",
+            "value" : 36
+          },
+          {
+            "display" : "37",
+            "value" : 37
+          },
+          {
+            "display" : "38",
+            "value" : 38
+          },
+          {
+            "display" : "39",
+            "value" : 39
+          },
+          {
+            "display" : "40",
+            "value" : 40
+          },
+          {
+            "display" : "41",
+            "value" : 41
+          },
+          {
+            "display" : "42",
+            "value" : 42
+          },
+          {
+            "display" : "43",
+            "value" : 43
+          },
+          {
+            "display" : "44",
+            "value" : 44
+          },
+          {
+            "display" : "45",
+            "value" : 45
+          },
+          {
+            "display" : "46",
+            "value" : 46
+          },
+          {
+            "display" : "47",
+            "value" : 47
+          },
+          {
+            "display" : "48",
+            "value" : 48
+          },
+          {
+            "display" : "49",
+            "value" : 49
+          },
+          {
+            "display" : "50",
+            "value" : 50
+          },
+          {
+            "display" : "51",
+            "value" : 51
+          },
+          {
+            "display" : "52",
+            "value" : 52
+          },
+          {
+            "display" : "53",
+            "value" : 53
+          },
+          {
+            "display" : "54",
+            "value" : 54
+          },
+          {
+            "display" : "55",
+            "value" : 55
+          },
+          {
+            "display" : "56",
+            "value" : 56
+          },
+          {
+            "display" : "57",
+            "value" : 57
+          },
+          {
+            "display" : "58",
+            "value" : 58
+          },
+          {
+            "display" : "59",
+            "value" : 59
+          },
+          {
+            "display" : "60",
+            "value" : 60
+          },
+          {
+            "display" : "61",
+            "value" : 61
+          },
+          {
+            "display" : "62",
+            "value" : 62
+          },
+          {
+            "display" : "63",
+            "value" : 63
+          },
+          {
+            "display" : "64",
+            "value" : 64
+          },
+          {
+            "display" : "65",
+            "value" : 65
+          },
+          {
+            "display" : "66",
+            "value" : 66
+          },
+          {
+            "display" : "67",
+            "value" : 67
+          },
+          {
+            "display" : "68",
+            "value" : 68
+          },
+          {
+            "display" : "69",
+            "value" : 69
+          },
+          {
+            "display" : "70",
+            "value" : 70
+          },
+          {
+            "display" : "71",
+            "value" : 71
+          },
+          {
+            "display" : "72",
+            "value" : 72
+          },
+          {
+            "display" : "73",
+            "value" : 73
+          },
+          {
+            "display" : "74",
+            "value" : 74
+          },
+          {
+            "display" : "75",
+            "value" : 75
+          },
+          {
+            "display" : "76",
+            "value" : 76
+          },
+          {
+            "display" : "77",
+            "value" : 77
+          },
+          {
+            "display" : "78",
+            "value" : 78
+          },
+          {
+            "display" : "79",
+            "value" : 79
+          },
+          {
+            "display" : "80",
+            "value" : 80
+          },
+          {
+            "display" : "81",
+            "value" : 81
+          },
+          {
+            "display" : "82",
+            "value" : 82
+          },
+          {
+            "display" : "83",
+            "value" : 83
+          },
+          {
+            "display" : "84",
+            "value" : 84
+          },
+          {
+            "display" : "85",
+            "value" : 85
+          },
+          {
+            "display" : "86",
+            "value" : 86
+          },
+          {
+            "display" : "87",
+            "value" : 87
+          },
+          {
+            "display" : "88",
+            "value" : 88
+          },
+          {
+            "display" : "89",
+            "value" : 89
+          },
+          {
+            "display" : "90",
+            "value" : 90
+          },
+          {
+            "display" : "91",
+            "value" : 91
+          },
+          {
+            "display" : "92",
+            "value" : 92
+          },
+          {
+            "display" : "93",
+            "value" : 93
+          },
+          {
+            "display" : "94",
+            "value" : 94
+          },
+          {
+            "display" : "95",
+            "value" : 95
+          },
+          {
+            "display" : "96",
+            "value" : 96
+          },
+          {
+            "display" : "97",
+            "value" : 97
+          },
+          {
+            "display" : "98",
+            "value" : 98
+          },
+          {
+            "display" : "99",
+            "value" : 99
+          },
+          {
+            "display" : "100",
+            "value" : 100
+          }
+        ]
+      },
+      "generateBinSizeStep" : {
+        "broadcastFacet" : true,
+        "groups" : [ ],
+        "label" : "total_rows/quantity",
+        "numbers" : [ ],
+        "query" : "q = load \"${App.Datasets.PricingGuidanceDataset_tp.FullyQualifiedName}\";\nq = group q by all;\nq = foreach q generate case when ceil(count()/100) < 30 then 30 else ceil(count()/100) end as 'binsize';\nq = limit q 1;",
+        "receiveFacet" : true,
+        "selectMode" : "single",
+        "strings" : [ ],
+        "type" : "saql",
+        "useGlobal" : true,
+        "visualizationParameters" : {
+          "parameters" : {
+            "autoFitMode" : "keepLabels",
+            "showValues" : true,
+            "bins" : {
+              "breakpoints" : {
+                "high" : 100,
+                "low" : 0
+              },
+              "bands" : {
+                "high" : {
+                  "color" : "#008000",
+                  "label" : ""
+                },
+                "low" : {
+                  "color" : "#B22222",
+                  "label" : ""
+                },
+                "medium" : {
+                  "color" : "#ffa500",
+                  "label" : ""
+                }
+              }
+            },
+            "legend" : {
+              "descOrder" : false,
+              "showHeader" : true,
+              "show" : true,
+              "customSize" : "auto",
+              "position" : "right-top",
+              "inside" : false
+            },
+            "axisMode" : "multi",
+            "tooltip" : {
+              "showBinLabel" : true,
+              "measures" : "",
+              "showNullValues" : true,
+              "showPercentage" : true,
+              "showDimensions" : true,
+              "showMeasures" : true,
+              "customizeTooltip" : false,
+              "dimensions" : ""
+            },
+            "visualizationType" : "hbar",
+            "title" : {
+              "fontSize" : 14,
+              "subtitleFontSize" : 11,
+              "label" : "",
+              "align" : "center",
+              "subtitleLabel" : ""
+            },
+            "binValues" : false,
+            "trellis" : {
+              "flipLabels" : false,
+              "showGridLines" : true,
+              "size" : [
+                100,
+                100
+              ],
+              "enable" : false,
+              "type" : "x",
+              "chartsPerLine" : 4
+            },
+            "columnMap" : {
+              "trellis" : [ ],
+              "dimensionAxis" : [ ],
+              "plots" : [
+                "count"
+              ]
+            },
+            "showActionMenu" : true,
+            "measureAxis2" : {
+              "sqrtScale" : false,
+              "showTitle" : true,
+              "showAxis" : true,
+              "title" : "",
+              "customDomain" : {
+                "showDomain" : false
+              }
+            },
+            "measureAxis1" : {
+              "sqrtScale" : false,
+              "showTitle" : true,
+              "showAxis" : true,
+              "title" : "",
+              "customDomain" : {
+                "showDomain" : false
+              }
+            },
+            "theme" : "wave",
+            "dimensionAxis" : {
+              "showTitle" : true,
+              "customSize" : "auto",
+              "showAxis" : true,
+              "title" : "",
+              "icons" : {
+                "useIcons" : false,
+                "iconProps" : {
+                  "fit" : "cover",
+                  "column" : "",
+                  "type" : "round"
+                }
+              }
+            },
+            "applyConditionalFormatting" : true
+          },
+          "type" : "chart"
+        }
+      },
+      "normPercentMedianStep" : {
+        "broadcastFacet" : true,
+        "label" : "Norm percent away from median",
+        "selectMode" : "singlerequired",
+        "type" : "staticflex",
+        "values" : [
+          {
+            "display" : "0",
+            "value" : 0
+          },
+          {
+            "display" : "-100",
+            "value" : -100
+          },
+          {
+            "display" : "-99",
+            "value" : -99
+          },
+          {
+            "display" : "-98",
+            "value" : -98
+          },
+          {
+            "display" : "-97",
+            "value" : -97
+          },
+          {
+            "display" : "-96",
+            "value" : -96
+          },
+          {
+            "display" : "-95",
+            "value" : -95
+          },
+          {
+            "display" : "-94",
+            "value" : -94
+          },
+          {
+            "display" : "-93",
+            "value" : -93
+          },
+          {
+            "display" : "-92",
+            "value" : -92
+          },
+          {
+            "display" : "-91",
+            "value" : -91
+          },
+          {
+            "display" : "-90",
+            "value" : -90
+          },
+          {
+            "display" : "-89",
+            "value" : -89
+          },
+          {
+            "display" : "-88",
+            "value" : -88
+          },
+          {
+            "display" : "-87",
+            "value" : -87
+          },
+          {
+            "display" : "-86",
+            "value" : -86
+          },
+          {
+            "display" : "-85",
+            "value" : -85
+          },
+          {
+            "display" : "-84",
+            "value" : -84
+          },
+          {
+            "display" : "-83",
+            "value" : -83
+          },
+          {
+            "display" : "-82",
+            "value" : -82
+          },
+          {
+            "display" : "-81",
+            "value" : -81
+          },
+          {
+            "display" : "-80",
+            "value" : -80
+          },
+          {
+            "display" : "-79",
+            "value" : -79
+          },
+          {
+            "display" : "-78",
+            "value" : -78
+          },
+          {
+            "display" : "-77",
+            "value" : -77
+          },
+          {
+            "display" : "-76",
+            "value" : -76
+          },
+          {
+            "display" : "-75",
+            "value" : -75
+          },
+          {
+            "display" : "-74",
+            "value" : -74
+          },
+          {
+            "display" : "-73",
+            "value" : -73
+          },
+          {
+            "display" : "-72",
+            "value" : -72
+          },
+          {
+            "display" : "-71",
+            "value" : -71
+          },
+          {
+            "display" : "-70",
+            "value" : -70
+          },
+          {
+            "display" : "-69",
+            "value" : -69
+          },
+          {
+            "display" : "-68",
+            "value" : -68
+          },
+          {
+            "display" : "-67",
+            "value" : -67
+          },
+          {
+            "display" : "-66",
+            "value" : -66
+          },
+          {
+            "display" : "-65",
+            "value" : -65
+          },
+          {
+            "display" : "-64",
+            "value" : -64
+          },
+          {
+            "display" : "-63",
+            "value" : -63
+          },
+          {
+            "display" : "-62",
+            "value" : -62
+          },
+          {
+            "display" : "-61",
+            "value" : -61
+          },
+          {
+            "display" : "-60",
+            "value" : -60
+          },
+          {
+            "display" : "-59",
+            "value" : -59
+          },
+          {
+            "display" : "-58",
+            "value" : -58
+          },
+          {
+            "display" : "-57",
+            "value" : -57
+          },
+          {
+            "display" : "-56",
+            "value" : -56
+          },
+          {
+            "display" : "-55",
+            "value" : -55
+          },
+          {
+            "display" : "-54",
+            "value" : -54
+          },
+          {
+            "display" : "-53",
+            "value" : -53
+          },
+          {
+            "display" : "-52",
+            "value" : -52
+          },
+          {
+            "display" : "-51",
+            "value" : -51
+          },
+          {
+            "display" : "-50",
+            "value" : -50
+          },
+          {
+            "display" : "-49",
+            "value" : -49
+          },
+          {
+            "display" : "-48",
+            "value" : -48
+          },
+          {
+            "display" : "-47",
+            "value" : -47
+          },
+          {
+            "display" : "-46",
+            "value" : -46
+          },
+          {
+            "display" : "-45",
+            "value" : -45
+          },
+          {
+            "display" : "-44",
+            "value" : -44
+          },
+          {
+            "display" : "-43",
+            "value" : -43
+          },
+          {
+            "display" : "-42",
+            "value" : -42
+          },
+          {
+            "display" : "-41",
+            "value" : -41
+          },
+          {
+            "display" : "-40",
+            "value" : -40
+          },
+          {
+            "display" : "-39",
+            "value" : -39
+          },
+          {
+            "display" : "-38",
+            "value" : -38
+          },
+          {
+            "display" : "-37",
+            "value" : -37
+          },
+          {
+            "display" : "-36",
+            "value" : -36
+          },
+          {
+            "display" : "-35",
+            "value" : -35
+          },
+          {
+            "display" : "-34",
+            "value" : -34
+          },
+          {
+            "display" : "-33",
+            "value" : -33
+          },
+          {
+            "display" : "-32",
+            "value" : -32
+          },
+          {
+            "display" : "-31",
+            "value" : -31
+          },
+          {
+            "display" : "-30",
+            "value" : -30
+          },
+          {
+            "display" : "-29",
+            "value" : -29
+          },
+          {
+            "display" : "-28",
+            "value" : -28
+          },
+          {
+            "display" : "-27",
+            "value" : -27
+          },
+          {
+            "display" : "-26",
+            "value" : -26
+          },
+          {
+            "display" : "-25",
+            "value" : -25
+          },
+          {
+            "display" : "-24",
+            "value" : -24
+          },
+          {
+            "display" : "-23",
+            "value" : -23
+          },
+          {
+            "display" : "-22",
+            "value" : -22
+          },
+          {
+            "display" : "-21",
+            "value" : -21
+          },
+          {
+            "display" : "-20",
+            "value" : -20
+          },
+          {
+            "display" : "-19",
+            "value" : -19
+          },
+          {
+            "display" : "-18",
+            "value" : -18
+          },
+          {
+            "display" : "-17",
+            "value" : -17
+          },
+          {
+            "display" : "-16",
+            "value" : -16
+          },
+          {
+            "display" : "-15",
+            "value" : -15
+          },
+          {
+            "display" : "-14",
+            "value" : -14
+          },
+          {
+            "display" : "-13",
+            "value" : -13
+          },
+          {
+            "display" : "-12",
+            "value" : -12
+          },
+          {
+            "display" : "-11",
+            "value" : -11
+          },
+          {
+            "display" : "-10",
+            "value" : -10
+          },
+          {
+            "display" : "-9",
+            "value" : -9
+          },
+          {
+            "display" : "-8",
+            "value" : -8
+          },
+          {
+            "display" : "-7",
+            "value" : -7
+          },
+          {
+            "display" : "-6",
+            "value" : -6
+          },
+          {
+            "display" : "-5",
+            "value" : -5
+          },
+          {
+            "display" : "-4",
+            "value" : -4
+          },
+          {
+            "display" : "-3",
+            "value" : -3
+          },
+          {
+            "display" : "-2",
+            "value" : -2
+          },
+          {
+            "display" : "-1",
+            "value" : -1
+          },
+          {
+            "display" : "1",
+            "value" : 1
+          },
+          {
+            "display" : "2",
+            "value" : 2
+          },
+          {
+            "display" : "3",
+            "value" : 3
+          },
+          {
+            "display" : "4",
+            "value" : 4
+          },
+          {
+            "display" : "5",
+            "value" : 5
+          },
+          {
+            "display" : "6",
+            "value" : 6
+          },
+          {
+            "display" : "7",
+            "value" : 7
+          },
+          {
+            "display" : "8",
+            "value" : 8
+          },
+          {
+            "display" : "9",
+            "value" : 9
+          },
+          {
+            "display" : "10",
+            "value" : 10
+          },
+          {
+            "display" : "11",
+            "value" : 11
+          },
+          {
+            "display" : "12",
+            "value" : 12
+          },
+          {
+            "display" : "13",
+            "value" : 13
+          },
+          {
+            "display" : "14",
+            "value" : 14
+          },
+          {
+            "display" : "15",
+            "value" : 15
+          },
+          {
+            "display" : "16",
+            "value" : 16
+          },
+          {
+            "display" : "17",
+            "value" : 17
+          },
+          {
+            "display" : "18",
+            "value" : 18
+          },
+          {
+            "display" : "19",
+            "value" : 19
+          },
+          {
+            "display" : "20",
+            "value" : 20
+          },
+          {
+            "display" : "21",
+            "value" : 21
+          },
+          {
+            "display" : "22",
+            "value" : 22
+          },
+          {
+            "display" : "23",
+            "value" : 23
+          },
+          {
+            "display" : "24",
+            "value" : 24
+          },
+          {
+            "display" : "25",
+            "value" : 25
+          },
+          {
+            "display" : "26",
+            "value" : 26
+          },
+          {
+            "display" : "27",
+            "value" : 27
+          },
+          {
+            "display" : "28",
+            "value" : 28
+          },
+          {
+            "display" : "29",
+            "value" : 29
+          },
+          {
+            "display" : "30",
+            "value" : 30
+          },
+          {
+            "display" : "31",
+            "value" : 31
+          },
+          {
+            "display" : "32",
+            "value" : 32
+          },
+          {
+            "display" : "33",
+            "value" : 33
+          },
+          {
+            "display" : "34",
+            "value" : 34
+          },
+          {
+            "display" : "35",
+            "value" : 35
+          },
+          {
+            "display" : "36",
+            "value" : 36
+          },
+          {
+            "display" : "37",
+            "value" : 37
+          },
+          {
+            "display" : "38",
+            "value" : 38
+          },
+          {
+            "display" : "39",
+            "value" : 39
+          },
+          {
+            "display" : "40",
+            "value" : 40
+          },
+          {
+            "display" : "41",
+            "value" : 41
+          },
+          {
+            "display" : "42",
+            "value" : 42
+          },
+          {
+            "display" : "43",
+            "value" : 43
+          },
+          {
+            "display" : "44",
+            "value" : 44
+          },
+          {
+            "display" : "45",
+            "value" : 45
+          },
+          {
+            "display" : "46",
+            "value" : 46
+          },
+          {
+            "display" : "47",
+            "value" : 47
+          },
+          {
+            "display" : "48",
+            "value" : 48
+          },
+          {
+            "display" : "49",
+            "value" : 49
+          },
+          {
+            "display" : "50",
+            "value" : 50
+          },
+          {
+            "display" : "51",
+            "value" : 51
+          },
+          {
+            "display" : "52",
+            "value" : 52
+          },
+          {
+            "display" : "53",
+            "value" : 53
+          },
+          {
+            "display" : "54",
+            "value" : 54
+          },
+          {
+            "display" : "55",
+            "value" : 55
+          },
+          {
+            "display" : "56",
+            "value" : 56
+          },
+          {
+            "display" : "57",
+            "value" : 57
+          },
+          {
+            "display" : "58",
+            "value" : 58
+          },
+          {
+            "display" : "59",
+            "value" : 59
+          },
+          {
+            "display" : "60",
+            "value" : 60
+          },
+          {
+            "display" : "61",
+            "value" : 61
+          },
+          {
+            "display" : "62",
+            "value" : 62
+          },
+          {
+            "display" : "63",
+            "value" : 63
+          },
+          {
+            "display" : "64",
+            "value" : 64
+          },
+          {
+            "display" : "65",
+            "value" : 65
+          },
+          {
+            "display" : "66",
+            "value" : 66
+          },
+          {
+            "display" : "67",
+            "value" : 67
+          },
+          {
+            "display" : "68",
+            "value" : 68
+          },
+          {
+            "display" : "69",
+            "value" : 69
+          },
+          {
+            "display" : "70",
+            "value" : 70
+          },
+          {
+            "display" : "71",
+            "value" : 71
+          },
+          {
+            "display" : "72",
+            "value" : 72
+          },
+          {
+            "display" : "73",
+            "value" : 73
+          },
+          {
+            "display" : "74",
+            "value" : 74
+          },
+          {
+            "display" : "75",
+            "value" : 75
+          },
+          {
+            "display" : "76",
+            "value" : 76
+          },
+          {
+            "display" : "77",
+            "value" : 77
+          },
+          {
+            "display" : "78",
+            "value" : 78
+          },
+          {
+            "display" : "79",
+            "value" : 79
+          },
+          {
+            "display" : "80",
+            "value" : 80
+          },
+          {
+            "display" : "81",
+            "value" : 81
+          },
+          {
+            "display" : "82",
+            "value" : 82
+          },
+          {
+            "display" : "83",
+            "value" : 83
+          },
+          {
+            "display" : "84",
+            "value" : 84
+          },
+          {
+            "display" : "85",
+            "value" : 85
+          },
+          {
+            "display" : "86",
+            "value" : 86
+          },
+          {
+            "display" : "87",
+            "value" : 87
+          },
+          {
+            "display" : "88",
+            "value" : 88
+          },
+          {
+            "display" : "89",
+            "value" : 89
+          },
+          {
+            "display" : "90",
+            "value" : 90
+          },
+          {
+            "display" : "91",
+            "value" : 91
+          },
+          {
+            "display" : "92",
+            "value" : 92
+          },
+          {
+            "display" : "93",
+            "value" : 93
+          },
+          {
+            "display" : "94",
+            "value" : 94
+          },
+          {
+            "display" : "95",
+            "value" : 95
+          },
+          {
+            "display" : "96",
+            "value" : 96
+          },
+          {
+            "display" : "97",
+            "value" : 97
+          },
+          {
+            "display" : "98",
+            "value" : 98
+          },
+          {
+            "display" : "99",
+            "value" : 99
+          },
+          {
+            "display" : "100",
+            "value" : 100
+          }
+        ]
+      },
+      "targetPercentMedianStep" : {
+        "broadcastFacet" : true,
+        "label" : "Target percent away from median",
+        "selectMode" : "singlerequired",
+        "type" : "staticflex",
+        "values" : [
+          {
+            "display" : "0",
+            "value" : 0
+          },
+          {
+            "display" : "-100",
+            "value" : -100
+          },
+          {
+            "display" : "-99",
+            "value" : -99
+          },
+          {
+            "display" : "-98",
+            "value" : -98
+          },
+          {
+            "display" : "-97",
+            "value" : -97
+          },
+          {
+            "display" : "-96",
+            "value" : -96
+          },
+          {
+            "display" : "-95",
+            "value" : -95
+          },
+          {
+            "display" : "-94",
+            "value" : -94
+          },
+          {
+            "display" : "-93",
+            "value" : -93
+          },
+          {
+            "display" : "-92",
+            "value" : -92
+          },
+          {
+            "display" : "-91",
+            "value" : -91
+          },
+          {
+            "display" : "-90",
+            "value" : -90
+          },
+          {
+            "display" : "-89",
+            "value" : -89
+          },
+          {
+            "display" : "-88",
+            "value" : -88
+          },
+          {
+            "display" : "-87",
+            "value" : -87
+          },
+          {
+            "display" : "-86",
+            "value" : -86
+          },
+          {
+            "display" : "-85",
+            "value" : -85
+          },
+          {
+            "display" : "-84",
+            "value" : -84
+          },
+          {
+            "display" : "-83",
+            "value" : -83
+          },
+          {
+            "display" : "-82",
+            "value" : -82
+          },
+          {
+            "display" : "-81",
+            "value" : -81
+          },
+          {
+            "display" : "-80",
+            "value" : -80
+          },
+          {
+            "display" : "-79",
+            "value" : -79
+          },
+          {
+            "display" : "-78",
+            "value" : -78
+          },
+          {
+            "display" : "-77",
+            "value" : -77
+          },
+          {
+            "display" : "-76",
+            "value" : -76
+          },
+          {
+            "display" : "-75",
+            "value" : -75
+          },
+          {
+            "display" : "-74",
+            "value" : -74
+          },
+          {
+            "display" : "-73",
+            "value" : -73
+          },
+          {
+            "display" : "-72",
+            "value" : -72
+          },
+          {
+            "display" : "-71",
+            "value" : -71
+          },
+          {
+            "display" : "-70",
+            "value" : -70
+          },
+          {
+            "display" : "-69",
+            "value" : -69
+          },
+          {
+            "display" : "-68",
+            "value" : -68
+          },
+          {
+            "display" : "-67",
+            "value" : -67
+          },
+          {
+            "display" : "-66",
+            "value" : -66
+          },
+          {
+            "display" : "-65",
+            "value" : -65
+          },
+          {
+            "display" : "-64",
+            "value" : -64
+          },
+          {
+            "display" : "-63",
+            "value" : -63
+          },
+          {
+            "display" : "-62",
+            "value" : -62
+          },
+          {
+            "display" : "-61",
+            "value" : -61
+          },
+          {
+            "display" : "-60",
+            "value" : -60
+          },
+          {
+            "display" : "-59",
+            "value" : -59
+          },
+          {
+            "display" : "-58",
+            "value" : -58
+          },
+          {
+            "display" : "-57",
+            "value" : -57
+          },
+          {
+            "display" : "-56",
+            "value" : -56
+          },
+          {
+            "display" : "-55",
+            "value" : -55
+          },
+          {
+            "display" : "-54",
+            "value" : -54
+          },
+          {
+            "display" : "-53",
+            "value" : -53
+          },
+          {
+            "display" : "-52",
+            "value" : -52
+          },
+          {
+            "display" : "-51",
+            "value" : -51
+          },
+          {
+            "display" : "-50",
+            "value" : -50
+          },
+          {
+            "display" : "-49",
+            "value" : -49
+          },
+          {
+            "display" : "-48",
+            "value" : -48
+          },
+          {
+            "display" : "-47",
+            "value" : -47
+          },
+          {
+            "display" : "-46",
+            "value" : -46
+          },
+          {
+            "display" : "-45",
+            "value" : -45
+          },
+          {
+            "display" : "-44",
+            "value" : -44
+          },
+          {
+            "display" : "-43",
+            "value" : -43
+          },
+          {
+            "display" : "-42",
+            "value" : -42
+          },
+          {
+            "display" : "-41",
+            "value" : -41
+          },
+          {
+            "display" : "-40",
+            "value" : -40
+          },
+          {
+            "display" : "-39",
+            "value" : -39
+          },
+          {
+            "display" : "-38",
+            "value" : -38
+          },
+          {
+            "display" : "-37",
+            "value" : -37
+          },
+          {
+            "display" : "-36",
+            "value" : -36
+          },
+          {
+            "display" : "-35",
+            "value" : -35
+          },
+          {
+            "display" : "-34",
+            "value" : -34
+          },
+          {
+            "display" : "-33",
+            "value" : -33
+          },
+          {
+            "display" : "-32",
+            "value" : -32
+          },
+          {
+            "display" : "-31",
+            "value" : -31
+          },
+          {
+            "display" : "-30",
+            "value" : -30
+          },
+          {
+            "display" : "-29",
+            "value" : -29
+          },
+          {
+            "display" : "-28",
+            "value" : -28
+          },
+          {
+            "display" : "-27",
+            "value" : -27
+          },
+          {
+            "display" : "-26",
+            "value" : -26
+          },
+          {
+            "display" : "-25",
+            "value" : -25
+          },
+          {
+            "display" : "-24",
+            "value" : -24
+          },
+          {
+            "display" : "-23",
+            "value" : -23
+          },
+          {
+            "display" : "-22",
+            "value" : -22
+          },
+          {
+            "display" : "-21",
+            "value" : -21
+          },
+          {
+            "display" : "-20",
+            "value" : -20
+          },
+          {
+            "display" : "-19",
+            "value" : -19
+          },
+          {
+            "display" : "-18",
+            "value" : -18
+          },
+          {
+            "display" : "-17",
+            "value" : -17
+          },
+          {
+            "display" : "-16",
+            "value" : -16
+          },
+          {
+            "display" : "-15",
+            "value" : -15
+          },
+          {
+            "display" : "-14",
+            "value" : -14
+          },
+          {
+            "display" : "-13",
+            "value" : -13
+          },
+          {
+            "display" : "-12",
+            "value" : -12
+          },
+          {
+            "display" : "-11",
+            "value" : -11
+          },
+          {
+            "display" : "-10",
+            "value" : -10
+          },
+          {
+            "display" : "-9",
+            "value" : -9
+          },
+          {
+            "display" : "-8",
+            "value" : -8
+          },
+          {
+            "display" : "-7",
+            "value" : -7
+          },
+          {
+            "display" : "-6",
+            "value" : -6
+          },
+          {
+            "display" : "-5",
+            "value" : -5
+          },
+          {
+            "display" : "-4",
+            "value" : -4
+          },
+          {
+            "display" : "-3",
+            "value" : -3
+          },
+          {
+            "display" : "-2",
+            "value" : -2
+          },
+          {
+            "display" : "-1",
+            "value" : -1
+          },
+          {
+            "display" : "1",
+            "value" : 1
+          },
+          {
+            "display" : "2",
+            "value" : 2
+          },
+          {
+            "display" : "3",
+            "value" : 3
+          },
+          {
+            "display" : "4",
+            "value" : 4
+          },
+          {
+            "display" : "5",
+            "value" : 5
+          },
+          {
+            "display" : "6",
+            "value" : 6
+          },
+          {
+            "display" : "7",
+            "value" : 7
+          },
+          {
+            "display" : "8",
+            "value" : 8
+          },
+          {
+            "display" : "9",
+            "value" : 9
+          },
+          {
+            "display" : "10",
+            "value" : 10
+          },
+          {
+            "display" : "11",
+            "value" : 11
+          },
+          {
+            "display" : "12",
+            "value" : 12
+          },
+          {
+            "display" : "13",
+            "value" : 13
+          },
+          {
+            "display" : "14",
+            "value" : 14
+          },
+          {
+            "display" : "15",
+            "value" : 15
+          },
+          {
+            "display" : "16",
+            "value" : 16
+          },
+          {
+            "display" : "17",
+            "value" : 17
+          },
+          {
+            "display" : "18",
+            "value" : 18
+          },
+          {
+            "display" : "19",
+            "value" : 19
+          },
+          {
+            "display" : "20",
+            "value" : 20
+          },
+          {
+            "display" : "21",
+            "value" : 21
+          },
+          {
+            "display" : "22",
+            "value" : 22
+          },
+          {
+            "display" : "23",
+            "value" : 23
+          },
+          {
+            "display" : "24",
+            "value" : 24
+          },
+          {
+            "display" : "25",
+            "value" : 25
+          },
+          {
+            "display" : "26",
+            "value" : 26
+          },
+          {
+            "display" : "27",
+            "value" : 27
+          },
+          {
+            "display" : "28",
+            "value" : 28
+          },
+          {
+            "display" : "29",
+            "value" : 29
+          },
+          {
+            "display" : "30",
+            "value" : 30
+          },
+          {
+            "display" : "31",
+            "value" : 31
+          },
+          {
+            "display" : "32",
+            "value" : 32
+          },
+          {
+            "display" : "33",
+            "value" : 33
+          },
+          {
+            "display" : "34",
+            "value" : 34
+          },
+          {
+            "display" : "35",
+            "value" : 35
+          },
+          {
+            "display" : "36",
+            "value" : 36
+          },
+          {
+            "display" : "37",
+            "value" : 37
+          },
+          {
+            "display" : "38",
+            "value" : 38
+          },
+          {
+            "display" : "39",
+            "value" : 39
+          },
+          {
+            "display" : "40",
+            "value" : 40
+          },
+          {
+            "display" : "41",
+            "value" : 41
+          },
+          {
+            "display" : "42",
+            "value" : 42
+          },
+          {
+            "display" : "43",
+            "value" : 43
+          },
+          {
+            "display" : "44",
+            "value" : 44
+          },
+          {
+            "display" : "45",
+            "value" : 45
+          },
+          {
+            "display" : "46",
+            "value" : 46
+          },
+          {
+            "display" : "47",
+            "value" : 47
+          },
+          {
+            "display" : "48",
+            "value" : 48
+          },
+          {
+            "display" : "49",
+            "value" : 49
+          },
+          {
+            "display" : "50",
+            "value" : 50
+          },
+          {
+            "display" : "51",
+            "value" : 51
+          },
+          {
+            "display" : "52",
+            "value" : 52
+          },
+          {
+            "display" : "53",
+            "value" : 53
+          },
+          {
+            "display" : "54",
+            "value" : 54
+          },
+          {
+            "display" : "55",
+            "value" : 55
+          },
+          {
+            "display" : "56",
+            "value" : 56
+          },
+          {
+            "display" : "57",
+            "value" : 57
+          },
+          {
+            "display" : "58",
+            "value" : 58
+          },
+          {
+            "display" : "59",
+            "value" : 59
+          },
+          {
+            "display" : "60",
+            "value" : 60
+          },
+          {
+            "display" : "61",
+            "value" : 61
+          },
+          {
+            "display" : "62",
+            "value" : 62
+          },
+          {
+            "display" : "63",
+            "value" : 63
+          },
+          {
+            "display" : "64",
+            "value" : 64
+          },
+          {
+            "display" : "65",
+            "value" : 65
+          },
+          {
+            "display" : "66",
+            "value" : 66
+          },
+          {
+            "display" : "67",
+            "value" : 67
+          },
+          {
+            "display" : "68",
+            "value" : 68
+          },
+          {
+            "display" : "69",
+            "value" : 69
+          },
+          {
+            "display" : "70",
+            "value" : 70
+          },
+          {
+            "display" : "71",
+            "value" : 71
+          },
+          {
+            "display" : "72",
+            "value" : 72
+          },
+          {
+            "display" : "73",
+            "value" : 73
+          },
+          {
+            "display" : "74",
+            "value" : 74
+          },
+          {
+            "display" : "75",
+            "value" : 75
+          },
+          {
+            "display" : "76",
+            "value" : 76
+          },
+          {
+            "display" : "77",
+            "value" : 77
+          },
+          {
+            "display" : "78",
+            "value" : 78
+          },
+          {
+            "display" : "79",
+            "value" : 79
+          },
+          {
+            "display" : "80",
+            "value" : 80
+          },
+          {
+            "display" : "81",
+            "value" : 81
+          },
+          {
+            "display" : "82",
+            "value" : 82
+          },
+          {
+            "display" : "83",
+            "value" : 83
+          },
+          {
+            "display" : "84",
+            "value" : 84
+          },
+          {
+            "display" : "85",
+            "value" : 85
+          },
+          {
+            "display" : "86",
+            "value" : 86
+          },
+          {
+            "display" : "87",
+            "value" : 87
+          },
+          {
+            "display" : "88",
+            "value" : 88
+          },
+          {
+            "display" : "89",
+            "value" : 89
+          },
+          {
+            "display" : "90",
+            "value" : 90
+          },
+          {
+            "display" : "91",
+            "value" : 91
+          },
+          {
+            "display" : "92",
+            "value" : 92
+          },
+          {
+            "display" : "93",
+            "value" : 93
+          },
+          {
+            "display" : "94",
+            "value" : 94
+          },
+          {
+            "display" : "95",
+            "value" : 95
+          },
+          {
+            "display" : "96",
+            "value" : 96
+          },
+          {
+            "display" : "97",
+            "value" : 97
+          },
+          {
+            "display" : "98",
+            "value" : 98
+          },
+          {
+            "display" : "99",
+            "value" : 99
+          },
+          {
+            "display" : "100",
+            "value" : 100
+          }
+        ]
+      },
+      "generateIntermediateStep" : {
+        "broadcastFacet" : true,
+        "groups" : [ ],
+        "numbers" : [ ],
+        "query" : "q = load \"${App.Datasets.PricingGuidanceDataset_tp.FullyQualifiedName}\";\nresult = group q by 'QuantityDim';\nresult = foreach result generate q.'QuantityDim' as 'QuantityDim', median('QuantitySum') as Quantity, count(q) as 'Count', row_number() over([..] partition by all order by median('QuantitySum')) as 'Index', sum(count(q)) over([..0] partition by all order by median('QuantitySum')) as 'Sum';\nresult = order result by Quantity asc;\nresult1 = foreach result generate 'QuantityDim' as QuantityDim, Quantity as Quantity, 'Count' as 'Count', 'Index' as 'Index', 'Sum' as 'Sum', (case \n    when 'Sum' < {{coalesce(cell(generateBinSizeStep.result, 0, \"binsize\"),-1).asObject()}}*1 then \"2\"\n    when 'Sum' < {{coalesce(cell(generateBinSizeStep.result, 0, \"binsize\"),-1).asObject()}}*2 then \"3\"\n    when 'Sum' < {{coalesce(cell(generateBinSizeStep.result, 0, \"binsize\"),-1).asObject()}}*3 then \"4\"\n    when 'Sum' < {{coalesce(cell(generateBinSizeStep.result, 0, \"binsize\"),-1).asObject()}}*4 then \"5\"\n    when 'Sum' < {{coalesce(cell(generateBinSizeStep.result, 0, \"binsize\"),-1).asObject()}}*5 then \"6\"\n    when 'Sum' < {{coalesce(cell(generateBinSizeStep.result, 0, \"binsize\"),-1).asObject()}}*6 then \"7\"\n    when 'Sum' < {{coalesce(cell(generateBinSizeStep.result, 0, \"binsize\"),-1).asObject()}}*7 then \"8\"\n    when 'Sum' < {{coalesce(cell(generateBinSizeStep.result, 0, \"binsize\"),-1).asObject()}}*8 then \"9\"\n    when 'Sum' < {{coalesce(cell(generateBinSizeStep.result, 0, \"binsize\"),-1).asObject()}}*9 then \"10\"\n    when 'Sum' < {{coalesce(cell(generateBinSizeStep.result, 0, \"binsize\"),-1).asObject()}}*10 then \"11\"\n    when 'Sum' < {{coalesce(cell(generateBinSizeStep.result, 0, \"binsize\"),-1).asObject()}}*11 then \"12\"\n    when 'Sum' < {{coalesce(cell(generateBinSizeStep.result, 0, \"binsize\"),-1).asObject()}}*12 then \"13\"\n    when 'Sum' < {{coalesce(cell(generateBinSizeStep.result, 0, \"binsize\"),-1).asObject()}}*13 then \"14\"\n    when 'Sum' < {{coalesce(cell(generateBinSizeStep.result, 0, \"binsize\"),-1).asObject()}}*14 then \"15\"\n    when 'Sum' < {{coalesce(cell(generateBinSizeStep.result, 0, \"binsize\"),-1).asObject()}}*15 then \"16\"\n    when 'Sum' < {{coalesce(cell(generateBinSizeStep.result, 0, \"binsize\"),-1).asObject()}}*16 then \"17\"\n    when 'Sum' < {{coalesce(cell(generateBinSizeStep.result, 0, \"binsize\"),-1).asObject()}}*17 then \"18\"\n    when 'Sum' < {{coalesce(cell(generateBinSizeStep.result, 0, \"binsize\"),-1).asObject()}}*18 then \"19\"\n    when 'Sum' < {{coalesce(cell(generateBinSizeStep.result, 0, \"binsize\"),-1).asObject()}}*19 then \"20\"\n    when 'Sum' < {{coalesce(cell(generateBinSizeStep.result, 0, \"binsize\"),-1).asObject()}}*20 then \"21\"\n    when 'Sum' < {{coalesce(cell(generateBinSizeStep.result, 0, \"binsize\"),-1).asObject()}}*21 then \"22\"\n    when 'Sum' < {{coalesce(cell(generateBinSizeStep.result, 0, \"binsize\"),-1).asObject()}}*22 then \"23\"\n    when 'Sum' < {{coalesce(cell(generateBinSizeStep.result, 0, \"binsize\"),-1).asObject()}}*23 then \"24\"\n    when 'Sum' < {{coalesce(cell(generateBinSizeStep.result, 0, \"binsize\"),-1).asObject()}}*24 then \"25\"\n    when 'Sum' < {{coalesce(cell(generateBinSizeStep.result, 0, \"binsize\"),-1).asObject()}}*25 then \"26\"\n    when 'Sum' < {{coalesce(cell(generateBinSizeStep.result, 0, \"binsize\"),-1).asObject()}}*26 then \"27\"\n    when 'Sum' < {{coalesce(cell(generateBinSizeStep.result, 0, \"binsize\"),-1).asObject()}}*27 then \"28\"\n    when 'Sum' < {{coalesce(cell(generateBinSizeStep.result, 0, \"binsize\"),-1).asObject()}}*28 then \"29\"\n    when 'Sum' < {{coalesce(cell(generateBinSizeStep.result, 0, \"binsize\"),-1).asObject()}}*29 then \"30\"\n    when 'Sum' < {{coalesce(cell(generateBinSizeStep.result, 0, \"binsize\"),-1).asObject()}}*30 then \"31\"\n    when 'Sum' < {{coalesce(cell(generateBinSizeStep.result, 0, \"binsize\"),-1).asObject()}}*31 then \"32\"\n    when 'Sum' < {{coalesce(cell(generateBinSizeStep.result, 0, \"binsize\"),-1).asObject()}}*32 then \"33\"\n    when 'Sum' < {{coalesce(cell(generateBinSizeStep.result, 0, \"binsize\"),-1).asObject()}}*33 then \"34\"\n    when 'Sum' < {{coalesce(cell(generateBinSizeStep.result, 0, \"binsize\"),-1).asObject()}}*34 then \"35\"\n    when 'Sum' < {{coalesce(cell(generateBinSizeStep.result, 0, \"binsize\"),-1).asObject()}}*35 then \"36\"\n    when 'Sum' < {{coalesce(cell(generateBinSizeStep.result, 0, \"binsize\"),-1).asObject()}}*36 then \"37\"\n    when 'Sum' < {{coalesce(cell(generateBinSizeStep.result, 0, \"binsize\"),-1).asObject()}}*37 then \"38\"\n    when 'Sum' < {{coalesce(cell(generateBinSizeStep.result, 0, \"binsize\"),-1).asObject()}}*38 then \"39\"\n    when 'Sum' < {{coalesce(cell(generateBinSizeStep.result, 0, \"binsize\"),-1).asObject()}}*39 then \"40\"\n    when 'Sum' < {{coalesce(cell(generateBinSizeStep.result, 0, \"binsize\"),-1).asObject()}}*40 then \"41\"\n    when 'Sum' < {{coalesce(cell(generateBinSizeStep.result, 0, \"binsize\"),-1).asObject()}}*41 then \"42\"\n    when 'Sum' < {{coalesce(cell(generateBinSizeStep.result, 0, \"binsize\"),-1).asObject()}}*42 then \"43\"\n    when 'Sum' < {{coalesce(cell(generateBinSizeStep.result, 0, \"binsize\"),-1).asObject()}}*43 then \"44\"\n    when 'Sum' < {{coalesce(cell(generateBinSizeStep.result, 0, \"binsize\"),-1).asObject()}}*44 then \"45\"\n    when 'Sum' < {{coalesce(cell(generateBinSizeStep.result, 0, \"binsize\"),-1).asObject()}}*45 then \"46\"\n    when 'Sum' < {{coalesce(cell(generateBinSizeStep.result, 0, \"binsize\"),-1).asObject()}}*46 then \"47\"\n    when 'Sum' < {{coalesce(cell(generateBinSizeStep.result, 0, \"binsize\"),-1).asObject()}}*47 then \"48\"\n    when 'Sum' < {{coalesce(cell(generateBinSizeStep.result, 0, \"binsize\"),-1).asObject()}}*48 then \"49\"\n    when 'Sum' < {{coalesce(cell(generateBinSizeStep.result, 0, \"binsize\"),-1).asObject()}}*49 then \"50\"\n    when 'Sum' < {{coalesce(cell(generateBinSizeStep.result, 0, \"binsize\"),-1).asObject()}}*50 then \"51\"\n    when 'Sum' < {{coalesce(cell(generateBinSizeStep.result, 0, \"binsize\"),-1).asObject()}}*51 then \"52\"\n    when 'Sum' < {{coalesce(cell(generateBinSizeStep.result, 0, \"binsize\"),-1).asObject()}}*52 then \"53\"\n    when 'Sum' < {{coalesce(cell(generateBinSizeStep.result, 0, \"binsize\"),-1).asObject()}}*53 then \"54\"\n    when 'Sum' < {{coalesce(cell(generateBinSizeStep.result, 0, \"binsize\"),-1).asObject()}}*54 then \"55\"\n    when 'Sum' < {{coalesce(cell(generateBinSizeStep.result, 0, \"binsize\"),-1).asObject()}}*55 then \"56\"\n    when 'Sum' < {{coalesce(cell(generateBinSizeStep.result, 0, \"binsize\"),-1).asObject()}}*56 then \"57\"\n    when 'Sum' < {{coalesce(cell(generateBinSizeStep.result, 0, \"binsize\"),-1).asObject()}}*57 then \"58\"\n    when 'Sum' < {{coalesce(cell(generateBinSizeStep.result, 0, \"binsize\"),-1).asObject()}}*58 then \"59\"\n    when 'Sum' < {{coalesce(cell(generateBinSizeStep.result, 0, \"binsize\"),-1).asObject()}}*59 then \"60\"\n    when 'Sum' < {{coalesce(cell(generateBinSizeStep.result, 0, \"binsize\"),-1).asObject()}}*60 then \"61\"\n    when 'Sum' < {{coalesce(cell(generateBinSizeStep.result, 0, \"binsize\"),-1).asObject()}}*61 then \"62\"\n    when 'Sum' < {{coalesce(cell(generateBinSizeStep.result, 0, \"binsize\"),-1).asObject()}}*62 then \"63\"\n    when 'Sum' < {{coalesce(cell(generateBinSizeStep.result, 0, \"binsize\"),-1).asObject()}}*63 then \"64\"\n    when 'Sum' < {{coalesce(cell(generateBinSizeStep.result, 0, \"binsize\"),-1).asObject()}}*64 then \"65\"\n    when 'Sum' < {{coalesce(cell(generateBinSizeStep.result, 0, \"binsize\"),-1).asObject()}}*65 then \"66\"\n    when 'Sum' < {{coalesce(cell(generateBinSizeStep.result, 0, \"binsize\"),-1).asObject()}}*66 then \"67\"\n    when 'Sum' < {{coalesce(cell(generateBinSizeStep.result, 0, \"binsize\"),-1).asObject()}}*67 then \"68\"\n    when 'Sum' < {{coalesce(cell(generateBinSizeStep.result, 0, \"binsize\"),-1).asObject()}}*68 then \"69\"\n    when 'Sum' < {{coalesce(cell(generateBinSizeStep.result, 0, \"binsize\"),-1).asObject()}}*69 then \"70\"\n    when 'Sum' < {{coalesce(cell(generateBinSizeStep.result, 0, \"binsize\"),-1).asObject()}}*70 then \"71\"\n    when 'Sum' < {{coalesce(cell(generateBinSizeStep.result, 0, \"binsize\"),-1).asObject()}}*71 then \"72\"\n    when 'Sum' < {{coalesce(cell(generateBinSizeStep.result, 0, \"binsize\"),-1).asObject()}}*72 then \"73\"\n    when 'Sum' < {{coalesce(cell(generateBinSizeStep.result, 0, \"binsize\"),-1).asObject()}}*73 then \"74\"\n    when 'Sum' < {{coalesce(cell(generateBinSizeStep.result, 0, \"binsize\"),-1).asObject()}}*74 then \"75\"\n    when 'Sum' < {{coalesce(cell(generateBinSizeStep.result, 0, \"binsize\"),-1).asObject()}}*75 then \"76\"\n    when 'Sum' < {{coalesce(cell(generateBinSizeStep.result, 0, \"binsize\"),-1).asObject()}}*76 then \"77\"\n    when 'Sum' < {{coalesce(cell(generateBinSizeStep.result, 0, \"binsize\"),-1).asObject()}}*77 then \"78\"\n    when 'Sum' < {{coalesce(cell(generateBinSizeStep.result, 0, \"binsize\"),-1).asObject()}}*78 then \"79\"\n    when 'Sum' < {{coalesce(cell(generateBinSizeStep.result, 0, \"binsize\"),-1).asObject()}}*79 then \"80\"\n    when 'Sum' < {{coalesce(cell(generateBinSizeStep.result, 0, \"binsize\"),-1).asObject()}}*80 then \"81\"\n    when 'Sum' < {{coalesce(cell(generateBinSizeStep.result, 0, \"binsize\"),-1).asObject()}}*81 then \"82\"\n    when 'Sum' < {{coalesce(cell(generateBinSizeStep.result, 0, \"binsize\"),-1).asObject()}}*82 then \"83\"\n    when 'Sum' < {{coalesce(cell(generateBinSizeStep.result, 0, \"binsize\"),-1).asObject()}}*83 then \"84\"\n    when 'Sum' < {{coalesce(cell(generateBinSizeStep.result, 0, \"binsize\"),-1).asObject()}}*84 then \"85\"\n    when 'Sum' < {{coalesce(cell(generateBinSizeStep.result, 0, \"binsize\"),-1).asObject()}}*85 then \"86\"\n    when 'Sum' < {{coalesce(cell(generateBinSizeStep.result, 0, \"binsize\"),-1).asObject()}}*86 then \"87\"\n    when 'Sum' < {{coalesce(cell(generateBinSizeStep.result, 0, \"binsize\"),-1).asObject()}}*87 then \"88\"\n    when 'Sum' < {{coalesce(cell(generateBinSizeStep.result, 0, \"binsize\"),-1).asObject()}}*88 then \"89\"\n    when 'Sum' < {{coalesce(cell(generateBinSizeStep.result, 0, \"binsize\"),-1).asObject()}}*89 then \"90\"\n    when 'Sum' < {{coalesce(cell(generateBinSizeStep.result, 0, \"binsize\"),-1).asObject()}}*90 then \"91\"\n    when 'Sum' < {{coalesce(cell(generateBinSizeStep.result, 0, \"binsize\"),-1).asObject()}}*91 then \"92\"\n    when 'Sum' < {{coalesce(cell(generateBinSizeStep.result, 0, \"binsize\"),-1).asObject()}}*92 then \"93\"\n    when 'Sum' < {{coalesce(cell(generateBinSizeStep.result, 0, \"binsize\"),-1).asObject()}}*93 then \"94\"\n    when 'Sum' < {{coalesce(cell(generateBinSizeStep.result, 0, \"binsize\"),-1).asObject()}}*94 then \"95\"\n    when 'Sum' < {{coalesce(cell(generateBinSizeStep.result, 0, \"binsize\"),-1).asObject()}}*95 then \"96\"\n    when 'Sum' < {{coalesce(cell(generateBinSizeStep.result, 0, \"binsize\"),-1).asObject()}}*96 then \"97\"\n    when 'Sum' < {{coalesce(cell(generateBinSizeStep.result, 0, \"binsize\"),-1).asObject()}}*97 then \"98\"\n    when 'Sum' < {{coalesce(cell(generateBinSizeStep.result, 0, \"binsize\"),-1).asObject()}}*98 then \"99\"\n    when 'Sum' < {{coalesce(cell(generateBinSizeStep.result, 0, \"binsize\"),-1).asObject()}}*99 then \"100\"\n    when 'Sum' < {{coalesce(cell(generateBinSizeStep.result, 0, \"binsize\"),-1).asObject()}}*100 then \"101\"\n    else \"101\" end ) as 'Bin';\nresult1 = group result1 by 'Bin';\nappendResult = group q by all;\nappendRow0 = foreach appendResult generate \"1\" as 'Bin', -1 as 'MinQuantity', -1 as 'MaxQuantity', -1 as 'SumCount';\nappendRow100 = foreach appendResult generate \"102\" as 'Bin', -1 as 'MinQuantity', -1 as 'MaxQuantity', -1 as 'SumCount';\nresult2 = foreach result1 generate min(Quantity) as MinQuantity, max(Quantity) as MaxQuantity, sum('Count') as 'SumCount', 'Bin' as 'Bin';\nintermediate = union appendRow0,appendRow100;\nintermediate = foreach intermediate generate 'Bin' as 'Bin', MinQuantity as MinQuantity, MaxQuantity as MaxQuantity, 'SumCount' as 'SumCount';\nintermediate = fill intermediate by (dateCols=('Bin', \"Y\"));\nresult2 = union result2, intermediate;\nresult3 = foreach result2 generate 'Bin' as 'Bin',(case when 'MinQuantity' is null then -1 else 'MinQuantity' end) as 'MinQuantity', (case when 'MaxQuantity' is null then -1 else 'MaxQuantity' end) as 'MaxQuantity', 'SumCount' as 'SumCount';\nresult3 = filter result3 by SumCount != -1 || SumCount is null;\nresult4 = group result3 by ('Bin');\nresult4 = foreach result4 generate string_to_number(first('Bin')) as 'Bin', max('MinQuantity') as 'MinQuantity', max('MaxQuantity') as 'MaxQuantity', max('SumCount') as 'SumCount';\nresult4 = order result4 by 'Bin' asc;",
+        "receiveFacet" : true,
+        "selectMode" : "single",
+        "strings" : [ ],
+        "type" : "saql",
+        "useGlobal" : true,
+        "visualizationParameters" : {
+          "parameters" : {
+            "autoFitMode" : "keepLabels",
+            "showValues" : true,
+            "bins" : {
+              "breakpoints" : {
+                "high" : 100,
+                "low" : 0
+              },
+              "bands" : {
+                "high" : {
+                  "color" : "#008000",
+                  "label" : ""
+                },
+                "low" : {
+                  "color" : "#B22222",
+                  "label" : ""
+                },
+                "medium" : {
+                  "color" : "#ffa500",
+                  "label" : ""
+                }
+              }
+            },
+            "legend" : {
+              "descOrder" : false,
+              "showHeader" : true,
+              "show" : true,
+              "customSize" : "auto",
+              "position" : "right-top",
+              "inside" : false
+            },
+            "axisMode" : "multi",
+            "tooltip" : {
+              "showBinLabel" : true,
+              "measures" : "",
+              "showNullValues" : true,
+              "showPercentage" : true,
+              "showDimensions" : true,
+              "showMeasures" : true,
+              "customizeTooltip" : false,
+              "dimensions" : ""
+            },
+            "visualizationType" : "hbar",
+            "title" : {
+              "fontSize" : 14,
+              "subtitleFontSize" : 11,
+              "label" : "",
+              "align" : "center",
+              "subtitleLabel" : ""
+            },
+            "binValues" : false,
+            "trellis" : {
+              "flipLabels" : false,
+              "showGridLines" : true,
+              "size" : [
+                100,
+                100
+              ],
+              "enable" : false,
+              "type" : "x",
+              "chartsPerLine" : 4
+            },
+            "showActionMenu" : true,
+            "measureAxis2" : {
+              "sqrtScale" : false,
+              "showTitle" : true,
+              "showAxis" : true,
+              "title" : "",
+              "customDomain" : {
+                "showDomain" : false
+              }
+            },
+            "measureAxis1" : {
+              "sqrtScale" : false,
+              "showTitle" : true,
+              "showAxis" : true,
+              "title" : "",
+              "customDomain" : {
+                "showDomain" : false
+              }
+            },
+            "theme" : "wave",
+            "dimensionAxis" : {
+              "showTitle" : true,
+              "customSize" : "auto",
+              "showAxis" : true,
+              "title" : "",
+              "icons" : {
+                "useIcons" : false,
+                "iconProps" : {
+                  "fit" : "cover",
+                  "column" : "",
+                  "type" : "round"
+                }
+              }
+            },
+            "applyConditionalFormatting" : true
+          },
+          "type" : "chart"
+        }
+      },
+      "generatePricingGuidanceGraph" : {
+        "broadcastFacet" : true,
+        "groups" : [ ],
+        "label" : "",
+        "numbers" : [ ],
+        "query" : "q = load \"${App.Datasets.PricingGuidanceDataset_tp.FullyQualifiedName}\";\nq = foreach q generate 'QuantitySum' as 'QuantitySum', 'SBQQ__TotalDiscountRate__c' as 'SBQQ__TotalDiscountRate__c',\n( case\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 0, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 0, \"MaxQuantity\"),-1).asObject()}} then \"0\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 1, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 1, \"MaxQuantity\"),-1).asObject()}} then \"1\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 2, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 2, \"MaxQuantity\"),-1).asObject()}} then \"2\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 3, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 3, \"MaxQuantity\"),-1).asObject()}} then \"3\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 4, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 4, \"MaxQuantity\"),-1).asObject()}} then \"4\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 5, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 5, \"MaxQuantity\"),-1).asObject()}} then \"5\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 6, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 6, \"MaxQuantity\"),-1).asObject()}} then \"6\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 7, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 7, \"MaxQuantity\"),-1).asObject()}} then \"7\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 8, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 8, \"MaxQuantity\"),-1).asObject()}} then \"8\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 9, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 9, \"MaxQuantity\"),-1).asObject()}} then \"9\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 10, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 10, \"MaxQuantity\"),-1).asObject()}} then \"10\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 11, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 11, \"MaxQuantity\"),-1).asObject()}} then \"11\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 12, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 12, \"MaxQuantity\"),-1).asObject()}} then \"12\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 13, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 13, \"MaxQuantity\"),-1).asObject()}} then \"13\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 14, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 14, \"MaxQuantity\"),-1).asObject()}} then \"14\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 15, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 15, \"MaxQuantity\"),-1).asObject()}} then \"15\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 16, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 16, \"MaxQuantity\"),-1).asObject()}} then \"16\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 17, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 17, \"MaxQuantity\"),-1).asObject()}} then \"17\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 18, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 18, \"MaxQuantity\"),-1).asObject()}} then \"18\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 19, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 19, \"MaxQuantity\"),-1).asObject()}} then \"19\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 20, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 20, \"MaxQuantity\"),-1).asObject()}} then \"20\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 21, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 21, \"MaxQuantity\"),-1).asObject()}} then \"21\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 22, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 22, \"MaxQuantity\"),-1).asObject()}} then \"22\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 23, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 23, \"MaxQuantity\"),-1).asObject()}} then \"23\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 24, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 24, \"MaxQuantity\"),-1).asObject()}} then \"24\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 25, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 25, \"MaxQuantity\"),-1).asObject()}} then \"25\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 26, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 26, \"MaxQuantity\"),-1).asObject()}} then \"26\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 27, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 27, \"MaxQuantity\"),-1).asObject()}} then \"27\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 28, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 28, \"MaxQuantity\"),-1).asObject()}} then \"28\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 29, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 29, \"MaxQuantity\"),-1).asObject()}} then \"29\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 30, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 30, \"MaxQuantity\"),-1).asObject()}} then \"30\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 31, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 31, \"MaxQuantity\"),-1).asObject()}} then \"31\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 32, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 32, \"MaxQuantity\"),-1).asObject()}} then \"32\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 33, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 33, \"MaxQuantity\"),-1).asObject()}} then \"33\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 34, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 34, \"MaxQuantity\"),-1).asObject()}} then \"34\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 35, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 35, \"MaxQuantity\"),-1).asObject()}} then \"35\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 36, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 36, \"MaxQuantity\"),-1).asObject()}} then \"36\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 37, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 37, \"MaxQuantity\"),-1).asObject()}} then \"37\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 38, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 38, \"MaxQuantity\"),-1).asObject()}} then \"38\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 39, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 39, \"MaxQuantity\"),-1).asObject()}} then \"39\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 40, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 40, \"MaxQuantity\"),-1).asObject()}} then \"40\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 41, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 41, \"MaxQuantity\"),-1).asObject()}} then \"41\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 42, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 42, \"MaxQuantity\"),-1).asObject()}} then \"42\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 43, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 43, \"MaxQuantity\"),-1).asObject()}} then \"43\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 44, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 44, \"MaxQuantity\"),-1).asObject()}} then \"44\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 45, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 45, \"MaxQuantity\"),-1).asObject()}} then \"45\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 46, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 46, \"MaxQuantity\"),-1).asObject()}} then \"46\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 47, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 47, \"MaxQuantity\"),-1).asObject()}} then \"47\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 48, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 48, \"MaxQuantity\"),-1).asObject()}} then \"48\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 49, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 49, \"MaxQuantity\"),-1).asObject()}} then \"49\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 50, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 50, \"MaxQuantity\"),-1).asObject()}} then \"50\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 51, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 51, \"MaxQuantity\"),-1).asObject()}} then \"51\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 52, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 52, \"MaxQuantity\"),-1).asObject()}} then \"52\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 53, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 53, \"MaxQuantity\"),-1).asObject()}} then \"53\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 54, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 54, \"MaxQuantity\"),-1).asObject()}} then \"54\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 55, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 55, \"MaxQuantity\"),-1).asObject()}} then \"55\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 56, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 56, \"MaxQuantity\"),-1).asObject()}} then \"56\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 57, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 57, \"MaxQuantity\"),-1).asObject()}} then \"57\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 58, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 58, \"MaxQuantity\"),-1).asObject()}} then \"58\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 59, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 59, \"MaxQuantity\"),-1).asObject()}} then \"59\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 60, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 60, \"MaxQuantity\"),-1).asObject()}} then \"60\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 61, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 61, \"MaxQuantity\"),-1).asObject()}} then \"61\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 62, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 62, \"MaxQuantity\"),-1).asObject()}} then \"62\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 63, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 63, \"MaxQuantity\"),-1).asObject()}} then \"63\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 64, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 64, \"MaxQuantity\"),-1).asObject()}} then \"64\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 65, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 65, \"MaxQuantity\"),-1).asObject()}} then \"65\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 66, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 66, \"MaxQuantity\"),-1).asObject()}} then \"66\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 67, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 67, \"MaxQuantity\"),-1).asObject()}} then \"67\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 68, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 68, \"MaxQuantity\"),-1).asObject()}} then \"68\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 69, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 69, \"MaxQuantity\"),-1).asObject()}} then \"69\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 70, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 70, \"MaxQuantity\"),-1).asObject()}} then \"70\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 71, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 71, \"MaxQuantity\"),-1).asObject()}} then \"71\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 72, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 72, \"MaxQuantity\"),-1).asObject()}} then \"72\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 73, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 73, \"MaxQuantity\"),-1).asObject()}} then \"73\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 74, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 74, \"MaxQuantity\"),-1).asObject()}} then \"74\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 75, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 75, \"MaxQuantity\"),-1).asObject()}} then \"75\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 76, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 76, \"MaxQuantity\"),-1).asObject()}} then \"76\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 77, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 77, \"MaxQuantity\"),-1).asObject()}} then \"77\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 78, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 78, \"MaxQuantity\"),-1).asObject()}} then \"78\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 79, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 79, \"MaxQuantity\"),-1).asObject()}} then \"79\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 80, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 80, \"MaxQuantity\"),-1).asObject()}} then \"80\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 81, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 81, \"MaxQuantity\"),-1).asObject()}} then \"81\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 82, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 82, \"MaxQuantity\"),-1).asObject()}} then \"82\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 83, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 83, \"MaxQuantity\"),-1).asObject()}} then \"83\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 84, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 84, \"MaxQuantity\"),-1).asObject()}} then \"84\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 85, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 85, \"MaxQuantity\"),-1).asObject()}} then \"85\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 86, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 86, \"MaxQuantity\"),-1).asObject()}} then \"86\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 87, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 87, \"MaxQuantity\"),-1).asObject()}} then \"87\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 88, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 88, \"MaxQuantity\"),-1).asObject()}} then \"88\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 89, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 89, \"MaxQuantity\"),-1).asObject()}} then \"89\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 90, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 90, \"MaxQuantity\"),-1).asObject()}} then \"90\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 91, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 91, \"MaxQuantity\"),-1).asObject()}} then \"91\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 92, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 92, \"MaxQuantity\"),-1).asObject()}} then \"92\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 93, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 93, \"MaxQuantity\"),-1).asObject()}} then \"93\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 94, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 94, \"MaxQuantity\"),-1).asObject()}} then \"94\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 95, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 95, \"MaxQuantity\"),-1).asObject()}} then \"95\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 96, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 96, \"MaxQuantity\"),-1).asObject()}} then \"96\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 97, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 97, \"MaxQuantity\"),-1).asObject()}} then \"97\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 98, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 98, \"MaxQuantity\"),-1).asObject()}} then \"98\"\n    when 'QuantitySum' >= {{coalesce(cell(generateIntermediateStep.result, 99, \"MinQuantity\"),-1).asObject()}} and 'QuantitySum' <= {{coalesce(cell(generateIntermediateStep.result, 99, \"MaxQuantity\"),-1).asObject()}} then \"99\"\n    else \"100\"\n end ) as 'BinGroup';\nresult = group q by 'BinGroup';\nresult = foreach result generate 'BinGroup' as 'BinGroup', min('QuantitySum') as 'Quantity Lower Bound', max('QuantitySum') as 'Quantity Upper Bound',  median('SBQQ__TotalDiscountRate__c') as 'Median Discount';\nresult = foreach result generate 'BinGroup' as 'Bin', 'Quantity Lower Bound' as 'Quantity Lower Bound', 'Quantity Upper Bound' as 'Quantity Upper Bound', 'Median Discount' as 'Median Discount', 'Median Discount' + ('Median Discount'*({{coalesce(cell(targetPercentMedianStep.selection, 0, \"value\"),-1).asObject()}}/100)) as 'Target', 'Median Discount' + ('Median Discount'*({{coalesce(cell(normPercentMedianStep.selection, 0, \"value\"),-1).asObject()}}/100)) as 'Norm', 'Median Discount' + ('Median Discount'*({{coalesce(cell(floorPercentMedianStep.selection, 0, \"value\"),-1).asObject()}}/100)) as 'Floor';\nresult = order result by 'Quantity Lower Bound' asc;\n--Combine upper and lower bounds to create ranges\nfinalResult = group result by ('Bin','Quantity Lower Bound', 'Median Discount', 'Target', 'Norm', 'Floor');\nfinalResult = foreach finalResult generate 'Quantity Lower Bound' as 'Quantity Lower Bound', max('Quantity Lower Bound') over([0..1] partition by all order by 'Quantity Lower Bound') as 'Quantity Upper Bound', 'Median Discount' as 'Median Discount %', 'Target' as 'Target', 'Norm' as 'Norm', 'Floor' as 'Floor';\nfinalResult = foreach finalResult generate number_to_string('Quantity Lower Bound', \"#\") + \" - \" + number_to_string('Quantity Upper Bound', \"#\") as 'Quantity', 'Median Discount %' as 'Median Discount %', 'Target' as 'Target', 'Norm' as 'Norm', 'Floor' as 'Floor';\nfinalResultGraph = foreach finalResult generate 'Quantity' as 'Quantity', median('Median Discount %') as 'Median Discount', median('Target') as 'Target %', median('Norm') as 'Norm %', median('Floor') as 'Floor %';",
+        "receiveFacet" : true,
+        "selectMode" : "single",
+        "strings" : [ ],
+        "type" : "saql",
+        "useGlobal" : true,
+        "visualizationParameters" : {
+          "parameters" : {
+            "autoFitMode" : "keepLabels",
+            "showPoints" : false,
+            "legend" : {
+              "descOrder" : false,
+              "showHeader" : true,
+              "show" : true,
+              "customSize" : "auto",
+              "position" : "right-top",
+              "inside" : false
+            },
+            "axisMode" : "sync",
+            "tooltip" : {
+              "showBinLabel" : true,
+              "measures" : "",
+              "showNullValues" : true,
+              "showPercentage" : true,
+              "showDimensions" : true,
+              "showMeasures" : true,
+              "customizeTooltip" : false,
+              "dimensions" : ""
+            },
+            "visualizationType" : "line",
+            "dashLine" : {
+              "measures" : [
+                "Median Discount"
+              ],
+              "showDashLine" : true
+            },
+            "title" : {
+              "fontSize" : 14,
+              "subtitleFontSize" : 11,
+              "label" : "",
+              "align" : "center",
+              "subtitleLabel" : ""
+            },
+            "trellis" : {
+              "flipLabels" : false,
+              "showGridLines" : true,
+              "size" : [
+                100,
+                100
+              ],
+              "enable" : false,
+              "type" : "x",
+              "chartsPerLine" : 4
+            },
+            "columnMap" : {
+              "split" : [ ],
+              "trellis" : [ ],
+              "dimensionAxis" : [
+                "Quantity"
+              ],
+              "plots" : [
+                "Median Discount",
+                "Target %",
+                "Norm %",
+                "Floor %"
+              ]
+            },
+            "fillArea" : true,
+            "showActionMenu" : true,
+            "showZero" : true,
+            "measureAxis2" : {
+              "sqrtScale" : false,
+              "showTitle" : true,
+              "showAxis" : true,
+              "title" : "",
+              "customDomain" : {
+                "showDomain" : false
+              }
+            },
+            "measureAxis1" : {
+              "sqrtScale" : false,
+              "showTitle" : true,
+              "showAxis" : true,
+              "title" : "",
+              "customDomain" : {
+                "showDomain" : false
+              }
+            },
+            "valueType" : "none",
+            "theme" : "wave",
+            "dimensionAxis" : {
+              "showTitle" : true,
+              "customSize" : "auto",
+              "showAxis" : true,
+              "title" : "",
+              "icons" : {
+                "useIcons" : false,
+                "iconProps" : {
+                  "fit" : "cover",
+                  "column" : "",
+                  "type" : "round"
+                }
+              }
+            },
+            "applyConditionalFormatting" : true,
+            "drawArea" : {
+              "measure" : "",
+              "showDrawArea" : false,
+              "bounding1" : "",
+              "bounding2" : ""
+            }
+          },
+          "type" : "chart"
+        }
+      },
+      "generateUniqueQuantityNumberStep" : {
+        "broadcastFacet" : true,
+        "groups" : [ ],
+        "label" : "generateUniqueQuantityNumberStep",
+        "numbers" : [ ],
+        "query" : "q = load \"${App.Datasets.PricingGuidanceDataset_tp.FullyQualifiedName}\";\nq = group q by all;\nq = foreach q generate unique('QuantitySum') as 'unique_QuantitySum';",
+        "receiveFacet" : true,
+        "selectMode" : "single",
+        "strings" : [ ],
+        "type" : "saql",
+        "useGlobal" : true,
+        "visualizationParameters" : {
+          "parameters" : {
+            "autoFitMode" : "keepLabels",
+            "showValues" : true,
+            "bins" : {
+              "breakpoints" : {
+                "high" : 100,
+                "low" : 0
+              },
+              "bands" : {
+                "high" : {
+                  "color" : "#008000",
+                  "label" : ""
+                },
+                "low" : {
+                  "color" : "#B22222",
+                  "label" : ""
+                },
+                "medium" : {
+                  "color" : "#ffa500",
+                  "label" : ""
+                }
+              }
+            },
+            "legend" : {
+              "descOrder" : false,
+              "showHeader" : true,
+              "show" : true,
+              "customSize" : "auto",
+              "position" : "right-top",
+              "inside" : false
+            },
+            "axisMode" : "multi",
+            "tooltip" : {
+              "showBinLabel" : true,
+              "measures" : "",
+              "showNullValues" : true,
+              "showPercentage" : true,
+              "showDimensions" : true,
+              "showMeasures" : true,
+              "customizeTooltip" : false,
+              "dimensions" : ""
+            },
+            "visualizationType" : "hbar",
+            "title" : {
+              "fontSize" : 14,
+              "subtitleFontSize" : 11,
+              "label" : "",
+              "align" : "center",
+              "subtitleLabel" : ""
+            },
+            "binValues" : false,
+            "trellis" : {
+              "flipLabels" : false,
+              "showGridLines" : true,
+              "size" : [
+                100,
+                100
+              ],
+              "enable" : false,
+              "type" : "x",
+              "chartsPerLine" : 4
+            },
+            "showActionMenu" : true,
+            "measureAxis2" : {
+              "sqrtScale" : false,
+              "showTitle" : true,
+              "showAxis" : true,
+              "title" : "",
+              "customDomain" : {
+                "showDomain" : false
+              }
+            },
+            "measureAxis1" : {
+              "sqrtScale" : false,
+              "showTitle" : true,
+              "showAxis" : true,
+              "title" : "",
+              "customDomain" : {
+                "showDomain" : false
+              }
+            },
+            "theme" : "wave",
+            "dimensionAxis" : {
+              "showTitle" : true,
+              "customSize" : "auto",
+              "showAxis" : true,
+              "title" : "",
+              "icons" : {
+                "useIcons" : false,
+                "iconProps" : {
+                  "fit" : "cover",
+                  "column" : "",
+                  "type" : "round"
+                }
+              }
+            },
+            "applyConditionalFormatting" : true
+          },
+          "type" : "chart"
+        }
+      },
+      "generateAllRowsCountStep" : {
+        "broadcastFacet" : true,
+        "groups" : [ ],
+        "numbers" : [ ],
+        "query" : "q = load \"${App.Datasets.PricingGuidanceDataset_tp.FullyQualifiedName}\";\nq = group q by all;\nq = foreach q generate count() as 'count';\n",
+        "receiveFacet" : true,
+        "selectMode" : "single",
+        "strings" : [ ],
+        "type" : "saql",
+        "useGlobal" : true,
+        "visualizationParameters" : {
+          "parameters" : {
+            "autoFitMode" : "keepLabels",
+            "showValues" : true,
+            "bins" : {
+              "breakpoints" : {
+                "high" : 100,
+                "low" : 0
+              },
+              "bands" : {
+                "high" : {
+                  "color" : "#008000",
+                  "label" : ""
+                },
+                "low" : {
+                  "color" : "#B22222",
+                  "label" : ""
+                },
+                "medium" : {
+                  "color" : "#ffa500",
+                  "label" : ""
+                }
+              }
+            },
+            "legend" : {
+              "descOrder" : false,
+              "showHeader" : true,
+              "show" : true,
+              "customSize" : "auto",
+              "position" : "right-top",
+              "inside" : false
+            },
+            "axisMode" : "multi",
+            "tooltip" : {
+              "showBinLabel" : true,
+              "measures" : "",
+              "showNullValues" : true,
+              "showPercentage" : true,
+              "showDimensions" : true,
+              "showMeasures" : true,
+              "customizeTooltip" : false,
+              "dimensions" : ""
+            },
+            "visualizationType" : "hbar",
+            "title" : {
+              "fontSize" : 14,
+              "subtitleFontSize" : 11,
+              "label" : "",
+              "align" : "center",
+              "subtitleLabel" : ""
+            },
+            "binValues" : false,
+            "trellis" : {
+              "flipLabels" : false,
+              "showGridLines" : true,
+              "size" : [
+                100,
+                100
+              ],
+              "enable" : false,
+              "type" : "x",
+              "chartsPerLine" : 4
+            },
+            "showActionMenu" : true,
+            "measureAxis2" : {
+              "sqrtScale" : false,
+              "showTitle" : true,
+              "showAxis" : true,
+              "title" : "",
+              "customDomain" : {
+                "showDomain" : false
+              }
+            },
+            "measureAxis1" : {
+              "sqrtScale" : false,
+              "showTitle" : true,
+              "showAxis" : true,
+              "title" : "",
+              "customDomain" : {
+                "showDomain" : false
+              }
+            },
+            "theme" : "wave",
+            "dimensionAxis" : {
+              "showTitle" : true,
+              "customSize" : "auto",
+              "showAxis" : true,
+              "title" : "",
+              "icons" : {
+                "useIcons" : false,
+                "iconProps" : {
+                  "fit" : "cover",
+                  "column" : "",
+                  "type" : "round"
+                }
+              }
+            },
+            "applyConditionalFormatting" : true
+          },
+          "type" : "chart"
+        }
+      }
+    },
+    "widgetStyle" : {
+      "backgroundColor" : "#FFFFFF",
+      "borderColor" : "#E6ECF2",
+      "borderEdges" : [ ],
+      "borderRadius" : 0,
+      "borderWidth" : 1
+    },
+    "widgets" : {
+      "table_1" : {
+        "parameters" : {
+          "borderColor" : "#e0e5ee",
+          "borderWidth" : 1,
+          "cell" : {
+            "backgroundColor" : "#ffffff",
+            "fontColor" : "#16325c",
+            "fontSize" : 14
+          },
+          "columnProperties" : {
+            "Floor" : {
+              "parameters" : {
+                "alignment" : "right"
+              },
+              "type" : "text"
+            },
+            "Quantity Lower Bound" : {
+              "parameters" : {
+                "alignment" : "right"
+              },
+              "type" : "text"
+            }
+          },
+          "columns" : [ ],
+          "customBulkActions" : [ ],
+          "exploreLink" : false,
+          "header" : {
+            "backgroundColor" : "#f4f6f9",
+            "fontColor" : "#16325c",
+            "fontSize" : 14
+          },
+          "innerMajorBorderColor" : "#a8b7c7",
+          "innerMinorBorderColor" : "#e0e5ee",
+          "mode" : "fittocontainer",
+          "numberOfLines" : 1,
+          "pivoted" : false,
+          "showActionMenu" : false,
+          "step" : "generateFinalPricingGuidanceStep",
+          "totals" : true,
+          "verticalPadding" : 4
+        },
+        "type" : "table"
+      },
+      "listselector_3" : {
+        "parameters" : {
+          "compact" : false,
+          "displayTemplate" : "[display]%",
+          "exploreLink" : false,
+          "instant" : true,
+          "measureField" : "value",
+          "showActionMenu" : true,
+          "step" : "targetPercentMedianStep",
+          "title" : " Target % away from median"
+        },
+        "type" : "listselector"
+      },
+      "listselector_2" : {
+        "parameters" : {
+          "compact" : false,
+          "displayTemplate" : "[display]%",
+          "exploreLink" : false,
+          "instant" : true,
+          "measureField" : "value",
+          "showActionMenu" : true,
+          "step" : "floorPercentMedianStep",
+          "title" : " Floor % away from median"
+        },
+        "type" : "listselector"
+      },
+      "filterpanel_1" : {
+        "parameters" : {
+          "filterItemOptions" : {
+            "backgroundColor" : "#FFFFFF",
+            "borderColor" : "#E6ECF2",
+            "borderRadius" : 4,
+            "borderWidth" : 1,
+            "propertyColor" : "#54698D",
+            "valueColor" : "#16325C"
+          },
+          "itemsPerRow" : 1,
+          "title" : {
+            "separatorColor" : "#E6ECF2",
+            "text" : {
+              "align" : "left",
+              "color" : "#091A3E",
+              "fontSize" : 16,
+              "label" : "Filters"
+            },
+            "visible" : true
+          }
+        },
+        "type" : "filterpanel"
+      },
+      "listselector_1" : {
+        "parameters" : {
+          "compact" : false,
+          "displayTemplate" : "[display]%",
+          "exploreLink" : false,
+          "instant" : true,
+          "measureField" : "value",
+          "showActionMenu" : true,
+          "step" : "normPercentMedianStep",
+          "title" : "Norm % away from median"
+        },
+        "type" : "listselector"
+      },
+      "navigation_2" : {
+        "parameters" : {
+          "fontSize" : 16,
+          "selectedTab" : {
+            "backgroundColor" : "#FFFFFF",
+            "borderColor" : "#0070D2",
+            "borderEdges" : [
+              "bottom"
+            ],
+            "borderWidth" : 2,
+            "textColor" : "#0070D2"
+          },
+          "tabCount" : 5,
+          "textColor" : "#54698D"
+        },
+        "type" : "navigation"
+      },
+      "chart_1" : {
+        "parameters" : {
+          "autoFitMode" : "keepLabels",
+          "showPoints" : false,
+          "legend" : {
+            "descOrder" : false,
+            "showHeader" : true,
+            "show" : true,
+            "customSize" : "auto",
+            "position" : "right-top",
+            "inside" : false
+          },
+          "axisMode" : "sync",
+          "tooltip" : {
+            "showBinLabel" : true,
+            "measures" : [
+              "Median Discount",
+              "Target %",
+              "Norm %",
+              "Floor %"
+            ],
+            "showNullValues" : true,
+            "showPercentage" : false,
+            "showDimensions" : true,
+            "showMeasures" : true,
+            "customizeTooltip" : true,
+            "dimensions" : [
+              "Quantity"
+            ]
+          },
+          "visualizationType" : "line",
+          "dashLine" : {
+            "measures" : [
+              "Median Discount"
+            ],
+            "showDashLine" : true
+          },
+          "exploreLink" : false,
+          "title" : {
+            "fontSize" : 14,
+            "subtitleFontSize" : 11,
+            "label" : "",
+            "align" : "center",
+            "subtitleLabel" : ""
+          },
+          "trellis" : {
+            "flipLabels" : false,
+            "showGridLines" : true,
+            "size" : [
+              100,
+              100
+            ],
+            "enable" : false,
+            "type" : "x",
+            "parameters" : { },
+            "chartsPerLine" : 4
+          },
+          "fillArea" : true,
+          "columnMap" : {
+            "split" : [ ],
+            "trellis" : [ ],
+            "dimensionAxis" : [
+              "Quantity"
+            ],
+            "plots" : [
+              "Median Discount",
+              "Target %",
+              "Norm %",
+              "Floor %"
+            ]
+          },
+          "showActionMenu" : false,
+          "showZero" : true,
+          "measureAxis2" : {
+            "sqrtScale" : false,
+            "showTitle" : true,
+            "showAxis" : true,
+            "title" : "",
+            "customDomain" : {
+              "showDomain" : false
+            }
+          },
+          "measureAxis1" : {
+            "sqrtScale" : false,
+            "showTitle" : true,
+            "showAxis" : true,
+            "title" : "Discount Percent (%)",
+            "customDomain" : {
+              "showDomain" : false
+            }
+          },
+          "valueType" : "none",
+          "theme" : "wave",
+          "step" : "generatePricingGuidanceGraph",
+          "dimensionAxis" : {
+            "showTitle" : true,
+            "customSize" : "auto",
+            "showAxis" : true,
+            "title" : "",
+            "icons" : {
+              "useIcons" : false,
+              "iconProps" : {
+                "fit" : "cover",
+                "column" : "",
+                "type" : "round",
+                "parameters" : { }
+              }
+            }
+          },
+          "applyConditionalFormatting" : true,
+          "drawArea" : {
+            "measure" : "Median Discount",
+            "showDrawArea" : false,
+            "bounding1" : "Median Discount",
+            "bounding2" : "Median Discount"
+          }
+        },
+        "type" : "chart"
+      },
+      "navigation_1" : {
+        "parameters" : {
+          "fontSize" : 16,
+          "selectedTab" : {
+            "backgroundColor" : "#FFFFFF",
+            "borderColor" : "#0070D2",
+            "borderEdges" : [
+              "bottom"
+            ],
+            "borderWidth" : 2,
+            "textColor" : "#0070D2"
+          },
+          "tabCount" : 5,
+          "textColor" : "#54698D"
+        },
+        "type" : "navigation"
+      }
+    }
+  }
+}

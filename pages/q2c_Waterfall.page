@@ -1,0 +1,103 @@
+<apex:page title="Test" applyBodyTag="False" applyHtmlTag="False" showHeader="false" standardStylesheets="false" sidebar="false" docType="html-5.0" controller="q2c_waterFallController">
+<html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <head>
+        <apex:slds />
+        <apex:includeScript value="https://cdnjs.cloudflare.com/ajax/libs/jsforce/1.7.0/jsforce.min.js" />
+        <apex:includeScript value="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.0/Chart.bundle.min.js"/>
+    </head>
+    <body>
+      
+
+                <div class="slds-size_1-of-7">
+                    <div class="slds-section slds-is-open slds-p-horizontal_xx-small">
+                        <div aria-hidden="false" class="slds-section__content">
+                            <div class="chart-container" style="height:150px; width:99%">
+                                <canvas id="bar-chart" ></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+          
+  <script type="text/javascript">
+    var StartingMRR = {!ExistingMRR};
+    var NetNew = {!NetNewMRR};
+    var Expansion = {!ExpansionMRR};
+    var Churn = {!ChurnMRR};
+    var EndingMRR = {!EndingMRR};
+    var Uplift = {!UpliftMRR};
+/**Blue,Green,Green,Red, Blue**/
+    var datasetDynamic = [
+                            {
+                              label: "MRR",
+                              backgroundColor: ["rgba(174, 214, 241, 1)"],
+                              data: [StartingMRR]
+                            },
+                            {
+                              label: "MRR",
+                              backgroundColor: ["rgba(255, 99, 132, 1)"],
+                              data: [0]
+                            }
+                          ];
+    var LabelDynamic = ["Before Quote MRR"];
+    if(NetNew>0){
+        LabelDynamic.push("Net New");
+        datasetDynamic[0].backgroundColor.push("rgba(255, 99, 132, 0)");
+        datasetDynamic[0].data.push(StartingMRR);
+        datasetDynamic[1].backgroundColor.push("rgba(171, 235, 198, 1)");
+        datasetDynamic[1].data.push(NetNew);
+    }
+    if(Expansion>0){
+        LabelDynamic.push("Expansion");
+        datasetDynamic[0].backgroundColor.push("rgba(255, 99, 132, 0)");
+        datasetDynamic[0].data.push(StartingMRR+NetNew);
+        datasetDynamic[1].backgroundColor.push("rgba(171, 235, 198, 1)");
+        datasetDynamic[1].data.push(Expansion);
+    }
+    if(Uplift>0){
+        LabelDynamic.push("Uplift");
+        datasetDynamic[0].backgroundColor.push("rgba(255, 99, 132, 0)");
+        datasetDynamic[0].data.push(StartingMRR+NetNew+Expansion);
+        datasetDynamic[1].backgroundColor.push("rgba(171, 235, 198, 1)");
+        datasetDynamic[1].data.push(Uplift);
+    }
+    if(Churn<0){
+        LabelDynamic.push("Churn");
+        datasetDynamic[0].backgroundColor.push("rgba(255, 99, 132, 0)");
+        datasetDynamic[0].data.push(EndingMRR);
+        datasetDynamic[1].backgroundColor.push("rgba(217, 136, 128, 1)");
+        datasetDynamic[1].data.push(-Churn);
+    }
+    LabelDynamic.push("After Quote Close MRR");
+    datasetDynamic[0].backgroundColor.push("rgba(174, 214, 241, 1)");
+    datasetDynamic[0].data.push(EndingMRR);
+    datasetDynamic[1].backgroundColor.push("rgba(171, 235, 198, 1)");
+    datasetDynamic[1].data.push(0);
+
+
+    Chart.defaults.global.defaultFontSize = 14;
+    new Chart(document.getElementById("bar-chart"), {
+        type: 'bar',
+        data: {
+          labels: LabelDynamic,
+          datasets: datasetDynamic
+        },
+        options: {
+            legend: { display: false },scales: {
+            xAxes: [{
+                stacked: true
+            }],
+            yAxes: [{
+                stacked: true
+            }]},
+          title: {
+            display: true,
+            text: 'MRR Waterfall ($)'
+          }
+        }
+    });
+  </script>
+    </body>
+</html>
+</apex:page>

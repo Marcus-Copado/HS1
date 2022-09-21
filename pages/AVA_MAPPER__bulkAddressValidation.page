@@ -1,0 +1,30 @@
+<apex:page standardController="Account" recordSetVar="accounts" extensions="AVA_MAPPER.GenericBulkAddressValidator"  sideBar="false" lightningStylesheets="true" >
+   <apex:includeLightning />
+   <div id="displayresult"></div>
+   <script>
+    $Lightning.use("ava_mapper:BulkAddressValidationApp", function() {
+        $Lightning.createComponent("ava_mapper:BulkAddressValidation",
+                                   {
+                                       selectedRecordIds : "{!JSENCODE(recordIdList)}",
+                                       objectType : "{!JSENCODE(sobjectType)}",
+                                       connectorType : "{!JSENCODE(connectorType)}",
+                                       filterId : "{!JSENCODE(filterId)}"
+                                   },
+                                   "displayresult",
+                                   function(component) {
+                                           $A.eventService.addHandler({
+                                               event: 'force:navigateToList',
+                                               handler: function(event) {
+                                                   if (typeof sforce != 'undefined' && typeof sforce.one != 'undefined') {
+                                                       sforce.one.navigateToList('{!JSENCODE(filterId)}',null,'{!JSENCODE(sobjectType)}');
+                                                   } else {
+                                                       window.location = '{!URLFOR($Action[sobjectType].List, $ObjectType[sobjectType].keyPrefix)}';
+                                                   }
+                                               }
+                                           });
+                                       }
+                                  );
+    });
+    </script>
+    
+</apex:page>

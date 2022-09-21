@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Description --></label>
+        <name>csfb__Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Name --></label>
+        <name>csfb__Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- SOQL Select Statement --></label>
+        <name>csfb__Query__c</name>
+    </fields>
+    <webLinks>
+        <label><!-- Conga_Query_Builder --></label>
+        <name>csfb__Conga_Query_Builder</name>
+    </webLinks>
+</CustomObjectTranslation>

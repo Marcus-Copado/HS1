@@ -1,0 +1,86 @@
+<!--
+ - Created by scheck on 10/25/18.
+ -->
+
+<aura:component description="qtc_PreviewFeature" implements="force:hasRecordId"
+    access="global">
+
+    <aura:attribute name="featureModel" type="Object" />
+    <aura:registerEvent name="reloadProduct" type="c:qtc_ReloadProduct"/>
+    <lightning:overlayLibrary aura:id="overlayLib"/>
+
+    <div class="slds-col slds-size--1-of-1 slds-m-bottom_x-small">
+        <article class="slds-card slds-card_boundary">
+            <div class="slds-card__header slds-grid">
+                <header class="slds-media slds-media_center slds-has-flexi-truncate">
+                    <div class="slds-media__body">
+                        <h2 class="slds-card__header-title">
+                            <span class="slds-text-heading">
+                                <a onclick="{!c.navToFeature}">{!v.featureModel.feature.record.Name}
+                                    ({!v.featureModel.options.length})</a>
+                            </span>
+                        </h2>
+                        <p class="slds-line-height_reset slds-text-title_caps">{!v.featureModel.feature.instructionsText}</p>
+                    </div>
+                    <div class="slds-no-flex">
+                        <lightning:buttonGroup>
+                            <lightning:button label="New Option" title="New Option" onclick="{!c.newFeatureOption}" />
+                            <lightning:buttonIcon iconName="utility:edit" variant="border-filled" alternativeText="Edit"
+                                onclick="{!c.editFeature}" />
+                        </lightning:buttonGroup>
+                    </div>
+                </header>
+            </div>
+
+            <div class="slds-card__body">
+                <table class="slds-table slds-table_cell-buffer slds-no-row-hover slds-table_bordered slds-table_fixed-layout"
+                    role="grid">
+                    <thead>
+                        <tr class="slds-line-height_reset">
+
+                            <th class="slds-text-title_caps" style="width: 6rem;" scope="col">
+                                <div class="slds-truncate" title="Selected"></div>
+                            </th>
+
+                            <th class="slds-text-title_caps" scope="col">
+                                <div class="slds-truncate" title="Image">Image</div>
+                            </th>
+
+                            <th class="slds-text-title_caps slds-cell-shrink" scope="col">
+                                <div class="slds-truncate" title="Quantity">Qty</div>
+                            </th>
+
+                            <th class="slds-text-title_caps" scope="col">
+                                <div class="slds-cell-wrap" title="Name">Name</div>
+                            </th>
+
+                            <th class="slds-text-title_caps" scope="col">
+                                <div class="slds-truncate" title="Option">Option</div>
+                            </th>
+
+                            <th class="slds-text-title_caps slds-cell-wrap slds-cell-buffer_right" colspan="2" scope="col">
+                                <div class="slds-cell-wrap" title="Description">Description</div>
+                            </th>
+
+                            <th class="slds-text-title_caps slds-cell-buffer_left slds-text-align_right" scope="col">
+                                <div class="slds-truncate slds-text-align_right" title="List Price">List Price</div>
+                            </th>
+
+                            <th class="slds-text-title_caps" style="width: 3rem;" scope="col">
+                                <div class="slds-truncate" title="Edit"></div>
+                            </th>
+
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <aura:iteration items="{!v.featureModel.options}" var="option">
+                            <c:qtc_PreviewOption optionModel="{!option}" radioButton="{!v.featureModel.feature.record.SBQQ__MaxOptionCount__c == 1 ? true : false}" />
+                        </aura:iteration>
+                    </tbody>
+                </table>
+            </div>
+
+        </article>
+    </div>
+</aura:component>

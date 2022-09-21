@@ -1,0 +1,319 @@
+<apex:page contentType="text/xml" showHeader="false" sidebar="false" controller="CustomTemplateController" rendered="{!showConsumptionSchedule}">
+
+
+<block>&nbsp;</block> 
+<block>&nbsp;</block> 
+<apex:repeat value="{!groups}" var="group" rendered="{!quote.SBQQ__LineItemsGrouped__c}">
+   	<block keep-together.within-page="always">
+        <block>{!group.Name}</block>
+        <block font-size="{!template.SBQQ__FontSize__c}" font-family="{!template.SBQQ__FontFamily__c}" >
+                <!--table border-collapse="collapse">
+                    <table-column column-width="30%"/>
+                    <table-column column-width="50%"/>
+                    <table-column column-width="20%"/>
+                   
+                    <table-header>
+                        <table-row font-weight="bold" background-color="#dddddd">
+                            <table-cell padding="3px" border-style="solid" border-width="1px" text-align="center">
+                                <block>Quantity</block>
+                            </table-cell>
+                            <table-cell padding="3px" border-style="solid" border-width="1px" text-align="center">
+                                <block>Service</block>
+                            </table-cell>
+                            <table-cell padding="3px" border-style="solid" border-width="1px" text-align="center">
+                                <block> Pricing</block>
+                            </table-cell>
+                            
+                        </table-row>
+                    </table-header>
+                
+                    <table-body>
+        
+                        <apex:repeat id="linerepeat" value="{!lines}" var="line">
+                            <apex:outputText rendered="{!(!line.SBQQ__HasConsumptionSchedule__c) && line.SBQQ__Group__c = group.Id}">
+                                <table-row keep-together.within-page="always">
+                                <table-cell padding="3px" border-style="solid" border-width="1px" text-align="center">
+                                    <block>
+                                    <apex:outputText value="{0,number, 0 }">
+                                            <apex:param value="{!line.SBQQ__Quantity__c}"/>
+                                        </apex:outputText>
+                                    </block>
+                                </table-cell>
+                                <table-cell padding="3px" border-style="solid" border-width="1px" text-align="center">
+                                    <block>{!line.SBQQ__Product__r.Name}</block>
+                                </table-cell>
+                                
+                                <table-cell padding="3px" border-style="solid" border-width="1px" text-align="right">
+                                    <block>
+                                        <apex:outputText value="{0,number, Currency }">
+                                            <apex:param value="{!line.SBQQ__NetTotal__c}"/>
+                                        </apex:outputText>
+                                    </block>
+                                </table-cell>
+                            </table-row>
+                            </apex:outputText>
+                            </apex:repeat>
+                            <table-row>
+                                <table-cell>
+                                    <block></block>
+                                </table-cell>
+                                <table-cell>
+                                    <block></block>
+                                </table-cell>
+                                <table-cell padding="3px" border-style="solid" border-width="1px" text-align="right">
+                                    <block>
+                                        <apex:outputText value="SubTotal: {0,number, Currency }">
+                                            <apex:param value="{!group.SBQQ__NetTotal__c}"/>
+                                        </apex:outputText>
+                                    </block>
+                                </table-cell>
+                        </table-row>
+                    </table-body>
+                
+                </table-->
+                <block>&nbsp;</block>
+                <block>&nbsp;</block>
+                <block>&nbsp;</block>
+                <table width="100%">
+                    <table-column column-width="100%"/>
+                    <table-header>
+                        <table-row font-weight="bold" background-color="#{!template.SBQQ__GroupShadingColor__c}">
+                            <table-cell padding="3px" border-style="solid" border-width="1px" text-align="center">
+                                <block>Overage Pricing (Billed Monthly)</block>
+                            </table-cell>
+                            
+                        </table-row>
+                    </table-header>
+                    
+                    <table-body>
+                        <apex:repeat id="usagerepeat" value="{!lines}" var="line">
+                            <apex:outputText rendered="{!line.SBQQ__HasConsumptionSchedule__c && line.SBQQ__Group__c = group.Id}">
+                                    <table-row keep-together.within-page="always">
+                                    
+                                    <table-cell padding="3px" border-style="solid" border-width="1px" text-align="center">
+                                        
+                                    <table border-collapse="collapse" >
+                                                <table-column column-width="35%"/>
+                                                <table-column column-width="40%"/>
+                                                <table-column column-width="25%"/>
+                                                <table-body>
+                                                    <apex:repeat id="raterepeat" value="{!consumptionRates}" var="rate">
+                                                        <apex:outputText rendered="{!rate.SBQQ__QuoteLineConsumptionSchedule__r.SBQQ__QuoteLine__c = line.Id}">
+                                                                <table-row keep-together.within-page="always">
+                                                                    <apex:outputText rendered="{!rate.SBQQ__QuoteLineConsumptionSchedule__r.SBQQ__QuoteLine__c = line.Id}">
+                                                                    <table-cell padding="3px" border-style="solid" border-width="1px"  text-align="center">
+                                                                        <apex:outputText >
+                                                                            <block>{!rate.SBQQ__QuoteLineConsumptionSchedule__r.SBQQ__UnitOfMeasure__c}</block>
+                                                                        </apex:outputText>
+                                                                    </table-cell>
+                                                                    </apex:outputText>
+                                                                    <apex:outputText rendered="{!rate.SBQQ__QuoteLineConsumptionSchedule__r.SBQQ__QuoteLine__c = line.Id}">
+                                                                    <table-cell padding="3px" border-style="solid" border-width="1px" text-align="center">
+                                                                        <apex:outputText rendered="{!NOT(ISNULL(rate.SBQQ__UpperBound__c))}">
+                                                                            <block>
+                                                                                {!rate.SBQQ__LowerBound__c} - {!rate.SBQQ__UpperBound__c - 1}
+                                                                            </block>
+                                                                        </apex:outputText>
+                                                                        <apex:outputText rendered="{!ISNULL(rate.SBQQ__UpperBound__c)}">
+                                                                            <block>
+                                                                                {!rate.SBQQ__LowerBound__c}+
+                                                                            </block>
+                                                                        </apex:outputText>
+                                                                       
+                                                                    </table-cell>
+                                                                    </apex:outputText>
+                                                                    <apex:outputText rendered="{!rate.SBQQ__QuoteLineConsumptionSchedule__r.SBQQ__QuoteLine__c = line.Id}">
+                                                                    <table-cell padding="3px" border-style="solid" border-width="1px" text-align="center">
+                                                                        <apex:outputText >
+                                                                            <block>
+                                                                                <apex:outputText value="{0,number,currency}">
+                                                                                    <apex:param value="{!rate.SBQQ__Price__c}"/>
+                                                                                </apex:outputText>
+                                                                            </block>
+                                                                        </apex:outputText>
+                                                                    </table-cell>
+                                                                    </apex:outputText>
+                                                                    <apex:outputText rendered="{!rate.SBQQ__QuoteLineConsumptionSchedule__r.SBQQ__QuoteLine__c != line.Id}">
+                                                                    <table-cell border-style="solid" border-width="1px" text-align="center">
+                                                                        <apex:outputText >
+                                                                            <block></block>
+                                                                        </apex:outputText>
+                                                                    </table-cell>
+                                                                    </apex:outputText>
+                                                                    
+                                                                </table-row>
+                                                            </apex:outputText>
+            
+                                                    </apex:repeat>
+                                                </table-body> 
+                                            </table>
+            
+                                    </table-cell>
+                                </table-row>
+                                </apex:outputText>
+                        </apex:repeat>
+                    </table-body>
+                </table>
+                <block>&nbsp;</block>
+                <block>&nbsp;</block>
+                <block>&nbsp;</block>
+        </block>
+    </block>
+</apex:repeat>
+    
+<apex:repeat value="{!quote}" var="q" rendered="{!NOT(quote.SBQQ__LineItemsGrouped__c)}">
+    <block font-size="{!template.SBQQ__FontSize__c}" font-family="{!template.SBQQ__FontFamily__c}" >
+                <!--table border-collapse="collapse">
+                    <table-column column-width="30%"/>
+                    <table-column column-width="50%"/>
+                    <table-column column-width="20%"/>
+                   
+                    <table-header>
+                        <table-row font-weight="bold" background-color="#dddddd">
+                            <table-cell padding="3px" border-style="solid" border-width="1px" text-align="center">
+                                <block>Quantity</block>
+                            </table-cell>
+                            <table-cell padding="3px" border-style="solid" border-width="1px" text-align="center">
+                                <block>Service</block>
+                            </table-cell>
+                            <table-cell padding="3px" border-style="solid" border-width="1px" text-align="center">
+                                <block> Pricing</block>
+                            </table-cell>
+                            
+                        </table-row>
+                    </table-header>
+                
+                    <table-body>
+        
+                        <apex:repeat id="linerepeat" value="{!lines}" var="line">
+                            <apex:outputText rendered="{!(!line.SBQQ__HasConsumptionSchedule__c)}">
+                                <table-row keep-together.within-page="always">
+                                <table-cell padding="3px" border-style="solid" border-width="1px" text-align="center">
+                                    <block>
+                                    <apex:outputText value="{0,number, 0 }">
+                                            <apex:param value="{!line.SBQQ__Quantity__c}"/>
+                                        </apex:outputText>
+                                    </block>
+                                </table-cell>
+                                <table-cell padding="3px" border-style="solid" border-width="1px" text-align="center">
+                                    <block>{!line.SBQQ__Product__r.Name}</block>
+                                </table-cell>
+                                
+                                <table-cell padding="3px" border-style="solid" border-width="1px" text-align="right">
+                                    <block>
+                                        <apex:outputText value="{0,number, Currency }">
+                                            <apex:param value="{!line.SBQQ__NetTotal__c}"/>
+                                        </apex:outputText>
+                                    </block>
+                                </table-cell>
+                            </table-row>
+                            </apex:outputText>
+                            </apex:repeat>
+                            <table-row>
+                                <table-cell>
+                                    <block></block>
+                                </table-cell>
+                                <table-cell>
+                                    <block></block>
+                                </table-cell>
+                                <table-cell padding="3px" border-style="solid" border-width="1px" text-align="right">
+                                    <block>
+                                        <apex:outputText value="SubTotal: {0,number, Currency }">
+                                            <apex:param value="{!quote.SBQQ__NetAmount__c}"/>
+                                        </apex:outputText>
+                                    </block>
+                                </table-cell>
+                        </table-row>
+                    </table-body>
+                
+                </table-->
+                <block>&nbsp;</block>
+                <block>&nbsp;</block>
+                <block>&nbsp;</block>
+                <table width="100%">
+                    <table-column column-width="100%"/>
+                    <table-header>
+                        <table-row font-weight="bold" background-color="#{!template.SBQQ__GroupShadingColor__c}">
+                            <table-cell padding="3px" border-style="solid" border-width="1px" text-align="center">
+                                <block>Overage Pricing (Billed Monthly)</block>
+                            </table-cell>
+                            
+                        </table-row>
+                    </table-header>
+                    
+                    <table-body>
+                        <apex:repeat id="usagerepeat" value="{!lines}" var="line">
+                            <apex:outputText rendered="{!line.SBQQ__HasConsumptionSchedule__c}">
+                                    <table-row keep-together.within-page="always">
+                                    
+                                    <table-cell padding="3px" border-style="solid" border-width="1px" text-align="center">
+                                        
+                                    <table border-collapse="collapse" >
+                                                <table-column column-width="35%"/>
+                                                <table-column column-width="40%"/>
+                                                <table-column column-width="25%"/>
+                                                <table-body>
+                                                    <apex:repeat id="raterepeat" value="{!consumptionRates}" var="rate">
+                                                        <apex:outputText rendered="{!rate.SBQQ__QuoteLineConsumptionSchedule__r.SBQQ__QuoteLine__c = line.Id}">
+                                                                <table-row keep-together.within-page="always">
+                                                                    <apex:outputText rendered="{!rate.SBQQ__QuoteLineConsumptionSchedule__r.SBQQ__QuoteLine__c = line.Id}">
+                                                                    <table-cell padding="3px" border-style="solid" border-width="1px"  text-align="center">
+                                                                        <apex:outputText >
+                                                                            <block>{!rate.SBQQ__QuoteLineConsumptionSchedule__r.SBQQ__UnitOfMeasure__c}</block>
+                                                                        </apex:outputText>
+                                                                    </table-cell>
+                                                                    </apex:outputText>
+                                                                    <apex:outputText rendered="{!rate.SBQQ__QuoteLineConsumptionSchedule__r.SBQQ__QuoteLine__c = line.Id}">
+                                                                    <table-cell padding="3px" border-style="solid" border-width="1px" text-align="center">
+                                                                        <apex:outputText rendered="{!NOT(ISNULL(rate.SBQQ__UpperBound__c))}">
+                                                                            <block>
+                                                                                {!rate.SBQQ__LowerBound__c} - {!rate.SBQQ__UpperBound__c - 1}
+                                                                            </block>
+                                                                        </apex:outputText>
+                                                                        <apex:outputText rendered="{!ISNULL(rate.SBQQ__UpperBound__c)}">
+                                                                            <block>
+                                                                                {!rate.SBQQ__LowerBound__c}+
+                                                                            </block>
+                                                                        </apex:outputText>
+                                                                       
+                                                                    </table-cell>
+                                                                    </apex:outputText>
+                                                                    <apex:outputText rendered="{!rate.SBQQ__QuoteLineConsumptionSchedule__r.SBQQ__QuoteLine__c = line.Id}">
+                                                                    <table-cell padding="3px" border-style="solid" border-width="1px" text-align="center">
+                                                                        <apex:outputText >
+                                                                            <block>
+                                                                                <apex:outputText value="{0,number,currency}">
+                                                                                    <apex:param value="{!rate.SBQQ__Price__c}"/>
+                                                                                </apex:outputText>
+                                                                            </block>
+                                                                        </apex:outputText>
+                                                                    </table-cell>
+                                                                    </apex:outputText>
+                                                                    <apex:outputText rendered="{!rate.SBQQ__QuoteLineConsumptionSchedule__r.SBQQ__QuoteLine__c != line.Id}">
+                                                                    <table-cell border-style="solid" border-width="1px" text-align="center">
+                                                                        <apex:outputText >
+                                                                            <block></block>
+                                                                        </apex:outputText>
+                                                                    </table-cell>
+                                                                    </apex:outputText>
+                                                                    
+                                                                </table-row>
+                                                            </apex:outputText>
+            
+                                                    </apex:repeat>
+                                                </table-body> 
+                                            </table>
+            
+                                    </table-cell>
+                                </table-row>
+                                </apex:outputText>
+                        </apex:repeat>
+                    </table-body>
+                </table>
+                <block>&nbsp;</block>
+                <block>&nbsp;</block>
+                <block>&nbsp;</block>
+        </block>
+</apex:repeat>
+
+</apex:page>

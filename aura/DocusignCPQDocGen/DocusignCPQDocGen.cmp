@@ -1,0 +1,13 @@
+<aura:component implements="force:appHostable,force:hasRecordId,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" >
+    <aura:attribute name="recordId" type="Id" />
+    <aura:attribute name="headerTitle" type="Aura.Component[]">
+        <h2>
+            <b>Docusign Agreement Cloud</b>
+        </h2>
+    </aura:attribute>
+    <lightning:card title="{!v.headerTitle}" iconName="standard:document" >
+        <div class="slds-p-top_small slds-p-left_small">
+        	<ui:button class="slds-button slds-button_outline-brand" label="Generate Quote-Propsal" press="{!c.generateDocusignDoc}" />
+        </div>
+    </lightning:card>
+</aura:component>

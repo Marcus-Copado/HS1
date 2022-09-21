@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DiscoveryAIModel xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <content xsi:nil="true"/>
+    <algorithmType>Glm</algorithmType>
+    <label>Maximize Original Price</label>
+    <modelFields>
+        <isDisparateImpact>false</isDisparateImpact>
+        <isSensitive>false</isSensitive>
+        <label>Role Id</label>
+        <name>SBQQ__Quote__r.SBQQ__SalesRep__r.UserRoleId</name>
+        <type>Text</type>
+    </modelFields>
+    <modelFields>
+        <isDisparateImpact>false</isDisparateImpact>
+        <isSensitive>false</isSensitive>
+        <label>Customer Total</label>
+        <name>SBQQ__CustomerTotal__c</name>
+        <type>Number</type>
+    </modelFields>
+    <modelFields>
+        <isDisparateImpact>false</isDisparateImpact>
+        <isSensitive>false</isSensitive>
+        <label>Net Total</label>
+        <name>SBQQ__NetTotal__c</name>
+        <type>Number</type>
+    </modelFields>
+    <modelFields>
+        <isDisparateImpact>false</isDisparateImpact>
+        <isSensitive>false</isSensitive>
+        <label>Account Id</label>
+        <name>SBQQ__Quote__r.SBQQ__Opportunity2__r.AccountId</name>
+        <type>Text</type>
+    </modelFields>
+    <modelFields>
+        <isDisparateImpact>false</isDisparateImpact>
+        <isSensitive>false</isSensitive>
+        <label>SBQQ__Quote__r.SBQQ__SalesRep__r.Role.ParentRoleId</label>
+        <name>SBQQ__Quote__r.SBQQ__SalesRep__r.Role.ParentRoleId</name>
+        <type>Text</type>
+    </modelFields>
+    <modelFields>
+        <isDisparateImpact>false</isDisparateImpact>
+        <isSensitive>false</isSensitive>
+        <label>Total Discount (Amt)</label>
+        <name>SBQQ__TotalDiscountAmount__c</name>
+        <type>Number</type>
+    </modelFields>
+    <modelFields>
+        <isDisparateImpact>false</isDisparateImpact>
+        <isSensitive>false</isSensitive>
+        <label>Pricing_Score</label>
+        <name>Pricing_Score</name>
+        <type>Number</type>
+    </modelFields>
+    <modelFields>
+        <isDisparateImpact>false</isDisparateImpact>
+        <isSensitive>false</isSensitive>
+        <label>SBQQ__Quote__r.SBQQ__SalesRep__r.Role.RolePath</label>
+        <name>SBQQ__Quote__r.SBQQ__SalesRep__r.Role.RolePath</name>
+        <type>Text</type>
+    </modelFields>
+    <modelFields>
+        <isDisparateImpact>false</isDisparateImpact>
+        <isSensitive>false</isSensitive>
+        <label>Billing Type</label>
+        <name>SBQQ__BillingType__c</name>
+        <type>Text</type>
+    </modelFields>
+    <modelFields>
+        <isDisparateImpact>false</isDisparateImpact>
+        <isSensitive>false</isSensitive>
+        <label>List Total</label>
+        <name>SBQQ__ListTotal__c</name>
+        <type>Number</type>
+    </modelFields>
+    <modelFields>
+        <isDisparateImpact>false</isDisparateImpact>
+        <isSensitive>false</isSensitive>
+        <label>OpportunityId</label>
+        <name>SBQQ__Quote__r.SBQQ__Opportunity2__c</name>
+        <type>Text</type>
+    </modelFields>
+    <modelFields>
+        <isDisparateImpact>false</isDisparateImpact>
+        <isSensitive>false</isSensitive>
+        <label>SBQQ__Quote__r.SBQQ__Opportunity2__r.Id</label>
+        <name>SBQQ__Quote__r.SBQQ__Opportunity2__r.Id</name>
+        <type>Text</type>
+    </modelFields>
+    <modelFields>
+        <isDisparateImpact>false</isDisparateImpact>
+        <isSensitive>false</isSensitive>
+        <label>Regular Total</label>
+        <name>SBQQ__RegularTotal__c</name>
+        <type>Number</type>
+    </modelFields>
+    <modelFields>
+        <isDisparateImpact>false</isDisparateImpact>
+        <isSensitive>false</isSensitive>
+        <label>SBQQ__Quote__r.SBQQ__SalesRep__r.Username</label>
+        <name>SBQQ__Quote__r.SBQQ__SalesRep__r.Username</name>
+        <type>Text</type>
+    </modelFields>
+    <modelFields>
+        <isDisparateImpact>false</isDisparateImpact>
+        <isSensitive>false</isSensitive>
+        <label>Opportunity Name</label>
+        <name>SBQQ__Quote__r.SBQQ__Opportunity2__r.Name</name>
+        <type>Text</type>
+    </modelFields>
+    <modelFields>
+        <isDisparateImpact>false</isDisparateImpact>
+        <isSensitive>false</isSensitive>
+        <label>Opportunity Owner Id</label>
+        <name>SBQQ__Quote__r.SBQQ__Opportunity2__r.OwnerId</name>
+        <type>Text</type>
+    </modelFields>
+    <modelFields>
+        <isDisparateImpact>false</isDisparateImpact>
+        <isSensitive>false</isSensitive>
+        <label>Quote Sales Rep Id</label>
+        <name>SBQQ__Quote__r.SBQQ__SalesRep__c</name>
+        <type>Text</type>
+    </modelFields>
+    <modelFields>
+        <isDisparateImpact>false</isDisparateImpact>
+        <isSensitive>false</isSensitive>
+        <label>Account Number of Employees</label>
+        <name>SBQQ__Quote__r.SBQQ__Opportunity2__r.Account.NumberOfEmployees</name>
+        <type>Number</type>
+    </modelFields>
+    <modelFields>
+        <isDisparateImpact>false</isDisparateImpact>
+        <isSensitive>false</isSensitive>
+        <label>User Tenure</label>
+        <name>SBQQ__Quote__r.SBQQ__SalesRep__r.UserTenure</name>
+        <type>Number</type>
+    </modelFields>
+    <modelFields>
+        <isDisparateImpact>false</isDisparateImpact>
+        <isSensitive>false</isSensitive>
+        <label>Effective Quantity</label>
+        <name>SBQQ__EffectiveQuantity__c</name>
+        <type>Number</type>
+    </modelFields>
+    <modelFields>
+        <isDisparateImpact>false</isDisparateImpact>
+        <isSensitive>false</isSensitive>
+        <label>Quantity</label>
+        <name>SBQQ__Quantity__c</name>
+        <type>Number</type>
+    </modelFields>
+    <modelFields>
+        <isDisparateImpact>false</isDisparateImpact>
+        <isSensitive>false</isSensitive>
+        <label>Quote Name</label>
+        <name>SBQQ__Quote__r.Name</name>
+        <type>Text</type>
+    </modelFields>
+    <modelFields>
+        <isDisparateImpact>false</isDisparateImpact>
+        <isSensitive>false</isSensitive>
+        <label>Account Photo URL</label>
+        <name>SBQQ__Quote__r.SBQQ__Opportunity2__r.Account.PhotoUrl</name>
+        <type>Text</type>
+    </modelFields>
+    <modelFields>
+        <isDisparateImpact>false</isDisparateImpact>
+        <isSensitive>false</isSensitive>
+        <label>Billing Name</label>
+        <name>SBQQ__Quote__r.SBQQ__BillingName__c</name>
+        <type>Text</type>
+    </modelFields>
+    <modelFields>
+        <isDisparateImpact>false</isDisparateImpact>
+        <isSensitive>false</isSensitive>
+        <label>Total Discount (%)</label>
+        <name>SBQQ__TotalDiscountRate__c</name>
+        <type>Number</type>
+    </modelFields>
+    <modelFields>
+        <isDisparateImpact>false</isDisparateImpact>
+        <isSensitive>false</isSensitive>
+        <label>SBQQ__Quote__r.SBQQ__SalesRep__r.Role.DeveloperName</label>
+        <name>SBQQ__Quote__r.SBQQ__SalesRep__r.Role.DeveloperName</name>
+        <type>Text</type>
+    </modelFields>
+    <modelFields>
+        <isDisparateImpact>false</isDisparateImpact>
+        <isSensitive>false</isSensitive>
+        <label>Industry</label>
+        <name>SBQQ__Quote__r.SBQQ__Opportunity2__r.Account.Industry</name>
+        <type>Text</type>
+    </modelFields>
+    <modelFields>
+        <isDisparateImpact>false</isDisparateImpact>
+        <isSensitive>false</isSensitive>
+        <label>Regular Unit Price</label>
+        <name>SBQQ__RegularPrice__c</name>
+        <type>Number</type>
+    </modelFields>
+    <modelFields>
+        <isDisparateImpact>false</isDisparateImpact>
+        <isSensitive>false</isSensitive>
+        <label>Unique User Name</label>
+        <name>SBQQ__Quote__r.SBQQ__SalesRep__r.UniqueUserName</name>
+        <type>Text</type>
+    </modelFields>
+    <modelFields>
+        <isDisparateImpact>false</isDisparateImpact>
+        <isSensitive>false</isSensitive>
+        <label>Quote Owner Name</label>
+        <name>SBQQ__Quote__r.SBQQ__SalesRep__r.Name</name>
+        <type>Text</type>
+    </modelFields>
+    <modelFields>
+        <isDisparateImpact>false</isDisparateImpact>
+        <isSensitive>false</isSensitive>
+        <label>Renewal</label>
+        <name>SBQQ__Renewal__c</name>
+        <type>Text</type>
+    </modelFields>
+    <modelFields>
+        <isDisparateImpact>false</isDisparateImpact>
+        <isSensitive>false</isSensitive>
+        <label>Quote Customer Amount</label>
+        <name>SBQQ__Quote__r.SBQQ__CustomerAmount__c</name>
+        <type>Number</type>
+    </modelFields>
+    <modelFields>
+        <isDisparateImpact>false</isDisparateImpact>
+        <isSensitive>false</isSensitive>
+        <label>Quote Net Amount</label>
+        <name>SBQQ__Quote__r.SBQQ__NetAmount__c</name>
+        <type>Number</type>
+    </modelFields>
+    <modelFields>
+        <isDisparateImpact>false</isDisparateImpact>
+        <isSensitive>false</isSensitive>
+        <label>Opportunity Amount</label>
+        <name>SBQQ__Quote__r.SBQQ__Opportunity2__r.Amount</name>
+        <type>Number</type>
+    </modelFields>
+    <modelFields>
+        <isDisparateImpact>false</isDisparateImpact>
+        <isSensitive>false</isSensitive>
+        <label>Net Unit Price</label>
+        <name>SBQQ__NetPrice__c</name>
+        <type>Number</type>
+    </modelFields>
+    <modelFields>
+        <isDisparateImpact>false</isDisparateImpact>
+        <isSensitive>false</isSensitive>
+        <label>Customer Unit Price</label>
+        <name>SBQQ__CustomerPrice__c</name>
+        <type>Number</type>
+    </modelFields>
+    <modelFields>
+        <isDisparateImpact>false</isDisparateImpact>
+        <isSensitive>false</isSensitive>
+        <label>Product Family</label>
+        <name>SBQQ__ProductFamily__c</name>
+        <type>Text</type>
+    </modelFields>
+    <modelFields>
+        <isDisparateImpact>false</isDisparateImpact>
+        <isSensitive>false</isSensitive>
+        <label>Additional Discount Calc</label>
+        <name>Additional_Discount_Calc__c</name>
+        <type>Number</type>
+    </modelFields>
+    <modelFields>
+        <isDisparateImpact>false</isDisparateImpact>
+        <isSensitive>false</isSensitive>
+        <label>IsScored</label>
+        <name>IsScored</name>
+        <type>Text</type>
+    </modelFields>
+    <modelFields>
+        <isDisparateImpact>false</isDisparateImpact>
+        <isSensitive>false</isSensitive>
+        <label>SBQQ__Quote__r.SBQQ__SalesRep__r.Role.ParentRole.DeveloperName</label>
+        <name>SBQQ__Quote__r.SBQQ__SalesRep__r.Role.ParentRole.DeveloperName</name>
+        <type>Text</type>
+    </modelFields>
+    <modelFields>
+        <isDisparateImpact>false</isDisparateImpact>
+        <isSensitive>false</isSensitive>
+        <label>Parent Role Name</label>
+        <name>SBQQ__Quote__r.SBQQ__SalesRep__r.Role.ParentRole.Name</name>
+        <type>Text</type>
+    </modelFields>
+    <modelFields>
+        <isDisparateImpact>false</isDisparateImpact>
+        <isSensitive>false</isSensitive>
+        <label>Additional Disc.</label>
+        <name>SBQQ__AdditionalDiscount__c</name>
+        <type>Number</type>
+    </modelFields>
+    <modelFields>
+        <isDisparateImpact>false</isDisparateImpact>
+        <isSensitive>false</isSensitive>
+        <label>Quote Regular Amount</label>
+        <name>SBQQ__Quote__r.SBQQ__RegularAmount__c</name>
+        <type>Number</type>
+    </modelFields>
+    <modelFields>
+        <isDisparateImpact>false</isDisparateImpact>
+        <isSensitive>false</isSensitive>
+        <label>Billing Frequency</label>
+        <name>SBQQ__BillingFrequency__c</name>
+        <type>Text</type>
+    </modelFields>
+    <modelFields>
+        <isDisparateImpact>false</isDisparateImpact>
+        <isSensitive>false</isSensitive>
+        <label>Quote Id</label>
+        <name>SBQQ__Quote__r.Id</name>
+        <type>Text</type>
+    </modelFields>
+    <modelFields>
+        <isDisparateImpact>false</isDisparateImpact>
+        <isSensitive>false</isSensitive>
+        <label>Quote</label>
+        <name>SBQQ__Quote__c</name>
+        <type>Text</type>
+    </modelFields>
+    <modelFields>
+        <isDisparateImpact>false</isDisparateImpact>
+        <isSensitive>false</isSensitive>
+        <label>Role Name</label>
+        <name>SBQQ__Quote__r.SBQQ__SalesRep__r.Role.Name</name>
+        <type>Text</type>
+    </modelFields>
+    <modelFields>
+        <isDisparateImpact>false</isDisparateImpact>
+        <isSensitive>false</isSensitive>
+        <label>Quote List Amount</label>
+        <name>SBQQ__Quote__r.SBQQ__ListAmount__c</name>
+        <type>Number</type>
+    </modelFields>
+    <modelFields>
+        <isDisparateImpact>false</isDisparateImpact>
+        <isSensitive>false</isSensitive>
+        <label>Account Name</label>
+        <name>SBQQ__Quote__r.SBQQ__Opportunity2__r.Account.Name</name>
+        <type>Text</type>
+    </modelFields>
+    <modelFields>
+        <isDisparateImpact>false</isDisparateImpact>
+        <isSensitive>false</isSensitive>
+        <label>SBQQ__Quote__r.SBQQ__SalesRep__r.Role.RoleNamesPath</label>
+        <name>SBQQ__Quote__r.SBQQ__SalesRep__r.Role.RoleNamesPath</name>
+        <type>Text</type>
+    </modelFields>
+    <modelFields>
+        <isDisparateImpact>false</isDisparateImpact>
+        <isSensitive>false</isSensitive>
+        <label>Original Price</label>
+        <name>SBQQ__OriginalPrice__c</name>
+        <type>Number</type>
+    </modelFields>
+    <modelRuntimeType>Discovery</modelRuntimeType>
+    <predictedField>SBQQ__OriginalPrice__c</predictedField>
+    <predictionType>Regression</predictionType>
+    <sourceType>Discovery</sourceType>
+    <status>Enabled</status>
+</DiscoveryAIModel>

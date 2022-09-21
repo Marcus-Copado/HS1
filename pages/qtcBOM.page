@@ -1,0 +1,68 @@
+<apex:page controller="qtcBOMContoller" title="BOM Detail" sidebar="false" showHeader="false" standardStylesheets="true">
+<apex:slds >
+   <div class="slds-scope">
+        <div class="slds-page-header">
+          <div class="slds-media">
+            <div class="slds-media__figure">
+              <span class="slds-icon_container slds-icon-standard-task" title="Description of icon when needed">
+                <svg class="slds-icon" aria-hidden="true">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{!URLFOR($Asset.SLDS, '/assets/icons/standard-sprite/svg/symbols.svg#task')}"></use>
+                </svg>
+              </span>
+            </div>
+            <div class="slds-media__body">
+              <h1 class="slds-page-header__title slds-truncate slds-align-middle" title="BOM">Bill of Materials</h1>
+                <apex:variable var="q" value="{!quote}" />
+                <p class="slds-text-body_small slds-line-height_reset">Account: {!q.SBQQ__Account__r.Name}</p>
+                <p class="slds-text-body_small slds-line-height_reset">Quote#: {!q.Name}</p>
+            </div>
+          </div>
+        </div>
+        
+        <table class="slds-table slds-table_bordered slds-table_cell-buffer">
+            <thead>
+                <tr class="slds-text-title_caps">
+                    <th scope="col">
+                        <div class="slds-truncate" title="Quantity">Quantity</div>
+                    </th>
+                    <th scope="col">
+                        <div class="slds-truncate" title="Quantity">Name</div>
+                    </th>
+                    <th scope="col">
+                        <div class="slds-truncate" title="Quantity">Product</div>
+                    </th>
+                    <th scope="col">
+                        <div class="slds-truncate" title="Quantity">Inventory Status</div>
+                    </th>
+                    <th scope="col">
+                        <div class="slds-truncate" title="Quantity">MFG Site</div>
+                    </th>
+                 </tr>
+            </thead>
+                  
+            <tbody>
+                <apex:repeat value="{!bom}" var="b">
+                <tr>
+                    <td>
+                        <apex:outputText value="{!Round(b.Quantity__c,0)}"/>
+                    </td>
+                    <td>
+                        <apex:outputText value="{!b.Name}"/>
+                    </td>
+                    <td>
+                        <apex:outputText value="{!b.Product__r.Name}"/>
+                    </td>
+                    <td>
+                        <apex:outputText value="{!b.Inventory_Status__c}"/>
+                    </td>
+                    <td>
+                        <apex:outputText value="{!b.Site__c}"/>
+                    </td>
+                </tr>
+            </apex:repeat>
+            
+        </tbody>
+</table>
+    </div>
+</apex:slds>
+</apex:page>

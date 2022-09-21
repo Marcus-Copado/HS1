@@ -1,0 +1,1 @@
+<aura:event type="COMPONENT" description="Reload Product from CPQ APIs" />

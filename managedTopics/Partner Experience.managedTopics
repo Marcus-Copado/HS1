@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ManagedTopics xmlns="http://soap.sforce.com/2006/04/metadata">
+    <managedTopic>
+        <fullName>Partner Experience.Navigational:Frequently Asked Questions</fullName>
+        <managedTopicType>Navigational</managedTopicType>
+        <name>Frequently Asked Questions</name>
+        <parentName></parentName>
+        <position>0</position>
+        <topicDescription> </topicDescription>
+    </managedTopic>
+    <managedTopic>
+        <fullName>Partner Experience.Navigational:General Discussion</fullName>
+        <managedTopicType>Navigational</managedTopicType>
+        <name>General Discussion</name>
+        <parentName></parentName>
+        <position>1</position>
+        <topicDescription> </topicDescription>
+    </managedTopic>
+</ManagedTopics>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Volume_Day</fullName>
+        <default>false</default>
+        <label>Volume_Day</label>
+    </customValue>
+    <customValue>
+        <fullName>Engineering_Options</fullName>
+        <default>false</default>
+        <label>Engineering_Options</label>
+    </customValue>
+    <customValue>
+        <fullName>Resource_Location</fullName>
+        <default>false</default>
+        <label>Resource_Location</label>
+    </customValue>
+    <customValue>
+        <fullName>Manufacturing_Site</fullName>
+        <default>false</default>
+        <label>Manufacturing_Site</label>
+    </customValue>
+    <customValue>
+        <fullName>Inventory_Approval</fullName>
+        <default>false</default>
+        <label>Inventory_Approval</label>
+    </customValue>
+    <customValue>
+        <fullName>SBQQ__StartDate</fullName>
+        <default>false</default>
+        <label>SBQQ__StartDate</label>
+    </customValue>
+    <customValue>
+        <fullName>SBQQ__EndDate</fullName>
+        <default>false</default>
+        <label>SBQQ__EndDate</label>
+    </customValue>
+    <customValue>
+        <fullName>More</fullName>
+        <default>false</default>
+        <label>More</label>
+    </customValue>
+    <masterLabel>CPQ Drawer Hidden Fields</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

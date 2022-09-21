@@ -1,0 +1,41 @@
+<!--
+@description       : 
+@author            : Kaustubh.Deolwadkar@avalara.com
+@group             : 
+@last modified on  : 01-08-2021
+@last modified by  : Kaustubh.Deolwadkar@avalara.com
+Modifications Log 
+Ver   Date         Author                            Modification
+1.0   01-05-2021   Kaustubh.Deolwadkar@avalara.com   Initial Version
+-->
+<apex:page lightningStyleSheets="true" standardController="blng__TaxTreatment__c" recordSetVar="TaxTreatments" extensions="AVA_BLNG.AvaTaxBulkTaxCodeMapping" title="Bulk TaxCode Mapping" action="{!AvaTaxBulkTaxCodeMapping}">
+    <apex:includeLightning />
+    <div id="displaybulkTaxCode"></div>
+    <script>
+    var taxtreatmentids = {!taxTreatmentListId};
+    
+    $Lightning.use("AVA_BLNG:AvaTaxBulkTaxCodeApp", function() {
+        $Lightning.createComponent("AVA_BLNG:AvaTaxBulkTaxCodeMapping",
+                                   { 
+                                       sessionId : "{!$API.Session_ID}",
+                                       selectedRecs : taxtreatmentids
+                                   },
+                                   "displaybulkTaxCode",
+                                   function(component) {
+                                       $A.eventService.addHandler({
+                                           event: 'force:navigateToList',
+                                           handler: function(event) {
+                                               if (typeof sforce != 'undefined' && typeof sforce.one != 'undefined') {
+                                                   // VF page in S1 or Lightning Exp
+                                                   sforce.one.navigateToList('',null,'blng__TaxTreatment__c');
+                                               } else {
+                                                   // VF page in Classic
+                                                   window.location = '{!URLFOR($Action.blng__TaxTreatment__c.Tab,$ObjectType.blng__TaxTreatment__c)}';
+                                               }
+                                           }
+                                       });
+                                   }
+                                  );
+    });
+    </script>
+</apex:page>

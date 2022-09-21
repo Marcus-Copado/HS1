@@ -1,0 +1,61 @@
+{
+  "templateType" : "app",
+  "label" : "Pricing Guidance",
+  "name" : "PricingGuidance",
+  "assetVersion" : 45.0,
+  "variableDefinition" : "variables.json",
+  "uiDefinition" : "ui.json",
+  "rules" : [
+    {
+      "type" : "templateToApp",
+      "file" : "template-to-app-rules.json"
+    },
+    {
+      "type" : "appToTemplate",
+      "file" : "app-to-template-rules.json"
+    }
+  ],
+  "releaseInfo" : {
+    "templateVersion" : "1.0",
+    "notesFile" : "releaseNotes.html"
+  },
+  "folderDefinition" : "folder.json",
+  "externalFiles" : [ ],
+  "lenses" : [ ],
+  "dashboards" : [
+    {
+      "label" : "Pricing Guidance",
+      "name" : "PricingGuidance_tp",
+      "condition" : "${Variables.Overrides.createAllDashboards}",
+      "file" : "dashboards/PricingGuidance.json"
+    }
+  ],
+  "eltDataflows" : [
+    {
+      "label" : "Pricing Guidance Dataflow",
+      "name" : "PricingGuidanceDataflow",
+      "condition" : "${Variables.Overrides.createDataflow}",
+      "file" : "dataflow/PricingGuidanceDataflow.json"
+    }
+  ],
+  "datasetFiles" : [
+    {
+      "label" : "Pricing Guidance Dataset",
+      "name" : "PricingGuidanceDataset_tp",
+      "condition" : "${Variables.Overrides.createAllDatasetFiles}",
+      "userXmd" : "dataset_files/PricingGuidanceDataset_XMD.json"
+    }
+  ],
+  "storedQueries" : [ ],
+  "imageFiles" : [ ],
+  "extendedTypes" : { },
+  "icons" : {
+    "appBadge" : {
+      "name" : "16.png"
+    },
+    "templateBadge" : {
+      "name" : "default.png"
+    },
+    "templateDetail" : { }
+  }
+}

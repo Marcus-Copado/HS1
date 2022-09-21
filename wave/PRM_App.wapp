@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WaveApplication xmlns="http://soap.sforce.com/2006/04/metadata">
+    <folder>PRM_App</folder>
+    <masterLabel>PRM App</masterLabel>
+    <shares>
+        <accessLevel>Manage</accessLevel>
+        <sharedTo>bgaldino.qgfqdpvvdnmw.rvoqwh5xoemi@copado.com2022/09/21_11-40-17.demo</sharedTo>
+        <sharedToType>User</sharedToType>
+    </shares>
+    <shares>
+        <accessLevel>View</accessLevel>
+        <sharedTo>partner.xf4m9l784ink.pwjxpap3acva@copado.com2022/09/21_11-40-17.demo</sharedTo>
+        <sharedToType>User</sharedToType>
+    </shares>
+</WaveApplication>

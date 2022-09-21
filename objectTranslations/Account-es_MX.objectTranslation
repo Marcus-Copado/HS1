@@ -1,0 +1,415 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Business Identification No.(Deprecated) --></label>
+        <name>AVA_BLNG__Business_Identification_Number__c</name>
+    </fields>
+    <fields>
+        <help><!-- Type of Entity/Use Code, if any, associated with this Account. Optional Field. --></help>
+        <label><!-- Entity/Use Code(Deprecated) --></label>
+        <name>AVA_BLNG__Entity_Use_Code__c</name>
+        <relationshipLabel><!-- Accounts --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Please enter exemption certification number, if any. --></help>
+        <label><!-- Exemption Number(Deprecated) --></label>
+        <name>AVA_BLNG__Exemption_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Is Seller Importer Of Record(Deprecated) --></label>
+        <name>AVA_BLNG__Is_Seller_Importer_Of_Record__c</name>
+    </fields>
+    <fields>
+        <help><!-- Please enter your Business Identification / VAT Number. This will be used for reverse charge VAT calculations. --></help>
+        <label><!-- Business Identification Number --></label>
+        <name>AVA_MAPPER__Business_Identification_Number__c</name>
+    </fields>
+    <fields>
+        <help><!-- Please select an entity use code (exemption reason) for this customer. --></help>
+        <label><!-- Entity/Use code --></label>
+        <name>AVA_MAPPER__Entity_Use_code__c</name>
+        <relationshipLabel><!-- Accounts --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- If you enter any data into this field their sales transactions will be exempt from sales tax. --></help>
+        <label><!-- Exemption Number --></label>
+        <name>AVA_MAPPER__Exemption_Number__c</name>
+    </fields>
+    <fields>
+        <help><!-- If checked, Seller is responsible for any import taxes and fees --></help>
+        <label><!-- Is Seller Importer Of Record --></label>
+        <name>AVA_MAPPER__Is_Seller_Importer_Of_Record__c</name>
+    </fields>
+    <fields>
+        <label><!-- Account Balance --></label>
+        <name>Account_Balance__c</name>
+    </fields>
+    <fields>
+        <label><!-- Accounting Finance Book --></label>
+        <name>Accounting_Finance_Book__c</name>
+        <relationshipLabel><!-- Accounts --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Auto Order? --></label>
+        <name>Auto_Order__c</name>
+    </fields>
+    <fields>
+        <label><!-- Auto Renewal Forecast --></label>
+        <name>Auto_Renewal_Forecast__c</name>
+    </fields>
+    <fields>
+        <label><!-- Credit Note Balance --></label>
+        <name>Credit_Note_Balance__c</name>
+    </fields>
+    <fields>
+        <label><!-- Debit Note Balance --></label>
+        <name>Debit_Note_Balance__c</name>
+    </fields>
+    <fields>
+        <label><!-- Generate Transactional Journal Entries --></label>
+        <name>Generate_Transactional_Journal_Entries__c</name>
+    </fields>
+    <fields>
+        <label><!-- HasParent --></label>
+        <name>HasParent__c</name>
+    </fields>
+    <fields>
+        <label><!-- Invoice Balance --></label>
+        <name>Invoice_Balance__c</name>
+    </fields>
+    <fields>
+        <label><!-- Legal Entity --></label>
+        <name>Legal_Entity__c</name>
+        <relationshipLabel><!-- Accounts --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Manager --></label>
+        <name>Manager__c</name>
+    </fields>
+    <fields>
+        <label><!-- ParentID --></label>
+        <name>ParentID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Payment Balance --></label>
+        <name>Payment_Balance__c</name>
+    </fields>
+    <fields>
+        <label><!-- Payment Responsibility --></label>
+        <name>Payment_Responsibility__c</name>
+        <picklistValues>
+            <masterLabel>Parent</masterLabel>
+            <translation><!-- Parent --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Self</masterLabel>
+            <translation><!-- Self --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Transactional</masterLabel>
+            <translation><!-- Transactional --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Refund Balance --></label>
+        <name>Refund_Balance__c</name>
+    </fields>
+    <fields>
+        <help>Opción para combinar las cantidades de múltiples activos para el mismo producto en una partida cuando se genera el presupuesto de renovación.</help>
+        <label><!-- Combine Asset Quantities --></label>
+        <name>SBQQ__AssetQuantitiesCombined__c</name>
+    </fields>
+    <fields>
+        <help>Active esta opción para combinar activos y suscripciones de múltiples contratos con plazos compartidos. Cada contrato con plazos compartidos genera de forma predeterminada un grupo separado en el presupuesto de renovación.</help>
+        <label><!-- Combine Co-Termed Contracts --></label>
+        <name>SBQQ__CoTermedContractsCombined__c</name>
+    </fields>
+    <fields>
+        <help>Determina el momento en que los contratos terminan de forma compartida</help>
+        <label><!-- Co-Termination Event --></label>
+        <name>SBQQ__CoTerminationEvent__c</name>
+        <picklistValues>
+            <masterLabel>Add-on</masterLabel>
+            <translation>Complemento</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Renewal</masterLabel>
+            <translation>Renovación</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>Determina el modo en que los contratos de servicios y suscripciones terminan de forma compartida para este cliente.</help>
+        <label><!-- Contract Co-Termination --></label>
+        <name>SBQQ__ContractCoTermination__c</name>
+        <picklistValues>
+            <masterLabel>Always</masterLabel>
+            <translation>Siempre</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Never</masterLabel>
+            <translation>Nunca</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Prompt</masterLabel>
+            <translation>Preguntar</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>Oportunidad predeterminada para esta cuenta empleada en un módulo de comercio electrónico para obtener la lista de precios del cliente y asociarla con presupuestos de &quot;carrito de la compra&quot;.</help>
+        <label><!-- Default Opportunity --></label>
+        <name>SBQQ__DefaultOpportunity__c</name>
+        <relationshipLabel><!-- Accounts --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Seleccione esta opción si no se deben heredar los precios contratados desde la cuenta principal.</help>
+        <label><!-- Ignore Parent Contracted Prices --></label>
+        <name>SBQQ__IgnoreParentContractedPrices__c</name>
+    </fields>
+    <fields>
+        <help>Seleccione la casilla de verificación para mantener la jerarquía del paquete en presupuestos de renovación y correcciones.</help>
+        <label><!-- Preserve Bundle Structure --></label>
+        <name>SBQQ__PreserveBundle__c</name>
+    </fields>
+    <fields>
+        <help>Ingrese la fecha hasta la que se deben mantener los precios.</help>
+        <label><!-- Price Hold End --></label>
+        <name>SBQQ__PriceHoldEnd__c</name>
+    </fields>
+    <fields>
+        <help>Seleccione Basado en activos para hacer que las renovaciones se basen en los activos de una cuenta o seleccione Basado en suscripciones para hacer que las renovaciones se basen en las suscripciones creadas desde un presupuesto.</help>
+        <label><!-- Renewal Model --></label>
+        <name>SBQQ__RenewalModel__c</name>
+        <picklistValues>
+            <masterLabel>Asset Based</masterLabel>
+            <translation>Basado en activos</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Contract Based</masterLabel>
+            <translation>Basado en contratos</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>Utilice &quot;Igual&quot; para mantener el mismo precio pagado la última vez. Utilice &quot;Lista&quot; para utilizar el precio de lista actual. Utilice &quot;Incremento&quot; para utilizar el precio pagado la última vez más un incremento.</help>
+        <label><!-- Renewal Pricing Method --></label>
+        <name>SBQQ__RenewalPricingMethod__c</name>
+        <picklistValues>
+            <masterLabel>List</masterLabel>
+            <translation>Lista</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Same</masterLabel>
+            <translation>Igual</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Uplift</masterLabel>
+            <translation>Incremento</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>Se selecciona si esta cuenta tiene certificados activos</help>
+        <label><!-- Tax-Exempt --></label>
+        <name>SBQQ__TaxExempt__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation>No</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation>Sí</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- User that will be assigned any tasks and activities from a Collections Plan on this account. --></help>
+        <label><!-- Collections Agent --></label>
+        <name>SFBD__CollectionsAgent__c</name>
+        <relationshipLabel><!-- Accounts --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Collections Plan Date --></label>
+        <name>SFBD__CollectionsPlanDate__c</name>
+    </fields>
+    <fields>
+        <help><!-- Current Collections Status for this Account --></help>
+        <label><!-- Collections Status --></label>
+        <name>SFBD__CollectionsStatus__c</name>
+        <picklistValues>
+            <masterLabel>Bad Debt</masterLabel>
+            <translation><!-- Bad Debt --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Credit Hold</masterLabel>
+            <translation><!-- Credit Hold --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Current</masterLabel>
+            <translation><!-- Current --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>In Collections</masterLabel>
+            <translation><!-- In Collections --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pending Collections</masterLabel>
+            <translation><!-- Pending Collections --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Dunning Method that will be run when the account&apos;s Collection Status is not current. --></help>
+        <label><!-- Dunning Method --></label>
+        <name>SFBD__DunningMethod__c</name>
+        <relationshipLabel><!-- Accounts --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- SLA --></label>
+        <name>SFBD__SLA__c</name>
+        <picklistValues>
+            <masterLabel>Bronze</masterLabel>
+            <translation><!-- Bronze --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Gold</masterLabel>
+            <translation><!-- Gold --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Platinum</masterLabel>
+            <translation><!-- Platinum --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Silver</masterLabel>
+            <translation><!-- Silver --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Upsell Opportunity --></label>
+        <name>SFBD__UpsellOpportunity__c</name>
+        <picklistValues>
+            <masterLabel>Maybe</masterLabel>
+            <translation><!-- Maybe --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Segment --></label>
+        <name>Segment__c</name>
+        <picklistValues>
+            <masterLabel>Enterprise</masterLabel>
+            <translation><!-- Enterprise --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Public Sector</masterLabel>
+            <translation><!-- Public Sector --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SMB</masterLabel>
+            <translation><!-- SMB --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Bill To Contact --></label>
+        <name>blng__BillToContact__c</name>
+        <relationshipLabel><!-- Accounts --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Customer Profile Id --></label>
+        <name>blng__CustomerProfileId__c</name>
+    </fields>
+    <fields>
+        <label><!-- Default Payment Type --></label>
+        <name>blng__DefaultPaymentType__c</name>
+    </fields>
+    <recordTypes>
+        <label><!-- Read Only --></label>
+        <name>Read_Only</name>
+    </recordTypes>
+    <webLinks>
+        <label><!-- Conga_Composer_OAuth --></label>
+        <name>APXTCFQ__Conga_Composer_OAuth</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Conga_Mail_Merge --></label>
+        <name>APXTCFQ__Conga_Mail_Merge</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Conga_Composer_OAuth --></label>
+        <name>APXTConga4__Conga_Composer_OAuth</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Conga_Mail_Merge --></label>
+        <name>APXTConga4__Conga_Mail_Merge</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Validate_Address --></label>
+        <name>AVA_BLNG__Validate_Address</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- AltavistaNews --></label>
+        <name>AltavistaNews</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- GoogleMaps --></label>
+        <name>GoogleMaps</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- GoogleNews --></label>
+        <name>GoogleNews</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- GoogleSearch --></label>
+        <name>GoogleSearch</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- HooversProfile --></label>
+        <name>HooversProfile</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Quick_Invoice --></label>
+        <name>Quick_Invoice</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Quick_Quote --></label>
+        <name>Quick_Quote</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Amend_Assets --></label>
+        <name>SBQQ__Amend_Assets</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Renew_Assets --></label>
+        <name>SBQQ__Renew_Assets</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Utilities --></label>
+        <name>Utilities</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Visualize_Contracted_Prices --></label>
+        <name>Visualize_Contracted_Prices</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- YahooMaps --></label>
+        <name>YahooMaps</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- CreditCenter --></label>
+        <name>blng__CreditCenter</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- PaymentVirtualTerminal --></label>
+        <name>blng__PaymentVirtualTerminal</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Refund --></label>
+        <name>blng__Refund</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Send_with_DocuSign --></label>
+        <name>dsfs__Send_with_DocuSign</name>
+    </webLinks>
+</CustomObjectTranslation>

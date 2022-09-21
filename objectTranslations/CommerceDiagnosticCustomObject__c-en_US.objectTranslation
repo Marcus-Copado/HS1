@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Commerce Diagnostic Custom Object</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Commerce Diagnostic Custom Objects</value>
+    </caseValues>
+    <fields>
+        <label><!-- B2B Edition --></label>
+        <name>B2B_Edition__c</name>
+    </fields>
+    <fields>
+        <label><!-- B2B Version --></label>
+        <name>B2B_Version__c</name>
+    </fields>
+    <fields>
+        <label><!-- Browser Device Type --></label>
+        <name>Browser_Device_Type__c</name>
+    </fields>
+    <fields>
+        <label><!-- Context Id 2 --></label>
+        <name>Context_Id_2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Context Id --></label>
+        <name>Context_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Context Map --></label>
+        <name>Context_Map__c</name>
+    </fields>
+    <fields>
+        <label><!-- Correlation Id --></label>
+        <name>Correlation_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Count --></label>
+        <name>Count__c</name>
+    </fields>
+    <fields>
+        <label><!-- Effective Account Id --></label>
+        <name>Effective_Account_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Error Code --></label>
+        <name>Error_Code__c</name>
+    </fields>
+    <fields>
+        <label><!-- Error Message --></label>
+        <name>Error_Message__c</name>
+    </fields>
+    <fields>
+        <label><!-- Event Created By --></label>
+        <name>Event_Created_By__c</name>
+    </fields>
+    <fields>
+        <label><!-- Event Created Date --></label>
+        <name>Event_Created_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Is Retry --></label>
+        <name>Is_Retry__c</name>
+    </fields>
+    <fields>
+        <label><!-- OS Version --></label>
+        <name>OS_Version__c</name>
+    </fields>
+    <fields>
+        <label><!-- Operation Stage --></label>
+        <name>Operation_Stage__c</name>
+    </fields>
+    <fields>
+        <label><!-- Operation State --></label>
+        <name>Operation_State__c</name>
+    </fields>
+    <fields>
+        <label><!-- Operation Status --></label>
+        <name>Operation_Status__c</name>
+    </fields>
+    <fields>
+        <label><!-- Operation Time --></label>
+        <name>Operation_Time__c</name>
+    </fields>
+    <fields>
+        <label><!-- Operation --></label>
+        <name>Operation__c</name>
+    </fields>
+    <fields>
+        <label><!-- Service Name --></label>
+        <name>Service_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- User --></label>
+        <name>User__c</name>
+    </fields>
+    <fields>
+        <label><!-- WebStore Id --></label>
+        <name>WebStore_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- WebStore Type --></label>
+        <name>WebStore_Type__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

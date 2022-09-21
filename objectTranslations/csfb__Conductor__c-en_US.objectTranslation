@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Conga Batch Environment --></label>
+        <name>csfb__Conductor_Environment__c</name>
+        <picklistValues>
+            <masterLabel>prod-</masterLabel>
+            <translation><!-- prod- --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>staging-</masterLabel>
+            <translation><!-- staging- --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Combine PDFs into a single file when scheduling a consolidated Conga Batch routine and delivering to a Content Workspace. --></help>
+        <label><!-- Consolidated PDF Output File --></label>
+        <name>csfb__Consolidated_PDF_Output_File__c</name>
+    </fields>
+    <fields>
+        <help><!-- The ID of a Content Library where files from a scheduled Conga Batch process will be stored when the output mode is set to download. --></help>
+        <label><!-- Content Workspace ID --></label>
+        <name>csfb__Content_Workspace_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Description --></label>
+        <name>csfb__Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Has Query ID --></label>
+        <name>csfb__Has_Query_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Has Record ID --></label>
+        <name>csfb__Has_Record_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Has Report ID --></label>
+        <name>csfb__Has_Report_Id__c</name>
+    </fields>
+    <fields>
+        <help><!-- Automatically populated by the Conga Batch schedule. --></help>
+        <label><!-- Next Run Date --></label>
+        <name>csfb__Next_Run_Date_Display__c</name>
+    </fields>
+    <fields>
+        <help><!-- Determined by &quot;Schedule&quot; button.  Do not edit this field manually. --></help>
+        <label><!-- Next Run Date --></label>
+        <name>csfb__Next_Run_Date__c</name>
+    </fields>
+    <fields>
+        <help><!-- The ID of a Conga Query record that returns the list of Master Object record IDs. Optionally, the query may include other fields. --></help>
+        <label><!-- Query ID --></label>
+        <name>csfb__Query_Id__c</name>
+    </fields>
+    <fields>
+        <help><!-- An individual Salesforce record ID to use as a Master Object ID. --></help>
+        <label><!-- Record ID --></label>
+        <name>csfb__Record_Id__c</name>
+    </fields>
+    <fields>
+        <help><!-- The ID of a Salesforce Report that contains the list of Master Object IDs. Optionally, the report may include other columns. --></help>
+        <label><!-- Report ID --></label>
+        <name>csfb__Report_Id__c</name>
+    </fields>
+    <fields>
+        <help><!-- Automatically populated by the Conga Batch schedule. --></help>
+        <label><!-- Schedule Description --></label>
+        <name>csfb__Schedule_Description_Display__c</name>
+    </fields>
+    <fields>
+        <help><!-- Determined by &quot;Schedule&quot; button.  Do not edit this field manually. --></help>
+        <label><!-- Schedule Description --></label>
+        <name>csfb__Schedule_Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Title --></label>
+        <name>csfb__Title__c</name>
+    </fields>
+    <fields>
+        <help><!-- The API name of the formula field that contains the converted Conga Composer button / link URL. --></help>
+        <label><!-- URL Field Name --></label>
+        <name>csfb__URL_Field_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Version --></label>
+        <name>csfb__Version__c</name>
+        <picklistValues>
+            <masterLabel>C7</masterLabel>
+            <translation><!-- C7 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>C8</masterLabel>
+            <translation><!-- C8 --></translation>
+        </picklistValues>
+    </fields>
+    <validationRules>
+        <errorMessage><!-- You must supply one of the following: a Report Id, a Query Id or a Record Id. --></errorMessage>
+        <name>csfb__Either_Report_or_Query_Id_must_be_suppli</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You must supply *only one* of the following:  a Report Id, a Query Id or a Record Id. --></errorMessage>
+        <name>csfb__Not_Both_a_Report_Id_and_a_Query_Id</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- The Query Id must be a 15- or 18-character Salesforce ID from a Conga Query --></errorMessage>
+        <name>csfb__Query_Id_Length</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- The Record Id must be a 15- or 18-character Salesforce ID --></errorMessage>
+        <name>csfb__Record_Id_Length</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- The Report Id must be a 15- or 18-character Salesforce ID from a Report --></errorMessage>
+        <name>csfb__Report_Id_Length</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You must supply the API Name of the field that contains the Composer URL --></errorMessage>
+        <name>csfb__URL_Field_Name_Required</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- The Workspace Id must be a 15- or 18-character Salesforce ID from a Content Worksapce. --></errorMessage>
+        <name>csfb__Workspace_Id_Length</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- Launch --></label>
+        <name>csfb__Launch</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Launch_C7 --></label>
+        <name>csfb__Launch_C7</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Launch_C8 --></label>
+        <name>csfb__Launch_C8</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Launch_Dev --></label>
+        <name>csfb__Launch_Dev</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Sample_List_View_Button --></label>
+        <name>csfb__Sample_List_View_Button</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Schedule --></label>
+        <name>csfb__Schedule</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Schedule_C7 --></label>
+        <name>csfb__Schedule_C7</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Schedule_C8 --></label>
+        <name>csfb__Schedule_C8</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- View_Conga_Conductor_Dashboard --></label>
+        <name>csfb__View_Conga_Conductor_Dashboard</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- View_Query --></label>
+        <name>csfb__View_Query</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- View_Report --></label>
+        <name>csfb__View_Report</name>
+    </webLinks>
+</CustomObjectTranslation>

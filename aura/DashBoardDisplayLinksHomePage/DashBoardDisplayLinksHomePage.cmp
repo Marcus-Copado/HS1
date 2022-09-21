@@ -1,0 +1,28 @@
+<aura:component implements="force:appHostable,force:hasRecordId,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" >
+    <aura:attribute name="title" type="String" default="Dashboard Quick Links"/>
+    <lightning:card class="slds-border_bottom">
+        <aura:set attribute="title">
+            {! v.title }
+        </aura:set>
+        <aura:set attribute="actions">
+			<ui:button class="slds-button slds-button_brand" label="All Dashboards" press="{!c.open_all_dashes}"/>
+        </aura:set>
+            <div class="slds-border_top slds-text-title slds-p-top_medium slds-p-left_small">Popular</div>
+            <div class="slds-p-top_small slds-p-left_small">
+            	<ui:button class="slds-button slds-button_outline-brand" label="Sales Management" press="{!c.open_sales_mgmt_dashes}"/>
+            	<ui:button class="slds-button slds-button_outline-brand" label="Advanced Approvals" press="{!c.open_aa_dashes}"/>
+                <ui:button class="slds-button slds-button_outline-brand" label="Renewals" press="{!c.open_renewals_dashes}"/>
+            </div>
+        	<div class="slds-p-top_xx-small slds-p-left_small">
+            	<ui:button class="slds-button slds-button_outline-brand" label="Finance" press="{!c.open_finance_dashes}"/>
+            	<ui:button class="slds-button slds-button_outline-brand" label="Dunning and Collections" press="{!c.open_dunning_dashes}"/>
+                <ui:button class="slds-button slds-button_outline-brand" label="Payments" press="{!c.open_payments_dashes}"/>
+            </div>
+        	<div class="slds-text-title slds-p-top_medium slds-p-left_small">Salesforce Billing Reporting Add-On</div>
+        	<div class="slds-p-top_small slds-p-left_small">
+            	<ui:button class="slds-button slds-button_outline-brand" label="Billing Operations" press="{!c.open_billingOps_dashes}"/>
+            	<ui:button class="slds-button slds-button_outline-brand" label="Invoice Settlements" press="{!c.open_invoiceSettle_dashes}"/>
+                <ui:button class="slds-button slds-button_outline-brand" label="Revenue Recognition" press="{!c.open_revRec_dashes}"/>
+            </div>
+    </lightning:card>
+</aura:component>

@@ -1,0 +1,5 @@
+<apex:page controller="csfb.ComposerUrlController" standardStylesheets="true" applyBodyTag="false" showHeader="true" sidebar="true">
+    <body>
+        <apex:iframe src="https://{!WorkflowHost}/C8WorkflowDashboard/index.html?ServerURL={!$CurrentPage.parameters.myserverurl}&uiscreen=setup&srcpkg=sfb" />
+    </body>
+</apex:page>

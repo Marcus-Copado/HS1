@@ -1,0 +1,4 @@
+<apex:page standardController="blng__InvoiceRun__c" extensions="InvoiceRunExtController"  action="{!onPreview}">
+<apex:pageMessages />
+<sbaa:approvalPreview approvals="{!approvals}"/>
+</apex:page>

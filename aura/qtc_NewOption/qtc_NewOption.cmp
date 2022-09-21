@@ -1,0 +1,28 @@
+<aura:component access="global">
+    <aura:attribute name="recordId" type="String"/>
+    <aura:attribute name="optNumber" type="Integer"/>
+    <aura:attribute name="featId" type="Id"/>
+    <aura:attribute name="configId" type="Id"/>
+
+    <lightning:overlayLibrary aura:id="overlayLib"/>
+
+    <lightning:recordEditForm aura:id="recordEditForm" 
+                                objectApiName="SBQQ__ProductOption__c"
+                                onsuccess="{!c.handleSuccess}"
+                                onload="{!c.handleOnload}">
+            <lightning:messages />
+            
+            <lightning:inputField fieldName="SBQQ__OptionalSKU__c" />
+            <lightning:inputField fieldName="SBQQ__Number__c" aura:id="optionNumber"/>
+            <lightning:inputField fieldName="SBQQ__Quantity__c" value="1"/>
+            <lightning:inputField fieldName="SBQQ__Type__c" />
+            <lightning:inputField fieldName="SBQQ__Feature__c" aura:id="featureId"/>
+            <lightning:inputField fieldName="SBQQ__ConfiguredSKU__c" aura:id="configuredSKU"/>
+			<div class="slds-grid slds-grid_align-end">
+  				<div class="slds-col">
+            		<lightning:button class="slds-m-top_medium" type="submit" variant="brand" label="Save" />
+                </div>
+            </div>
+        </lightning:recordEditForm>
+        
+</aura:component>

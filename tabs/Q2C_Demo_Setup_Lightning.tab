@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomTab xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>Q2C Demo Setup</label>
+    <motif>Custom19: Wrench</motif>
+    <page>Q2C_Demo_Settings_LDS2</page>
+</CustomTab>

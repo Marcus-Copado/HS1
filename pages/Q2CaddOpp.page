@@ -1,0 +1,2 @@
+<apex:page StandardController="SBQQ__Quote__c" extensions="Q2Cacceptcustomerquote" action="{!genOpp}">
+</apex:page>

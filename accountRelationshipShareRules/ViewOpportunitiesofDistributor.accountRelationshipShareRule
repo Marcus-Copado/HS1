@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AccountRelationshipShareRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <accessLevel>Edit</accessLevel>
+    <accountToCriteriaField>Opportunity.AccountId</accountToCriteriaField>
+    <entityType>Opportunity</entityType>
+    <masterLabel>View Opportunities of Distributor</masterLabel>
+    <type>Distributor</type>
+</AccountRelationshipShareRule>

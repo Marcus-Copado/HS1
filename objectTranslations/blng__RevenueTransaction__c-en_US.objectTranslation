@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Days Since Start --></label>
+        <name>Days_Since_Start__c</name>
+    </fields>
+    <fields>
+        <label><!-- GL Debit Account Name (Deferred) --></label>
+        <name>GL_Debit_Account_Name_Deferred__c</name>
+    </fields>
+    <fields>
+        <label><!-- Period End --></label>
+        <name>Period_End__c</name>
+    </fields>
+    <fields>
+        <label><!-- Revenue End Date --></label>
+        <name>Revenue_End_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Revenue Start Date --></label>
+        <name>Revenue_Start_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Revenue Days --></label>
+        <name>Total_Revenue_Days__c</name>
+    </fields>
+    <fields>
+        <label><!-- Account --></label>
+        <name>blng__Account__c</name>
+        <relationshipLabel><!-- RevenueTransactions --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Base Currency Amount --></label>
+        <name>blng__BaseCurrencyAmount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Base Currency FX Date --></label>
+        <name>blng__BaseCurrencyFXDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Base Currency FX Rate --></label>
+        <name>blng__BaseCurrencyFXRate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Base Currency --></label>
+        <name>blng__BaseCurrency__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contract --></label>
+        <name>blng__Contract__c</name>
+        <relationshipLabel><!-- RevenueTransactions --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Credit Note Line --></label>
+        <name>blng__CreditNoteLine__c</name>
+        <relationshipLabel><!-- RevenueTransactions --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Debit Note Line --></label>
+        <name>blng__DebitNoteLine__c</name>
+        <relationshipLabel><!-- RevenueTransactions --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- The Deferred Revenue balance after recognizing revenue for this period. --></help>
+        <label><!-- Deferred Balance --></label>
+        <name>blng__DeferredBalance__c</name>
+    </fields>
+    <fields>
+        <label><!-- Invoice Line --></label>
+        <name>blng__InvoiceLine__c</name>
+        <relationshipLabel><!-- RevenueTransactions --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Legal Entity --></label>
+        <name>blng__LegalEntity__c</name>
+        <relationshipLabel><!-- RevenueTransactions --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Notes --></label>
+        <name>blng__Notes__c</name>
+    </fields>
+    <fields>
+        <label><!-- Order Product --></label>
+        <name>blng__OrderProduct__c</name>
+        <relationshipLabel><!-- RevenueTransactions --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Original Finance Period --></label>
+        <name>blng__OriginalFinancePeriod__c</name>
+        <relationshipLabel><!-- RevenueTransactions (Original Finance Period) --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Sum of all prior revenue transactions in the same Revenue Schedule --></help>
+        <label><!-- Previously Recognized Revenue --></label>
+        <name>blng__PreviouslyRecognizedRevenue__c</name>
+    </fields>
+    <fields>
+        <help><!-- The amount of revenue that will be recognized in this period --></help>
+        <label><!-- Revenue Amount --></label>
+        <name>blng__RevenueAmount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Revenue Distribution Method --></label>
+        <name>blng__RevenueDistributionMethod__c</name>
+    </fields>
+    <fields>
+        <help><!-- Inherited from the Revenue Schedule. The Finance Book where this revenue will be recorded. --></help>
+        <label><!-- Revenue Finance Book --></label>
+        <name>blng__RevenueFinanceBook__c</name>
+    </fields>
+    <fields>
+        <label><!-- RevenueFinancePeriodUniqueId --></label>
+        <name>blng__RevenueFinancePeriodUniqueId__c</name>
+    </fields>
+    <fields>
+        <help><!-- Inherited from the Revenue Schedule. The Finance Period where this revenue will be recorded. --></help>
+        <label><!-- Revenue Finance Period --></label>
+        <name>blng__RevenueFinancePeriod__c</name>
+        <relationshipLabel><!-- RevenueTransactions --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Inherited from the Revenue Schedule. The Revenue Rule that is used to calculate this transaction --></help>
+        <label><!-- Revenue Recognition GL Rule --></label>
+        <name>blng__RevenueRecognitionGLRule__c</name>
+        <relationshipLabel><!-- RevenueTransactions --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Revenue Recognition GL Treatment --></label>
+        <name>blng__RevenueRecognitionGLTreatment__c</name>
+        <relationshipLabel><!-- RevenueTransactions --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Inherited from the Revenue Schedule. The Revenue Recognition Policy that is used to calculate this transaction --></help>
+        <label><!-- Revenue Recognition Rule --></label>
+        <name>blng__RevenueRecognitionRule__c</name>
+        <relationshipLabel><!-- RevenueTransactions --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Inherited from the Revenue Schedule. The Revenue Treatment that is used to calculate this transaction --></help>
+        <label><!-- Revenue Recognition Treatment --></label>
+        <name>blng__RevenueRecognitionTreatment__c</name>
+    </fields>
+    <fields>
+        <help><!-- The parent schedule for this Revenue Transaction --></help>
+        <label><!-- Revenue Schedule --></label>
+        <name>blng__RevenueSchedule__c</name>
+        <relationshipLabel><!-- Revenue Transactions --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- &quot;The current recognition status of this transaction. Can be:
+Deferred
+Recognized&quot; --></help>
+        <label><!-- Status --></label>
+        <name>blng__Status__c</name>
+    </fields>
+    <fields>
+        <label><!-- System Period Start Date --></label>
+        <name>blng__SystemPeriodStartDate__c</name>
+    </fields>
+</CustomObjectTranslation>

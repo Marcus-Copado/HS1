@@ -1,0 +1,22 @@
+<!--
+ - Created by k.han on 2019-02-07.
+ -->
+
+<apex:page title="{!$Label.cpqea__lbl_pricing_guidance}">
+    <apex:includeLightning />
+
+    <div id="PGLightning" />
+
+    <script>
+        $Lightning.use("cpqea:generatePricingGuidanceVFApp", function() {
+          $Lightning.createComponent("cpqea:generatePricingGuidance",
+          {
+              isLightning: UITheme.getUITheme() === "Theme4d"
+          },
+          "PGLightning",
+          function(cmp) {
+            // do some stuff
+          });
+        });
+    </script>
+</apex:page>

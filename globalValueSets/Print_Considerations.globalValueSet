@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>1 Copy</fullName>
+        <default>true</default>
+        <label>1 Copy</label>
+    </customValue>
+    <customValue>
+        <fullName>Tandem</fullName>
+        <default>false</default>
+        <label>Tandem</label>
+    </customValue>
+    <customValue>
+        <fullName>Combo</fullName>
+        <default>false</default>
+        <label>Combo</label>
+    </customValue>
+    <masterLabel>Print Considerations</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

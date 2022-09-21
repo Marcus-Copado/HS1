@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Class Name --></label>
+        <name>cpqlabs__ClassName__c</name>
+    </fields>
+    <fields>
+        <label><!-- JSON --></label>
+        <name>cpqlabs__JSON__c</name>
+    </fields>
+    <fields>
+        <label><!-- Level --></label>
+        <name>cpqlabs__Level__c</name>
+        <picklistValues>
+            <masterLabel>DEBUG</masterLabel>
+            <translation><!-- DEBUG --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ERROR</masterLabel>
+            <translation><!-- ERROR --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>INFO</masterLabel>
+            <translation><!-- INFO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>WARN</masterLabel>
+            <translation><!-- WARN --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Message --></label>
+        <name>cpqlabs__Message__c</name>
+    </fields>
+    <fields>
+        <label><!-- Object IDs --></label>
+        <name>cpqlabs__ObjectIDs__c</name>
+    </fields>
+    <fields>
+        <label><!-- Object Name --></label>
+        <name>cpqlabs__ObjectName__c</name>
+    </fields>
+    <fields>
+        <label><!-- Stack Trace --></label>
+        <name>cpqlabs__StackTrace__c</name>
+    </fields>
+    <fields>
+        <label><!-- User --></label>
+        <name>cpqlabs__User__c</name>
+        <relationshipLabel><!-- Logs --></relationshipLabel>
+    </fields>
+</CustomObjectTranslation>

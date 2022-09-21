@@ -1,0 +1,34 @@
+<template>
+  <template if:true={fileId}>
+    <video
+      src={videoUrl}
+      preload="metadata"
+      loop={shouldLoop}
+      controls={controls}
+      autoplay={shouldAutoPlay}
+    >
+      <lightning-card
+        ><div class="slds-m-around_medium">
+          Your browser does not support embedded videos.
+        </div></lightning-card
+      >
+    </video>
+  </template>
+  <template if:true={iframeUrl}>
+    <div class="resp-container">
+      <iframe
+        class="resp-iframe"
+        src={iframeUrl}
+        allow="encrypted-media picture-in-picture fullscreen"
+        allowfullscreen
+      ></iframe>
+    </div>
+  </template>
+  <template if:false={hasVideo}>
+    <lightning-card title="Additional Configuration Required"
+      ><div class="slds-m-around_medium">
+        No File Id or URL found. Please specify either a File Id or URL.
+      </div></lightning-card
+    >
+  </template>
+</template>

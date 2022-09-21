@@ -1,0 +1,461 @@
+{
+  "version" : "52.0",
+  "nodes" : {
+    "LOAD_DATASET5" : {
+      "action" : "load",
+      "parameters" : {
+        "dataset" : {
+          "label" : "Account",
+          "name" : "account",
+          "type" : "analyticsDataset"
+        },
+        "fields" : [ "User.Role.RoleNamesPath", "User.Role.ForecastManager.UniqueUserName", "User.SmallPhotoUrl", "User.UserRoleId", "User.Role.ParentRole.ForecastManager.UniqueUserName", "User.Role.ParentRole.DeveloperName", "Name", "Industry", "User.Role.DeveloperName", "User.IsActive", "OwnerId", "User.Role.ForecastManager.Name", "User.Username", "User.Role.Name", "AccountSource", "User.Role.ForecastManager.ForecastEnabled", "User.Role.ParentRole.Name", "User.Name", "User.Role.RoleNames", "User.UniqueUserName", "User.Role.ParentRoleId", "Type", "BillingCountry", "User.Role.ParentRole.ForecastManager.Name", "User.Role.Roles", "CreatedDate", "LastActivityDate", "User.ForecastEnabled", "Id", "BillingState", "User.Role.RolePath", "NumberOfEmployees", "AnnualRevenue" ]
+      },
+      "sources" : [ ]
+    },
+    "FORMULA2" : {
+      "action" : "formula",
+      "parameters" : {
+        "expressionType" : "SQL",
+        "fields" : [ {
+          "defaultValue" : "A",
+          "formulaExpression" : "'A'",
+          "label" : "JoinKey",
+          "name" : "User.Role.RoleNamesPath_formula",
+          "precision" : 255,
+          "type" : "TEXT"
+        } ]
+      },
+      "sources" : [ "LOAD_DATASET5" ]
+    },
+    "LOAD_DATASET6" : {
+      "action" : "load",
+      "parameters" : {
+        "dataset" : {
+          "label" : "Products",
+          "name" : "products",
+          "type" : "analyticsDataset"
+        },
+        "fields" : [ "ProductCode", "Family", "Id", "Name" ]
+      },
+      "sources" : [ ]
+    },
+    "FORMULA3" : {
+      "action" : "formula",
+      "parameters" : {
+        "expressionType" : "SQL",
+        "fields" : [ {
+          "defaultValue" : "A",
+          "formulaExpression" : "'A'",
+          "label" : "JoinKey",
+          "name" : "ProductCode_formula",
+          "precision" : 255,
+          "type" : "TEXT"
+        } ]
+      },
+      "sources" : [ "JOIN3" ]
+    },
+    "FORMULA4" : {
+      "action" : "computeRelative",
+      "parameters" : {
+        "expressionType" : "SQL",
+        "fields" : [ {
+          "defaultValue" : "",
+          "formulaExpression" : "dense_rank()",
+          "label" : "Rank",
+          "name" : "ProductCode_formula_formula",
+          "precision" : 10,
+          "scale" : 0,
+          "type" : "NUMBER"
+        } ],
+        "orderBy" : [ {
+          "direction" : "DESC",
+          "fieldName" : "OpptyProducts.Total_ListPrice"
+        } ],
+        "partitionBy" : [ "ProductCode_formula" ]
+      },
+      "sources" : [ "FORMULA3" ]
+    },
+    "JOIN1" : {
+      "action" : "join",
+      "parameters" : {
+        "joinType" : "LEFT_OUTER",
+        "leftKeys" : [ "User.Role.RoleNamesPath_formula" ],
+        "rightKeys" : [ "ProductCode_formula" ],
+        "rightQualifier" : "Product"
+      },
+      "schema" : {
+        "slice" : {
+          "mode" : "DROP",
+          "ignoreMissingFields" : true,
+          "fields" : [ ]
+        }
+      },
+      "sources" : [ "FORMULA2", "FILTER2" ]
+    },
+    "LOAD_DATASET7" : {
+      "action" : "load",
+      "parameters" : {
+        "dataset" : {
+          "label" : "Oppty Products",
+          "name" : "opportunity_product",
+          "type" : "analyticsDataset"
+        },
+        "fields" : [ "Opportunity.IsWon", "Opportunity.User.SmallPhotoUrl", "ServiceDate", "Opportunity.User.Role.ParentRoleId", "Opportunity.Account.User.UniqueUserName", "Product.ProductCode", "Opportunity.StageName", "ProductCode", "Opportunity.Account.User.Role.Roles", "Opportunity.Account.User.Role.Name", "Opportunity.IsClosed", "Opportunity.Account.BillingCountry", "Opportunity.Account.User.Role.RolePath", "Opportunity.User.Role.Name", "PricebookEntryId", "Id", "HasRevenueSchedule", "Pricebook.Product2Id", "Opportunity.Account.AccountSource", "Opportunity.AccountId", "Opportunity.User.Name", "Opportunity.Account.User.Name", "Opportunity.ForecastCategoryName", "Opportunity.User.Role.Roles", "Opportunity.User.UniqueUserName", "Opportunity.User.Role.RolePath", "Opportunity.Type", "OpportunityId", "Opportunity.Account.Type", "Opportunity.Account.Name", "Opportunity.Name", "Opportunity.CloseDate", "Opportunity.Account.Industry", "Product.Name", "Opportunity.Account.OwnerId", "Opportunity.CreatedDate", "Opportunity.User.Role.ParentRole.DeveloperName", "Opportunity.OwnerId", "Product.Family", "Opportunity.User.Role.RoleNames", "Opportunity.LeadSource", "Opportunity.Account.BillingState", "ListPrice", "Discount_Percent", "Opportunity.Account.AnnualRevenue", "Quantity", "Total_ListPrice", "Opportunity.Account.NumberOfEmployees", "TotalPrice" ]
+      },
+      "sources" : [ ]
+    },
+    "JOIN2" : {
+      "action" : "join",
+      "parameters" : {
+        "joinType" : "LOOKUP",
+        "leftKeys" : [ "Id", "Product.Id" ],
+        "rightKeys" : [ "Opportunity.AccountId", "Pricebook.Product2Id" ],
+        "rightQualifier" : "OpptyProduct"
+      },
+      "schema" : {
+        "slice" : {
+          "mode" : "DROP",
+          "ignoreMissingFields" : true,
+          "fields" : [ "OpptyProduct.Opportunity.IsWon", "OpptyProduct.Opportunity.User.SmallPhotoUrl", "OpptyProduct.ServiceDate", "OpptyProduct.Opportunity.User.Role.ParentRoleId", "OpptyProduct.Opportunity.Account.User.UniqueUserName", "OpptyProduct.Product.ProductCode", "OpptyProduct.Opportunity.StageName", "OpptyProduct.ProductCode", "OpptyProduct.Opportunity.Account.User.Role.Roles", "OpptyProduct.Opportunity.Account.User.Role.Name", "OpptyProduct.Opportunity.IsClosed", "OpptyProduct.Opportunity.Account.BillingCountry", "OpptyProduct.Opportunity.Account.User.Role.RolePath", "OpptyProduct.Opportunity.User.Role.Name", "OpptyProduct.PricebookEntryId", "OpptyProduct.Id", "OpptyProduct.HasRevenueSchedule", "OpptyProduct.Opportunity.Account.AccountSource", "OpptyProduct.Opportunity.User.Name", "OpptyProduct.Opportunity.Account.User.Name", "OpptyProduct.Opportunity.ForecastCategoryName", "OpptyProduct.Opportunity.User.Role.Roles", "OpptyProduct.Opportunity.User.UniqueUserName", "OpptyProduct.Opportunity.User.Role.RolePath", "OpptyProduct.Opportunity.Type", "OpptyProduct.OpportunityId", "OpptyProduct.Opportunity.Account.Type", "OpptyProduct.Opportunity.Account.Name", "OpptyProduct.Opportunity.Name", "OpptyProduct.Opportunity.CloseDate", "OpptyProduct.Opportunity.Account.Industry", "OpptyProduct.Product.Name", "OpptyProduct.Opportunity.Account.OwnerId", "OpptyProduct.Opportunity.CreatedDate", "OpptyProduct.Opportunity.User.Role.ParentRole.DeveloperName", "OpptyProduct.Opportunity.OwnerId", "OpptyProduct.Product.Family", "OpptyProduct.Opportunity.User.Role.RoleNames", "OpptyProduct.Opportunity.LeadSource", "OpptyProduct.Opportunity.Account.BillingState", "OpptyProduct.ListPrice", "OpptyProduct.Discount_Percent", "OpptyProduct.Opportunity.Account.AnnualRevenue", "OpptyProduct.Quantity", "OpptyProduct.Total_ListPrice", "OpptyProduct.Opportunity.Account.NumberOfEmployees", "OpptyProduct.TotalPrice" ]
+        }
+      },
+      "sources" : [ "JOIN1", "FILTER0" ]
+    },
+    "REPLACE0" : {
+      "action" : "formula",
+      "parameters" : {
+        "expressionType" : "SQL",
+        "fields" : [ {
+          "formulaExpression" : "coalesce(\"OpptyProduct.Pricebook.Product2Id\", null, 'false')",
+          "label" : "Pricebook.Product2Id Replace",
+          "name" : "OpptyProduct.Pricebook.Product2Id_replace",
+          "type" : "TEXT"
+        } ]
+      },
+      "sources" : [ "JOIN2" ]
+    },
+    "BUCKET0" : {
+      "action" : "bucket",
+      "parameters" : {
+        "fields" : [ {
+          "bucketsSetup" : {
+            "buckets" : [ {
+              "sourceValues" : [ "false" ],
+              "value" : "false"
+            } ],
+            "defaultBucketValue" : "true",
+            "isPassthroughEnabled" : false,
+            "nullBucketValue" : "false",
+            "sourceField" : {
+              "name" : "OpptyProduct.Pricebook.Product2Id_replace",
+              "type" : "TEXT"
+            }
+          },
+          "label" : "Pricebook.Product2Id Replace Bucket",
+          "name" : "OpptyProduct.Pricebook.Product2Id_replace_bucket",
+          "type" : "TEXT"
+        } ]
+      },
+      "sources" : [ "REPLACE0" ]
+    },
+    "EDIT_ATTRIBUTES0" : {
+      "action" : "schema",
+      "parameters" : {
+        "fields" : [ {
+          "name" : "OpptyProduct.Pricebook.Product2Id_replace_bucket",
+          "newProperties" : {
+            "label" : "Bought",
+            "name" : "Bought",
+            "typeProperties" : {
+              "type" : "TEXT"
+            }
+          }
+        } ]
+      },
+      "sources" : [ "BUCKET0" ]
+    },
+    "OUTPUT1" : {
+      "action" : "save",
+      "parameters" : {
+        "dataset" : {
+          "label" : "GuidedSelling_ED",
+          "name" : "GuidedSelling_ED",
+          "folderName" : "Revenue_Analytics",
+          "type" : "analyticsDataset"
+        },
+        "fields" : [ ]
+      },
+      "sources" : [ "FILTER3" ]
+    },
+    "FILTER0" : {
+      "action" : "filter",
+      "parameters" : {
+        "filterExpressions" : [ {
+          "field" : "Opportunity.IsClosed",
+          "operands" : [ "true" ],
+          "operator" : "EQUAL",
+          "type" : "TEXT"
+        }, {
+          "field" : "Opportunity.IsWon",
+          "operands" : [ "true" ],
+          "operator" : "EQUAL",
+          "type" : "TEXT"
+        } ]
+      },
+      "sources" : [ "LOAD_DATASET7" ]
+    },
+    "FILTER1" : {
+      "action" : "filter",
+      "parameters" : {
+        "filterExpressions" : [ {
+          "field" : "Opportunity.IsClosed",
+          "operands" : [ "true" ],
+          "operator" : "EQUAL",
+          "type" : "TEXT"
+        }, {
+          "field" : "Opportunity.IsWon",
+          "operands" : [ "true" ],
+          "operator" : "EQUAL",
+          "type" : "TEXT"
+        }, {
+          "field" : "Pricebook.Product2Id",
+          "operands" : [ ],
+          "operator" : "IS_NOT_NULL",
+          "type" : "TEXT"
+        } ]
+      },
+      "sources" : [ "LOAD_DATASET7" ]
+    },
+    "JOIN3" : {
+      "action" : "join",
+      "parameters" : {
+        "joinType" : "MULTI_VALUE_LOOKUP",
+        "leftKeys" : [ "Id" ],
+        "rightKeys" : [ "Pricebook.Product2Id" ],
+        "rightQualifier" : "OpptyProducts"
+      },
+      "schema" : {
+        "slice" : {
+          "mode" : "DROP",
+          "ignoreMissingFields" : true,
+          "fields" : [ "OpptyProducts.Discount_Percent", "OpptyProducts.HasRevenueSchedule", "OpptyProducts.Id", "OpptyProducts.ListPrice", "OpptyProducts.Opportunity.Account.AccountSource", "OpptyProducts.Opportunity.Account.AnnualRevenue", "OpptyProducts.Opportunity.Account.BillingCountry", "OpptyProducts.Opportunity.Account.BillingState", "OpptyProducts.Opportunity.Account.Industry", "OpptyProducts.Opportunity.Account.Name", "OpptyProducts.Opportunity.Account.NumberOfEmployees", "OpptyProducts.Opportunity.Account.OwnerId", "OpptyProducts.Opportunity.Account.Type", "OpptyProducts.Opportunity.Account.User.Name", "OpptyProducts.Opportunity.Account.User.Role.Name", "OpptyProducts.Opportunity.Account.User.Role.RolePath", "OpptyProducts.Opportunity.Account.User.Role.Roles", "OpptyProducts.Opportunity.Account.User.UniqueUserName", "OpptyProducts.Opportunity.AccountId", "OpptyProducts.Opportunity.CloseDate", "OpptyProducts.Opportunity.CreatedDate", "OpptyProducts.Opportunity.ForecastCategoryName", "OpptyProducts.Opportunity.IsClosed", "OpptyProducts.Opportunity.IsWon", "OpptyProducts.Opportunity.LeadSource", "OpptyProducts.Opportunity.Name", "OpptyProducts.Opportunity.OwnerId", "OpptyProducts.Opportunity.StageName", "OpptyProducts.Opportunity.Type", "OpptyProducts.Opportunity.User.Name", "OpptyProducts.Opportunity.User.Role.Name", "OpptyProducts.Opportunity.User.Role.ParentRole.DeveloperName", "OpptyProducts.Opportunity.User.Role.ParentRoleId", "OpptyProducts.Opportunity.User.Role.RoleNames", "OpptyProducts.Opportunity.User.Role.RolePath", "OpptyProducts.Opportunity.User.Role.Roles", "OpptyProducts.Opportunity.User.SmallPhotoUrl", "OpptyProducts.Opportunity.User.UniqueUserName", "OpptyProducts.OpportunityId", "OpptyProducts.Pricebook.Product2Id", "OpptyProducts.PricebookEntryId", "OpptyProducts.Product.Family", "OpptyProducts.Product.Name", "OpptyProducts.Product.ProductCode", "OpptyProducts.ProductCode", "OpptyProducts.Quantity", "OpptyProducts.ServiceDate", "OpptyProducts.TotalPrice" ]
+        }
+      },
+      "sources" : [ "LOAD_DATASET6", "FILTER1" ]
+    },
+    "FILTER2" : {
+      "action" : "filter",
+      "parameters" : {
+        "filterExpressions" : [ {
+          "field" : "ProductCode_formula_formula",
+          "operands" : [ "25" ],
+          "operator" : "LESS_OR_EQUAL",
+          "type" : "NUMBER"
+        } ]
+      },
+      "sources" : [ "FORMULA4" ]
+    },
+    "FILTER3" : {
+      "action" : "filter",
+      "parameters" : {
+        "filterExpressions" : [ {
+          "field" : "User.Role.RoleNamesPath_formula",
+          "operator" : "EQUAL",
+          "operands" : [ "A" ],
+          "type" : "TEXT"
+        } ]
+      },
+      "sources" : [ "EDIT_ATTRIBUTES0" ]
+    }
+  },
+  "ui" : {
+    "nodes" : {
+      "LOAD_DATASET5" : {
+        "label" : "Load Account dataset from RevOps app",
+        "description" : "",
+        "type" : "LOAD_DATASET",
+        "top" : 392,
+        "left" : 112,
+        "parameters" : {
+          "sampleSize" : 2000
+        }
+      },
+      "TRANSFORM2" : {
+        "label" : "Add JoinKey",
+        "description" : "",
+        "type" : "TRANSFORM",
+        "top" : 392,
+        "left" : 252,
+        "graph" : {
+          "FORMULA2" : {
+            "parameters" : {
+              "type" : "BASE_FORMULA_UI"
+            }
+          }
+        },
+        "connectors" : [ ]
+      },
+      "LOAD_DATASET6" : {
+        "label" : "Load Products dataset from RevOps app",
+        "description" : "",
+        "type" : "LOAD_DATASET",
+        "top" : 532,
+        "left" : 112,
+        "parameters" : {
+          "sampleSize" : 2000
+        }
+      },
+      "TRANSFORM3" : {
+        "label" : "Add JoinKey",
+        "description" : "",
+        "type" : "TRANSFORM",
+        "top" : 532,
+        "left" : 252,
+        "graph" : {
+          "FORMULA3" : {
+            "parameters" : {
+              "type" : "BASE_FORMULA_UI"
+            }
+          },
+          "FORMULA4" : null
+        },
+        "connectors" : [ {
+          "source" : "FORMULA3",
+          "target" : "FORMULA4"
+        } ]
+      },
+      "JOIN1" : {
+        "label" : "CrossJoin",
+        "description" : "",
+        "type" : "JOIN",
+        "top" : 392,
+        "left" : 392
+      },
+      "LOAD_DATASET7" : {
+        "label" : "Load Oppty Products dataset from RevOps app",
+        "description" : "",
+        "type" : "LOAD_DATASET",
+        "top" : 672,
+        "left" : 112,
+        "parameters" : {
+          "sampleSize" : 2000
+        }
+      },
+      "JOIN2" : {
+        "label" : "Join",
+        "type" : "JOIN",
+        "top" : 392,
+        "left" : 532
+      },
+      "TRANSFORM4" : {
+        "label" : "Transforms Bucket",
+        "description" : "",
+        "type" : "TRANSFORM",
+        "top" : 392,
+        "left" : 672,
+        "graph" : {
+          "REPLACE0" : {
+            "parameters" : {
+              "type" : "REPLACE_UI"
+            }
+          },
+          "BUCKET0" : null,
+          "EDIT_ATTRIBUTES0" : null
+        },
+        "connectors" : [ {
+          "source" : "REPLACE0",
+          "target" : "BUCKET0"
+        }, {
+          "source" : "BUCKET0",
+          "target" : "EDIT_ATTRIBUTES0"
+        } ]
+      },
+      "OUTPUT1" : {
+        "label" : "Register GuidedSelling_ED dataset",
+        "description" : "",
+        "type" : "OUTPUT",
+        "top" : 392,
+        "left" : 1092
+      },
+      "FILTER0" : {
+        "label" : "Filter for Closed-Won",
+        "description" : "",
+        "type" : "FILTER",
+        "top" : 672,
+        "left" : 812
+      },
+      "FILTER1" : {
+        "label" : "Filter for Closed - Won",
+        "description" : "",
+        "type" : "FILTER",
+        "top" : 672,
+        "left" : 252
+      },
+      "JOIN3" : {
+        "label" : "Join OpptyProducts",
+        "description" : "gets Total_ListPrice onto Products so we can rank them and keep Top N.",
+        "type" : "JOIN",
+        "top" : 672,
+        "left" : 392
+      },
+      "FILTER2" : {
+        "label" : "Filter for Top N",
+        "description" : "",
+        "type" : "FILTER",
+        "top" : 532,
+        "left" : 392
+      },
+      "FILTER3" : {
+        "label" : "Filter",
+        "type" : "FILTER",
+        "top" : 392,
+        "left" : 812
+      }
+    },
+    "connectors" : [ {
+      "source" : "LOAD_DATASET5",
+      "target" : "TRANSFORM2"
+    }, {
+      "source" : "JOIN3",
+      "target" : "TRANSFORM3"
+    }, {
+      "source" : "TRANSFORM2",
+      "target" : "JOIN1"
+    }, {
+      "source" : "JOIN1",
+      "target" : "JOIN2"
+    }, {
+      "source" : "FILTER0",
+      "target" : "JOIN2"
+    }, {
+      "source" : "JOIN2",
+      "target" : "TRANSFORM4"
+    }, {
+      "source" : "FILTER3",
+      "target" : "OUTPUT1"
+    }, {
+      "source" : "LOAD_DATASET7",
+      "target" : "FILTER0"
+    }, {
+      "source" : "LOAD_DATASET7",
+      "target" : "FILTER1"
+    }, {
+      "source" : "LOAD_DATASET6",
+      "target" : "JOIN3"
+    }, {
+      "source" : "FILTER1",
+      "target" : "JOIN3"
+    }, {
+      "source" : "TRANSFORM3",
+      "target" : "FILTER2"
+    }, {
+      "source" : "FILTER2",
+      "target" : "JOIN1"
+    }, {
+      "source" : "TRANSFORM4",
+      "target" : "FILTER3"
+    } ],
+    "hiddenColumns" : [ ]
+  }
+}

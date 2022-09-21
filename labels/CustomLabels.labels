@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>B2B_CS_Add_To_Cart_Button_Label</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>B2B CS Add To Cart Button Label</shortDescription>
+        <value>Add to Cart</value>
+    </labels>
+    <labels>
+        <fullName>B2B_CS_Cart_Updated</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>B2B CS Cart Updated</shortDescription>
+        <value>Cart Updated</value>
+    </labels>
+    <labels>
+        <fullName>B2B_CS_Description_Label</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>B2B CS Description Label</shortDescription>
+        <value>Description</value>
+    </labels>
+    <labels>
+        <fullName>B2B_CS_Error_detected</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>B2B CS Error detected</shortDescription>
+        <value>Error detected</value>
+    </labels>
+    <labels>
+        <fullName>B2B_CS_More_Information_Button_Label</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>B2B CS More Information Button Label</shortDescription>
+        <value>More Information</value>
+    </labels>
+    <labels>
+        <fullName>B2B_CS_Product_added_to_your_cart</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>B2B CS Product added to your cart</shortDescription>
+        <value>Product added to your cart</value>
+    </labels>
+    <labels>
+        <fullName>B2B_FP_Alt_Text_Please_Wait</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>B2B FP Alt Text Please Wait</shortDescription>
+        <value>Please wait...</value>
+    </labels>
+    <labels>
+        <fullName>B2B_FP_CategoryId_is_blank</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>B2B FP CategoryId is blank</shortDescription>
+        <value>CategoryId is blank</value>
+    </labels>
+    <labels>
+        <fullName>B2B_FP_Category_contains_no_products</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>B2B FP Category contains no products</shortDescription>
+        <value>Category contains no products</value>
+    </labels>
+    <labels>
+        <fullName>B2B_FP_Component_configuration_error</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>B2B FP Component configuration error</shortDescription>
+        <value>Component configuration error</value>
+    </labels>
+    <labels>
+        <fullName>B2B_FP_Field_is_not_accessible</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>B2B FP Field is not accessible</shortDescription>
+        <value>{0} is not accessible to the current user</value>
+    </labels>
+    <labels>
+        <fullName>B2B_FP_Invalid_Boolean_Field_Value</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>B2B FP Invalid Boolean Field Value</shortDescription>
+        <value>{0} field value is not a valid Boolean value (true/false)</value>
+    </labels>
+    <labels>
+        <fullName>B2B_FP_Invalid_Compare_Type</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>B2B FP Invalid Compare Type</shortDescription>
+        <value>Field compare type not a valid option (compares, equals)</value>
+    </labels>
+    <labels>
+        <fullName>B2B_FP_Invalid_Field_Type</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>B2B FP Invalid Field Type</shortDescription>
+        <value>{0} is not a valid field type for selection (String, Picklist, Boolean)</value>
+    </labels>
+    <labels>
+        <fullName>B2B_FP_Invalid_Field_for_Product_Object</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>B2B FP Invalid Field for Product Object</shortDescription>
+        <value>{0} is not a valid field on the Product object</value>
+    </labels>
+    <labels>
+        <fullName>B2B_FP_No_Products</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>B2B FP No Products</shortDescription>
+        <value>NO PRODUCTS TO DISPLAY</value>
+    </labels>
+    <labels>
+        <fullName>B2B_FP_Processing_Error</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>B2B FP Processing Error</shortDescription>
+        <value>Processing Error</value>
+    </labels>
+    <labels>
+        <fullName>B2B_FP_Product_SKU_list_is_empty</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>B2B FP Product SKU list is empty</shortDescription>
+        <value>Product SKU list is empty</value>
+    </labels>
+    <labels>
+        <fullName>B2B_FP_Search_Error_Title</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>B2B FP Search Error Title</shortDescription>
+        <value>Search Error</value>
+    </labels>
+    <labels>
+        <fullName>B2B_MP4_URI_not_found</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>B2B MP4 URI not found</shortDescription>
+        <value>MP4 URI not found.</value>
+    </labels>
+    <labels>
+        <fullName>B2B_Product_Videos</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>B2B Product Videos</shortDescription>
+        <value>Product Videos</value>
+    </labels>
+    <labels>
+        <fullName>B2B_YouTube_ID_Not_Found</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>B2B YouTube ID Not Found</shortDescription>
+        <value>YouTube ID field not found. Please double check the field name.</value>
+    </labels>
+    <labels>
+        <fullName>GeneralCPQB</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>GeneralCPQB</shortDescription>
+        <value>0PS3t000001nDZk</value>
+    </labels>
+</CustomLabels>

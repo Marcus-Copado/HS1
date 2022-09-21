@@ -1,0 +1,264 @@
+<aura:component controller="AccountingPeriodModCtrl" implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes">
+    	<aura:attribute name="legalEnts" type="List" />   
+        <aura:attribute name="finBooks" type="List" /> 
+    	<aura:attribute name="periods" type="List" />
+        <aura:attribute name="revperiods" type="List" />  
+        <aura:handler name="init" value="{!this}" action="{!c.doInit}" />      
+
+    <!-- Start Legal Entity Card -->
+    
+    	<article class="slds-card">
+			<div class="slds-card__header slds-grid">
+				<header class="slds-media slds-media_center slds-has-flexi-truncate">
+                    <div class="slds-media__figure">
+                        <span class="slds-icon_container slds-icon-standard-period" title="Legal Entities">
+                            <lightning:icon iconName="utility:company" alternativeText="Legal Entities" />
+                            <span class="slds-assistive-text">Legal Entities</span>
+                            </span>
+                    </div>
+                    <div class="slds-media__body" style="margin-top:5px;">
+                        <h2 class="slds-card__header-title">
+                            <a href="/lightning/o/blng__LegalEntity__c/list?filterName=Recent" class="slds-card__header-link slds-truncate" title="Legal Entities">
+                                <span>Legal Entities</span>
+                            </a>
+                        </h2>
+                    </div>
+                    <!-- <div class="slds-no-flex">
+                        <button class="slds-button slds-button_neutral">New</button>
+                    </div> -->
+				</header>
+			</div>
+	
+
+	    <div class="slds-card__body slds-card__body_inner">
+      	<table class="slds-table slds-table_cell-buffer slds-table_header-hidden slds-table_bordered">
+    			<thead class="slds-assistive-text">
+    				<tr class="slds-line-height_reset">
+    					<th class="" scope="col">
+    						<div class="slds-truncate" title="Legal Entity Name">Legal Entity Name</div>
+    					</th>
+    					<th class="" scope="col">
+    						<div class="slds-truncate" title="Location">Location</div>
+    					</th>
+    				</tr>
+    			</thead>
+              <tbody>
+                  <aura:iteration items="{!v.legalEnts}" var="ent">
+                  <tr class="slds-hint-parent">
+                      <th data-label="Legal Entity Name" scope="row">
+                          <div class="slds-truncate" title="{!ent.Name}">
+                              <a href="{!'/lightning/r/blng__LegalEntity__c/' + ent.Id + '/view'}" tabindex="-1">{!ent.Name}</a>
+                          </div>
+                      </th>
+                      <td data-label="Legal Entity Location">
+                          <div class="slds-truncate" title="Location">{!ent.blng__Street1__c}, {!ent.blng__City__c}, {!ent.blng__State__c}, {!ent.blng__Country__c}, {!ent.blng__ZipPostalCode__c}</div>
+                      </td>
+                  </tr>
+                  </aura:iteration>    
+              </tbody>
+  		    </table>
+     	</div>	
+		<!-- <footer class="slds-card__footer">
+        	<a class="slds-card__footer-action" href="javascript:void(0);">View All
+            	<span class="slds-assistive-text">Finance Books</span>
+           	</a>
+        </footer> -->
+    	</article>
+
+      <!-- End Legal Entity Card -->
+    
+   		<!-- Start Finance Book Card -->
+    
+    	<article class="slds-card">
+			<div class="slds-card__header slds-grid">
+				<header class="slds-media slds-media_center slds-has-flexi-truncate">
+                    <div class="slds-media__figure">
+                        <span class="slds-icon_container slds-icon-standard-period" title="finance books">
+                            <lightning:icon iconName="utility:moneybag" alternativeText="Finance Books" />
+                            <span class="slds-assistive-text">Finance Books</span>
+                            </span>
+                    </div>
+                    <div class="slds-media__body" style="margin-top:5px;">
+                        <h2 class="slds-card__header-title">
+                            <a href="/lightning/o/blng__FinanceBook__c/list?filterName=Recent" class="slds-card__header-link slds-truncate" title="Finance Books">
+                                <span>Finance Books</span>
+                            </a>
+                        </h2>
+                    </div>
+                    <!-- <div class="slds-no-flex">
+                        <button class="slds-button slds-button_neutral">New</button>
+                    </div> -->
+				</header>
+			</div>
+	
+
+	    <div class="slds-card__body slds-card__body_inner">
+      	<table class="slds-table slds-table_cell-buffer slds-table_header-hidden slds-table_bordered">
+    			<thead class="slds-assistive-text">
+    				<tr class="slds-line-height_reset">
+    					<th class="" scope="col">
+    						<div class="slds-truncate" title="Finance Book Name">Finance Book Name</div>
+    					</th>
+    					<th class="" scope="col">
+    						<div class="slds-truncate" title="Period Type">Period Type</div>
+    					</th>
+    				</tr>
+    			</thead>
+              <tbody>
+                  <aura:iteration items="{!v.finBooks}" var="book">
+                  <tr class="slds-hint-parent">
+                      <th data-label="Finance Book Name" scope="row">
+                          <div class="slds-truncate" title="{!book.Name}">
+                              <a href="{!'/lightning/r/blng__FinanceBook__c/' + book.Id + '/view'}" tabindex="-1">{!book.Name}</a>
+                          </div>
+                      </th>
+                      <td data-label="Period Type">
+                          <div class="slds-truncate" title="{!book.blng__PeriodType__c}">{!book.blng__PeriodType__c}</div>
+                      </td>
+                  </tr>
+                  </aura:iteration>    
+              </tbody>
+  		    </table>
+     	</div>	
+		<!-- <footer class="slds-card__footer">
+        	<a class="slds-card__footer-action" href="javascript:void(0);">View All
+            	<span class="slds-assistive-text">Finance Books</span>
+           	</a>
+        </footer> -->
+    	</article>
+
+      <!-- End Finance Book Card -->
+
+      <!-- Start Finance Period Accounting Card -->
+        
+        <article class="slds-card">
+            <div class="slds-card__header slds-grid">
+            	<header class="slds-media slds-media_center slds-has-flexi-truncate">
+                    <div class="slds-media__figure">
+                        <span class="slds-icon_container slds-icon-standard-period" title="account">
+                            <lightning:icon iconName="utility:monthlyview" alternativeText="Finance Periods" />
+                            <span class="slds-assistive-text">Finance Periods</span>
+                            </span>
+                    </div>
+                    <div class="slds-media__body" style="margin-top:5px;">
+                        <h2 class="slds-card__header-title">
+                            <a href="/lightning/o/blng__FinancePeriod__c/list?filterName=00B3t00000EUC1QEAH" class="slds-card__header-link slds-truncate" title="Revenue Finance Periods">
+                            <span>Accounting Periods</span>
+                            </a>
+                        </h2>
+                    </div>
+            	</header>	
+            </div>
+		
+      <div class="slds-card__body slds-card__body_inner">
+        <table class="slds-table slds-table_cell-buffer slds-table_header-hidden slds-table_bordered">
+          <thead class="slds-assistive-text">
+            <tr class="slds-line-height_reset">
+              <!-- <th scope="col"><div class="slds-truncate" title="ID">ID</div></th> -->
+              <!-- <th scope="col"><div class="slds-truncate" title="Name">Name</div></th> -->                
+              <th style="width: 275px;" scope="col"><div class="slds-truncate" title="Type">Finance Book</div></th>
+              <!-- <th scope="col"><div class="slds-truncate" title="Number Of Employees">Legal Entity</div></th> -->
+              <th scope="col"><div class="slds-truncate" title="Ticker Symbol">Period Type</div></th>
+              <th scope="col"><div class="slds-truncate" title="Phone">Start Date</div></th>
+              <th scope="col"><div class="slds-truncate" title="Delete">End Date</div></th>
+              <th scope="col"><div class="slds-truncate" title="Delete">Status</div></th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Use the Apex model and controller to fetch server side data -->
+            <aura:iteration items="{!v.periods}" var="period">
+                <tr>
+                   <!--  <th scope="row"><div class="slds-truncate" title="{!period.Id}">{!period.Id}</div></th> -->
+                   <!-- <td><div class="slds-truncate" title="{!period.Name}"><a href="{!'/one/one.app?#/sObject/'+ period.Id + '/view'}" target="_blank">{!period.Name}</a></div></td> -->
+                   <!--  <td><div class="slds-truncate" title="{!period.Name}">{!period.Name}</div></td> -->
+                    <td><div class="slds-truncate" title="{!period.blng__FinanceBook__c}">{!period.blng__FinanceBook__r.Name}</div></td>
+                   <!--  <td><div class="slds-truncate" title="{!period.blng__LegalEntity__c}">{!period.blng__LegalEntity__r.Name}</div></td> -->
+                    <td><div class="slds-truncate" title="{!period.blng__PeriodType__c}">{!period.blng__PeriodType__c}</div></td>
+                    <td><div class="slds-truncate" title="Start Date"><lightning:formattedDateTime value="{!period.blng__PeriodStartDate__c}"/></div></td>
+                    <td><div class="slds-truncate" title="End Date"><lightning:formattedDateTime value="{!period.blng__PeriodEndDate__c}"/></div></td>
+                    <td><div class="slds-truncate" title="{!period.blng__PeriodStatus__c}">{!period.blng__PeriodStatus__c}</div></td>
+                    <td>                        
+                    	<lightning:button
+                            onclick="{!c.manageAccountingPeriod}"
+                            value="{!period.Id}"
+                            label="Manage"
+                            iconName="action:edit"
+                            iconPosition="left"
+                            variant="Neutral"
+                          />
+                    </td>
+                </tr>
+            </aura:iteration>
+          </tbody>
+        </table>
+      </div>
+    </article> 
+
+      <!-- End Finance Period Accounting Card -->
+
+      <!-- Start Finance Period Revenue Card -->
+    	
+      <article class="slds-card">
+            <div class="slds-card__header slds-grid">
+            	<header class="slds-media slds-media_center slds-has-flexi-truncate">
+                    <div class="slds-media__figure">
+                        <span class="slds-icon_container slds-icon-standard-period" title="account">
+                            <lightning:icon iconName="utility:money" alternativeText="Finance Periods" />
+                            <span class="slds-assistive-text">Finance Periods</span>
+                            </span>
+                    </div>
+                    <div class="slds-media__body" style="margin-top:5px;">
+                        <h2 class="slds-card__header-title">
+                            <a href="/lightning/o/blng__FinancePeriod__c/list?filterName=00B3t00000EUC1SEAX" class="slds-card__header-link slds-truncate" title="Revenue Finance Periods">
+                            <span>Revenue Periods</span>
+                            </a>
+                        </h2>
+                    </div>
+            	</header>	
+            </div>
+		
+          
+        <div class="slds-card__body slds-card__body_inner">
+        <table class="slds-table slds-table_cell-buffer slds-table_header-hidden slds-table_bordered">
+          <thead class="slds-assistive-text">
+            <tr class="slds-text-heading_label">
+              <!-- <th scope="col"><div class="slds-truncate" title="ID">ID</div></th> -->
+              <!-- <th scope="col"><div class="slds-truncate" title="Name">Name</div></th> -->
+              <th style="width: 275px;" scope="col"><div class="slds-truncate" title="Type">Finance Book</div></th>
+              <!-- <th scope="col"><div class="slds-truncate" title="Number Of Employees">Legal Entity</div></th> -->
+              <th scope="col"><div class="slds-truncate" title="Ticker Symbol">Period Type</div></th>
+              <th scope="col"><div class="slds-truncate" title="Phone">Start Date</div></th>
+              <th scope="col"><div class="slds-truncate" title="Delete">End Date</div></th>
+              <th scope="col"><div class="slds-truncate" title="Delete">Status</div></th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Use the Apex model and controller to fetch server side data -->
+            <aura:iteration items="{!v.revperiods}" var="revperiod">
+                <tr>
+                    <!-- <th scope="row"><div class="slds-truncate" title="{!revperiod.Id}">{!revperiod.Id}</div></th> -->
+                    <!-- <td><div class="slds-truncate" title="{!revperiod.Name}">{!revperiod.Name}</div></td> -->
+                    <td><div class="slds-truncate" title="{!revperiod.blng__FinanceBook__c}">{!revperiod.blng__FinanceBook__r.Name}</div></td>
+                    <!-- <td><div class="slds-truncate" title="{!revperiod.blng__LegalEntity__c}">{!revperiod.blng__LegalEntity__r.Name}</div></td> -->
+                    <td><div class="slds-truncate" title="{!revperiod.blng__PeriodType__c}">{!revperiod.blng__PeriodType__c}</div></td>
+                    <td><div class="slds-truncate" title="Start Date"><lightning:formattedDateTime value="{!revperiod.blng__PeriodStartDate__c}"/></div></td>
+                    <td><div class="slds-truncate" title="End Date"><lightning:formattedDateTime value="{!revperiod.blng__PeriodEndDate__c}"/></div></td>
+                    <td><div class="slds-truncate" title="{!revperiod.blng__PeriodStatus__c}">{!revperiod.blng__PeriodStatus__c}</div></td>
+                    <td>                        
+                        <lightning:button
+                            onclick="{!c.manageAccountingPeriod}"
+                            value="{!revperiod.Id}"
+                            label="Manage"
+                            iconName="action:edit"
+                            iconPosition="left"
+                            variant="Neutral"
+                          />
+                    </td>
+                </tr>
+            </aura:iteration>
+          </tbody>
+        </table>  
+      </div>
+     </article>   
+     <!-- End Finance Period Revenue Card -->
+   </aura:component>

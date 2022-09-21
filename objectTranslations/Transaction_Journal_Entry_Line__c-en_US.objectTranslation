@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Transaction Journal Entry Line</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Transaction Journal Entry Lines</value>
+    </caseValues>
+    <fields>
+        <label><!-- Account --></label>
+        <name>Account__c</name>
+        <relationshipLabel><!-- Transaction Journal Entry Lines --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Credit GL Account Number --></label>
+        <name>Credit_GL_Account_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Credit GL Account --></label>
+        <name>Credit_GL_Account__c</name>
+        <relationshipLabel><!-- Transaction Journal Entry Lines --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Credit --></label>
+        <name>Credit__c</name>
+    </fields>
+    <fields>
+        <label><!-- Debit GL Account Number --></label>
+        <name>Debit_GL_Account_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Debit GL Account --></label>
+        <name>Debit_GL_Account__c</name>
+        <relationshipLabel><!-- Transaction Journal Entry Lines (Debit GL Account) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Debit --></label>
+        <name>Debit__c</name>
+    </fields>
+    <fields>
+        <label><!-- Effective Date --></label>
+        <name>Effective_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Finance Book --></label>
+        <name>Finance_Book__c</name>
+        <relationshipLabel><!-- Transaction Journal Entry Lines --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Finance Period --></label>
+        <name>Finance_Period__c</name>
+        <relationshipLabel><!-- Transaction Journal Entry Lines --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- GL Account Numbers:
+Cash (1020)
+Accounts Receivable (1312)
+Deferred Revenue (2710)
+Sales Tax Payable (2310)
+Subscription Revenue (4010)
+Usage Revenue (4020)
+Professional Services Revenue (4030)
+Discounts (4900)
+Accounts Payable (5111) --></help>
+        <label><!-- GL Account Name --></label>
+        <name>GL_Account_Name__c</name>
+        <picklistValues>
+            <masterLabel>Accounts Payable</masterLabel>
+            <translation><!-- Accounts Payable --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Accounts Receivable</masterLabel>
+            <translation><!-- Accounts Receivable --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cash</masterLabel>
+            <translation><!-- Cash --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Deferred Revenue</masterLabel>
+            <translation><!-- Deferred Revenue --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Discounts</masterLabel>
+            <translation><!-- Discounts --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Professional Services Revenue</masterLabel>
+            <translation><!-- Professional Services Revenue --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sales Tax Payable</masterLabel>
+            <translation><!-- Sales Tax Payable --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Subscription Revenue</masterLabel>
+            <translation><!-- Subscription Revenue --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Usage Revenue</masterLabel>
+            <translation><!-- Usage Revenue --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Invoice Line --></label>
+        <name>Invoice_Line__c</name>
+        <relationshipLabel><!-- Transaction Journal Entry Lines --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Journal Entry Line Type --></label>
+        <name>Journal_Entry_Line_Type__c</name>
+        <picklistValues>
+            <masterLabel>CR</masterLabel>
+            <translation><!-- CR --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DR</masterLabel>
+            <translation><!-- DR --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Legal Entity --></label>
+        <name>Legal_Entity__c</name>
+        <relationshipLabel><!-- Transaction Journal Entry Lines --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Override GL Account Number --></label>
+        <name>Override_GL_Account_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Posted --></label>
+        <name>Posted__c</name>
+    </fields>
+    <fields>
+        <label><!-- Posting Date --></label>
+        <name>Posting_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Posting Status --></label>
+        <name>Posting_Status__c</name>
+        <picklistValues>
+            <masterLabel>Draft</masterLabel>
+            <translation><!-- Draft --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Posted</masterLabel>
+            <translation><!-- Posted --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Transaction Currency --></label>
+        <name>Transaction_Currency__c</name>
+        <picklistValues>
+            <masterLabel>CAD</masterLabel>
+            <translation><!-- CAD --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GBP</masterLabel>
+            <translation><!-- GBP --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>USD</masterLabel>
+            <translation><!-- USD --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Transaction Date --></label>
+        <name>Transaction_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Transaction Journal Entry --></label>
+        <name>Transaction_Journal_Entry__c</name>
+        <relationshipLabel><!-- Transaction Journal Entry Lines --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Transaction Type --></label>
+        <name>Transaction_Type__c</name>
+        <picklistValues>
+            <masterLabel>Credit Note Allocation</masterLabel>
+            <translation><!-- Credit Note Allocation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Credit Note Line</masterLabel>
+            <translation><!-- Credit Note Line --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Debit Note Line</masterLabel>
+            <translation><!-- Debit Note Line --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Debit Note Line Allocation (Credit Note Line)</masterLabel>
+            <translation><!-- Debit Note Line Allocation (Credit Note Line) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Debit Note Line Allocation (Invoice Line)</masterLabel>
+            <translation><!-- Debit Note Line Allocation (Invoice Line) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Invoice Line</masterLabel>
+            <translation><!-- Invoice Line --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Payment</masterLabel>
+            <translation><!-- Payment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Payment Allocation (Invoice Line)</masterLabel>
+            <translation><!-- Payment Allocation (Invoice Line) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Payment Allocation (Invoice)</masterLabel>
+            <translation><!-- Payment Allocation (Invoice) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Realized Gain/Loss</masterLabel>
+            <translation><!-- Realized Gain/Loss --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Refund</masterLabel>
+            <translation><!-- Refund --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Refund Line (Credit Note Line)</masterLabel>
+            <translation><!-- Refund Line (Credit Note Line) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Refund Line (Payment)</masterLabel>
+            <translation><!-- Refund Line (Payment) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Revenue Transaction</masterLabel>
+            <translation><!-- Revenue Transaction --></translation>
+        </picklistValues>
+    </fields>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- Journal Entry Line has already been posted. You cannot de-post it. --></errorMessage>
+        <name>No_DePosting</name>
+    </validationRules>
+</CustomObjectTranslation>

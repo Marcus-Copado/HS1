@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Livre de financement</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Livres de financement</value>
+    </caseValues>
+    <fields>
+        <label><!-- Default --></label>
+        <name>Default__c</name>
+    </fields>
+    <fields>
+        <help>Si elles sont inactives, les nouvelles transactions peuvent être enregistrées dans ce livre de finance mais elles n’affectent pas les transactions qui sont déjà dans le livre.</help>
+        <label><!-- Active --></label>
+        <name>blng__Active__c</name>
+    </fields>
+    <fields>
+        <help>La durée de la plage de dates de la période de financement.</help>
+        <label><!-- Finance Period Duration --></label>
+        <name>blng__FinancePeriodDuration__c</name>
+    </fields>
+    <fields>
+        <label><!-- Notes --></label>
+        <name>blng__Notes__c</name>
+    </fields>
+    <fields>
+        <help>« Utilisé pour classer les livres de finance. Cela peut être :
+Revenus
+Comptabilité »</help>
+        <label><!-- Period Type --></label>
+        <name>blng__PeriodType__c</name>
+    </fields>
+    <gender>Masculine</gender>
+    <nameFieldLabel>Nom du livre de finance</nameFieldLabel>
+    <startsWith>Consonant</startsWith>
+    <webLinks>
+        <label><!-- Create_Finance_Periods --></label>
+        <name>blng__Create_Finance_Periods</name>
+    </webLinks>
+</CustomObjectTranslation>

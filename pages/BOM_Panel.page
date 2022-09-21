@@ -1,0 +1,129 @@
+<apex:page standardController="Product2" Extensions="qtcBuildBOM" applyBodyTag="False" applyHtmlTag="False" showHeader="false" standardStylesheets="false" sidebar="false" docType="html-5.0" tabStyle="Account">
+   <html>
+      <head>
+         <apex:slds />
+      </head>
+      <body>
+         <div class="slds-scope">
+            <apex:form >
+
+                <div class="slds-page-header">
+                  <div class="slds-grid">
+                     <div class="slds-col slds-has-flexi-truncate">
+                        <div class="slds-media slds-no-space slds-grow">
+                           <div class="slds-media__figure">
+                              <span class="slds-icon_container slds-icon-standard-opportunity" title="Description of icon when needed">
+                                 <svg class="slds-icon slds-page-header__icon" aria-hidden="true">
+                                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="../assets/icons/standard-sprite/svg/symbols.svg#opportunity" />
+                                 </svg>
+                              </span>
+                           </div>
+                           <div class="slds-media__body">
+                              <h1 class="slds-page-header__title slds-truncate slds-align-middle" title="Quote to Cash Demo Setup">Custom Demo Template Version: {!$Setup.Q2C_Demo_Settings__c.Version__c}</h1>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="slds-col slds-no-flex slds-grid slds-align-top">
+                        <div class="slds-button-group" role="group">
+                           <apex:commandButton action="{!CloseRedirect}" value="Close" styleClass="slds-button slds-button_neutral"/>
+                        </div>
+                     </div>
+                     <div class="slds-text-align_center">
+                        <div class="slds-button-group slds-align_absolute-center" role="group">
+                            <apex:commandButton reRender="mtable,form" action="{!clearBOM}" value="Clear Product BOM" styleClass="slds-button slds-button_neutral"/>
+                            
+                        </div>
+                    </div>
+                  </div>
+               </div>
+           </apex:form>
+            <apex:form id="form">
+               <br></br>
+                    <article class="slds-card">
+                            <div class="slds-card__header slds-grid">
+                                <header class="slds-media slds-media_center slds-has-flexi-truncate">
+                                    <div class="slds-media__body">
+                                        <h2 class="slds-text-heading_small">
+                                            <span>Product BOM Setup</span>
+                                        </h2>
+                                    </div>
+                                </header>
+                            </div>
+                            <div class="slds-card__body slds-card__body_inner">
+                                <div class="slds-grid">
+                                    
+                                    <div class="slds-col">
+                                        <!-- Approver Email -->
+                                        <div class="slds-form-element">
+                                            <apex:outputLabel styleClass="slds-form-element__label" value="# of materials for this product" />
+                                            <div class="slds-form-element__control">
+                                                <apex:inputText styleClass="slds-input" value="{!Mats}" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slds-text-align_center">
+                                <div class="slds-button-group slds-align_absolute-center" role="group">
+                                    <apex:commandButton reRender="mtable,form" action="{!BOM}" value="Update BOM" styleClass="slds-button slds-button_neutral"/>
+                                 
+                                </div>
+                            </div>
+                            <br></br>
+                    </article>
+                    <br></br>
+               </apex:form>
+               <apex:form >
+               <apex:outputPanel id="mtable">
+                   <table class="slds-table slds-table_bordered slds-table_cell-buffer">
+                        <thead>
+                            <tr class="slds-text-title_caps">
+                                <th scope="col">
+                                    <div class="slds-truncate" title="Quantity">Quantity</div>
+                                </th>
+                                <th scope="col">
+                                    <div class="slds-truncate" title="Quantity">Name</div>
+                                </th>
+                                <th scope="col">
+                                    <div class="slds-truncate" title="Quantity">Code</div>
+                                </th>
+                                <th scope="col">
+                                    <div class="slds-truncate" title="Quantity">Inventory Status</div>
+                                </th>
+                                <th scope="col">
+                                    <div class="slds-truncate" title="Quantity">MFG Site</div>
+                                </th>
+                             </tr>
+                        </thead>
+                      
+                    <tbody>
+                        <apex:repeat value="{!bom}" var="b">
+                            <tr>
+                                <td>
+                                    <apex:outputText value="{!Round(b.Quantity__c,0)}"/>
+                                </td>
+                                <td>
+                                    <apex:outputText value="{!b.Name}"/>
+                                </td>
+                                <td>
+                                    <apex:outputText value="{!b.Code__c}"/>
+                                </td>
+                                <td>
+                                    <apex:outputText value="{!b.Inventory_Status__c}"/>
+                                </td>
+                                <td>
+                                    <apex:outputText value="{!b.Site__c}"/>
+                                </td>
+                            </tr>
+                        </apex:repeat>
+                    
+                    </tbody>
+                </table>
+            </apex:outputPanel>
+               
+            </apex:form>
+            
+         </div>
+      </body>
+   </html>
+</apex:page>

@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Entrada de proceso</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Entradas de proceso</value>
+    </caseValues>
+    <fields>
+        <label><!-- IT Application --></label>
+        <name>IT_Application__c</name>
+        <picklistValues>
+            <masterLabel>Consolidate Assets</masterLabel>
+            <translation><!-- Consolidate Assets --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ongoing IT Support Tools</masterLabel>
+            <translation><!-- Ongoing IT Support Tools --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Implementation Options --></label>
+        <name>Implementation_Options__c</name>
+        <picklistValues>
+            <masterLabel>Include Professional Services</masterLabel>
+            <translation><!-- Include Professional Services --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Self-Implement</masterLabel>
+            <translation><!-- Self-Implement --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Industry --></label>
+        <name>Industry__c</name>
+        <picklistValues>
+            <masterLabel>Communications</masterLabel>
+            <translation><!-- Communications --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Financial Services</masterLabel>
+            <translation><!-- Financial Services --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Healthcare</masterLabel>
+            <translation><!-- Healthcare --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Public Sector</masterLabel>
+            <translation><!-- Public Sector --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Number of Employees --></label>
+        <name>Number_of_Employees__c</name>
+    </fields>
+    <fields>
+        <help>Seleccione la casilla de verificación para entrada de proceso.</help>
+        <label><!-- Active --></label>
+        <name>SBQQ__Active__c</name>
+    </fields>
+    <fields>
+        <label><!-- Binary Choice --></label>
+        <name>SBQQ__BinaryChoice__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation>No</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation>Sí</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>Indica qué condiciones de entrada de proceso deben cumplirse.</help>
+        <label><!-- Conditions Met --></label>
+        <name>SBQQ__ConditionsMet__c</name>
+        <picklistValues>
+            <masterLabel>All</masterLabel>
+            <translation>Todas</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Any</masterLabel>
+            <translation>Cualquiera</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>Campo de presupuesto que origina el valor predeterminado para esta entrada.</help>
+        <label><!-- Default Field --></label>
+        <name>SBQQ__DefaultField__c</name>
+        <picklistValues>
+            <masterLabel>Bill To Country</masterLabel>
+            <translation>País para facturar</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Quote_Process_Default__c</masterLabel>
+            <translation><!-- Quote_Process_Default__c --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ship To Country</masterLabel>
+            <translation>País para enviar</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>Ingrese el orden en el que se debe mostrar la entrada de proceso.</help>
+        <label><!-- Display Order --></label>
+        <name>SBQQ__DisplayOrder__c</name>
+    </fields>
+    <fields>
+        <help>Seleccione el nombre de API para el campo que acepta el ingreso de usuario.</help>
+        <label><!-- Input Field --></label>
+        <name>SBQQ__InputField__c</name>
+        <picklistValues>
+            <masterLabel>BinaryChoice__c</masterLabel>
+            <translation>BinaryChoice__c</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IT_Application__c</masterLabel>
+            <translation><!-- IT_Application__c --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Implementation_Options__c</masterLabel>
+            <translation><!-- Implementation_Options__c --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Industry__c</masterLabel>
+            <translation><!-- Industry__c --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IntegerInput__c</masterLabel>
+            <translation>IntegerInput__c</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Number_of_Employees__c</masterLabel>
+            <translation><!-- Number_of_Employees__c --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Security_Monitoring__c</masterLabel>
+            <translation><!-- Security_Monitoring__c --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Server_Type__c</masterLabel>
+            <translation><!-- Server_Type__c --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Solution_Type__c</masterLabel>
+            <translation><!-- Solution_Type__c --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>Ingrese un valor numérico.</help>
+        <label><!-- Integer Input --></label>
+        <name>SBQQ__IntegerInput__c</name>
+    </fields>
+    <fields>
+        <help>El texto que desea que se muestre al usuario en la solicitud.</help>
+        <label><!-- Label --></label>
+        <name>SBQQ__Label__c</name>
+    </fields>
+    <fields>
+        <help>Seleccione el operador que hay que utilizar cuando se compara la entrada de Campo de entrada con el Campo de producto.</help>
+        <label><!-- Operator --></label>
+        <name>SBQQ__Operator__c</name>
+        <picklistValues>
+            <masterLabel>contains</masterLabel>
+            <translation>contiene</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ends with</masterLabel>
+            <translation>termina por</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>equals</masterLabel>
+            <translation>igual a</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>greater or equals</masterLabel>
+            <translation>mayor o igual</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>greater than</masterLabel>
+            <translation>mayor que</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>less or equals</masterLabel>
+            <translation>menor o igual</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>less than</masterLabel>
+            <translation>menor que</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>not equals</masterLabel>
+            <translation>no igual a</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>starts with</masterLabel>
+            <translation>comienza por</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Process Input Condition --></label>
+        <name>SBQQ__ProcessInputCondition__c</name>
+        <relationshipLabel><!-- Process Inputs --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Campo en el objeto Producto empleado para filtrar productos que coinciden con esta entrada.</help>
+        <label><!-- Product Field --></label>
+        <name>SBQQ__ProductField__c</name>
+        <picklistValues>
+            <masterLabel>IT_Application__c</masterLabel>
+            <translation><!-- IT_Application__c --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Industry__c</masterLabel>
+            <translation><!-- Industry__c --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Product Code</masterLabel>
+            <translation>Código del producto</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Product Family</masterLabel>
+            <translation>Familia de productos</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Product Name</masterLabel>
+            <translation>Nombre del producto</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Server_Type__c</masterLabel>
+            <translation><!-- Server_Type__c --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Solution_Type__c</masterLabel>
+            <translation><!-- Solution_Type__c --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>Proceso de presupuesto que es propietario de la entrada.</help>
+        <label><!-- Quote Process --></label>
+        <name>SBQQ__QuoteProcess__c</name>
+        <relationshipLabel><!-- Process Inputs --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Security Monitoring --></label>
+        <name>Security_Monitoring__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Server Type --></label>
+        <name>Server_Type__c</name>
+        <picklistValues>
+            <masterLabel>Application</masterLabel>
+            <translation><!-- Application --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Database</masterLabel>
+            <translation><!-- Database --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>File</masterLabel>
+            <translation><!-- File --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Web</masterLabel>
+            <translation><!-- Web --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Solution Type --></label>
+        <name>Solution_Type__c</name>
+        <picklistValues>
+            <masterLabel>Complete Data Solution</masterLabel>
+            <translation><!-- Complete Data Solution --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IT Operations</masterLabel>
+            <translation><!-- IT Operations --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Professional Services</masterLabel>
+            <translation><!-- Professional Services --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Risk Mitigation</masterLabel>
+            <translation><!-- Risk Mitigation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Software Suites</masterLabel>
+            <translation><!-- Software Suites --></translation>
+        </picklistValues>
+    </fields>
+    <gender>Feminine</gender>
+    <nameFieldLabel>Nombre de entrada</nameFieldLabel>
+    <validationRules>
+        <errorMessage><!-- Both Product Field and Operator must be set if either are set. --></errorMessage>
+        <name>SBQQ__ProductFieldAndOperatorSet</name>
+    </validationRules>
+</CustomObjectTranslation>

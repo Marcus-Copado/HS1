@@ -1,0 +1,2 @@
+<apex:page standardController="blng__Invoice__c" extensions="AVA_BLNG.AvalaraTaxBreakUp" action="{!calculateInvoiceTaxBreakup}">
+</apex:page>

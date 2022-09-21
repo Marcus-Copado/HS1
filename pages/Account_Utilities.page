@@ -1,0 +1,18 @@
+<apex:page standardController="Account" Extensions="AccountUtilitiesController" tabStyle="Account">
+    <apex:sectionHeader title="{!Account.Name}" subtitle="Demo Reset"/>
+    <apex:pageBlock title="Account Utilities" tabStyle="Account">
+        <apex:pageblockButtons >
+            <apex:form >
+                <apex:commandButton action="{!ResetAccount}" value="Demo Reset"/>
+            </apex:form>
+        </apex:pageblockButtons>
+        <apex:pageBlockSection title="Items That Will Be Deleted" columns="1" collapsible="false">
+            <apex:relatedList list="Opportunities" pageSize="999"/>
+            <apex:relatedList list="SBQQ__Quotes__r" pageSize="999"/>
+            <apex:relatedList list="Contracts" pageSize="999"/>
+            <apex:relatedList list="SBQQ__Subscriptions__r" pageSize="999"/>
+            <apex:relatedList list="Assets" pageSize="999"/>
+            <apex:relatedList list="Orders" pageSize="999"/>
+        </apex:pageBlockSection>
+    </apex:pageBlock>
+</apex:page>

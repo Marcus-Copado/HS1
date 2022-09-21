@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>SFBD__CollectionsPlan__c$SFBD__Account__c.Name</field>
+    </columns>
+    <columns>
+        <field>SFBD__CollectionsPlan__c$SFBD__Status__c</field>
+    </columns>
+    <columns>
+        <field>SFBD__CollectionsPlan__c$SFBD__DaysOpen__c</field>
+    </columns>
+    <columns>
+        <field>SFBD__CollectionsPlan__c$SFBD__StartDate__c</field>
+    </columns>
+    <columns>
+        <field>SFBD__CollectionsPlan__c$SFBD__EndDate__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>SFBD__CollectionsPlan__c$SFBD__InvoiceBalance__c</field>
+    </columns>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>SFBD__CollectionsPlan__c$SFBD__CollectionsAgent__c.Name</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>SFBD__CollectionsPlan__c$Name</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Collections Plan Details by Agent</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>SFBD__Collections_Plan_Details__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>SFBD__CollectionsPlan__c$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

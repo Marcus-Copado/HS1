@@ -1,0 +1,2 @@
+<apex:page standardController="blng__Invoice__c" showHeader="false" extensions="SavePDF" action="{!saveAttachement}">
+</apex:page>

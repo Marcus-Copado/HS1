@@ -1,0 +1,5 @@
+<apex:page controller="csfb.ComposerUrlController" standardStylesheets="true" applyBodyTag="false" showHeader="true" sidebar="true">
+    <body>
+        <apex:iframe src="https://{!ConductorHost}/Conductor/index.html?uiscreen=setup&product=conductor&ServerURL={!$CurrentPage.parameters.myserverurl}&srcpkg=sfb" />
+    </body>
+</apex:page>

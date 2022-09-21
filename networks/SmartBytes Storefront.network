@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Network xmlns="http://soap.sforce.com/2006/04/metadata">
+    <allowInternalUserLogin>false</allowInternalUserLogin>
+    <allowMembersToFlag>false</allowMembersToFlag>
+    <changePasswordTemplate>unfiled$public/CommunityChangePasswordEmailTemplate</changePasswordTemplate>
+    <communityRoles/>
+    <disableReputationRecordConversations>true</disableReputationRecordConversations>
+    <emailSenderAddress>bgaldino@salesforce.com</emailSenderAddress>
+    <emailSenderName>SmartBytes Storefront</emailSenderName>
+    <enableCustomVFErrorPageOverrides>false</enableCustomVFErrorPageOverrides>
+    <enableDirectMessages>true</enableDirectMessages>
+    <enableExperienceBundleBasedSnaOverrideEnabled>true</enableExperienceBundleBasedSnaOverrideEnabled>
+    <enableGuestChatter>false</enableGuestChatter>
+    <enableGuestFileAccess>false</enableGuestFileAccess>
+    <enableGuestMemberVisibility>false</enableGuestMemberVisibility>
+    <enableInvitation>false</enableInvitation>
+    <enableKnowledgeable>false</enableKnowledgeable>
+    <enableMemberVisibility>false</enableMemberVisibility>
+    <enableNicknameDisplay>true</enableNicknameDisplay>
+    <enablePrivateMessages>false</enablePrivateMessages>
+    <enableReputation>false</enableReputation>
+    <enableShowAllNetworkSettings>false</enableShowAllNetworkSettings>
+    <enableSiteAsContainer>true</enableSiteAsContainer>
+    <enableTalkingAboutStats>true</enableTalkingAboutStats>
+    <enableTopicAssignmentRules>true</enableTopicAssignmentRules>
+    <enableTopicSuggestions>false</enableTopicSuggestions>
+    <enableUpDownVote>false</enableUpDownVote>
+    <forgotPasswordTemplate>unfiled$public/CommunityForgotPasswordEmailTemplate</forgotPasswordTemplate>
+    <gatherCustomerSentimentData>false</gatherCustomerSentimentData>
+    <networkMemberGroups>
+        <permissionSet>SBQQ__SteelBrickCPQCustomerUser</permissionSet>
+        <permissionSet>Customer_CPQ_License</permissionSet>
+        <permissionSet>Partner_CPQ_License</permissionSet>
+        <permissionSet>SBQQ__SteelBrickCPQPartnerUser</permissionSet>
+        <permissionSet>B2B_Commerce_Integrated_User</permissionSet>
+        <permissionSet>B2B_LE_Request_for_Quote</permissionSet>
+        <profile>admin</profile>
+        <profile>sys admin - cpq</profile>
+        <profile>distributor cpq user</profile>
+        <profile>silver - partner cpq user</profile>
+        <profile>customer community user</profile>
+        <profile>customer community plus login user</profile>
+        <profile>partner community user</profile>
+        <profile>customer community plus user</profile>
+        <profile>partner community login user</profile>
+        <profile>buyer_user_profile_from_quickstart</profile>
+        <profile>billing community login user</profile>
+        <profile>customer community login user</profile>
+        <profile>partner</profile>
+        <profile>customer portal manager custom</profile>
+        <profile>customermanager</profile>
+        <profile>customer portal manager standard</profile>
+        <profile>reseller cpq user</profile>
+    </networkMemberGroups>
+    <networkPageOverrides>
+        <changePasswordPageOverrideSetting>Standard</changePasswordPageOverrideSetting>
+        <forgotPasswordPageOverrideSetting>Designer</forgotPasswordPageOverrideSetting>
+        <homePageOverrideSetting>Designer</homePageOverrideSetting>
+        <loginPageOverrideSetting>Designer</loginPageOverrideSetting>
+        <selfRegProfilePageOverrideSetting>Designer</selfRegProfilePageOverrideSetting>
+    </networkPageOverrides>
+    <newSenderAddress>steelbrick_demo@salesforce.com</newSenderAddress>
+    <picassoSite>SmartBytes_Storefront1</picassoSite>
+    <selfRegistration>false</selfRegistration>
+    <sendWelcomeEmail>true</sendWelcomeEmail>
+    <site>SmartBytes_Storefront</site>
+    <siteArchiveStatus>NotArchived</siteArchiveStatus>
+    <status>Live</status>
+    <tabs>
+        <defaultTab>home</defaultTab>
+        <standardTab>Chatter</standardTab>
+    </tabs>
+    <urlPathPrefix>storefront</urlPathPrefix>
+    <welcomeTemplate>unfiled$public/CommunityWelcomeEmailTemplate</welcomeTemplate>
+</Network>

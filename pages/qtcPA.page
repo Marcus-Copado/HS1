@@ -1,0 +1,224 @@
+<apex:page title="Price Analyzer" applyBodyTag="False" applyHtmlTag="False" showHeader="false" standardStylesheets="false" sidebar="false" docType="html-5.0" controller="qtcPriceAnalyzerController">
+
+
+
+<html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <head>
+        <apex:slds /> 
+        <apex:includeScript value="https://cdnjs.cloudflare.com/ajax/libs/jsforce/1.7.0/jsforce.min.js" />
+        <apex:includeScript value="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.0/Chart.bundle.min.js"/>
+    </head>
+    <body>
+
+        <div class="slds-scope" >
+            <div class="slds-page-header">
+                <div class="slds-media">
+                    <div class="slds-media__figure">
+                        <span class="slds-icon_container slds-icon-standard-poll">
+                            <svg class="slds-icon slds-page-header__icon" aria-hidden="true">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{!URLFOR($Asset.SLDS, '/assets/icons/standard-sprite/svg/symbols.svg#poll')}" />
+                            </svg>
+                        </span>
+                    </div>
+                    <div class="slds-media__body">
+                        <h1 class="slds-page-header__title slds-truncate slds-align-middle" title="Price Analyzer">Price Analyzer</h1>
+                        <p class="slds-text-body_small slds-line-height_reset">{!productObj.Name}</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="demo-only demo-only--sizing slds-grid slds-wrap">
+                <div class="slds-size_1-of-7">
+                    <div class="slds-section slds-is-open">
+                        <h3 class="slds-section__title slds-theme_shade">
+                            <span class="slds-truncate slds-p-horizontal_small" title="Price Metrics">Price Metrics</span>
+                        </h3>
+                        <div aria-hidden="false" class="slds-section__content">
+                            <div class="slds-box slds-m-vertical_xx-small">
+                                <div class="slds-text-title_caps slds-m-bottom_xx-small">Highest Price</div>
+                                <div class="slds-text-heading_medium">
+                                    <apex:outputText value="{0, number, currency}">
+                                        <apex:param value="{!high}" />
+                                    </apex:outputText>
+                                </div>
+                            </div>
+                            <div class="slds-box slds-m-vertical_xx-small">
+                                <div class="slds-text-title_caps slds-m-bottom_xx-small">Average Price</div>
+                                <div class="slds-text-heading_medium">
+                                    <apex:outputText value="{0, number, currency}">
+                                        <apex:param value="{!avg}" />
+                                    </apex:outputText>
+                                </div>
+                            </div>
+                            <div class="slds-box slds-m-vertical_xx-small">
+                                <div class="slds-text-title_caps slds-m-bottom_xx-small">Lowest Price</div>
+                                <div class="slds-text-heading_medium">
+                                    <apex:outputText value="{0, number, currency}">
+                                        <apex:param value="{!low}" />
+                                    </apex:outputText>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- History Chart -->
+                <div class="slds-size_4-of-7">
+                    <div class="slds-section slds-is-open slds-p-horizontal_xx-small">
+                        <h3 class="slds-section__title slds-theme_shade">
+                            <span class="slds-truncate slds-p-horizontal_small" title="Pricing History">Pricing History</span>
+                        </h3>
+                        <div aria-hidden="false" class="slds-section__content">
+                            <div class="chart-container" style="height:350px; width:99%">
+                                <canvas id="timechart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Scatter Chart -->
+                <div class="slds-size_2-of-7">
+                    <div class="slds-section slds-is-open">
+                        <h3 class="slds-section__title slds-theme_shade">
+                            <span class="slds-truncate slds-p-horizontal_small" title="Volume Analysis">Volume Analysis</span>
+                        </h3>
+                        <div aria-hidden="false" class="slds-section__content">
+                            <div class="chart-container" style="height:350px; width:99%">
+                                <canvas id="chart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <script>
+                function processChartData(err, res){
+                    console.debug('*CPQ_PA Processing Scatter Plot');
+                    if(err){
+                        console.error(err);
+                        return;
+                    }
+                    console.debug('*CPQ_PA Processing Results:');
+                    console.debug(res);
+                    var thisData = [{x:{!param1},y:{!param2}}]
+                    var wonData = [];
+                    var activeData = [];
+                    var lostData = [];
+                    for(var i = 0; i< res.records.length; i++){
+                        if(res.records[i].SBQQ__Quote__r.SBQQ__Opportunity2__r.IsClosed){
+                            if(res.records[i].SBQQ__Quote__r.SBQQ__Opportunity2__r.IsWon){
+                                wonData.push({x:res.records[i].SBQQ__Quantity__c,y:res.records[i].SBQQ__NetPrice__c});
+                            }
+                            else{
+                                lostData.push({x:res.records[i].SBQQ__Quantity__c,y:res.records[i].SBQQ__NetPrice__c});
+                            }
+                        }
+                        else{
+                            activeData.push({x:res.records[i].SBQQ__Quantity__c,y:res.records[i].SBQQ__NetPrice__c});
+                        }
+                    }
+                    var chartParams = {
+                    type: 'scatter',
+                    data: {
+                        datasets: [
+                            {label: 'Won',data: wonData, backgroundColor: '#04844b', radius:5},
+                            {label: 'Active',data: activeData, backgroundColor: '#ff9a3c', radius:5},
+                            {label: 'Lost',data: lostData, backgroundColor: '#c23934', radius:5},
+                            {label: 'This Deal',data: thisData, backgroundColor: '#0070d2', radius:7}
+                        ]
+                    },
+                    options: {
+                        scales: {
+                            xAxes: [{
+                                type: 'linear',
+                                position: 'bottom',
+                                scaleLabel: {display:true, labelString: 'Quantity'}
+                            }],
+                            yAxes: [{
+                                type: 'linear',
+                                position: 'left',
+                                scaleLabel: {display:true, labelString: 'Price'}
+                            }]
+                        },
+                        legend:{
+                            position:'bottom'
+                        }
+                    }
+                    };
+                    var ctx = document.getElementById('chart');
+                    ctx.getContext('2d').canvas.height = ctx.parentElement.offsetHeight;
+                    ctx.getContext('2d').canvas.width = ctx.parentElement.offsetWidth;
+                    var scatterChart = new Chart(ctx, chartParams);
+                }
+
+                function processTimeChartData(err, res){
+                console.debug('*CPQ_PA Processing Time Plot');
+                if(err){
+                    console.error(err);
+                    return;
+                }
+                console.debug('*CPQ_PA Processing Results:');
+                console.debug(res);
+                var activeData = [];
+                for(var i = 0; i< res.records.length; i++){
+                    if(res.records[i].CloseDate){
+                        activeData.push({t: new Date(res.records[i].CloseDate),y:res.records[i].expr0});
+                    }
+                    
+                }
+                var chartParams = {
+                    type: 'line',
+                    data: {
+                        datasets: [
+                            //{label: 'Won',data: wonData, backgroundColor: '#04844b', radius:5},
+                            {pointStyle:'circle', label: 'Active',data: activeData, borderColor: '#ff9a3c', pointRadius:5, showLine:true}
+                            //{label: 'Lost',data: lostData, backgroundColor: '#c23934', radius:5},
+                            //{label: 'This Deal',data: thisData, backgroundColor: '#0070d2', radius:7}
+                        ]
+                    },
+                    options: {
+                        legend:{
+                            position:'bottom'
+                        },
+                        scales: {
+                            xAxes: [
+                                {
+                                    type: 'time',
+                                    position: 'bottom',
+                                    time: {unit: 'month'},
+                                    scaleLabel: {display:true, labelString: 'Close Date'}
+                                }
+                            ],
+                            yAxes: [
+                                {
+                                    type: 'linear',
+                                    position: 'left',
+                                    scaleLabel: {display:true, labelString: 'Average Selling Price'}
+                                }
+                            ]
+                        }
+                    }
+                };
+                var ctx = document.getElementById('timechart');
+                ctx.getContext('2d').canvas.height = ctx.parentElement.offsetHeight;
+                ctx.getContext('2d').canvas.width = ctx.parentElement.offsetWidth;
+                var scatterChart = new Chart(ctx, chartParams);
+                }
+
+
+                var conn = new jsforce.Connection({ accessToken: '{!$API.Session_Id}' });
+
+                conn.query('SELECT Id, SBQQ__Quote__r.SBQQ__Opportunity2__r.IsWon, SBQQ__Quote__r.SBQQ__Opportunity2__r.IsClosed, SBQQ__NetPrice__c, SBQQ__ListPrice__c, SBQQ__Quantity__c FROM SBQQ__QuoteLine__c WHERE SBQQ__Product__c = \'{!productId}\' AND SBQQ__Quote__r.SBQQ__Opportunity2__c !=null AND SBQQ__NetPrice__c != null AND SBQQ__Quantity__c != null AND SBQQ__Quote__r.SBQQ__Primary__c = TRUE AND SBQQ__Quote__r.SBQQ__Opportunity2__r.CloseDate <= TODAY ORDER BY SBQQ__Quote__r.SBQQ__Opportunity2__r.CloseDate DESC LIMIT 200', processChartData);
+                
+                conn.query('SELECT SBQQ__Quote__r.SBQQ__Opportunity2__r.CloseDate, AVG(SBQQ__NetPrice__c) FROM SBQQ__QuoteLine__c WHERE SBQQ__Product__c = \'{!productId}\' AND SBQQ__Quote__r.SBQQ__Primary__c = TRUE AND SBQQ__Quote__r.SBQQ__Opportunity2__r.CloseDate <= TODAY GROUP BY SBQQ__Quote__r.SBQQ__Opportunity2__r.CloseDate ORDER BY SBQQ__Quote__r.SBQQ__Opportunity2__r.CloseDate', processTimeChartData);
+
+            </script>
+        </div>
+
+    </body>
+</html>
+
+
+
+</apex:page>

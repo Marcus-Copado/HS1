@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>false</plural>
+        <value>Finanzbuch</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>true</plural>
+        <value>Finanzbücher</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>false</plural>
+        <value>Finanzbuch</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>true</plural>
+        <value>Finanzbücher</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>false</plural>
+        <value>Finanzbuchs</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>true</plural>
+        <value>Finanzbücher</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>false</plural>
+        <value>Finanzbuch</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>true</plural>
+        <value>Finanzbüchern</value>
+    </caseValues>
+    <fields>
+        <label><!-- Default --></label>
+        <name>Default__c</name>
+    </fields>
+    <fields>
+        <help>Bei Inaktivität können neue Transaktionen in diesem Finanzbuch erfasst werden, die sich jedoch nicht auf die bereits im Buch enthaltenen Transaktionen auswirken.</help>
+        <label><!-- Active --></label>
+        <name>blng__Active__c</name>
+    </fields>
+    <fields>
+        <help>Die Dauer für den Datumsbereich des Finanzzeitraums.</help>
+        <label><!-- Finance Period Duration --></label>
+        <name>blng__FinancePeriodDuration__c</name>
+    </fields>
+    <fields>
+        <label><!-- Notes --></label>
+        <name>blng__Notes__c</name>
+    </fields>
+    <fields>
+        <help>&quot;Wird zur Klassifizierung von Finanzbüchern verwendet. Möglich sind:
+Umsatz
+Buchhaltung&quot;</help>
+        <label><!-- Period Type --></label>
+        <name>blng__PeriodType__c</name>
+    </fields>
+    <gender>Neuter</gender>
+    <nameFieldLabel>Name des Finanzbuchs</nameFieldLabel>
+    <webLinks>
+        <label><!-- Create_Finance_Periods --></label>
+        <name>blng__Create_Finance_Periods</name>
+    </webLinks>
+</CustomObjectTranslation>

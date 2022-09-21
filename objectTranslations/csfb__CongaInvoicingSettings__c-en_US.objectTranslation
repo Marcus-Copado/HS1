@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Base CN VF Page --></label>
+        <name>csfb__BaseCNVFPage__c</name>
+    </fields>
+    <fields>
+        <label><!-- Base VF Page --></label>
+        <name>csfb__BaseVFPage__c</name>
+    </fields>
+    <fields>
+        <label><!-- Name Space --></label>
+        <name>csfb__Name_Space__c</name>
+    </fields>
+    <fields>
+        <label><!-- Set by UserName --></label>
+        <name>csfb__Set_by_UserName__c</name>
+    </fields>
+</CustomObjectTranslation>

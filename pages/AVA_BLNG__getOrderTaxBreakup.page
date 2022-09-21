@@ -1,0 +1,2 @@
+<apex:page standardController="order" extensions="AVA_BLNG.AvalaraTaxBreakUp" action="{!calculateOrderTaxBreakup}">
+</apex:page>

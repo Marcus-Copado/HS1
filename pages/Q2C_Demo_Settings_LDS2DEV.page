@@ -1,0 +1,454 @@
+<apex:page title="Custom Demo Template Version: {!$Setup.Q2C_Demo_Settings__c.Version__c}" applyBodyTag="False" applyHtmlTag="False" showHeader="false" standardStylesheets="false" sidebar="false" docType="html-5.0" tabStyle="SBQQ__Quote__c" controller="Q2C_Demo_Settings_Controller">
+<html>
+<head>
+<apex:slds />
+</head>
+<body>
+<div class="slds-scope">
+  <apex:form >
+  <div class="slds-page-header">
+  <div class="slds-grid">
+    <div class="slds-col slds-has-flexi-truncate">
+      <div class="slds-media slds-no-space slds-grow">
+          <div class="slds-media__figure">
+            <span class="slds-icon_container slds-icon-standard-opportunity" title="Description of icon when needed">
+              <svg class="slds-icon slds-page-header__icon" aria-hidden="true">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="../assets/icons/standard-sprite/svg/symbols.svg#opportunity" />
+              </svg>
+            </span>
+          </div>
+          
+          <div class="slds-media__body">
+            <h1 class="slds-page-header__title slds-truncate slds-align-middle" title="Quote to Cash Demo Setup">Custom Demo Template Version: {!$Setup.Q2C_Demo_Settings__c.Version__c}</h1>
+          </div>
+        </div>
+    </div>
+    <div class="slds-col slds-no-flex slds-grid slds-align-top">
+      <div class="slds-button-group" role="group">
+        <button type="button" onclick="CloseRedirect()" class="slds-button slds-button_neutral">Close</button> 
+        <button onclick="SaveSettings()"  class="slds-button slds-button_neutral">Save Setting</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="slds-text-body_regular">&nbsp;</div>
+
+<article class="slds-card">
+  <div class="slds-card__header slds-grid">
+    <header class="slds-media slds-media_center slds-has-flexi-truncate">
+      <div class="slds-media__body">
+        <h2 class="slds-text-heading_small">
+            <span>Company Information</span><br></br>
+            <apex:commandButton action="{!updateOrgInfo}" value="Set Defaults" styleClass="slds-button slds-button_neutral"/>
+        </h2>
+      </div>
+    </header>
+  </div>
+  <div class="slds-card__body slds-card__body_inner">
+    <div class="slds-grid">
+      <div class="slds-col">
+        <!-- Compnay Name Form -->
+    <div class="slds-form-element">
+      <label class="slds-form-element__label" for="text-input-id-1">Company Name</label>
+      <div class="slds-form-element__control slds-m-horizontal_xx-small">
+        <input type="text" id="text-input-id-1" value="{!settings.Company_Name__c}" class="slds-input" placeholder="Company Name" />
+      </div>
+    </div>
+
+        <!-- Compnay Slogan -->
+        <div class="slds-form-element">
+                <label class="slds-form-element__label" for="text-input-id-1">Company Slogan</label>
+      <div class="slds-form-element__control slds-m-horizontal_xx-small">
+        <input type="text" id="text-input-id-1" value="{!settings.Company_Slogan__c}" class="slds-input" placeholder="Company Slogan" />
+      </div>
+        </div>
+
+        <!-- Compnay Email -->
+        <div class="slds-form-element">
+                <label class="slds-form-element__label" for="text-input-id-1">Company Email</label>
+      <div class="slds-form-element__control slds-m-horizontal_xx-small">
+        <input type="text" id="text-input-id-1" value="{!settings.Company_Email__c}" class="slds-input" placeholder="Company Email" />
+      </div>
+        </div>
+        <!-- Compnay Phone -->
+           <div class="slds-form-element">
+                <label class="slds-form-element__label" for="text-input-id-1">Company Phone</label>
+      <div class="slds-form-element__control slds-m-horizontal_xx-small">
+        <input type="text" id="text-input-id-1" value="{!settings.Company_Phone__c}" class="slds-input" placeholder="Company Phone" />
+      </div>
+        </div>
+
+        <!-- Compnay Fax -->
+                <div class="slds-form-element">
+                <label class="slds-form-element__label" for="text-input-id-1">Company Fax</label>
+      <div class="slds-form-element__control slds-m-horizontal_xx-small">
+        <input type="text" id="text-input-id-1" value="{!settings.Company_Fax__c}" class="slds-input" placeholder="Company Fax" />
+      </div>
+        </div>
+
+
+      </div>
+      <div class="slds-col">
+        <!-- Compnay Street -->
+                <div class="slds-form-element">
+                <label class="slds-form-element__label" for="text-input-id-1">Company Street</label>
+      <div class="slds-form-element__control slds-m-horizontal_xx-small">
+        <input type="text" id="text-input-id-1" value="{!settings.Company_Street__c}" class="slds-input" placeholder="Company Street" />
+      </div>
+        </div>
+
+        <!-- Compnay City -->
+              <div class="slds-form-element">
+                <label class="slds-form-element__label" for="text-input-id-1">Company City</label>
+      <div class="slds-form-element__control slds-m-horizontal_xx-small">
+        <input type="text" id="text-input-id-1" value="{!settings.Company_City__c}" class="slds-input" placeholder="Company City" />
+      </div>
+        </div>
+
+        <!-- Compnay State -->
+        <div class="slds-form-element">
+                <label class="slds-form-element__label" for="text-input-id-1">Company State</label>
+      <div class="slds-form-element__control slds-m-horizontal_xx-small">
+        <input type="text" id="text-input-id-1" value="{!settings.Company_State__c}" class="slds-input" placeholder="Company State" />
+      </div>
+        </div>
+
+        <!-- Compnay State -->
+        <div class="slds-form-element">
+                <label class="slds-form-element__label" for="text-input-id-1">Company Postal Code</label>
+      <div class="slds-form-element__control slds-m-horizontal_xx-small">
+        <input type="text" id="text-input-id-1" value="{!settings.Company_Postal_Code__c}" class="slds-input" placeholder="Company Postal Code" />
+      </div>
+        </div>
+
+        <!-- Compnay State -->
+        <div class="slds-form-element">
+                <label class="slds-form-element__label" for="text-input-id-1">Company Country</label>
+      <div class="slds-form-element__control slds-m-horizontal_xx-small">
+        <input type="text" id="text-input-id-1" value="{!settings.Company_Country__c}" class="slds-input" placeholder="Company Country" />
+      </div>
+        </div>
+        
+      </div>
+    </div>
+        
+  </div>
+   <div class="slds-text-align_center">
+      <div class="slds-button-group slds-align_absolute-center" role="group">
+        <apex:commandButton action="{!SaveSettings}" value="Save Settings" styleClass="slds-button slds-button_neutral"/>
+      </div>
+    </div>
+     <br></br>
+ 
+  
+</article>
+
+<div class="slds-text-body_regular">&nbsp;</div>
+
+<article class="slds-card">
+  <div class="slds-card__header slds-grid">
+    <header class="slds-media slds-media_center slds-has-flexi-truncate">
+      <div class="slds-media__body">
+        <h2 class="slds-text-heading_small">
+            <span>Style Information</span>
+        </h2>
+      </div>
+    </header>
+  </div>
+  <div class="slds-card__body slds-card__body_inner">
+    <div class="slds-grid">
+      <div class="slds-col">
+        <!-- Compnay image Form -->
+         <div class="slds-form-element">
+                <label class="slds-form-element__label" for="text-input-id-1">Company Image URL</label>
+      <div class="slds-form-element__control slds-m-horizontal_xx-small">
+        <input type="text" id="text-input-id-1" value="{!settings.Company_Image_URL__c}" class="slds-input" placeholder="Company Image URL" />
+      </div>
+        </div>
+
+        <!-- Compnay image height -->
+         <div class="slds-form-element">
+                <label class="slds-form-element__label" for="text-input-id-1">Company Image Height</label>
+      <div class="slds-form-element__control">
+        <input type="text" id="text-input-id-1" value="{!settings.Company_Image_Height__c}" class="slds-input" placeholder="Company Image Height" />
+      </div>
+        </div>
+
+      </div>
+      <div class="slds-col">
+        <!-- Compnay Primary Color -->
+         <div class="slds-form-element">
+                <label class="slds-form-element__label" for="text-input-id-1">Company Primary Color</label>
+      <div class="slds-form-element__control">
+        <input type="text" id="text-input-id-1" value="{!settings.Company_Primary_Color__c}" class="slds-input" placeholder="Company Primary Color" />
+      </div>
+        </div>
+
+        <!-- Compnay Image width -->
+         <div class="slds-form-element">
+                <label class="slds-form-element__label" for="text-input-id-1">Company Image Width</label>
+      <div class="slds-form-element__control">
+        <input type="text" id="text-input-id-1" value="{!settings.Company_Image_Width__c}" class="slds-input" placeholder="Company Image Width" />
+      </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+     <div class="slds-text-align_center">
+      <div class="slds-button-group slds-align_absolute-center" role="group">
+        <apex:commandButton action="{!SaveSettings}" value="Save Settings" styleClass="slds-button slds-button_neutral"/>
+      </div>
+    </div>
+     <br></br>
+</article>
+
+
+
+<div class="slds-text-body_regular">&nbsp;</div>
+
+<article class="slds-card">
+  <div class="slds-card__header slds-grid">
+    <header class="slds-media slds-media_center slds-has-flexi-truncate">
+      <div class="slds-media__body">
+        <h2 class="slds-text-heading_small">
+            <span>Demo Config</span>
+        </h2>
+      </div>
+    </header>
+  </div>
+  <div class="slds-card__body slds-card__body_inner">
+    <div class="slds-grid">
+      <div class="slds-col">
+        <!-- approval 1 -->
+                 <div class="slds-form-element">
+                <label class="slds-form-element__label" for="text-input-id-1">Approval Tier 1</label>
+      <div class="slds-form-element__control">
+        <input type="text" id="text-input-id-1" value="{!settings.Default_Approval_Tier_1__c}" class="slds-input" placeholder="Approval Tier 1" />
+      </div>
+        </div>
+
+        <!-- approval 2 -->
+                <div class="slds-form-element">
+                <label class="slds-form-element__label" for="text-input-id-1">Approval Tier 2</label>
+      <div class="slds-form-element__control">
+        <input type="text" id="text-input-id-1" value="{!settings.Default_Approval_Tier_2__c}" class="slds-input" placeholder="Approval Tier 2" />
+      </div>
+        </div>
+        <!-- approval 3 -->
+                <div class="slds-form-element">
+                <label class="slds-form-element__label" for="text-input-id-1">Approval Tier 3</label>
+      <div class="slds-form-element__control">
+        <input type="text" id="text-input-id-1" value="{!settings.Default_Approval_Tier_3__c}" class="slds-input" placeholder="Approval Tier 3" />
+      </div>
+        </div>
+
+      </div>
+      <div class="slds-col">
+
+
+        <!-- PO Logic -->
+        <div class="slds-form-element">
+          <apex:outputLabel styleClass="slds-form-element__label" value="{!$ObjectType.Q2C_Demo_Settings__c.Fields.Enforce_PO_Logic__c.Label}" />
+          <div class="slds-form-element__control">
+            <apex:inputCheckbox styleClass="slds-input" value="{!settings.Enforce_PO_Logic__c}" />
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+     <div class="slds-text-align_center">
+      <div class="slds-button-group slds-align_absolute-center" role="group">
+        <apex:commandButton action="{!SaveSettings}" value="Save Settings" styleClass="slds-button slds-button_neutral"/>
+      </div>
+    </div>
+     <br></br>
+</article>
+
+<div class="slds-text-body_regular">&nbsp;</div>
+
+<article class="slds-card">
+  <div class="slds-card__header slds-grid">
+    <header class="slds-media slds-media_center slds-has-flexi-truncate">
+      <div class="slds-media__body">
+        <h2 class="slds-text-heading_small">
+            <span>Approver Setup</span>
+        </h2>
+      </div>
+    </header>
+  </div>
+  <div class="slds-card__body slds-card__body_inner">
+    <div class="slds-grid">
+
+      <div class="slds-col">
+        <!-- Approver Email -->
+        <div class="slds-form-element">
+          <apex:outputLabel styleClass="slds-form-element__label" value="{!$ObjectType.Q2C_Demo_Settings__c.Fields.Approver_Email__c.Label}" />
+          <div class="slds-form-element__control">
+            <apex:inputText styleClass="slds-input" value="{!settings.Approver_Email__c}" />
+          </div>
+        </div>
+                <div class="slds-form-element">
+          <apex:outputLabel styleClass="slds-form-element__label" value="{!$ObjectType.Q2C_Demo_Settings__c.Fields.Password__c.Label}" />
+          <div class="slds-form-element__control">
+            <apex:inputText styleClass="slds-input" value="{!settings.Password__c}" />
+           
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+     <div class="slds-text-align_center">
+      <div class="slds-button-group slds-align_absolute-center" role="group">
+        <apex:commandButton action="{!UpdateApprovers}" value="Update Approvers" styleClass="slds-button slds-button_neutral"/>
+      </div>
+    </div>
+     <br></br>
+</article>
+
+<!-- Data Cannon -->
+<div class="slds-text-body_regular">&nbsp;</div>
+
+<article class="slds-card">
+  <div class="slds-card__header slds-grid">
+    <header class="slds-media slds-media_center slds-has-flexi-truncate">
+      <div class="slds-media__body">
+        <h2 class="slds-text-heading_small">
+            <span>Data Cannon</span>
+        </h2>
+      </div>
+    </header>
+  </div>
+  <div class="slds-card__body slds-card__body_inner">
+    <div class="slds-grid">
+      <div class="slds-col">
+        <!-- approval 1 -->
+        <div class="slds-form-element">
+          <apex:outputLabel styleClass="slds-form-element__label" value="{!$ObjectType.Q2C_Demo_Settings__c.Fields.Reporting_Start_Date__c.Label}" />
+          <div class="slds-form-element__control">
+            <apex:inputField styleClass="slds-input" value="{!settings.Reporting_Start_Date__c}" />
+          </div>
+        </div>
+
+        <!-- approval 2 -->
+        <div class="slds-form-element">
+          <apex:outputLabel styleClass="slds-form-element__label" value="{!$ObjectType.Q2C_Demo_Settings__c.Fields.Reporting_End_Date__c.Label}" />
+          <div class="slds-form-element__control">
+            <apex:inputField styleClass="slds-input" value="{!settings.Reporting_End_Date__c}" />
+          </div>
+        </div>
+        <!-- approval 3 -->
+        <div class="slds-form-element">
+          <apex:outputLabel styleClass="slds-form-element__label" value="{!$ObjectType.Q2C_Demo_Settings__c.Fields.Discount_Variation__c.Label}" />
+          <div class="slds-form-element__control">
+            <apex:inputField styleClass="slds-input" value="{!settings.Discount_Variation__c}" />
+          </div>
+        </div>
+
+      </div>
+      <div class="slds-col">
+
+
+        <!-- Master Quote -->
+        <div class="slds-form-element">
+          <apex:outputLabel styleClass="slds-form-element__label" value="Master Quote" />
+          <div class="slds-form-element__control">
+            <apex:inputField styleClass="slds-input" value="{!Cont.SBQQ__Quote__c}" />
+          </div>
+        </div>
+        <br></br>
+        
+          <div class="slds-form-element">
+          <apex:outputLabel styleClass="slds-form-element__label" value="{!$ObjectType.Q2C_Demo_Settings__c.Fields.Number_of_Records__c.Label}" />
+          <div class="slds-form-element__control">
+            <apex:inputText styleClass="slds-input" value="{!settings.Number_of_Records__c}" />
+          </div>
+        </div>
+          
+        <br></br>
+      </div>
+    </div>
+  </div>
+     <div class="slds-text-align_center">
+      <div class="slds-button-group slds-align_absolute-center" role="group">
+        <apex:commandButton action="{!Blast}" value="Blast" styleClass="slds-button slds-button_neutral"/>
+      </div>
+    </div>
+     <br></br>
+</article>
+
+
+
+  </apex:form>
+  <apex:pageBlock title="">
+  <div class="slds-media__body">
+        <h2 class="slds-text-heading_small">
+            <span>Preview</span>
+        </h2>
+      </div>
+      <div style="font-size:.7em; margin-left:auto; margin-right:auto; height:704px; width:544px; border-color:#000; border-width:1px; border-style:solid; background-color:#fff;">
+          <div style="margin-top:32px; margin-left:32px; margin-right:32px; margin-bottom:48px; height:624px; width:480px; border-bottom:#{!$Setup.Q2C_Demo_Settings__c.Company_Primary_Color__c} solid 1px;">
+              
+              <table style="width:100%;">
+                  <tr style="width:100%;">
+                      <td style="width:100%; border-bottom:#{!$Setup.Q2C_Demo_Settings__c.Company_Primary_Color__c} solid 1px;">
+                          <table style="width:100%;">
+                              <tr style="width:100%;">
+                                  <td style="width:50%"> 
+                                      <img src="{!$Setup.Q2C_Demo_Settings__c.Company_Image_URL__c}" height="{!$Setup.Q2C_Demo_Settings__c.Company_Image_Height__c}" width="{!$Setup.Q2C_Demo_Settings__c.Company_Image_Width__c}" /><br></br><br></br>
+                                      <p style="line-height:0; font-weight:bold;">{!$Setup.Q2C_Demo_Settings__c.Company_Slogan__c}</p> <br></br>
+                                      <p style="line-height:0;">{!$Setup.Q2C_Demo_Settings__c.Company_Street__c}</p><br></br>
+                                      <p style="line-height:0;">{!$Setup.Q2C_Demo_Settings__c.Company_City__c} {!$Setup.Q2C_Demo_Settings__c.Company_State__c}, {!$Setup.Q2C_Demo_Settings__c.Company_Postal_Code__c}</p><br></br>
+                                      <p style="line-height:0;">{!$Setup.Q2C_Demo_Settings__c.Company_Country__c}</p><br></br>
+                                      <p style="line-height:0;">{!$Setup.Q2C_Demo_Settings__c.Company_Phone__c}</p><br></br>
+                                      <p style="line-height:0;">{!$Setup.Q2C_Demo_Settings__c.Company_Email__c}</p><br></br>
+                                      
+                                          
+                                    </td>
+                                  <td style="width:50%; text-align:right;"> 
+                                      <p style="font-size:1.5em; font-weight:bold; color:#{!$Setup.Q2C_Demo_Settings__c.Company_Primary_Color__c};">Proposal Q-00035-1</p><br></br>
+                                      <p style="line-height:0;">
+                                        <apex:outputText value="Proposal Date: {0, date, MMMM d','  yyyy}">
+                                            <apex:param value="{!TODAY()}" /> 
+                                            </apex:outputText>
+                                      </p><br></br>
+                                      <p style="line-height:0;">
+                                        <apex:outputText value="Expiration Date: {0, date, MMMM d','  yyyy}">
+                                            <apex:param value="{!TODAY()+10}" /> 
+                                            </apex:outputText>
+                                      </p>
+                                       <br></br><br></br><br></br><br></br>
+                                  </td>
+                              </tr>
+                          </table>
+                      </td>
+                  </tr>
+              </table>
+              <table style="width:100%;">
+                <tr style="width:100%;">
+                    <td style="width:80%;">
+                      <p>&#160;</p>
+                      <p>&#160;</p>
+                      <p>Greetings Illinois Acme ,</p>
+                      <p>Enclosed is the proposal I promised you.</p>
+                      <p>I also want to take this opportunity to thank you for all your help. Designing a suitable solution required that I become familiar with your products and your industry. As a result, your help and guidance proved to be invaluable and ultimately resulted in a better, more cost effective solution for your organization.</p>
+                      <p>I will call you next week to discuss this proposal. As always, please don’t hesitate to call me if you have questions or if I can be of further assistance.</p>
+                      <p>I hope we can continue working together into the future.</p>
+                      <p>With best regards,</p>
+                      <p></p>
+                      <p>Admin User</p>
+                      <p>steelbrick_demo@salesforce.com</p>
+                  </td>
+                  <td style="width:20%;"></td>
+              </tr>
+          </table>
+          </div>
+      </div>
+  </apex:pageBlock>
+</div>
+</body>
+</html>
+</apex:page>

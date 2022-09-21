@@ -1,0 +1,173 @@
+{
+  "notificationLevel": "",
+  "workflowDefinition": {
+    "QuoteLines": {
+      "action": "sfdcDigest",
+      "parameters": {
+        "fields": [
+          {"name": "CreatedDate"},
+          {"name": "SBQQ__ListPrice__c"},
+          {"name": "SBQQ__Product__c"},
+          {"name": "SBQQ__Quantity__c"},
+          {"name": "SBQQ__Quote__c"},
+          {"name": "SBQQ__TotalDiscountRate__c"},
+          {
+            "defaultValue": "0",
+            "name": "SBQQ__PriorQuantity__c"
+          },
+          {"name": "IsDeleted"}
+        ],
+        "object": "SBQQ__QuoteLine__c"
+      }
+    },
+    "Products": {
+      "action": "sfdcDigest",
+      "parameters": {
+        "fields": [
+          {"name": "ProductCode"},
+          {"name": "Name"},
+          {"name": "Id"},
+          {"name": "IsDeleted"}
+        ],
+        "object": "Product2"
+      }
+    },
+    "Pricing Guidance Dataset": {
+      "action": "sfdcRegister",
+      "parameters": {
+        "name": "Pricing Guidance Dataset",
+        "alias": "${App.Datasets.PricingGuidanceDataset_tp.FullyQualifiedName}",
+        "source": "QuantityToDim"
+      }
+    },
+    "RemoveDeletedProducts": {
+      "action": "filter",
+      "parameters": {
+        "filter": "IsDeleted:EQ:false",
+        "source": "Products"
+      }
+    },
+    "QuoteJoiner": {
+      "action": "augment",
+      "parameters": {
+        "right_key": ["Id"],
+        "left": "SumQuantity",
+        "left_key": ["SBQQ__Quote__c"],
+        "right_select": [
+          "SBQQ__Status__c",
+          "Name",
+          "IsDeleted",
+          "CreatedDate",
+          "Id"
+        ],
+        "right": "RemoveDeletedQuotes",
+        "relationship": "SBQQ__Quote__c",
+        "operation": "LookupSingleValue"
+      }
+    },
+    "QuantityToDim": {
+      "action": "computeExpression",
+      "parameters": {
+        "source": "ProductJoiner",
+        "mergeWithSource": true,
+        "computedFields": [{
+          "name": "QuantityDim",
+          "saqlExpression": "number_to_string('QuantitySum', \"###.###\")",
+          "label": "QuantityDim",
+          "type": "Text"
+        }]
+      }
+    },
+    "Quotes": {
+      "action": "sfdcDigest",
+      "parameters": {
+        "fields": [
+          {"name": "SBQQ__Status__c"},
+          {"name": "Id"},
+          {"name": "Name"},
+          {"name": "CreatedDate"},
+          {"name": "IsDeleted"}
+        ],
+        "object": "SBQQ__Quote__c"
+      }
+    },
+    "SumQuantity": {
+      "action": "computeExpression",
+      "parameters": {
+        "source": "RemoveDeletedQuoteLines",
+        "mergeWithSource": true,
+        "computedFields": [{
+          "defaultValue": "0",
+          "name": "QuantitySum",
+          "saqlExpression": "SBQQ__PriorQuantity__c + SBQQ__Quantity__c",
+          "scale": 0,
+          "label": "QuantitySum",
+          "type": "Numeric"
+        }]
+      }
+    },
+    "RemoveDeletedQuotes": {
+      "action": "filter",
+      "parameters": {
+        "filter": "IsDeleted:EQ:false",
+        "source": "Quotes"
+      }
+    },
+    "RemoveDeletedQuoteLines": {
+      "action": "filter",
+      "parameters": {
+        "filter": "IsDeleted:EQ:false",
+        "source": "QuoteLines"
+      }
+    },
+    "ProductJoiner": {
+      "action": "augment",
+      "parameters": {
+        "right_key": ["Id"],
+        "left": "QuoteJoiner",
+        "left_key": ["SBQQ__Product__c"],
+        "right_select": [
+          "Id",
+          "IsDeleted",
+          "Name",
+          "ProductCode"
+        ],
+        "right": "RemoveDeletedProducts",
+        "relationship": "SBQQ__Product__c",
+        "operation": "LookupSingleValue"
+      }
+    }
+  },
+  "_type": "dataflow",
+  "description": "Pricing Guidance Dataflow",
+  "MasterLabel": "Pricing Guidance Dataflow",
+  "nextRun": "2019-04-12T07:00:00.000Z",
+  "frequency": "day",
+  "WorkflowStatus": "Inactive",
+  "isDeletable": true,
+  "longRunningAlertInMins": "",
+  "scheduleAttributes": {
+    "scheduleType": "hourly",
+    "hourlyInterval": 24,
+    "timeZone": "America/Los_Angeles",
+    "startTime": {
+      "hour": 0,
+      "minute": 0
+    },
+    "daysOfWeek": [
+      "Sunday",
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday"
+    ]
+  },
+  "DataflowType": "USER",
+  "name": "PricingGuidanceDataflow",
+  "RefreshFrequencySec": 86400,
+  "interval": 1,
+  "_url": "/insights/internal_api/v1.0/esObject/workflow//json",
+  "_uid": ""
+}

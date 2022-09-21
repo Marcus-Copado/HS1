@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldSets>
+        <label><!-- Compact Layout --></label>
+        <name>SBQQ__CompactLayout</name>
+    </fieldSets>
+    <fields>
+        <label><!-- Category --></label>
+        <name>SBQQ__Category__c</name>
+        <picklistValues>
+            <masterLabel>Advisory</masterLabel>
+            <translation><!-- Advisory --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Analyzed Data</masterLabel>
+            <translation><!-- Analyzed Data --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Architecture</masterLabel>
+            <translation><!-- Architecture --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Data</masterLabel>
+            <translation><!-- Data --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Engineering</masterLabel>
+            <translation><!-- Engineering --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Events</masterLabel>
+            <translation><!-- Events --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ingested Data</masterLabel>
+            <translation><!-- Ingested Data --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Logins</masterLabel>
+            <translation><!-- Logins --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Management</masterLabel>
+            <translation><!-- Management --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rates</masterLabel>
+            <translation>Taxas</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Stored Data</masterLabel>
+            <translation><!-- Stored Data --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>Consulta à regra de faturamento atribuída</help>
+        <label><!-- Billing Rule --></label>
+        <name>blng__BillingRule__c</name>
+        <relationshipLabel><!-- Billing Rule --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Lookup to the Revenue Recognition Rule assigned --></help>
+        <label><!-- Revenue Recognition Rule --></label>
+        <name>blng__RevenueRecognitionRule__c</name>
+        <relationshipLabel><!-- Revenue Recognition Rule --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Consulta à regra de imposto atribuída</help>
+        <label><!-- Tax Rule --></label>
+        <name>blng__TaxRule__c</name>
+        <relationshipLabel><!-- Tax Rule --></relationshipLabel>
+    </fields>
+</CustomObjectTranslation>

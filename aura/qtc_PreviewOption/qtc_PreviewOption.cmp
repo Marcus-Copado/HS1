@@ -1,0 +1,67 @@
+<!--
+ - Created by scheck on 10/25/18.
+ -->
+
+<aura:component description="qtc_PreviewOption" implements="force:hasRecordId"
+    access="global">
+    <aura:attribute name="optionModel" type="Object" />
+    <aura:attribute name="radioButton" type="Boolean" />
+
+    <tr class="slds-hint-parent">
+        <th scope="row" style="width: 6rem;">
+            <div class="slds-grid slds-grid_vertical-align-center">
+                <aura:if isTrue="{!!v.radioButton}">
+                    <div class="slds-truncate slds-m-right_xx-small" title="Selected">
+                        <ui:inputCheckbox disabled="{! v.optionModel.record.SBQQ__Required__c}" value="{! v.optionModel.record.SBQQ__Selected__c}" />
+                    </div>
+                </aura:if>
+                <aura:if isTrue="{!v.radioButton}">
+                    <div class="slds-truncate slds-m-right_xx-small" title="Selected">
+                        <lightning:input type="radio" label="{!v.optionModel.record.Name}" variant="label-hidden" name="{!v.optionModel.record.SBQQ__Feature__c}"
+                            disabled="{! v.optionModel.record.SBQQ__Required__c}" checked="{! v.optionModel.record.SBQQ__Selected__c}" />
+                    </div>
+                </aura:if>
+                <div class="slds-truncate slds-m-right_xx-small" title="Configure">
+                    <aura:if isTrue="{! v.optionModel.configurable}">
+                        <lightning:buttonIcon iconName="utility:custom_apps" variant="bare" alternativeText="Configure" />
+                    </aura:if>
+                </div>
+            </div>
+        </th>
+        <td role="gridcell">
+            <div class="slds-truncate" title="Image">
+                <aura:unescapedHtml value="{! v.optionModel.record.Image__c}" />
+            </div>
+        </td>
+        <td role="gridcell">
+            <div class="slds-truncate" title="{!v.optionModel.record.SBQQ__Quantity__c}">{!v.optionModel.record.SBQQ__Quantity__c}</div>
+
+        </td>
+        <td role="gridcell">
+            <div class="slds-cell-wrap" title="{! v.optionModel.record.SBQQ__ProductName__c}">
+                <a onclick="{!c.navToProduct}">{! v.optionModel.record.SBQQ__ProductName__c}</a>
+            </div>
+        </td>
+        <td role="gridcell">
+            <div class="slds-truncate" title="{!v.optionModel.record.Name}">
+                <a onclick="{!c.navToOption}">{!v.optionModel.record.Name}</a>
+            </div>
+        </td>
+        <td role="gridcell" colspan="2">
+            <div class="slds-cell-wrap" title="Description">
+                {!v.optionModel.record.SBQQ__ProductDescription__c}
+            </div>
+        </td>
+        <td role="gridcell">
+            <div class="slds-truncate slds-text-align_right" title="{! v.optionModel.record.SBQQ__UnitPrice__c + ' ' + v.optionModel.record.CurrencyIsoCode}">
+                <ui:outputCurrency value="{!v.optionModel.record.SBQQ__UnitPrice__c}" />
+            </div>
+        </td>
+        <td role="gridcell" style="width: 3rem;">
+            <div class="slds-truncate" title="Edit">
+                <lightning:buttonIcon iconName="utility:edit" variant="bare" alternativeText="Edit Option" onclick="{!c.editOption}" />
+            </div>
+        </td>
+    </tr>
+
+</aura:component>

@@ -1,0 +1,5 @@
+<design:component label="CPQ Preview Config">
+  <sfdc:objects>
+    <sfdc:object>Product2</sfdc:object>
+  </sfdc:objects>
+</design:component>

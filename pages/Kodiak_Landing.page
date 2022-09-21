@@ -1,0 +1,105 @@
+<apex:page sidebar="false" showHeader="false" docType="html-5.0" standardStylesheets="false"
+    applyHtmlTag="false">
+    <head>
+        <meta charset="utf-8">
+        </meta>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        </meta>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        </meta>
+        <title>Kodiak</title>
+        
+
+        <!-- Michroma font link -->
+<link href="https://fonts.googleapis.com/css2?family=Michroma&display=swap" rel="stylesheet"></link>
+
+        <style>
+            html,
+body {
+  height: 100%;
+}
+body {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+  height: 100%;
+  background: #f4f6f9;
+}
+#box {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  width: 400px;
+  height: 200px;
+  color: #E78200;
+  font-family: "Michroma";
+  font-size: 2.5rem;
+}
+.gradient-border {
+  --borderWidth: 3px;
+  background: #f4f6f9;
+  position: relative;
+  border-radius: var(--borderWidth);
+}
+.gradient-border:after {
+  content: "";
+  position: absolute;
+  top: calc(-1 * var(--borderWidth));
+  left: calc(-1 * var(--borderWidth));
+  height: calc(100% + var(--borderWidth) * 2);
+  width: calc(100% + var(--borderWidth) * 2);
+  background: linear-gradient(
+    60deg,
+    #f79533,
+    #f37055,
+    #ef4e7b,
+    #a166ab,
+    #5073b8,
+    #1098ad,
+    #07b39b,
+    #6fba82
+  );
+  border-radius: calc(2 * var(--borderWidth));
+  z-index: -1;
+  -webkit-animation: animatedgradient 3s ease alternate infinite;
+  animation: animatedgradient 3s ease alternate infinite;
+  background-size: 300% 300%;
+}
+
+@-webkit-keyframes animatedgradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes animatedgradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+        </style>
+    </head>
+<body>
+    <div class="gradient-border" id="box">SmartBytes<br /></div>
+
+</body>
+</apex:page>

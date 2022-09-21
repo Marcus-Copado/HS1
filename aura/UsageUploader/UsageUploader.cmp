@@ -1,0 +1,61 @@
+<!--
+          ** Component Details***
+         Name: CreateUsageRecord
+         Type: Lightning Component 
+         Purpose: Component to create records
+-->
+
+
+<aura:component controller="Q2CUsageUploader" 
+                implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes" 
+                access="global" >
+    
+    <!-- Include Static Resource-->
+    <ltng:require styles="/resource/bootstrap/css/bootstrap.min.css" 
+                  scripts="/resource/bootstrap/js/jquery.js,/resource/bootstrap/js/bootstrap.min.js"/>
+    
+    <aura:handler name="init" value="{!this}" action="{!c.init}"/>
+    
+    <!-- Define Attribute-->
+    <aura:attribute name="defaultUsageDate" type="DateTime"/>
+    <aura:attribute name="orderItems" type="List"/>
+    <aura:attribute name="usageRecord" type="blng__Usage__c" default="{'sobjectType': 'blng__Usage__c',
+                                                                      'blng__StartDateTime__c': '',
+                                                                      'blng__EndDateTime__c': '',
+                                                                      'blng__Quantity__c': '1', 
+                                                                      'blng__MatchingId__c': ''
+                                                                      }"/>
+    
+    <div class="container-fluid">
+        <lightning:icon iconName="standard:timesheet" />
+        <span class="headerSP">Enter Your Usage Information</span>
+        <div class="form-group">
+            <!--<label>Usage Date</label>
+            <ui:inputDateTime class="form-control" value="{!v.usageRecord.blng__StartDateTime__c}" displayDatePicker="true" />-->
+            <lightning:input aura:id="usageDate" type="datetime" name="datetime" label="Usage Date" value="{!v.defaultUsageDate}" onchange="{!c.updateUsageDate}"/>
+        </div>
+        <!--<div class="form-group">
+            <label>End Date</label>
+            <ui:inputDateTime class="form-control" value="{!v.usageRecord.blng__EndDateTime__c}" displayDatePicker="true" />
+        </div>-->
+        <div class="form-group">
+            <label>Quantity</label>
+            <ui:inputNumber class="form-control" value="{!v.usageRecord.blng__Quantity__c}"/>
+        </div>
+        <!--<div class="form-group">
+            <label>Matching ID</label>
+            <ui:inputText class="form-control" value="{!v.usageRecord.blng__MatchingId__c}"/>
+        </div>-->
+        <div class="form-group">
+            <lightning:select aura:id="orderProduct" name="select1" label="Order Product" required="true" onchange="{!c.updateOrderProduct}">
+                <option value="">choose one...</option>
+                <aura:iteration items="{!v.orderItems}" var="orderItem">
+                    <option value="{!orderItem.Order.Account.AccountNumber+'-' + orderItem.OrderItemNumber}">{!orderItem.Product2.Name}</option>
+                </aura:iteration>
+            </lightning:select>
+        </div>
+    </div>
+    <div class="col-md-4 text-center">
+        <ui:button class="btn btn-default" press="{!c.create}">Create</ui:button>
+    </div>
+</aura:component>

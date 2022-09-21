@@ -1,0 +1,35 @@
+.custom-alert {
+  border-radius: 0.25em !important;
+}
+
+.animate-content_in {
+  animation: animate 1.5s ease forwards;
+}
+
+.animate-content_out {
+  animation: animate 1.5s reverse backwards;
+}
+
+a.no-outline,
+a.no-outline:focus,
+a.no-outline:active {
+  border: none !important;
+  outline: none !important;
+}
+
+@keyframes animate {
+  0% {
+    transform: scale(0.2, 0.002);
+    opacity: 0;
+  }
+  25% {
+    transform: scale(0.2, 0.02);
+    opacity: 1;
+  }
+  65% {
+    transform: scale(1, 0.02);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}

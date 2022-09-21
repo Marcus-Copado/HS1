@@ -1,0 +1,638 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <content>Transaction_Journal_Entry_Line_Record_Page2</content>
+        <formFactor>Small</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <comment>Action override created by Lightning App Builder during activation.</comment>
+        <content>Transaction_Journal_Entry_Line_Record_Page2</content>
+        <formFactor>Large</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>Private</externalSharingModel>
+    <fields>
+        <fullName>Account__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Account</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Transaction Journal Entry Lines</relationshipLabel>
+        <relationshipName>Transaction_Journal_Entry_Lines</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Credit_GL_Account_Number__c</fullName>
+        <externalId>false</externalId>
+        <formula>Credit_GL_Account__r.blng__GLAccountNumber__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Credit GL Account Number</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Credit_GL_Account__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Credit GL Account</label>
+        <referenceTo>blng__GLAccount__c</referenceTo>
+        <relationshipLabel>Transaction Journal Entry Lines</relationshipLabel>
+        <relationshipName>Transaction_Journal_Entry_Lines</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Credit__c</fullName>
+        <externalId>false</externalId>
+        <label>Credit</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Debit_GL_Account_Number__c</fullName>
+        <externalId>false</externalId>
+        <formula>Debit_GL_Account__r.blng__GLAccountNumber__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Debit GL Account Number</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Debit_GL_Account__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Debit GL Account</label>
+        <referenceTo>blng__GLAccount__c</referenceTo>
+        <relationshipLabel>Transaction Journal Entry Lines (Debit GL Account)</relationshipLabel>
+        <relationshipName>Transaction_Journal_Entry_Lines1</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Debit__c</fullName>
+        <externalId>false</externalId>
+        <label>Debit</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Effective_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Effective Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Finance_Book__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Finance Book</label>
+        <referenceTo>blng__FinanceBook__c</referenceTo>
+        <relationshipLabel>Transaction Journal Entry Lines</relationshipLabel>
+        <relationshipName>Transaction_Journal_Entry_Lines</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Finance_Period__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Finance Period</label>
+        <referenceTo>blng__FinancePeriod__c</referenceTo>
+        <relationshipLabel>Transaction Journal Entry Lines</relationshipLabel>
+        <relationshipName>Transaction_Journal_Entry_Lines</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>GL_Account_Name__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>GL Account Numbers:
+Cash (1020)
+Accounts Receivable (1312)
+Deferred Revenue (2710)
+Sales Tax Payable (2310)
+Subscription Revenue (4010)
+Usage Revenue (4020)
+Professional Services Revenue (4030)
+Discounts (4900)
+Accounts Payable (5111)</inlineHelpText>
+        <label>GL Account Name</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Cash</fullName>
+                    <default>false</default>
+                    <label>Cash</label>
+                </value>
+                <value>
+                    <fullName>Accounts Receivable</fullName>
+                    <default>false</default>
+                    <label>Accounts Receivable</label>
+                </value>
+                <value>
+                    <fullName>Deferred Revenue</fullName>
+                    <default>false</default>
+                    <label>Deferred Revenue</label>
+                </value>
+                <value>
+                    <fullName>Sales Tax Payable</fullName>
+                    <default>false</default>
+                    <label>Sales Tax Payable</label>
+                </value>
+                <value>
+                    <fullName>Subscription Revenue</fullName>
+                    <default>false</default>
+                    <label>Subscription Revenue</label>
+                </value>
+                <value>
+                    <fullName>Usage Revenue</fullName>
+                    <default>false</default>
+                    <label>Usage Revenue</label>
+                </value>
+                <value>
+                    <fullName>Professional Services Revenue</fullName>
+                    <default>false</default>
+                    <label>Professional Services Revenue</label>
+                </value>
+                <value>
+                    <fullName>Discounts</fullName>
+                    <default>false</default>
+                    <label>Discounts</label>
+                </value>
+                <value>
+                    <fullName>Accounts Payable</fullName>
+                    <default>false</default>
+                    <label>Accounts Payable</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Invoice_Line__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Invoice Line</label>
+        <referenceTo>blng__InvoiceLine__c</referenceTo>
+        <relationshipLabel>Transaction Journal Entry Lines</relationshipLabel>
+        <relationshipName>Transaction_Journal_Entry_Lines</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Journal_Entry_Line_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Journal Entry Line Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>CR</fullName>
+                    <default>false</default>
+                    <label>CR</label>
+                </value>
+                <value>
+                    <fullName>DR</fullName>
+                    <default>false</default>
+                    <label>DR</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Legal_Entity__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Legal Entity</label>
+        <referenceTo>blng__LegalEntity__c</referenceTo>
+        <relationshipLabel>Transaction Journal Entry Lines</relationshipLabel>
+        <relationshipName>Transaction_Journal_Entry_Lines</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Override_GL_Account_Number__c</fullName>
+        <externalId>false</externalId>
+        <label>Override GL Account Number</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Posted__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Posted</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Posting_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Posting Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Posting_Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Posting Status</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Draft</fullName>
+                    <default>false</default>
+                    <label>Draft</label>
+                </value>
+                <value>
+                    <fullName>Posted</fullName>
+                    <default>false</default>
+                    <label>Posted</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Transaction_Currency__c</fullName>
+        <externalId>false</externalId>
+        <label>Transaction Currency</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>USD</fullName>
+                    <default>false</default>
+                    <label>USD</label>
+                </value>
+                <value>
+                    <fullName>CAD</fullName>
+                    <default>false</default>
+                    <label>CAD</label>
+                </value>
+                <value>
+                    <fullName>GBP</fullName>
+                    <default>false</default>
+                    <label>GBP</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Transaction_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Transaction Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Transaction_Journal_Entry__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Transaction Journal Entry</label>
+        <referenceTo>Transaction_Journal_Entry__c</referenceTo>
+        <relationshipLabel>Transaction Journal Entry Lines</relationshipLabel>
+        <relationshipName>Transaction_Journal_Entry_Lines</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Transaction_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Transaction Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Invoice Line</fullName>
+                    <default>false</default>
+                    <label>Invoice Line</label>
+                </value>
+                <value>
+                    <fullName>Debit Note Line</fullName>
+                    <default>false</default>
+                    <label>Debit Note Line</label>
+                </value>
+                <value>
+                    <fullName>Debit Note Line Allocation (Invoice Line)</fullName>
+                    <default>false</default>
+                    <label>Debit Note Line Allocation (Invoice Line)</label>
+                </value>
+                <value>
+                    <fullName>Debit Note Line Allocation (Credit Note Line)</fullName>
+                    <default>false</default>
+                    <label>Debit Note Line Allocation (Credit Note Line)</label>
+                </value>
+                <value>
+                    <fullName>Credit Note Line</fullName>
+                    <default>false</default>
+                    <label>Credit Note Line</label>
+                </value>
+                <value>
+                    <fullName>Credit Note Allocation</fullName>
+                    <default>false</default>
+                    <label>Credit Note Allocation</label>
+                </value>
+                <value>
+                    <fullName>Revenue Transaction</fullName>
+                    <default>false</default>
+                    <label>Revenue Transaction</label>
+                </value>
+                <value>
+                    <fullName>Payment</fullName>
+                    <default>false</default>
+                    <label>Payment</label>
+                </value>
+                <value>
+                    <fullName>Payment Allocation (Invoice)</fullName>
+                    <default>false</default>
+                    <label>Payment Allocation (Invoice)</label>
+                </value>
+                <value>
+                    <fullName>Payment Allocation (Invoice Line)</fullName>
+                    <default>false</default>
+                    <label>Payment Allocation (Invoice Line)</label>
+                </value>
+                <value>
+                    <fullName>Refund</fullName>
+                    <default>false</default>
+                    <label>Refund</label>
+                </value>
+                <value>
+                    <fullName>Refund Line (Payment)</fullName>
+                    <default>false</default>
+                    <label>Refund Line (Payment)</label>
+                </value>
+                <value>
+                    <fullName>Refund Line (Credit Note Line)</fullName>
+                    <default>false</default>
+                    <label>Refund Line (Credit Note Line)</label>
+                </value>
+                <value>
+                    <fullName>Realized Gain/Loss</fullName>
+                    <default>false</default>
+                    <label>Realized Gain/Loss</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <label>Transaction Journal Entry Line</label>
+    <listViews>
+        <fullName>All</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <listViews>
+        <fullName>Transaction_Journal_Entry_Lines</fullName>
+        <columns>NAME</columns>
+        <columns>Transaction_Date__c</columns>
+        <columns>Transaction_Type__c</columns>
+        <columns>Posting_Status__c</columns>
+        <columns>Finance_Book__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>Transaction Journal Entry Lines</label>
+    </listViews>
+    <nameField>
+        <displayFormat>TJEL-{000000}</displayFormat>
+        <label>Transaction Journal Entry Line Name</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Transaction Journal Entry Lines</pluralLabel>
+    <searchLayouts>
+        <excludedStandardButtons>New</excludedStandardButtons>
+        <excludedStandardButtons>OpenListInQuip</excludedStandardButtons>
+        <excludedStandardButtons>PrintableListView</excludedStandardButtons>
+        <excludedStandardButtons>ChangeOwner</excludedStandardButtons>
+        <excludedStandardButtons>MassChangeOwner</excludedStandardButtons>
+        <excludedStandardButtons>Accept</excludedStandardButtons>
+        <searchResultsAdditionalFields>Invoice_Line__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Journal_Entry_Line_Type__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Credit_GL_Account__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Credit_GL_Account_Number__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Debit_GL_Account__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Debit_GL_Account_Number__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Posting_Status__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Credit__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Debit__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+    <validationRules>
+        <fullName>No_DePosting</fullName>
+        <active>true</active>
+        <errorConditionFormula>Posted__c &amp;&amp; ispickval( Posting_Status__c, &quot;Draft&quot;)</errorConditionFormula>
+        <errorMessage>Journal Entry Line has already been posted. You cannot de-post it.</errorMessage>
+    </validationRules>
+    <visibility>Public</visibility>
+</CustomObject>

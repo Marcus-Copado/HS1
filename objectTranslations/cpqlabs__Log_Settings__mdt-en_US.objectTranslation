@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Enable Logging --></label>
+        <name>cpqlabs__Enable_Logging__c</name>
+    </fields>
+    <fields>
+        <label><!-- Enable Pruning --></label>
+        <name>cpqlabs__Enable_Pruning__c</name>
+    </fields>
+    <fields>
+        <label><!-- Interfaced_Class_Order --></label>
+        <name>cpqlabs__Interfaced_Class_Order__c</name>
+    </fields>
+    <fields>
+        <label><!-- Max Number Of Logs --></label>
+        <name>cpqlabs__Max_Number_Of_Logs__c</name>
+    </fields>
+</CustomObjectTranslation>

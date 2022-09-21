@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Settings for cancelled quotes.</description>
+    <fields>
+        <fullName>cpqlabs__Sync_Orders__c</fullName>
+        <defaultValue>true</defaultValue>
+        <deprecated>false</deprecated>
+        <description>If marked True, initiating an Order for a Cancelled and Replaced Quote will Order the Amendment Quotes automatically.</description>
+        <externalId>false</externalId>
+        <fieldManageability>SubscriberControlled</fieldManageability>
+        <inlineHelpText>If marked True, initiating an Order for a Cancelled and Replaced Quote will Order the Amendment Quotes automatically.</inlineHelpText>
+        <label>Sync Orders</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>cpqlabs__Sync_QuoteStartDate__c</fullName>
+        <defaultValue>true</defaultValue>
+        <deprecated>false</deprecated>
+        <description>If marked True, updating the Quote Start Date on the Replacement Quote updates the Start Date on the Amended Quotes.</description>
+        <externalId>false</externalId>
+        <fieldManageability>SubscriberControlled</fieldManageability>
+        <inlineHelpText>If marked True, updating the Quote Start Date on the Replacement Quote updates the Start Date on the Amended Quotes.</inlineHelpText>
+        <label>Sync Quote Start Date</label>
+        <type>Checkbox</type>
+    </fields>
+    <label>Cancelled Quote Settings</label>
+    <pluralLabel>Cancelled Quote Settings</pluralLabel>
+    <visibility>Public</visibility>
+</CustomObject>

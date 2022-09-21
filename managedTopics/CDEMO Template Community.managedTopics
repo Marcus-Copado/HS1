@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ManagedTopics xmlns="http://soap.sforce.com/2006/04/metadata">
+    <managedTopic>
+        <fullName>CDEMO Template Community.Content:News</fullName>
+        <managedTopicType>Content</managedTopicType>
+        <name>News</name>
+        <parentName></parentName>
+        <position>0</position>
+        <topicDescription>Recent SmartBytes News</topicDescription>
+    </managedTopic>
+    <managedTopic>
+        <fullName>CDEMO Template Community.Featured:Contact Us</fullName>
+        <managedTopicType>Featured</managedTopicType>
+        <name>Contact Us</name>
+        <parentName></parentName>
+        <position>5</position>
+        <topicDescription> </topicDescription>
+    </managedTopic>
+    <managedTopic>
+        <fullName>CDEMO Template Community.Featured:Enablement</fullName>
+        <managedTopicType>Featured</managedTopicType>
+        <name>Enablement</name>
+        <parentName></parentName>
+        <position>4</position>
+        <topicDescription> </topicDescription>
+    </managedTopic>
+    <managedTopic>
+        <fullName>CDEMO Template Community.Featured:Our Company</fullName>
+        <managedTopicType>Featured</managedTopicType>
+        <name>Our Company</name>
+        <parentName></parentName>
+        <position>2</position>
+        <topicDescription> </topicDescription>
+    </managedTopic>
+    <managedTopic>
+        <fullName>CDEMO Template Community.Featured:Our Services</fullName>
+        <managedTopicType>Featured</managedTopicType>
+        <name>Our Services</name>
+        <parentName></parentName>
+        <position>1</position>
+        <topicDescription> </topicDescription>
+    </managedTopic>
+    <managedTopic>
+        <fullName>CDEMO Template Community.Featured:Our Solutions</fullName>
+        <managedTopicType>Featured</managedTopicType>
+        <name>Our Solutions</name>
+        <parentName></parentName>
+        <position>0</position>
+        <topicDescription> </topicDescription>
+    </managedTopic>
+    <managedTopic>
+        <fullName>CDEMO Template Community.Featured:Partner Support</fullName>
+        <managedTopicType>Featured</managedTopicType>
+        <name>Partner Support</name>
+        <parentName></parentName>
+        <position>3</position>
+        <topicDescription> </topicDescription>
+    </managedTopic>
+</ManagedTopics>

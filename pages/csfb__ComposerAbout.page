@@ -1,0 +1,55 @@
+<apex:page showHeader="true" sidebar="false" controller="csfb.ComposerAboutController" action="{!PageInit}" tabStyle="About_Composer__tab"  >
+	<apex:form >
+		<apex:pageMessages id="pgMessages" ></apex:pageMessages> 
+		<input id="hiddenElement" type="hidden" />
+		<apex:outputPanel id="pbForm" rendered="{!$Setup.csfb__CongaInvoicingSettings__c.csfb__Name_Space__c == 'sfb' && ButtonId == null}"> 
+			<apex:sectionHeader title="Create Invoice Starter Pack" subtitle="Conga Invoicing Starter Pack" ></apex:sectionHeader>  
+			<apex:outputText value="Step 1 - Configure Remote Sites" style="font-weight: bold; font-style: italic;"></apex:outputText>
+			<br/>
+			<apex:outputText value="The starter pack deployment requires remote site access. Please create and/or validate the remote sites before creating the Invoice Solution." style="margin-left: 20px"></apex:outputText>
+			<br/>
+			<apex:commandButton id="cmdRemote" action="{!NavigateToRemoteSite}" style="margin-left: 20px;width:220px;" value="Configure Remote Sites"></apex:commandButton>
+			<br/> 
+			<br/>  
+			<apex:outputText value="Step 2 - Create Conga Invoicing Solution" style="font-weight: bold; font-style: italic;"></apex:outputText>
+			<br/> 
+			<apex:outputText value="Clicking the button below will create a conga invoicing solution " style="margin-left: 20px"></apex:outputText>   
+			<br/>  
+			
+			<apex:outputPanel id="pnlButton">
+				<apex:commandButton title="Create" value="Create Conga Solution" action="{!UnpackSolution}" disabled="{! NOT(HasSolutionFolders && ISBLANK(SolutionId))}" style="margin-left: 20px;width:220px;" rerender="pnlButton,pgMessages"></apex:commandButton>
+	 			<apex:outputLink rendered="{!NOT(ISBLANK(SolutionId))}" value="/{!SolutionId}" target="_blank">View Solution</apex:outputLink>
+	 			<br/>  
+	 			<br/>
+	 			<apex:outputText value="Step 3 - Create 'Generate Invoice' Button" style="font-weight: bold; font-style: italic;"></apex:outputText>
+			<br/> 
+			<apex:outputText value="Clicking the button below will create a new custom button that can be added to the Invoice object page layout." style="margin-left: 20px"></apex:outputText>   
+			<br/>
+				<apex:commandButton title="Create" value="Create Custom Button" action="{!createButtons}" disabled="{! NOT(SFBillingInstalled && ISBLANK(ButtonId) && NOT(ISBLANK(SolutionId)))}" style="margin-left: 20px;width:220px;" rerender="pnlButton2,pgMessages"></apex:commandButton>
+				<apex:outputPanel id="pnlButton2">
+	 				<apex:outputLink rendered="{!NOT(ISBLANK(ButtonId))}" value="/{!ButtonId}"  target="_blank">View Button</apex:outputLink>
+	 			</apex:outputPanel>
+	 			<apex:outputText rendered="{! NOT(SFBillingInstalled)}" value="Please install Salesforce Billing (blng) to enable this functionality." style="font-weight:bold; color:#00008B"></apex:outputText> <br/> 
+	 		</apex:outputPanel>
+		<br/>
+		</apex:outputPanel> 
+		<iframe src="{!IF($Setup.csfb__CongaInvoicingSettings__c.csfb__Name_Space__c = 'sfb','https://getconga.com/conga-invoicing-for-salesforce-billing','https://www.congamerge.com/about-conga-composer')}" height="1500px" width="100%" frameborder="false"></iframe>
+		<apex:pageBlock rendered="{!$Setup.csfb__CongaInvoicingSettings__c.csfb__Name_Space__c = 'sfb'}" > 
+			<apex:sectionHeader title="Unlock Composer's full potential" subtitle="Upgrade" ></apex:sectionHeader> 
+			<apex:outputLabel value="Enter your upgrade code "></apex:outputLabel>
+			<span title="{!$Organization.Name} {!$Organization.Id}"><apex:inputText value="{!UnlockCode}"></apex:inputText></span>
+			<apex:commandButton value="Upgrade!" action="{!UpgradePackage}" rerender=""></apex:commandButton> 
+			<apex:outputText value="{!UnlockMessage}"></apex:outputText>
+			<div style="display:none">{!$Organization.Id}</div> 
+	 		<script type="text/javascript"> 
+			  	function setFocus() {
+			    	document.getElementById("hiddenElement").focus();
+			  	}
+			  	var previousOnload = window.onload; 
+			  	window.onload = function() { if (previousOnload) { previousOnload(); } setFocus(); }
+			</script>
+		</apex:pageBlock>
+		
+	</apex:form>
+	
+</apex:page>

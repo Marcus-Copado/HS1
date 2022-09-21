@@ -1,0 +1,22 @@
+<apex:page id="EmbeddedSending" controller="dfsle.SendingController" showHeader="false" sidebar="false"
+           title="{!$Label.dfsle__sendwithdocusign}">
+
+    <apex:includeScript value="{!$Resource.dfsle__navUtils}"/>
+    <apex:includeScript value="{!$Resource.dfsle__userEvents}"/>
+    <apex:includeLightning />
+    <apex:slds />
+    <div id="ds-spinner">
+        <div role="status" class="slds-spinner slds-spinner_medium slds-spinner_brand">
+            <div class="slds-spinner__dot-a"></div>
+            <div class="slds-spinner__dot-b"></div>
+        </div>
+    </div>
+    <apex:form >
+        <apex:actionFunction name="embeddedSending" action="{!getEmbeddedSigningURL}" rerender="">
+            <apex:param name="baseURL" value=""/>
+        </apex:actionFunction>
+    </apex:form>
+    <script>
+      embeddedSending("{!$Site.BaseUrl}");
+    </script>
+</apex:page>

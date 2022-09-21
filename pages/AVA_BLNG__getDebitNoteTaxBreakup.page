@@ -1,0 +1,2 @@
+<apex:page standardController="blng__DebitNote__c" extensions="AVA_BLNG.AvalaraTaxBreakUp" lightningStylesheets="true" action="{!calculateDebitNoteTaxBreakup}">
+</apex:page>

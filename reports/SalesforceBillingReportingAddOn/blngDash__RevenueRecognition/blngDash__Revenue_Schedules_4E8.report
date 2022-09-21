@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <columns>
+        <field>blng__RevenueSchedule__c.blng__RevenueStartDate__c</field>
+    </columns>
+    <columns>
+        <field>blng__RevenueSchedule__c.blng__RevenueEndDate__c</field>
+    </columns>
+    <columns>
+        <field>blng__RevenueSchedule__c.blng__RevenueFinanceBook__c</field>
+    </columns>
+    <columns>
+        <field>blng__RevenueSchedule__c.blng__RevenueRecognitionTreatment__c</field>
+    </columns>
+    <columns>
+        <field>blng__RevenueSchedule__c.blng__RevenueDistributionMethod__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>blng__RevenueSchedule__c.blng__TotalRevenueAmount__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>blng__RevenueSchedule__c.blng__RecognizedRevenueLastClosedPeriod__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>blng__RevenueSchedule__c.blng__Deferred__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>blng__RevenueSchedule__c.blng__Unrecognized__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>blng__RevenueSchedule__c.blng__Available__c</field>
+    </columns>
+    <description>All revenue schedules to allow you quickly see what&apos;s been recognized or deferred at a Revenue Schedule basis.</description>
+    <format>Tabular</format>
+    <name>Revenue Schedules</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$blng__RevenueSchedule__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>blng__RevenueSchedule__c.blng__RevenueStartDate__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

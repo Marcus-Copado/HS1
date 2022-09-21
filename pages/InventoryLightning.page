@@ -1,0 +1,133 @@
+<apex:page controller="InventoryController" title="Inventory Detail" sidebar="false" showHeader="false" standardStylesheets="true">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+       <style>
+            div.Bottom [hidden], .slds template 
+            {
+                display: block;
+            }
+    	</style>
+
+<apex:slds rendered="{! IF(($CurrentPage.parameters.f) == 'Hardware', true, false)}">
+  <div class="slds-scope"> 
+        <div class="slds-page-header">
+          <div class="slds-media">
+            <div class="slds-media__figure">
+              <span class="slds-icon_container slds-icon-standard-shipment" title="Description of icon when needed">
+                <svg class="slds-icon" aria-hidden="true">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{!URLFOR($Asset.SLDS, '/assets/icons/standard-sprite/svg/symbols.svg#shipment')}"></use>
+                </svg>
+              </span>
+            </div>
+            <div class="slds-media__body">
+              <h1 class="slds-page-header__title slds-truncate slds-align-middle" title="BOM">Inventory</h1>
+                <p class="slds-text-body_small slds-line-height_reset">{!$CurrentPage.parameters.p}</p>
+                <p class="slds-text-body_small slds-line-height_reset">{!$CurrentPage.parameters.f}: {!$CurrentPage.parameters.r}</p>
+                <p class="slds-text-body_small slds-line-height_reset">Quantity Required: {!$CurrentPage.parameters.q}</p>
+            </div>
+          </div>
+        </div>
+	  </div>
+
+	  <table class="slds-table slds-table_bordered slds-table_cell-buffer">
+  			<thead>
+    			<tr class="slds-text-title_caps">
+                	<th scope="col">
+        				<div class="slds-truncate" title="Code">Product Code</div>
+      				</th>
+                	<th scope="col">
+        				<div class="slds-truncate" title="MFG Site">Manufacturing Site</div>
+      				</th>
+                	<th scope="col">
+        				<div class="slds-truncate" title="Cost">Unit Cost</div>
+      				</th>                        
+                    <th scope="col">
+        				<div class="slds-truncate" title="OnHand">Qty On Hand</div>
+      				</th>
+                    <th scope="col">
+        				<div class="slds-truncate" title="Allocated">Qty Allocated</div>
+      				</th>
+                    <th scope="col">
+        				<div class="slds-truncate" title="Available">Qty Available</div>
+      				</th>
+                    <th scope="col">
+        				<div class="slds-truncate" title="Status">Status</div>
+      				</th>
+                 </tr>
+  			</thead>
+
+			<tbody>
+				<apex:repeat value="{!invs}" var="b">
+                <tr>
+                    <td>
+                        <apex:outputText value="{!b.Product_Code__c}"/>
+                    </td>
+                    <td>
+                        <apex:outputText value="{!b.Manufacturing_Site__c}"/>
+                    </td>
+                    <td>
+                        <apex:outputText value="{!b.Unit_Cost__c}"/>
+                    </td>                        
+                    <td>
+                        <apex:outputText value="{!b.Quantity_On_Hand__c}"/>
+                    </td>
+                    <td>
+                        <apex:outputText value="{!b.Quantity_Allocated__c}"/>
+                    </td>
+                    <td>
+                        <apex:outputText value="{!b.Quantity_Available__c}"/>
+                    </td>
+                    <td>
+                        <apex:outputText value="{!b.Inventory_Status__c}"/>
+                    </td>
+                </tr>
+            </apex:repeat>
+
+       	</tbody>
+	  </table>
+
+	  <br/>
+
+	  <div class="Bottom">
+                <apex:chart height="300" width="95%" data="{!data}" animate="true">
+                <apex:axis type="Numeric" position="left" fields="chi,ftl,lax,nyc,ptb" title="New Inventory" grid="true"/>
+                <apex:legend position="bottom"/>
+    
+                <apex:axis type="Category" position="bottom" fields="mon"/>
+    
+                <apex:barSeries orientation="vertical" axis="left" xField="mon" yField="chi,ftl,lax,nyc,ptb" title="Chicago,Fort Lauderdale,Los Angeles,New York,Pittsburgh" tips="false" >
+                </apex:barseries>
+    
+                </apex:chart>
+          </div>
+    
+  </apex:slds>
+
+<apex:slds rendered="{! IF(($CurrentPage.parameters.f) == 'Hardware', false, true)}">
+  <div class="slds-scope"> 
+        <div class="slds-page-header">
+          <div class="slds-media">
+            <div class="slds-media__figure">
+              <span class="slds-icon_container slds-icon-standard-shipment" title="Description of icon when needed">
+                <svg class="slds-icon" aria-hidden="true">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{!URLFOR($Asset.SLDS, '/assets/icons/standard-sprite/svg/symbols.svg#shipment')}"></use>
+                </svg>
+              </span>
+            </div>
+            <div class="slds-media__body">
+              <h1 class="slds-page-header__title slds-truncate slds-align-middle" title="BOM">Inventory</h1>
+                <p class="slds-text-body_small slds-line-height_reset">{!$CurrentPage.parameters.p}</p>
+                <p class="slds-text-body_small slds-line-height_reset">{!$CurrentPage.parameters.f}: {!$CurrentPage.parameters.r}</p>
+                <p class="slds-text-body_small slds-line-height_reset">Quantity Required: {!$CurrentPage.parameters.q}</p>
+                <p class="slds-text-body_small slds-line-height_reset">**Only Hardware items have associated Inventory.</p>
+            </div>
+          </div>
+        </div>
+	  </div>
+
+    <apex:image id="NoInventory" value="https://www.safetysign.com/images/source/large-images/N3598.png" width="440" height="110" alt="No Inventory"/>
+
+  </apex:slds>
+
+
+</apex:page>

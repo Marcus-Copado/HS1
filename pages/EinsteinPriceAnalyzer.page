@@ -1,0 +1,156 @@
+<apex:page title="EinsteinPriceAnalyzer" applyBodyTag="False" applyHtmlTag="False" showHeader="false" standardStylesheets="false" sidebar="false" docType="html-5.0" controller="qtcEinsteinAnalyzerController">
+
+<html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <head>
+        <apex:slds />
+        <apex:includeScript value="https://cdnjs.cloudflare.com/ajax/libs/jsforce/1.7.0/jsforce.min.js" />
+        <apex:includeScript value="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.0/Chart.bundle.min.js"/>
+    </head>
+    <body>
+        <apex:pageBlock rendered="{!NOT(isDone)}">
+        <div class="slds-scope">
+            
+            <div class="slds-page-header">
+                <div class="slds-media">
+                    <div class="slds-media__figure">
+                        <span class="slds-icon_container slds-icon-standard-poll">
+                            <svg class="slds-icon slds-page-header__icon" aria-hidden="true">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{!URLFOR($Asset.SLDS, '/assets/icons/standard-sprite/svg/symbols.svg#poll')}" />
+                            </svg>
+                        </span>
+                    </div>
+                    <div class="slds-media__body">
+                        <h1 class="slds-page-header__title slds-truncate slds-align-middle" title="Einstein Analytics">{!productObj.Name}</h1>
+                        <p class="slds-text-body_small slds-line-height_reset">Einstein Analytics - Pricing</p>
+                    </div>
+                </div>
+            </div>
+
+            
+                <div class="slds-grid slds-gutters">
+                    
+                    <div class="slds-col slds-size_1-of-4">
+                        
+                        <div class="slds-box slds-m-vertical_xx-small">
+                            <div class="slds-text-title_caps slds-m-bottom_xx-small">List Price</div>
+                                <div class="slds-text-heading_medium">
+                                    <apex:outputText value="{0, number, currency}">
+                                        <apex:param value="{!lp}" />
+                                    </apex:outputText>
+                            </div>
+                        </div>
+<!-- Undetermined Value -->
+                        <div class="slds-box slds-m-vertical_xx-small">
+                            <div class="slds-text-title_caps slds-m-bottom_xx-small">Current Approval Level</div>
+                                <div class="slds-text-heading_medium">
+                                    <apex:outputText value="{!app}" escape="false" />
+                            </div>
+                        </div>
+<!-- Undetermined Value End -->
+                    </div>
+
+                    <div class="slds-col slds-size_1-of-4">
+  <!-- Undetermined Value 2  -->                    
+                        <div class="slds-box slds-m-vertical_xx-small">
+                            <div class="slds-text-title_caps slds-m-bottom_xx-small">Unit Cost</div>
+                                <div class="slds-text-heading_medium">
+                                    <apex:outputText value="{0, number, currency}">
+                                        <apex:param value="{!uc}" />
+                                    </apex:outputText>
+                                </div>
+                        </div>
+<!-- Undetermined Value 2 End -->
+<!-- Approval Level 1 -->
+                        <div class="slds-box slds-m-vertical_xx-small">
+                            <div class="slds-text-title_caps slds-m-bottom_xx-small">Approval Level 1</div>
+                                <div class="slds-text-heading_medium">
+                                   <apex:outputText value="{0, number, currency}">
+                                        <apex:param value="{!lev1}" />
+                                    </apex:outputText>
+                                </div>
+                        </div>
+<!-- Approval 1 Value End -->
+                    </div>
+ 
+                    <div class="slds-col slds-size_1-of-4">
+                        
+                        <div class="slds-box slds-m-vertical_xx-small">
+                            <div class="slds-text-title_caps slds-m-bottom_xx-small">Current Price</div>
+                                <div class="slds-text-heading_medium">
+                                    <apex:outputText value="{0, number, currency}">
+                                        <apex:param value="{!ntp}" />
+                                    </apex:outputText>
+                                </div>
+                        </div>
+<!-- Appproval Level 2 -->
+                        <div class="slds-box slds-m-vertical_xx-small">
+                            <div class="slds-text-title_caps slds-m-bottom_xx-small">Approval Level 2</div>
+                                <div class="slds-text-heading_medium">
+                                    <apex:outputText value="{0, number, currency}">
+                                        <apex:param value="{!lev2}" />
+                                    </apex:outputText>
+                                </div>
+                        </div>
+<!-- Appproval Level 2 End --> 
+                    </div>
+
+                   
+
+                    <div class="slds-col slds-size_1-of-4">
+                        
+                        <div class="slds-box slds-m-vertical_xx-small">
+                            
+                            <div class="slds-text-title_caps slds-m-bottom_xx-small">Standalone Selling Price</div>
+                                <div class="slds-text-heading_medium">
+                                    <apex:outputText value="{0, number, currency}">
+                                        <apex:param value="{!ssp}" />
+                                    </apex:outputText>
+                                </div>
+                            
+
+                        </div>
+
+<!-- Approval Level 3 -->
+                        <div class="slds-box slds-m-vertical_xx-small">
+                            <div class="slds-text-title_caps slds-m-bottom_xx-small">Approval Level 3</div>
+                                <div class="slds-text-heading_medium">
+                                    <apex:outputText value="{0, number, currency}">
+                                        <apex:param value="{!lev3}" />
+                                    </apex:outputText>
+                                </div>
+                           
+                        </div>
+<!-- Appproval Level 3 End --> 
+                    </div>
+
+                </div>
+
+
+                
+                
+<!-- Einstein Dashboard -- dashboardId="0FK3t000000MhzjGAA" -->
+            <wave:dashboard developerName="Einstein_Quote_Line_Analytics"  
+                    height="700px" 
+                    showTitle="false"
+                    showSharing="true" 
+                    openLinksInNewWindow="false" 
+                    hideOnError="true"
+                    filter="{'datasets' : {'QuoteLineItems_QuoteDashboard': [ {'fields':['SBQQ__ProductName__c'], 'selection': ['{!productObj.Name}']}]}}"
+                  />
+
+        </div>
+    
+    </apex:pageBlock> 
+    <center>
+    <apex:pageBlock rendered="{!(isDone)}">
+        
+        
+        <div>
+            <apex:image id="hitquicksave" value="https://smartbytes--c.documentforce.com/servlet/servlet.ImageServer?id=0153t000004QwHn&oid=00D3t000005Ag13&lastMod=1597351951000" width="739" height="469" alt="Hit Quick Save"/>
+        </div>
+    </apex:pageBlock>
+</center>
+         
+    </body>
+</html>
+</apex:page>

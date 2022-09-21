@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WaveApplication xmlns="http://soap.sforce.com/2006/04/metadata">
+    <assetIcon>/analytics/wave/web/proto/images/app/icons/16.png</assetIcon>
+    <folder>Pricing_Guidance</folder>
+    <masterLabel>Pricing_Guidance</masterLabel>
+    <shares>
+        <accessLevel>View</accessLevel>
+        <sharedTo>AllInternalUsers</sharedTo>
+        <sharedToType>Organization</sharedToType>
+    </shares>
+    <shares>
+        <accessLevel>Manage</accessLevel>
+        <sharedTo>jzomayah.ntrmwmywiwur.rr4meoppihag@copado.com2022/09/21_11-40-17.demo</sharedTo>
+        <sharedToType>User</sharedToType>
+    </shares>
+    <templateOrigin>cpqea__PricingGuidance</templateOrigin>
+    <templateVersion>1.0</templateVersion>
+</WaveApplication>

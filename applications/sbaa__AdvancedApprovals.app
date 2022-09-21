@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomApplication xmlns="http://soap.sforce.com/2006/04/metadata">
+    <defaultLandingTab>standard-home</defaultLandingTab>
+    <description>Enhance approval workflow management with Advanced Approvals. We understand the many intricacies that growing businesses face and have created a flexible product that allows you to customize complex approval solutions that will meet your needs.</description>
+    <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
+    <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
+    <isNavTabPersistenceDisabled>false</isNavTabPersistenceDisabled>
+    <label>Advanced Approvals</label>
+    <logo>sbaa__Salesforce_CPQ_AA_Assets/sbaa__Salesforce_CPQ_Logo.png</logo>
+    <tabs>standard-Opportunity</tabs>
+    <tabs>SBQQ__Quote__c</tabs>
+    <tabs>standard-Product2</tabs>
+    <tabs>sbaa__ApprovalRule__c</tabs>
+    <tabs>sbaa__ApprovalChain__c</tabs>
+    <tabs>sbaa__Approver__c</tabs>
+    <tabs>sbaa__ApprovalVariable__c</tabs>
+    <tabs>sbaa__EmailTemplate__c</tabs>
+    <tabs>standard-report</tabs>
+    <tabs>Approval_Threshold__c</tabs>
+    <tabs>Transaction_Journal_Entry__c</tabs>
+    <tabs>Transaction_Journal_Entry_Line__c</tabs>
+    <tabs>Inventory__c</tabs>
+    <tabs>SBQQ__QuoteLine__c</tabs>
+    <tabs>Conga_Quote_Solution</tabs>
+    <tabs>APXTCFQ__Conga_Solution__c</tabs>
+    <tabs>APXTCFQ__Conga_Collection__c</tabs>
+    <tabs>Material__c</tabs>
+</CustomApplication>

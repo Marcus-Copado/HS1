@@ -1,0 +1,18 @@
+<apex:page controller="csfb.SolutionPackLandingPageController" sidebar="false">
+    <table>
+        <tr>
+            <td>
+                <img src="{!JSENCODE($Resource.Conga_O_Logo_SM)}" width="32"/>
+            </td>
+            <td>
+                <br/>
+                <span style="font-size: 1.8em;font-weight: normal;line-height: 1.1em;">Conga Solution Extractor</span>               
+            </td>
+        </tr>
+    </table>
+    <apex:pageMessages />
+    
+    <apex:form > 
+            
+    </apex:form>
+</apex:page>

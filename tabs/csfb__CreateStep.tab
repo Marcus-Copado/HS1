@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomTab xmlns="http://soap.sforce.com/2006/04/metadata">
+    <icon>csfb__Conga/csfb__Conga_O.svg</icon>
+    <label>Conga Invoice Quick Start</label>
+    <motif>Custom352: TV Widescreen</motif>
+    <page>csfb__CreateStep</page>
+</CustomTab>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <columns>
+        <field>blng__RevenueAdjustment__c.blng__RevenueAdjustmentDate__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>blng__RevenueAdjustment__c.blng__Amount__c</field>
+    </columns>
+    <columns>
+        <field>blng__RevenueAdjustment__c.blng__Status__c</field>
+    </columns>
+    <columns>
+        <field>blng__RevenueAdjustment__c.blng__RelatedRevenueAdjustment__c</field>
+    </columns>
+    <columns>
+        <field>blng__RevenueAdjustment__c.blng__Account__c</field>
+    </columns>
+    <columns>
+        <field>blng__RevenueAdjustment__c.blng__LegalEntity__c</field>
+    </columns>
+    <description>List of revenue adjustments grouped by Type (Adjustment or Transfer) to allow you to track the different revenue adjustments introduced to adjust your revenue schedules.</description>
+    <filter>
+        <criteriaItems>
+            <column>blng__RevenueAdjustment__c.blng__Status__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Posted</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>blng__RevenueAdjustment__c.blng__Type__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Revenue Adjustments by Type</name>
+    <params>
+        <name>co</name>
+        <value>0</value>
+    </params>
+    <reportType>CustomEntity$blng__RevenueAdjustment__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>blng__RevenueAdjustment__c.blng__RevenueAdjustmentDate__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

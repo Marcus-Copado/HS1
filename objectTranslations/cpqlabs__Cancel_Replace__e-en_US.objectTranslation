@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Contract Id --></label>
+        <name>cpqlabs__ContractId__c</name>
+    </fields>
+    <fields>
+        <label><!-- JobId --></label>
+        <name>cpqlabs__JobId__c</name>
+    </fields>
+    <fields>
+        <label><!-- Quote Id --></label>
+        <name>cpqlabs__QuoteId__c</name>
+    </fields>
+</CustomObjectTranslation>

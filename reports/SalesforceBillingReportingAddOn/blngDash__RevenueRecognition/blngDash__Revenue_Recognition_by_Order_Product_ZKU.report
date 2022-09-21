@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>blng__RevenueSchedule__c.blng__TotalRevenueAmount__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>blng__RevenueSchedule__c.blng__Adjustments__c</field>
+    </columns>
+    <columns>
+        <field>blng__RevenueSchedule__c.blng__RevenueStartDate__c</field>
+    </columns>
+    <columns>
+        <field>blng__RevenueSchedule__c.blng__RevenueEndDate__c</field>
+    </columns>
+    <columns>
+        <field>blng__RevenueSchedule__c.blng__FullRecognitionDate__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>blng__RevenueSchedule__c.blng__RecognizedRevenueLastClosedPeriod__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>blng__RevenueSchedule__c.blng__Unrecognized__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>blng__RevenueSchedule__c.blng__Available__c</field>
+    </columns>
+    <columns>
+        <field>blng__RevenueSchedule__c.blng__RevenueTransactionStatus__c</field>
+    </columns>
+    <currency>USD</currency>
+    <description>Revenue schedules with amounts for each order product to allow you to get visiblity into the revenue recognition from each order product.</description>
+    <filter>
+        <criteriaItems>
+            <column>blng__RevenueSchedule__c.blng__TotalRevenueAmount__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>lessOrEqual</operator>
+            <value>USD 5000</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>FK_ORDITM_PRODUCT_NAME</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Application Monitoring</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>FK_ORDITM_PRODUCT_NAME</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Revenue Schedules from Order Product</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$blng__RevenueSchedule__c@blng__RevenueSchedule__c.blng__OrderProduct__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>blng__RevenueSchedule__c.blng__RevenueEndDate__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

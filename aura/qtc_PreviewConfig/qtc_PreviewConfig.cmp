@@ -1,0 +1,56 @@
+<!--
+ - Created by scheck on 10/25/18.
+ -->
+
+<aura:component description="qtc_PreviewConfig" controller="qtc_PreviewConfigCTRL" implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId"
+    access="global">
+
+    <aura:attribute name="showSpinner" type="Boolean" default="true" />
+    <aura:attribute name="productJSON" type="String" />
+    <aura:attribute name="productModel" type="Object" />
+    <aura:attribute name="featureModel" type="Object" />
+
+    <aura:handler name="reloadProduct" event="c:qtc_ReloadProduct" action="{!c.reloadProduct}"/>
+
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <lightning:overlayLibrary aura:id="overlayLib"/>
+
+    <article class="slds-card slds-card_boundary">
+        <aura:if isTrue="{!v.showSpinner}">
+            <lightning:spinner variant="brand" alternativeText="Loading Product Model" />
+        </aura:if>
+        <div class="slds-card__header slds-grid slds-m-bottom--small">
+            <header class="slds-media slds-media_center slds-has-flexi-truncate">
+                <div class="slds-media__figure">
+                    <lightning:icon iconName="standard:product_item" alternativeText="Product Model" />
+                </div>
+                <div class="slds-media__body">
+                    <h2 class="slds-card__header-title">
+                        <span class="slds-text-heading_small">{!v.productModel.record.Name}</span>
+                    </h2>
+                </div>
+                <div class="slds-no-flex">
+                    <lightning:buttonGroup>
+                        <!--lightning:button label="Preview Config" title="Preview Config" onclick="{!c.previewConfig}"/-->
+                        <lightning:button label="New Feature" title="New Feature" onclick="{!c.newFeature}" />
+                        <!--lightning:button label="New Option" title="New Option" onclick="{!c.newOption}" /-->
+                        <lightning:buttonIcon iconName="utility:refresh" variant="border-filled" alternativeText="Refresh"
+                            onclick="{!c.reloadProduct}" />
+                    </lightning:buttonGroup>
+                </div>
+            </header>
+        </div>
+
+        <hr />
+
+        <div class="slds-card__body slds-card__body_inner">
+            <aura:iteration items="{!v.featureModel}" var="feature">
+                <div class="slds-grid">
+                    <c:qtc_PreviewFeature featureModel="{!feature}" />
+                </div>
+            </aura:iteration>
+        </div>
+
+    </article>
+
+</aura:component>

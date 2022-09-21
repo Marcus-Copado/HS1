@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>None</fullName>
+        <default>false</default>
+        <label>None</label>
+    </customValue>
+    <customValue>
+        <fullName>GB</fullName>
+        <default>false</default>
+        <label>GB</label>
+    </customValue>
+    <customValue>
+        <fullName>IoT Event</fullName>
+        <default>false</default>
+        <label>IoT Event</label>
+    </customValue>
+    <customValue>
+        <fullName>Login</fullName>
+        <default>false</default>
+        <label>Login</label>
+    </customValue>
+    <customValue>
+        <fullName>Hour</fullName>
+        <default>false</default>
+        <label>Hour</label>
+    </customValue>
+    <masterLabel>Unit Of Measure</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

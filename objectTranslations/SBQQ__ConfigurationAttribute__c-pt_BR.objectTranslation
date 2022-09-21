@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Atributo de configuração</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Atributos de configurações</value>
+    </caseValues>
+    <fields>
+        <help>Selecione a caixa de seleção para aplicar imediatamente as alterações a essa opção. Use com cautela para evitar tornar a experiência do usuário lenta.</help>
+        <label><!-- Apply Immediately --></label>
+        <name>SBQQ__AppliedImmediately__c</name>
+    </fields>
+    <fields>
+        <help>Selecione a caixa de seleção para aplicar a seleção de atributos de configuração às opções de produto.</help>
+        <label><!-- Apply To Product Options --></label>
+        <name>SBQQ__ApplyToProductOptions__c</name>
+    </fields>
+    <fields>
+        <help>Defina o valor desse atributo ao adicionar um produto de um Recurso dinâmico usando o valor no campo correspondente do produto adicionado.</help>
+        <label><!-- Auto-Select --></label>
+        <name>SBQQ__AutoSelect__c</name>
+    </fields>
+    <fields>
+        <help>As colunas são compostas por uma lista de opções (de 1, 2 ou 3) para cada Atributo de configuração. Um máximo de três colunas é permitido.</help>
+        <label><!-- Column Order --></label>
+        <name>SBQQ__ColumnOrder__c</name>
+        <picklistValues>
+            <masterLabel>1</masterLabel>
+            <translation>1</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2</masterLabel>
+            <translation>2</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3</masterLabel>
+            <translation>3</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>API do campo de destino no objeto padrão para o valor padrão do atributo.</help>
+        <label><!-- Default Field --></label>
+        <name>SBQQ__DefaultField__c</name>
+    </fields>
+    <fields>
+        <help>O objeto de destino para o valor padrão do atributo.</help>
+        <label><!-- Default Object --></label>
+        <name>SBQQ__DefaultObject__c</name>
+        <picklistValues>
+            <masterLabel>Quote</masterLabel>
+            <translation>Quote</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Quote Line Group</masterLabel>
+            <translation>Quote Line Group</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>Se não houver uma ordem de exibição associada ao Atributo de configuração, a ordem será determinada pelo nome do Conteúdo relacionado.</help>
+        <label><!-- Row Order --></label>
+        <name>SBQQ__DisplayOrder__c</name>
+    </fields>
+    <fields>
+        <help>Especifique o recurso em que esse atributo deve ser inserido.</help>
+        <label><!-- Feature --></label>
+        <name>SBQQ__Feature__c</name>
+        <relationshipLabel><!-- Configuration Attributes --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Indica se esse atributo tem um campo de destino global.</help>
+        <label><!-- Global --></label>
+        <name>SBQQ__Global__c</name>
+    </fields>
+    <fields>
+        <help>Insira os valores do campo da lista de opções correspondente no objeto Opção de produto que você deseja que fique oculto nesse pacote.</help>
+        <label><!-- Hidden Values --></label>
+        <name>SBQQ__HiddenValues__c</name>
+    </fields>
+    <fields>
+        <help>Se sinalizado como oculto, o Atributo de configuração não aparecerá na Página do configurador de produto.</help>
+        <label><!-- Hidden --></label>
+        <name>SBQQ__Hidden__c</name>
+    </fields>
+    <fields>
+        <help>Especifique a posição desse atributo. Topo renderiza acima das opções. Base renderiza abaixo.</help>
+        <label><!-- Position --></label>
+        <name>SBQQ__Position__c</name>
+        <picklistValues>
+            <masterLabel>Bottom</masterLabel>
+            <translation>Base</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Top</masterLabel>
+            <translation>Topo</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>Especifique o produto no qual está criando o atributo.</help>
+        <label><!-- Product --></label>
+        <name>SBQQ__Product__c</name>
+        <relationshipLabel><!-- Configuration Attributes --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Especifique se esse atributo necessita de um valor.</help>
+        <label><!-- Required --></label>
+        <name>SBQQ__Required__c</name>
+    </fields>
+    <fields>
+        <help>Insira valores do campo da lista de opções correspondente no objeto Opção de produto que deseja que seja mostrado nesse pacote.</help>
+        <label><!-- Shown Values --></label>
+        <name>SBQQ__ShownValues__c</name>
+    </fields>
+    <fields>
+        <help>Especifique o campo na Opção de produto que conterá esse valor de atributo.</help>
+        <label><!-- Target Field --></label>
+        <name>SBQQ__TargetField__c</name>
+        <picklistValues>
+            <masterLabel>Additional_Backups__c</masterLabel>
+            <translation><!-- Additional_Backups__c --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Backside_Print__c</masterLabel>
+            <translation><!-- Backside_Print__c --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Caliper2__c</masterLabel>
+            <translation><!-- Caliper2__c --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Caliper__c</masterLabel>
+            <translation><!-- Caliper__c --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cluster_Type__c</masterLabel>
+            <translation><!-- Cluster_Type__c --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Coatings__c</masterLabel>
+            <translation><!-- Coatings__c --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Colors__c</masterLabel>
+            <translation><!-- Colors__c --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Configuration__c</masterLabel>
+            <translation><!-- Configuration__c --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Continous_Integration__c</masterLabel>
+            <translation><!-- Continous_Integration__c --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Depth__c</masterLabel>
+            <translation><!-- Depth__c --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Discount (%)</masterLabel>
+            <translation>Desconto (%)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Discount (Amt)</masterLabel>
+            <translation>Desconto (Valor)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Embossing__c</masterLabel>
+            <translation><!-- Embossing__c --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Engineering_Options__c</masterLabel>
+            <translation><!-- Engineering_Options__c --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Environment__c</masterLabel>
+            <translation><!-- Environment__c --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Example__c</masterLabel>
+            <translation><!-- Example__c --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Film_Type__c</masterLabel>
+            <translation><!-- Film_Type__c --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Foil_Stamped__c</masterLabel>
+            <translation><!-- Foil_Stamped__c --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Gauge__c</masterLabel>
+            <translation><!-- Gauge__c --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Glued__c</masterLabel>
+            <translation><!-- Glued__c --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Grade__c</masterLabel>
+            <translation><!-- Grade__c --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Internal_Diameter__c</masterLabel>
+            <translation><!-- Internal_Diameter__c --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Inventory_Status__c</masterLabel>
+            <translation><!-- Inventory_Status__c --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Knifing__c</masterLabel>
+            <translation><!-- Knifing__c --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Length__c</masterLabel>
+            <translation><!-- Length__c --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>License_Type__c</masterLabel>
+            <translation><!-- License_Type__c --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Linux__c</masterLabel>
+            <translation><!-- Linux__c --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mac__c</masterLabel>
+            <translation><!-- Mac__c --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Max_Cluster_Size__c</masterLabel>
+            <translation><!-- Max_Cluster_Size__c --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Max_Data_Storage__c</masterLabel>
+            <translation><!-- Max_Data_Storage__c --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Memory_Config__c</masterLabel>
+            <translation><!-- Memory_Config__c --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Number_of_Employees__c</masterLabel>
+            <translation><!-- Number_of_Employees__c --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Packing_Spec__c</masterLabel>
+            <translation><!-- Packing_Spec__c --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Platform__c</masterLabel>
+            <translation><!-- Platform__c --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Print_Considerations__c</masterLabel>
+            <translation><!-- Print_Considerations__c --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Print__c</masterLabel>
+            <translation><!-- Print__c --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Protected_Devices__c</masterLabel>
+            <translation><!-- Protected_Devices__c --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Quantity_Allocated__c</masterLabel>
+            <translation><!-- Quantity_Allocated__c --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Quantity_Assigned__c</masterLabel>
+            <translation><!-- Quantity_Assigned__c --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Quantity_Available__c</masterLabel>
+            <translation><!-- Quantity_Available__c --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Quantity_On_Hand__c</masterLabel>
+            <translation><!-- Quantity_On_Hand__c --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Quick_Push__c</masterLabel>
+            <translation><!-- Quick_Push__c --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Recovery_Method__c</masterLabel>
+            <translation><!-- Recovery_Method__c --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Resource_Location__c</masterLabel>
+            <translation><!-- Resource_Location__c --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sample__c</masterLabel>
+            <translation><!-- Sample__c --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Smart_Recovery__c</masterLabel>
+            <translation><!-- Smart_Recovery__c --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>StorageDeployment__c</masterLabel>
+            <translation><!-- StorageDeployment__c --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Storage__c</masterLabel>
+            <translation><!-- Storage__c --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Style__c</masterLabel>
+            <translation><!-- Style__c --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Testing_Environments__c</masterLabel>
+            <translation><!-- Testing_Environments__c --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tube_Type__c</masterLabel>
+            <translation><!-- Tube_Type__c --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unit Price</masterLabel>
+            <translation>Preço unitário</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Volume_Day__c</masterLabel>
+            <translation><!-- Volume_Day__c --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Width__c</masterLabel>
+            <translation><!-- Width__c --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Windowed_Controlling__c</masterLabel>
+            <translation><!-- Windowed_Controlling__c --></translation>
+        </picklistValues>
+    </fields>
+    <gender>Masculine</gender>
+    <nameFieldLabel>Nome do atributo</nameFieldLabel>
+    <recordTypes>
+        <description><!-- Configuration Attribute associated to a product --></description>
+        <label><!-- Configuration Attribute --></label>
+        <name>SBQQ__Configuration_Attribute</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Definition of an Attribute Item --></description>
+        <label><!-- Global Attribute --></label>
+        <name>SBQQ__Global_Attribute</name>
+    </recordTypes>
+    <validationRules>
+        <errorMessage><!-- Column Order is required. --></errorMessage>
+        <name>SBQQ__Column_Order_is_required</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Product is required. --></errorMessage>
+        <name>SBQQ__Product_is_required_if_not_global</name>
+    </validationRules>
+</CustomObjectTranslation>

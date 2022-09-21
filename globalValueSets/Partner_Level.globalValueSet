@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>SmartBytes NA Reseller Silver</fullName>
+        <default>false</default>
+        <label>SmartBytes NA Reseller Silver</label>
+    </customValue>
+    <customValue>
+        <fullName>SmartBytes NA Reseller Gold</fullName>
+        <default>false</default>
+        <label>SmartBytes NA Reseller Gold</label>
+    </customValue>
+    <customValue>
+        <fullName>SmartBytes NA Reseller Platinum</fullName>
+        <default>false</default>
+        <label>SmartBytes NA Reseller Platinum</label>
+    </customValue>
+    <customValue>
+        <fullName>SmartBytes NA Distributor Silver</fullName>
+        <default>false</default>
+        <label>SmartBytes NA Distributor Silver</label>
+    </customValue>
+    <customValue>
+        <fullName>SmartBytes NA Distributor Gold</fullName>
+        <default>false</default>
+        <label>SmartBytes NA Distributor Gold</label>
+    </customValue>
+    <customValue>
+        <fullName>SmartBytes NA Distributor Platinum</fullName>
+        <default>false</default>
+        <label>SmartBytes NA Distributor Platinum</label>
+    </customValue>
+    <masterLabel>Partner Level</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>
