@@ -243,17 +243,6 @@
     <enableHistory>true</enableHistory>
     <externalSharingModel>Private</externalSharingModel>
     <fields>
-        <fullName>AQR__c</fullName>
-        <externalId>false</externalId>
-        <label>AQR</label>
-        <length>18</length>
-        <required>false</required>
-        <trackFeedHistory>false</trackFeedHistory>
-        <trackHistory>false</trackHistory>
-        <type>Text</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
         <fullName>AVA_BLNG__Business_Identification_Number__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
