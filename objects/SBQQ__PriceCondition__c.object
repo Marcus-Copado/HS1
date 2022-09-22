@@ -275,6 +275,11 @@
                     <default>false</default>
                     <label>InventoryFlag__c</label>
                 </value>
+                <value>
+                    <fullName>HS1__c</fullName>
+                    <default>false</default>
+                    <label>HS1__c</label>
+                </value>
             </valueSetDefinition>
         </valueSet>
     </fields>
