@@ -276,9 +276,9 @@
                     <label>InventoryFlag__c</label>
                 </value>
                 <value>
-                    <fullName>HS2__c</fullName>
+                    <fullName>HS1__c</fullName>
                     <default>false</default>
-                    <label>HS2__c</label>
+                    <label>HS1__c</label>
                 </value>
             </valueSetDefinition>
         </valueSet>
