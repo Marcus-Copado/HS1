@@ -285,6 +285,11 @@
                     <default>false</default>
                     <label>HS2__c</label>
                 </value>
+                <value>
+                    <fullName>HS3__c</fullName>
+                    <default>false</default>
+                    <label>HS3__c</label>
+                </value>
             </valueSetDefinition>
         </valueSet>
     </fields>
